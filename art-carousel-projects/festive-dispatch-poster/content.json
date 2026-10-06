@@ -1,0 +1,42 @@
+{
+  "status": "Concept C — four-slide motion-poster experiment; exact source copy",
+  "handle": "@arealtimetech",
+  "slides": [
+    {
+      "number": 3,
+      "copy": [
+        "**Orders buried in multiple places?**",
+        "Orders come in by phone, chat and email, all at once. One gets lost in the scroll, and you only find out when the customer calls asking where it is.",
+        "**What if every order, from every channel, landed in one place, logged and tracked from the moment it came in?**",
+        "→ No order missed. No festive sale lost."
+      ]
+    },
+    {
+      "number": 4,
+      "copy": [
+        "**Ran out of your best-seller mid-rush?**",
+        "In peak season, stock moves faster than anyone can count it. By the time someone spots the empty shelf, the orders are already promised.",
+        "**How about your stock being watched for you, with a reorder drafted before it runs low, waiting for your approval?**",
+        "→ Stock that keeps up with demand. No sales turned away."
+      ]
+    },
+    {
+      "number": 5,
+      "copy": [
+        "**Invoices and e-way bills stacking up at the end of the day?**",
+        "More orders mean more paperwork, typed in a hurry. One wrong detail can hold a consignment back right when your customer needs it most.",
+        "**What if every document was read once and checked against the order, so mistakes were caught before the goods left?**",
+        "→ Fewer errors. Goods that leave on time."
+      ]
+    },
+    {
+      "number": 6,
+      "copy": [
+        "**\"Where's my order?\" calls piling up?**",
+        "When a delivery runs late, you usually hear about it from an unhappy customer. In festive season, that call can cost you the customer for the whole year.",
+        "**Imagine delays flagged the moment they happen, and your customers updated automatically, before they have to ask.**",
+        "→ Fewer calls. Customers who come back next season."
+      ]
+    }
+  ]
+}
