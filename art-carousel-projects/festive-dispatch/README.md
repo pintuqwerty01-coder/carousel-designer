@@ -1,42 +1,36 @@
-# Festive dispatch Instagram review proof
+# Festive dispatch — simplified motion review
 
-Status: DRAFT REVIEW. Source copy is preserved; not approved for publication. Slides 02–09 are provided. Slide 01 has not been created because the selected stock cover photo has not been supplied. The Aiotrix logo is also not supplied, so the reveal currently uses only the intact ART logo. Optional CTA logo omitted. ART clock parts are not animated.
+Draft review; exact source copy retained. Slides 02–09 are provided. The cover photo binary and Aiotrix logo are missing. The ART logo stays intact. LinkedIn is a separate asset and has not been produced.
 
-Open proof/contact-sheet.png for all eight layouts. Still PNGs are in stills/. Four-second videos are in render/out/. Nine-frame animation proofs are in proof/sheet-NN.png. The caption is in caption.txt. Original script and editorial issues are in source-script.md and design-plan.md. Cover selection guidance is in cover-brief.md.
+## Current motion
 
-To rebuild these post-specific layouts:
+Each scene has fixed robot staging, one main action, restrained supporting props, and a final hold. Props use smooth easing. The robot changes pose at the action and result beats, without running, hopping, blinking or waving loops.
 
-    /workspace/art-carousel-venv/bin/python build-review.py
+- 02: One parcel waits at a gate; one delay marker fades in.
+- 03: One order slip settles into one tray.
+- 04: One reorder moves for approval; one carton appears afterward.
+- 05: One document is scanned and checked beside one parcel.
+- 06: One gate opens, one parcel passes, one customer notice settles.
+- 07: One ribbon settles on a gift.
+- 08: One carton is sealed and checked.
+- 09: One envelope flap closes.
 
-To check stills:
+Timing: establish for the first second, action through roughly 2.5 seconds, resolve by 3 seconds, then hold. Stock and dispatch retain a short secondary confirmation beat. Text does not move. The source paragraphs are unchanged and remain dense; this revision simplifies illustration action, not approved copy.
 
-    /workspace/art-carousel-venv/bin/python /workspace/art-carousel-kit/run-system-browser.py /workspace/art-carousel-kit/scripts/stills.py /workspace/art-carousel-projects/festive-dispatch
+## Files
 
-To render the standard quality proof:
+Videos: `render/out/slide-02.mp4` through `slide-09.mp4`. Still images: `stills/`. Animation sheets: `proof/sheet-NN.png`. Overview: `proof/contact-sheet.png`. Original script: `source-script.md`. Caption: `caption.txt`. These filenames replace the previous versions.
 
-    npm_config_cache=/workspace/art-carousel-npm-cache HYPERFRAMES_BROWSER_PATH=/usr/bin/chromium /workspace/art-carousel-venv/bin/python /workspace/art-carousel-kit/scripts/render.py /workspace/art-carousel-projects/festive-dispatch
+## Rebuild in the cloud
 
-Do not run the generic kit builder on this project: it needs this post-specific builder for setup/outcome layouts and exact draft copy.
+Use this post-specific builder; the generic kit builder does not handle the setup/outcome layouts.
 
-All eight slides now use post-specific festive choreography; none uses the original topic’s stock, paperwork, calls, reveal or CTA choreography. No LinkedIn slides have been produced; those remain a separate formal static asset.
+```bash
+/workspace/art-carousel-venv/bin/python /workspace/art-carousel-projects/festive-dispatch/build-review.py
+/workspace/art-carousel-venv/bin/python /workspace/art-carousel-kit/run-system-browser.py /workspace/art-carousel-kit/scripts/stills.py /workspace/art-carousel-projects/festive-dispatch
+/workspace/art-carousel-venv/bin/python /workspace/art-carousel-kit/run-system-browser.py /workspace/art-carousel-kit/scripts/sheets.py /workspace/art-carousel-projects/festive-dispatch
+npm_config_cache=/workspace/art-carousel-npm-cache HYPERFRAMES_BROWSER_PATH=/usr/bin/chromium /workspace/art-carousel-venv/bin/python /workspace/art-carousel-projects/festive-dispatch/render-lossless.py
+/workspace/art-carousel-venv/bin/python /workspace/art-carousel-projects/festive-dispatch/encode-delivery.py
+```
 
-If static headline pixels differ because of video compression, use the supported lossless encoder override for the affected slide:
-
-    npm_config_cache=/workspace/art-carousel-npm-cache HYPERFRAMES_BROWSER_PATH=/usr/bin/chromium /workspace/art-carousel-venv/bin/python render-lossless.py 03
-
-The updated videos use the lossless override to preserve static headline pixels; the same validation checks remain active.
-
-## Motion revision v2
-
-02: Pull a parcel train and recoil at a jam.
-03: Catch falling order slips in a basket and file them.
-04: Measure a low shelf, offer a reorder, pause for approval, then receive cartons.
-05: Isolate a mismatched document, compare it, and release the corrected pack.
-06: Divert a delayed parcel and send a customer envelope ahead.
-07: Tie a bow on a festive parcel and present it.
-08: Push a checked parcel along a clear conveyor and let it go.
-09: Fold a note into an envelope and present it.
-
-The existing video and still filenames are overwritten by this revision.
-
-Playback delivery files use standard H.264 High, yuv420p and faststart. Do not distribute CRF 0 exports directly: their High 4:4:4 Predictive profile can fail on common players.
+Lossless masters permit static-pixel checks, but their H.264 profile is unsuitable for many players. The final encoding step produces standard H.264 High, yuv420p and faststart for delivery. Minor compression differences between static pixels are possible in these final MP4s.

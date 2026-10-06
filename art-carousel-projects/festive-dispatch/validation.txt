@@ -1,13 +1,3 @@
-Motion revision v2: all eight slides use original festive-specific choreography.
-02: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
-03: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
-04: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
-05: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
-06: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
-07: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=11622; reveal logo exempt
-08: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
-09: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
-All eight layout/font checks passed; no JavaScript errors in animation sheets. Source copy unchanged. Animation sheets and actual video frames inspected. All updated videos use CRF 0.
-Cover photo binary and Aiotrix logo still missing. Draft review only; LinkedIn not produced.
-
-Playback update: delivery videos re-encoded to H.264 High (not High 4:4:4 Predictive), yuv420p, CRF 16, faststart. Codec, dimensions, 30fps and four-second duration verified for all eight. Lossless pixel counts above describe pre-transcode motion checks; lossy delivery compression may change individual text pixels. Source timelines and choreography are unchanged.
+Simplified motion revision v3. All eight slides passed lint, font/layout, browser animation-sheet and exact source-copy checks. Render masters: 1080x1350, 30fps, 4.000000s, headline pixel movement 0 except expected reveal logo animation. Final delivery: H.264 High, yuv420p, CRF 16 and faststart; codec, dimensions, frame rate and duration verified for all eight. Delivery compression can change individual static pixels. Actual video frames and nine-frame animation sheets inspected.
+One primary action per scene, fixed robot positions, smooth prop easing, reduced props and a final hold. No walking/hopping/waving loops. Copy unchanged.
+Missing: cover photo binary and Aiotrix logo. Draft review only. LinkedIn assets not produced.
