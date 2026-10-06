@@ -1,0 +1,10 @@
+02: lint=0; 1080x1350; 30fps; 4s; static headline passed
+03: lint=0; 1080x1350; 30fps; 4s; static headline passed
+04: lint=0; 1080x1350; 30fps; 4s; static headline passed
+05: lint=0; 1080x1350; 30fps; 4s; static headline passed
+06: lint=0; 1080x1350; 30fps; 4s; static headline passed
+07: lint=0; 1080x1350; 30fps; 4s; static headline passed (logo animation exempt)
+08: lint=0; 1080x1350; 30fps; 4s; static headline passed
+09: lint=0; 1080x1350; 30fps; 4s; static headline passed
+All eight still/font/layout checks passed. All source copy lines retained. Animation sheets and actual video frames inspected. Slide 03 uses CRF 0 after standard compression changed eight headline pixels.
+Missing: cover photo and Aiotrix logo. Draft review only. LinkedIn not produced.

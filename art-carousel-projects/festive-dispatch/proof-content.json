@@ -1,0 +1,17 @@
+{
+  "status": "review proof, unapproved draft",
+  "slide": 3,
+  "content": {
+    "template": "task",
+    "n": 1,
+    "of": 4,
+    "label": "Orders",
+    "scene": "festiveOrders",
+    "headline": "Orders buried in multiple places?",
+    "pain": "Orders come in by phone, chat and email, all at once. One gets lost in the scroll, and you only find out when the customer calls asking where it is.",
+    "whatif": "What if every order, from every channel, landed in one place, logged and tracked from the moment it came in?",
+    "outcome": [
+      "\u2192 No order missed. No festive sale lost."
+    ]
+  }
+}

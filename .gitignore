@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.env
+.env.*
+!.env.example
+art-carousel-venv/
+art-carousel-npm-cache/
+art-carousel-browsers/
+**/render/out/work-*/
