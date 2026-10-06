@@ -1,10 +1,11 @@
-02: lint=0; 1080x1350; 30fps; 4s; static headline passed
-03: lint=0; 1080x1350; 30fps; 4s; static headline passed
-04: lint=0; 1080x1350; 30fps; 4s; static headline passed
-05: lint=0; 1080x1350; 30fps; 4s; static headline passed
-06: lint=0; 1080x1350; 30fps; 4s; static headline passed
-07: lint=0; 1080x1350; 30fps; 4s; static headline passed (logo animation exempt)
-08: lint=0; 1080x1350; 30fps; 4s; static headline passed
-09: lint=0; 1080x1350; 30fps; 4s; static headline passed
-All eight still/font/layout checks passed. All source copy lines retained. Animation sheets and actual video frames inspected. Slide 03 uses CRF 0 after standard compression changed eight headline pixels.
-Missing: cover photo and Aiotrix logo. Draft review only. LinkedIn not produced.
+Motion revision v2: all eight slides use original festive-specific choreography.
+02: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
+03: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
+04: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
+05: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
+06: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
+07: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=11622; reveal logo exempt
+08: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
+09: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
+All eight layout/font checks passed; no JavaScript errors in animation sheets. Source copy unchanged. Animation sheets and actual video frames inspected. All updated videos use CRF 0.
+Cover photo binary and Aiotrix logo still missing. Draft review only; LinkedIn not produced.
