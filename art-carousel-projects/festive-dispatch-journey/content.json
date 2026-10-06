@@ -1,0 +1,24 @@
+{
+  "status": "Design concept B; exact draft copy; two-slide prototype",
+  "handle": "@arealtimetech",
+  "slides": [
+    {
+      "number": 3,
+      "copy": [
+        "**Orders buried in multiple places?**",
+        "Orders come in by phone, chat and email, all at once. One gets lost in the scroll, and you only find out when the customer calls asking where it is.",
+        "**What if every order, from every channel, landed in one place, logged and tracked from the moment it came in?**",
+        "→ No order missed. No festive sale lost."
+      ]
+    },
+    {
+      "number": 4,
+      "copy": [
+        "**Ran out of your best-seller mid-rush?**",
+        "In peak season, stock moves faster than anyone can count it. By the time someone spots the empty shelf, the orders are already promised.",
+        "**How about your stock being watched for you, with a reorder drafted before it runs low, waiting for your approval?**",
+        "→ Stock that keeps up with demand. No sales turned away."
+      ]
+    }
+  ]
+}
