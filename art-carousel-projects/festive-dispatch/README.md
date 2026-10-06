@@ -38,3 +38,5 @@ The updated videos use the lossless override to preserve static headline pixels;
 09: Fold a note into an envelope and present it.
 
 The existing video and still filenames are overwritten by this revision.
+
+Playback delivery files use standard H.264 High, yuv420p and faststart. Do not distribute CRF 0 exports directly: their High 4:4:4 Predictive profile can fail on common players.

@@ -9,3 +9,5 @@ Motion revision v2: all eight slides use original festive-specific choreography.
 09: lint=0; 1080x1350; 30fps; 4s; headline-px-moved=0
 All eight layout/font checks passed; no JavaScript errors in animation sheets. Source copy unchanged. Animation sheets and actual video frames inspected. All updated videos use CRF 0.
 Cover photo binary and Aiotrix logo still missing. Draft review only; LinkedIn not produced.
+
+Playback update: delivery videos re-encoded to H.264 High (not High 4:4:4 Predictive), yuv420p, CRF 16, faststart. Codec, dimensions, 30fps and four-second duration verified for all eight. Lossless pixel counts above describe pre-transcode motion checks; lossy delivery compression may change individual text pixels. Source timelines and choreography are unchanged.
