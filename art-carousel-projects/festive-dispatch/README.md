@@ -4,18 +4,18 @@ Draft review; exact source copy retained. Slides 02–09 are provided. The cover
 
 ## Current motion
 
-Each scene has fixed robot staging, one main action, restrained supporting props, and a final hold. Props use smooth easing. The robot changes pose at the action and result beats, without running, hopping, blinking or waving loops.
+Each slide has its own robot pose sequence and a scene derived from the copy. The previous shared reach-and-hold choreography is removed.
 
-- 02: One parcel waits at a gate; one delay marker fades in.
-- 03: One order slip settles into one tray.
-- 04: One reorder moves for approval; one carton appears afterward.
-- 05: One document is scanned and checked beside one parcel.
-- 06: One gate opens, one parcel passes, one customer notice settles.
-- 07: One ribbon settles on a gift.
-- 08: One carton is sealed and checked.
-- 09: One envelope flap closes.
+- 02: Parcels arrive from both sides; the same bot turns between queues, then becomes overwhelmed.
+- 03: Phone, chat and email each produce an order. The bot collects the slips, turns and files all three in one register.
+- 04: Stock disappears from a shelf. The bot counts, raises a draft reorder and waits for approval before another carton appears.
+- 05: Order and dispatch document are compared. The bot tracks them with a magnifier, finds the red mismatch and stamps the checked document beside the parcel.
+- 06: A parcel remains stopped at a delay. The bot raises an alert flag and sends a customer update ahead; notifying the customer does not magically resolve the delay.
+- 07: The bot acts as a conductor, bringing order, stock, document and delivery symbols into alignment. The logo stays intact.
+- 08: The bot carries a completed parcel to a customer counter and hands it over, depicting service rather than more processing.
+- 09: The bot points toward a bookmark, then sends a DM envelope, matching the save/share and message invitation.
 
-Timing: establish for the first second, action through roughly 2.5 seconds, resolve by 3 seconds, then hold. Stock and dispatch retain a short secondary confirmation beat. Text does not move. The source paragraphs are unchanged and remain dense; this revision simplifies illustration action, not approved copy.
+Robot poses retain the stepped house style. Props use smooth easing and finish in a stable hold. Copy remains verbatim.
 
 ## Files
 
