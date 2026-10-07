@@ -1,0 +1,782 @@
+[
+  {
+    "slide": 1,
+    "selector": ".cover-h",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 57
+      }
+    ]
+  },
+  {
+    "slide": 1,
+    "selector": ".cover-h em",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 17
+      }
+    ]
+  },
+  {
+    "slide": 1,
+    "selector": ".cover-sub",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 36
+      }
+    ]
+  },
+  {
+    "slide": 1,
+    "selector": ".cover-cta",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 43
+      }
+    ]
+  },
+  {
+    "slide": 1,
+    "selector": ".handle",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ]
+  },
+  {
+    "slide": 1,
+    "selector": ".count",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 5
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "selector": ".photo-h",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 35
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "selector": ".photo-pain",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 164
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "selector": ".setup-next",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 13
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "selector": ".handle",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "selector": ".count",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 5
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "selector": ".photo-h",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 32
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "selector": ".photo-h em",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 16
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "selector": ".photo-pain",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 146
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "selector": ".photo-whatif",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 107
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "selector": ".photo-result",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 39
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "selector": ".handle",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "selector": ".count",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 5
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "selector": ".kicker",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 9
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".photo-h",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 36
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".photo-h em",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 9
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".photo-pain",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 134
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".photo-whatif",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 112
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".photo-result",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 55
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".handle",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".count",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 5
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".kicker",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 8
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "selector": ".photo-h",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 57
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "selector": ".photo-h em",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 33
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "selector": ".photo-pain",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 133
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "selector": ".photo-whatif",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 113
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "selector": ".photo-result",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 40
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "selector": ".handle",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "selector": ".count",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 5
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "selector": ".kicker",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 12
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "selector": ".photo-h",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 35
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "selector": ".photo-h em",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 16
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "selector": ".photo-pain",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 151
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "selector": ".photo-whatif",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 112
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "selector": ".photo-result",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 50
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "selector": ".handle",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "selector": ".count",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 5
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "selector": ".kicker",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 11
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "selector": ".photo-h",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 83
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "selector": ".reveal-body",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 332
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "selector": ".reveal-body strong",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 20
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "selector": ".reveal-sign",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 75
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "selector": ".handle",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "selector": ".count",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 5
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "selector": ".photo-h",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 34
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "selector": ".photo-h em",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "selector": ".benefit p",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 21
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "selector": ".benefit p",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 20
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "selector": ".benefit p",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 31
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "selector": ".benefit p",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 27
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "selector": ".summary-end",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 67
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "selector": ".handle",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "selector": ".count",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 5
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "selector": ".photo-h",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 25
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "selector": ".photo-h em",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 6
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "selector": ".cta-body",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 50
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "selector": ".cta-dm",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 56
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "selector": ".cta-save",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 55
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "selector": ".handle",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "selector": ".count",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 5
+      }
+    ]
+  }
+]
