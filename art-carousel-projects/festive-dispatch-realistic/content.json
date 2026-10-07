@@ -1,0 +1,23 @@
+{
+  "status": "DRAFT REVIEW \u2014 not approved for publication",
+  "handle": "@arealtimetech",
+  "slides": [
+    {
+      "number": 1,
+      "copy": [
+        "**Festive season orders are coming. Can your dispatch keep up?**",
+        "Diwali orders don't wait for anyone.",
+        "Swipe to see where the rush usually breaks \u2192"
+      ]
+    },
+    {
+      "number": 3,
+      "copy": [
+        "**Orders buried in multiple places?**",
+        "Orders come in by phone, chat and email, all at once. One gets lost in the scroll, and you only find out when the customer calls asking where it is.",
+        "**What if every order, from every channel, landed in one place, logged and tracked from the moment it came in?**",
+        "\u2192 No order missed. No festive sale lost."
+      ]
+    }
+  ]
+}
