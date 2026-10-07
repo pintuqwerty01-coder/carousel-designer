@@ -21,3 +21,6 @@ Latest revision: HERE'S WHERE uses a right arrow. Slide 9 replaces the dated cal
 
 
 Latest copy revision: retained FESTIVE SEASON in the cover headline only; replaced repeated seasonal wording elsewhere. Full revised script is in revised-copy.md. Cover text now has a stronger full-width black gradient fading into the photograph. All text, fonts, card padding and nine PDF pages validated.
+
+
+Cover readability: black gradient now holds 88% opacity through all supporting copy before fading into the scene. White supporting text has a subtle shadow; the order urgency line increased to 32px. Copy, Preahvihear and text bounds checked; PDF regenerated.
