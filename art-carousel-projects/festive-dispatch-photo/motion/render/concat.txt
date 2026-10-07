@@ -1,0 +1,6 @@
+file 'out/slide-01.mp4'
+file 'out/slide-02.mp4'
+file 'out/slide-03.mp4'
+file 'out/slide-04.mp4'
+file 'out/slide-05.mp4'
+file 'out/slide-06.mp4'

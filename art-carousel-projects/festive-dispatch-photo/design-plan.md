@@ -25,3 +25,11 @@ Remove white fading text overlays. Setup/task slides use solid ink header/footer
 ## Revision 3 — blend the shade into the photo
 
 Replace opaque header/footer sheets on 02–06 with full-frame ink-to-transparent gradients. The warehouse continues behind the headline; the hero image and footer have no abrupt rectangular boundary. Fade depth adapts to the longer setup/paperwork copy. Reveal, solution and CTA retain the revision 2 page colours and composition. Still a static review revision.
+
+## Revision 4 — approved first-six motion / closing static experiment
+
+User authorised animation of slides 01–06. Retain their approved photographic layouts and blended ink shading. Use one scene action per slide: cover balancing, growing parcel queue, channel convergence, replenishment arrival, document scan and customer-update route. Smooth eased action, one readable outcome, no repeated mascot bounce on task pages. Task mascot figures remain embedded in the approved photo plates.
+
+Closing static alternatives: 07 governed hub with mascot at centre and four connected processes; 08 staggered continuous flow of four outcomes, alternating ink/aqua on white; 09 deadline/calendar metaphor with the pointing mascot and prominent DM panel. No fabricated date, metric or claim. Exact draft copy retained. These three wait for static design approval before animation.
+
+Rebuild order: build-statics.py, revise-endings.py, capture-statics.py, make-review.py, build-motion.py, motion/render-frames.py, validate-motion.py. Browser scripts use the kit system-browser adapter. The existing cover master is reused unchanged.

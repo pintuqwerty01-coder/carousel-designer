@@ -13,3 +13,7 @@ Fonts, brand palette, mascot identity and exact source draft copy retained. The 
 Review files: `static-review.pdf`, `proof/all-slides.png`, `stills/slide-01.png` through `slide-09.png`, and local gallery `review.html`. Earlier layouts remain in Git history. These revised layouts have not been animated; review approval comes first, as requested. `corrected-cover.mp4` is the previously checked cover motion, unchanged by this revision.
 
 Rebuild: `build-statics.py`; capture via `capture-statics.py` through the kit browser adapter; `make-review.py` checks exact copy, image loading and text bounds, then creates PDF and overview. Source assets are in `artwork/`, layouts in `slides/`. Cloud scripts resolve `/workspace/art-carousel-kit` and `/workspace/art-carousel-venv`.
+
+## Revision 4
+
+Slides 01–06 now have motion deliveries in `motion/render/out/`. Closing slides 07–09 have new static concepts: connected hub, flowing benefits and calendar deadline CTA. See `proof/last-three.png`. These closing designs await approval before motion. Exact copy remains unchanged. Build instructions are in `design-plan.md`; scene actions and rendering details are in `motion/README.md`.

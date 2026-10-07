@@ -15,3 +15,14 @@ Corrected cover MP4: zero lint/JavaScript errors; 1080×1350, 30fps, four second
 White fade removed from slides 02–06; 07–09 use solid aqua, white and ink pages. Newly generated transparent character layers reviewed. All images load, every source copy line remains, and all text bounds pass. PNGs are 1080×1350. Final statics are captured in fresh browser pages; what-if panels use block layout and vector result checks to avoid partial text painting. Updated PDF and overview use final PNGs. No new motion rendered for this revision.
 
 Revision 3: all nine image-loading/copy/text-bound checks pass. Photographic slides 02–06 use blended dark overlays instead of opaque sheets. Readability and final PNG/PDF composition reviewed; source copy retained. No new motion rendered.
+
+
+## Revision 4 verification
+
+- Static image loading, exact source copy and safe text bounds: passed for all nine slides after closing redesign. Cover is exact approved raster.
+- Six motion files: 1080×1350, 30fps, four seconds, 120 frames; H.264 High, yuv420p, faststart. ffprobe passed for all six.
+- Chromium decoded and played all six videos; no media errors.
+- Headline region comparison at 0.1s and 3.9s: zero materially changed pixels (>40 intensity threshold) on all six encoded videos. Small codec quantisation is excluded; text DOM does not animate.
+- Inspected action-frame overview for all six and document/order frame details, plus all three closing static designs.
+- Task animation acts on props and process cues, not articulated embedded mascot limbs. Cover retains previously approved balancing motion.
+- Closing three remain static pending approval. Source draft copy is unchanged; no capability/production approval inferred.
