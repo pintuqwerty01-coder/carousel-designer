@@ -1,0 +1,860 @@
+[
+  {
+    "slide": 1,
+    "arm_poses": [
+      "down",
+      "hold",
+      "reach"
+    ],
+    "expressions": [
+      "happy",
+      "lookR"
+    ],
+    "x_span": 220,
+    "states": [
+      {
+        "slide": 1,
+        "x": 430,
+        "y": 760,
+        "legs": "stepR",
+        "armL": "out",
+        "armR": "hold",
+        "eyes": "lookR",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "parcel": [
+          610,
+          911
+        ]
+      },
+      {
+        "slide": 1,
+        "x": 430.1855901090595,
+        "y": 764,
+        "legs": "stepL",
+        "armL": "out",
+        "armR": "hold",
+        "eyes": "lookR",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "parcel": [
+          610.1855901090595,
+          915
+        ]
+      },
+      {
+        "slide": 1,
+        "x": 441.8777669798078,
+        "y": 760,
+        "legs": "stepR",
+        "armL": "out",
+        "armR": "hold",
+        "eyes": "lookR",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "parcel": [
+          621.8777669798078,
+          911
+        ]
+      },
+      {
+        "slide": 1,
+        "x": 561.9278425655976,
+        "y": 764,
+        "legs": "stepL",
+        "armL": "out",
+        "armR": "hold",
+        "eyes": "lookR",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "parcel": [
+          741.9278425655976,
+          915
+        ]
+      },
+      {
+        "slide": 1,
+        "x": 639.8162995356872,
+        "y": 764,
+        "legs": "stepL",
+        "armL": "out",
+        "armR": "hold",
+        "eyes": "lookR",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "parcel": [
+          819.8162995356872,
+          915
+        ]
+      },
+      {
+        "slide": 1,
+        "x": 650,
+        "y": 760,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "lookR",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "parcel": [
+          830.0186618115612,
+          911.0131998179336
+        ]
+      },
+      {
+        "slide": 1,
+        "x": 650,
+        "y": 760,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "lookR",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "parcel": [
+          893.3381884387801,
+          955.8001820664542
+        ]
+      },
+      {
+        "slide": 1,
+        "x": 650,
+        "y": 760,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "down",
+        "eyes": "happy",
+        "mouth": "grin",
+        "bulb": "aqua",
+        "parcel": [
+          912,
+          969
+        ]
+      },
+      {
+        "slide": 1,
+        "x": 650,
+        "y": 760,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "down",
+        "eyes": "happy",
+        "mouth": "grin",
+        "bulb": "aqua",
+        "parcel": [
+          912,
+          969
+        ]
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "arm_poses": [
+      "flex",
+      "tap",
+      "wave1",
+      "wave2"
+    ],
+    "expressions": [
+      "focus",
+      "happy",
+      "wide"
+    ],
+    "x_span": 0,
+    "states": [
+      {
+        "slide": 2,
+        "x": 492,
+        "y": 620,
+        "legs": "stand",
+        "armL": "up",
+        "armR": "flex",
+        "eyes": "wide",
+        "mouth": "wobble",
+        "bulb": "red",
+        "bulbOff": true,
+        "queue": 1,
+        "completed": 0
+      },
+      {
+        "slide": 2,
+        "x": 492,
+        "y": 620,
+        "legs": "stand",
+        "armL": "up",
+        "armR": "flex",
+        "eyes": "wide",
+        "mouth": "wobble",
+        "bulb": "red",
+        "bulbOff": false,
+        "queue": 1,
+        "completed": 0
+      },
+      {
+        "slide": 2,
+        "x": 492,
+        "y": 620,
+        "legs": "stand",
+        "armL": "up",
+        "armR": "flex",
+        "eyes": "wide",
+        "mouth": "wobble",
+        "bulb": "red",
+        "bulbOff": true,
+        "queue": 2,
+        "completed": 0
+      },
+      {
+        "slide": 2,
+        "x": 492,
+        "y": 620,
+        "legs": "stand",
+        "armL": "up",
+        "armR": "flex",
+        "eyes": "wide",
+        "mouth": "wobble",
+        "bulb": "red",
+        "bulbOff": false,
+        "queue": 3,
+        "completed": 0
+      },
+      {
+        "slide": 2,
+        "x": 492,
+        "y": 620,
+        "legs": "stand",
+        "armL": "up",
+        "armR": "wave1",
+        "eyes": "focus",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "bulbOff": false,
+        "queue": 3,
+        "completed": 0
+      },
+      {
+        "slide": 2,
+        "x": 492,
+        "y": 620,
+        "legs": "stand",
+        "armL": "up",
+        "armR": "wave1",
+        "eyes": "focus",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "bulbOff": false,
+        "queue": 3,
+        "completed": 1
+      },
+      {
+        "slide": 2,
+        "x": 492,
+        "y": 620,
+        "legs": "stand",
+        "armL": "up",
+        "armR": "wave2",
+        "eyes": "focus",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "bulbOff": false,
+        "queue": 3,
+        "completed": 2
+      },
+      {
+        "slide": 2,
+        "x": 492,
+        "y": 620,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "tap",
+        "eyes": "happy",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "bulbOff": false,
+        "queue": 3,
+        "completed": 3
+      },
+      {
+        "slide": 2,
+        "x": 492,
+        "y": 620,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "tap",
+        "eyes": "happy",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "bulbOff": false,
+        "queue": 3,
+        "completed": 3
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "arm_poses": [
+      "down",
+      "reach",
+      "tap"
+    ],
+    "expressions": [
+      "happy",
+      "lookL",
+      "lookR"
+    ],
+    "x_span": 100,
+    "states": [
+      {
+        "slide": 3,
+        "x": 480,
+        "y": 640,
+        "legs": "stand",
+        "armL": "out",
+        "armR": "reach",
+        "eyes": "lookL",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "phase": "receive"
+      },
+      {
+        "slide": 3,
+        "x": 480,
+        "y": 640,
+        "legs": "stand",
+        "armL": "out",
+        "armR": "reach",
+        "eyes": "lookL",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "phase": "receive"
+      },
+      {
+        "slide": 3,
+        "x": 480,
+        "y": 640,
+        "legs": "stand",
+        "armL": "out",
+        "armR": "reach",
+        "eyes": "lookL",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "phase": "receive"
+      },
+      {
+        "slide": 3,
+        "x": 480,
+        "y": 640,
+        "legs": "stand",
+        "armL": "out",
+        "armR": "reach",
+        "eyes": "lookL",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "phase": "receive"
+      },
+      {
+        "slide": 3,
+        "x": 480.02893518518516,
+        "y": 640,
+        "legs": "stepL",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "phase": "file"
+      },
+      {
+        "slide": 3,
+        "x": 579.21875,
+        "y": 640,
+        "legs": "stepL",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "phase": "file"
+      },
+      {
+        "slide": 3,
+        "x": 580,
+        "y": 640,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "tap",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "phase": "file"
+      },
+      {
+        "slide": 3,
+        "x": 580,
+        "y": 640,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "down",
+        "eyes": "happy",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "phase": "captured"
+      },
+      {
+        "slide": 3,
+        "x": 580,
+        "y": 640,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "down",
+        "eyes": "happy",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "phase": "captured"
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "arm_poses": [
+      "down",
+      "hold",
+      "up"
+    ],
+    "expressions": [
+      "happy",
+      "lookR"
+    ],
+    "x_span": 290,
+    "states": [
+      {
+        "slide": 4,
+        "x": 530,
+        "y": 641,
+        "flip": true,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "hold",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "red",
+        "parcel": [
+          513,
+          772
+        ],
+        "phase": "carry"
+      },
+      {
+        "slide": 4,
+        "x": 530,
+        "y": 641,
+        "flip": true,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "hold",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "red",
+        "parcel": [
+          513,
+          772
+        ],
+        "phase": "carry"
+      },
+      {
+        "slide": 4,
+        "x": 523.0277986476334,
+        "y": 641,
+        "flip": true,
+        "legs": "stepR",
+        "armL": "down",
+        "armR": "hold",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "red",
+        "parcel": [
+          506.0277986476334,
+          772
+        ],
+        "phase": "carry"
+      },
+      {
+        "slide": 4,
+        "x": 258.12500000000006,
+        "y": 641,
+        "flip": true,
+        "legs": "stepL",
+        "armL": "down",
+        "armR": "hold",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "parcel": [
+          241.12500000000006,
+          772
+        ],
+        "phase": "carry"
+      },
+      {
+        "slide": 4,
+        "x": 240,
+        "y": 641,
+        "flip": true,
+        "legs": "stand",
+        "armL": "out",
+        "armR": "down",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "parcel": [
+          222.9093222063912,
+          771.725218807246
+        ],
+        "phase": "restock"
+      },
+      {
+        "slide": 4,
+        "x": 240,
+        "y": 641,
+        "flip": true,
+        "legs": "stand",
+        "armL": "out",
+        "armR": "down",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "parcel": [
+          194.47007938123346,
+          685.5456950946468
+        ],
+        "phase": "restock"
+      },
+      {
+        "slide": 4,
+        "x": 240,
+        "y": 641,
+        "flip": true,
+        "legs": "stand",
+        "armL": "out",
+        "armR": "down",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "parcel": [
+          190,
+          672
+        ],
+        "phase": "restock"
+      },
+      {
+        "slide": 4,
+        "x": 240,
+        "y": 641,
+        "flip": true,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "up",
+        "eyes": "happy",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "parcel": [
+          190,
+          672
+        ],
+        "phase": "confirmed"
+      },
+      {
+        "slide": 4,
+        "x": 240,
+        "y": 641,
+        "flip": true,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "up",
+        "eyes": "happy",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "parcel": [
+          190,
+          672
+        ],
+        "phase": "confirmed"
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "arm_poses": [
+      "down",
+      "reach"
+    ],
+    "expressions": [
+      "focus",
+      "happy"
+    ],
+    "x_span": 0,
+    "states": [
+      {
+        "slide": 5,
+        "x": 395,
+        "y": 635,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "focus",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "lensY": 696,
+        "phase": "inspect"
+      },
+      {
+        "slide": 5,
+        "x": 395,
+        "y": 635,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "focus",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "lensY": 696,
+        "phase": "inspect"
+      },
+      {
+        "slide": 5,
+        "x": 395,
+        "y": 635,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "focus",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "lensY": 696,
+        "phase": "inspect"
+      },
+      {
+        "slide": 5,
+        "x": 395,
+        "y": 635,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "focus",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "lensY": 716.2302979227405,
+        "phase": "inspect"
+      },
+      {
+        "slide": 5,
+        "x": 395,
+        "y": 635,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "focus",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "lensY": 765.347007106414,
+        "phase": "inspect"
+      },
+      {
+        "slide": 5,
+        "x": 395,
+        "y": 635,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "down",
+        "eyes": "focus",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "lensY": 769,
+        "phase": "stamp"
+      },
+      {
+        "slide": 5,
+        "x": 395,
+        "y": 635,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "down",
+        "eyes": "focus",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "lensY": 769,
+        "phase": "stamp"
+      },
+      {
+        "slide": 5,
+        "x": 395,
+        "y": 635,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "down",
+        "eyes": "happy",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "lensY": 769,
+        "phase": "verified"
+      },
+      {
+        "slide": 5,
+        "x": 395,
+        "y": 635,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "down",
+        "eyes": "happy",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "lensY": 769,
+        "phase": "verified"
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "arm_poses": [
+      "down",
+      "hold",
+      "reach"
+    ],
+    "expressions": [
+      "happy",
+      "lookL",
+      "lookR"
+    ],
+    "x_span": 0,
+    "states": [
+      {
+        "slide": 6,
+        "x": 440,
+        "y": 642,
+        "legs": "stand",
+        "armL": "up",
+        "armR": "hold",
+        "eyes": "lookL",
+        "mouth": "o",
+        "bulb": "red",
+        "bulbOff": true,
+        "envelopeProgress": 0,
+        "phase": "delay"
+      },
+      {
+        "slide": 6,
+        "x": 440,
+        "y": 642,
+        "legs": "stand",
+        "armL": "up",
+        "armR": "hold",
+        "eyes": "lookL",
+        "mouth": "o",
+        "bulb": "red",
+        "bulbOff": false,
+        "envelopeProgress": 0,
+        "phase": "delay"
+      },
+      {
+        "slide": 6,
+        "x": 440,
+        "y": 642,
+        "legs": "stand",
+        "armL": "up",
+        "armR": "hold",
+        "eyes": "lookL",
+        "mouth": "o",
+        "bulb": "red",
+        "bulbOff": true,
+        "envelopeProgress": 0,
+        "phase": "delay"
+      },
+      {
+        "slide": 6,
+        "x": 440,
+        "y": 642,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "bulbOff": false,
+        "envelopeProgress": 2.5402631712645154e-05,
+        "phase": "send"
+      },
+      {
+        "slide": 6,
+        "x": 440,
+        "y": 642,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "bulbOff": false,
+        "envelopeProgress": 0.23525377229080915,
+        "phase": "send"
+      },
+      {
+        "slide": 6,
+        "x": 440,
+        "y": 642,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "bulbOff": false,
+        "envelopeProgress": 0.944190418127318,
+        "phase": "send"
+      },
+      {
+        "slide": 6,
+        "x": 440,
+        "y": 642,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "reach",
+        "eyes": "lookR",
+        "mouth": "flat",
+        "bulb": "yellow",
+        "bulbOff": false,
+        "envelopeProgress": 1,
+        "phase": "send"
+      },
+      {
+        "slide": 6,
+        "x": 440,
+        "y": 642,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "down",
+        "eyes": "happy",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "bulbOff": false,
+        "envelopeProgress": 1,
+        "phase": "updated"
+      },
+      {
+        "slide": 6,
+        "x": 440,
+        "y": 642,
+        "legs": "stand",
+        "armL": "down",
+        "armR": "down",
+        "eyes": "happy",
+        "mouth": "smile",
+        "bulb": "aqua",
+        "bulbOff": false,
+        "envelopeProgress": 1,
+        "phase": "updated"
+      }
+    ]
+  }
+]

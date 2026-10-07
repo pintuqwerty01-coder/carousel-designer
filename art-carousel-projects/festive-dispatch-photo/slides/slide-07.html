@@ -871,6 +871,11 @@ window.__timelines = window.__timelines || {};
 const tl = gsap.timeline({ paused: true });
 tl.to(st, { t: 4, duration: 4, ease: "none", onUpdate: render }, 0);
 document.fonts.load('40px Preahvihear');document.fonts.load('600 40px Poppins');
+
+const closingHolder=document.querySelector('.mascot');closingHolder.innerHTML='<canvas id="closing-flat" width="330" height="280" style="width:330px;height:280px;image-rendering:auto"></canvas>';
+const cc=document.getElementById('closing-flat').getContext('2d');
+drawBot(cc,5,25,10,{dark:true,halo:true,eyes:'happy',mouth:'smile',bulb:'aqua',armL:'down',armR:'wave1',flip:false});
+
 render();
 window.__timelines["photo-v2-07"] = tl;
 </script>

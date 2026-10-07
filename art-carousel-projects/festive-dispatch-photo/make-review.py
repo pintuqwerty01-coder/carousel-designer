@@ -14,7 +14,7 @@ with sync_playwright() as w:
    for line in s['copy']:assert norm(line.replace('**','')) in text,(n,line)
    rects=page.evaluate("[...document.querySelectorAll('.photo-h,.photo-pain,.photo-whatif,.photo-result,.reveal-body,.reveal-sign,.summary,.benefits,.summary-end,.cta-body,.cta-dm,.cta-save,.setup-next')].map(e=>({class:e.className,top:e.offsetTop,bottom:e.offsetTop+e.offsetHeight,left:e.offsetLeft,right:e.offsetLeft+e.offsetWidth}))")
    assert all(r['bottom']<=1220 and r['left']>=84 and r['right']<=996 for r in rects),(n,rects)
-  print(f'{n:02}: images loaded; copy and text bounds OK' if n!=1 else '01: exact approved raster cover; image loaded',flush=True)
+  print(f'{n:02}: images loaded; copy and text bounds OK' if n!=1 else '01: original cover lettering preserved; 2D actor over clean photograph',flush=True)
  cards=''.join(f'<figure><img src="stills/slide-{n:02d}.png"><figcaption>{n:02d}/09</figcaption></figure>' for n in range(1,10))
  (p/'review.html').write_text('<!doctype html><meta charset="utf-8"><title>Festive dispatch — static review</title><style>body{margin:0;padding:20px;background:#1A1A1A;font:20px Arial;color:white}main{display:grid;grid-template-columns:repeat(3,540px);gap:18px}figure{margin:0}img{width:540px;height:675px;display:block}figcaption{padding:10px 0} @media print{body{padding:0;background:white}main{display:block}figure{break-after:page}img{width:1080px;height:1350px}figcaption{display:none}@page{size:1080px 1350px;margin:0}}</style><main>'+cards+'</main>')
  page.set_viewport_size({'width':1696,'height':2200});page.goto((p/'review.html').as_uri());page.wait_for_timeout(300)

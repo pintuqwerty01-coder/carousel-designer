@@ -41,3 +41,12 @@ User rejected flat prop overlays because they conflicted with the photographic s
 Audit actual font glyph rendering: headline and accent words use Preahvihear; body varied between Poppins Medium and SemiBold, and the outcome arrow used Liberation Serif. Lock affected body copy to Poppins Medium and draw the arrow as SVG while keeping its source text. Keep Preahvihear headlines as the branding requires. Cover keeps its original approved raster lettering.
 
 Reveal 07 becomes ink, with grey/white copy, aqua ART emphasis, a white process strip and a dark mascot inset. Reconfigure bottom trail for ink contrast. Preserve 08 and 09 exactly; compare both HTML bytes and PNG pixels against their accepted versions.
+
+
+## Revision 6 — user authorises 2D mascot and real character actions
+
+Replace embedded dimensional mascots with the original flat pixel-grid ART bot. Reconstruct clean photographic plates through image editing, preserving realistic warehouse surroundings. Preserve cover lettering using the original raster layer. Keep exact live copy, font roles and shade transitions fixed.
+
+First six scenes: walking parcel handoff; stationary queue sorting; multi-channel inbox capture; walking/lifting shelf replenishment; held magnifier and stamp; delayed-consignment alert followed by an envelope update. Each action changes articulated limbs and facial state. Cover/setup must differ in initial pose and locomotion, verified from rendered states and nine-frame proofs.
+
+The closing layouts remain as accepted, with the mascot skin changed to matching 2D wave/cup/point poses. Do not add motion to 07–09 under the first-six-only animation scope.

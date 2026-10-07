@@ -11,6 +11,7 @@ for n in range(1,7):
  a=Image.open(m/f'proof/{n:02d}-first.png').convert('RGB');b=Image.open(m/f'proof/{n:02d}-last.png').convert('RGB')
  # Encoding can produce tiny quantisation differences; count material changes.
  d=ImageChops.difference(a.crop((84,40,996,440)),b.crop((84,40,996,440))).convert('L');changed=d.point(lambda v:255 if v>40 else 0).histogram()[255]
+ assert changed==0,(n,'Upper text/background region changed',changed)
  stage=ImageChops.difference(a.crop((84,550,996,900)),b.crop((84,550,996,900))).convert('L')
  assert stage.point(lambda v:255 if v>12 else 0).histogram()[255]>100,(n,'Scene did not move')
- print(f'{n:02}: 1080x1350, 30fps, 4s, 120 frames, H264 High/yuv420p; upper-region changes >40 (includes moving background) = {changed}',flush=True)
+ print(f'{n:02}: 1080x1350, 30fps, 4s, 120 frames, H264 High/yuv420p; stationary upper-region changes >40 = {changed}',flush=True)

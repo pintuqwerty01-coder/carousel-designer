@@ -39,3 +39,15 @@ Revision 3: all nine image-loading/copy/text-bound checks pass. Photographic sli
 - Inspected all six camera-frame proofs and the final document frame: original photographic textures and imagery retained. Reveal 07 inspected on ink with white process strip and distinct aqua mascot.
 - Slides 08 and 09: HTML byte-identical and still images pixel-identical to accepted versions.
 - This is photographic camera motion. Embedded mascots are not articulated character video. Exact draft remains a review proof.
+
+
+## Revision 6 verification — real 2D actor animation
+
+- Five clean background plates inspected: dimensional robots and old floating effects removed, warehouse photography reconstructed. Cover uses existing cleaned background, with original lettering retained in a static image layer.
+- All six scenes checked across nine times: right-arm poses and expressions change, actor/prop frames visibly change, no JavaScript errors. Hidden actor/trail comparison confirms every background and text pixel is stationary.
+- Cover/setup initial arm and leg poses differ; cover travels over 200px, setup remains at a fixed workstation and sorts a growing queue. Pose/state evidence is in motion/proof/actor-validation.json.
+- All six nine-frame contact sheets opened and inspected, including both walking-leg and arm-wave phases. Stock carton aligned to the physical shelf; magnifier and stamp connect to the 2D bot's hands; no props cover its face.
+- All nine stills: source copy, image loading and safe text bounds passed. Actual font audit confirms Preahvihear headlines/accents and Poppins Medium on affected body copy; cover preserves raster lettering.
+- All six final MP4s: 1080×1350, four seconds, 30fps, 120 frames, H.264 High/yuv420p, faststart. Metadata passed. Encoded upper region comparison at 0.1s and 3.9s: zero changed pixels above the >40 threshold on every slide. Scene differences confirm visible action.
+- Chromium decoded and played all six videos without media errors. First-two GIF has 48 frames, four seconds, 1080×675, loops; Chromium screenshot comparison confirms that it actually animates.
+- Closing 07–09 retain their layout/text/palette; mascot is now flat 2D wave/cup/point. Closing pages remain static. Source draft and publication status unchanged.
