@@ -20,3 +20,6 @@ Slide 2: all four topic cards now use one aqua accent. Slide 9: rebuilt illustra
 
 
 Latest revision: HERE'S WHERE uses a right arrow. Slide 9 replaces the dated calendar with a date-free preparation milestone card, completion check and finish flag. Fonts, point boxes and the full nine-page export checked.
+
+
+Latest copy revision: retained FESTIVE SEASON in the cover headline only; replaced repeated seasonal wording elsewhere. Full revised script is in revised-copy.md. Cover text now has a stronger full-width black gradient fading into the photograph. All text, fonts, card padding and nine PDF pages validated.

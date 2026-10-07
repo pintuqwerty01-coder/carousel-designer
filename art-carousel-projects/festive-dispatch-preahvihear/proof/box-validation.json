@@ -51,7 +51,7 @@
             "height": 50
           }
         ],
-        "text": "HERE'S WHERE\n\u2193",
+        "text": "HERE'S WHERE\n\u2192",
         "iconRects": [
           {
             "left": 934,
@@ -268,20 +268,20 @@
         },
         "textRects": [
           {
-            "left": 669.125,
+            "left": 714.71875,
             "top": 1128.796875,
-            "right": 905.875,
+            "right": 860.265625,
             "bottom": 1171.796875,
-            "width": 236.75,
+            "width": 145.546875,
             "height": 43
           }
         ],
-        "text": "\u2713\nNo festive sale lost",
+        "text": "\u2713\nNo sale lost",
         "iconRects": [
           {
-            "left": 634.125,
+            "left": 679.71875,
             "top": 1139,
-            "right": 658.125,
+            "right": 703.71875,
             "bottom": 1163,
             "width": 24,
             "height": 24
@@ -790,13 +790,13 @@
           {
             "left": 114,
             "top": 1001,
-            "right": 517.859375,
+            "right": 333.046875,
             "bottom": 1056,
-            "width": 403.859375,
+            "width": 219.046875,
             "height": 55
           }
         ],
-        "text": "DM us to see how ART could fit\nyour business this season.",
+        "text": "DM us to see how ART could fit\nyour business.",
         "iconRects": []
       },
       {
