@@ -17,3 +17,7 @@ Status: static review. User requested rest of carousel in the attached dimension
 Art: generated photographic interpretations, not licensed stock. Full-bleed neutral warehouse backgrounds, restrained festive details, aqua panels, white result panels, teal-green completion checks. Mascot matches the user's dimensional pixel-block reference. That user-approved direction supersedes the prior flat sprite/set style. Fonts remain Preahvihear/Poppins; exact draft copy is typeset separately. No invented metrics or actual product UI.
 
 After static approval, produce cover plus one task motion proof that matches these approved compositions, then await approval before rendering the remaining motions, following the ART Markdown workflow.
+
+## Revision 2 — user feedback
+
+Remove white fading text overlays. Setup/task slides use solid ink header/footer bands and clear photographic scenes. Closing pages now separate brand reveal (aqua orchestration rail), benefit recap (white page, four ink benefit cards) and contact action (ink page, oversized message symbol). Dimensional mascot has celebration, relaxed cup/thumbs-up and pointing poses respectively. Exact script retained; static approval required before new motion.

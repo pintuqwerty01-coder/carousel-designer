@@ -57,8 +57,8 @@ canvas { image-rendering: pixelated; }
 .photo{position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover}.handle,.count,#trail{display:none}
 </style></head>
 <body>
-<div id="root" data-composition-id="photo-01" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30">
-  <div id="s" class="clip slide light" data-start="0" data-duration="4">
+<div id="root" data-composition-id="photo-v2-01" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30">
+  <div id="s" class="clip slide dark" data-start="0" data-duration="4">
 <img class="photo" src="assets/approved-cover.png">
     <div class="handle">@arealtimetech</div>
     <div class="count">01/09</div>
@@ -840,6 +840,6 @@ const tl = gsap.timeline({ paused: true });
 tl.to(st, { t: 4, duration: 4, ease: "none", onUpdate: render }, 0);
 document.fonts.load('40px Preahvihear');document.fonts.load('600 40px Poppins');
 render();
-window.__timelines["photo-01"] = tl;
+window.__timelines["photo-v2-01"] = tl;
 </script>
 </body></html>

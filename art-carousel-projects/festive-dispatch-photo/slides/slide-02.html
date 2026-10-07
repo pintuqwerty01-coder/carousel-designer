@@ -56,20 +56,22 @@ canvas { image-rendering: pixelated; }
 
 
 .photo{position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover}
-.wash{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.96) 28%,rgba(255,255,255,.82) 34%,rgba(255,255,255,0) 43%,transparent 67%,rgba(0,0,0,.25) 92%,rgba(0,0,0,.45) 100%)}
-.kicker{position:absolute;left:84px;top:58px;border-radius:999px;padding:12px 22px;background:#1A1A1A;color:white;font:500 23px/1 Poppins}.kicker b{color:#04ADC3;padding-right:12px}
-.photo-h{position:absolute;left:84px;right:84px;top:116px;font-size:62px;line-height:1.12;color:#1A1A1A}.photo-h em{color:#04ADC3;font-style:normal}
-.photo-pain{position:absolute;left:84px;right:84px;top:345px;font:500 27px/1.36 Poppins;color:#1A1A1A}
-.photo-whatif{position:absolute;left:84px;right:84px;top:948px;background:#04ADC3;border-radius:30px;padding:19px 25px;font:600 27px/1.35 Poppins;color:#1A1A1A}
+.header{position:absolute;left:0;top:0;width:1080px;height:420px;background:#1A1A1A;border-bottom:3px solid #04ADC3}
+.footer{position:absolute;left:0;top:1108px;bottom:0;width:1080px;background:#1A1A1A}
+.kicker{position:absolute;left:84px;top:48px;border-radius:999px;padding:12px 22px;background:white;color:#1A1A1A;font:500 23px/1 Poppins}.kicker b{color:#04ADC3;padding-right:12px}
+.photo-h{position:absolute;left:84px;right:84px;top:106px;font-size:62px;line-height:1.12;color:white}.photo-h em{color:#04ADC3;font-style:normal}
+.photo-pain{position:absolute;left:84px;right:84px;top:274px;font:500 27px/1.36 Poppins;color:#DEDEDE}
+.photo-whatif{display:block;z-index:10;position:absolute;left:84px;right:84px;top:948px;background:#04ADC3;border-radius:30px;padding:19px 25px;font:600 27px/1.35 Poppins;color:#1A1A1A}
 .photo-result{position:absolute;left:84px;right:84px;top:1130px;min-height:62px;border-radius:999px;background:white;padding:15px 23px;font:600 25px/1.35 Poppins;color:#1A1A1A;display:flex;gap:14px;align-items:center}
 .photo-result .check{flex:none;width:34px;height:34px;background:#2B907F;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.handle,.count{color:white!important;text-shadow:0 1px 4px #000}
- .slide.light{background:#1A1A1A} .photo-h{top:108px;font-size:68px}.photo-pain{top:392px;font-size:30px;line-height:1.4}.setup-next{position:absolute;left:84px;top:1100px;border-radius:999px;background:#04ADC3;color:#1A1A1A;padding:18px 28px;font:600 32px/1.2 Poppins}.wash{background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.94) 43%,transparent 56%,transparent 79%,rgba(0,0,0,.4))}
+.handle,.count{color:white!important;text-shadow:none}
+.mascot{position:absolute;overflow:hidden}.mascot img{position:absolute;max-width:none}
+ .header{height:450px}.photo-h{top:80px;font-size:68px}.photo-pain{top:284px;font-size:30px;line-height:1.4}.setup-next{position:absolute;left:84px;top:1000px;border-radius:999px;background:#04ADC3;color:#1A1A1A;padding:18px 28px;font:600 32px/1.2 Poppins}
 </style></head>
 <body>
-<div id="root" data-composition-id="photo-02" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30">
-  <div id="s" class="clip slide light" data-start="0" data-duration="4">
-<img class="photo" src="assets/art-02.png"><div class="wash"></div><div class="h-display photo-h">More orders. Same team. Same system?</div><div class="photo-pain">In the weeks before Diwali, cashew, sweets and gifting orders pile up fast. What works on a normal day starts to crack, and it usually cracks in the same four places.</div><div class="setup-next">Here&#x27;s where 👇</div>
+<div id="root" data-composition-id="photo-v2-02" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30">
+  <div id="s" class="clip slide dark" data-start="0" data-duration="4">
+<img class="photo" src="assets/art-02.png"><div class="header"></div><div class="footer"></div><div class="h-display photo-h">More orders. Same team. Same system?</div><div class="photo-pain">In the weeks before Diwali, cashew, sweets and gifting orders pile up fast. What works on a normal day starts to crack, and it usually cracks in the same four places.</div><div class="setup-next">Here&#x27;s where 👇</div>
     <div class="handle">@arealtimetech</div>
     <div class="count">02/09</div>
     <canvas id="trail" width="1080" height="80"></canvas>
@@ -850,6 +852,6 @@ const tl = gsap.timeline({ paused: true });
 tl.to(st, { t: 4, duration: 4, ease: "none", onUpdate: render }, 0);
 document.fonts.load('40px Preahvihear');document.fonts.load('600 40px Poppins');
 render();
-window.__timelines["photo-02"] = tl;
+window.__timelines["photo-v2-02"] = tl;
 </script>
 </body></html>

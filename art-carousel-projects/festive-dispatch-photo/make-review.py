@@ -12,7 +12,7 @@ with sync_playwright() as w:
   if n!=1:
    text=norm(page.locator('body').inner_text())
    for line in s['copy']:assert norm(line.replace('**','')) in text,(n,line)
-   rects=page.evaluate("[...document.querySelectorAll('.photo-h,.photo-pain,.photo-whatif,.photo-result,.reveal-body,.reveal-sign,.summary,.summary-end,.cta-body,.cta-dm,.cta-save,.setup-next')].map(e=>({class:e.className,top:e.offsetTop,bottom:e.offsetTop+e.offsetHeight,left:e.offsetLeft,right:e.offsetLeft+e.offsetWidth}))")
+   rects=page.evaluate("[...document.querySelectorAll('.photo-h,.photo-pain,.photo-whatif,.photo-result,.reveal-body,.reveal-sign,.summary,.benefits,.summary-end,.cta-body,.cta-dm,.cta-save,.setup-next')].map(e=>({class:e.className,top:e.offsetTop,bottom:e.offsetTop+e.offsetHeight,left:e.offsetLeft,right:e.offsetLeft+e.offsetWidth}))")
    assert all(r['bottom']<=1220 and r['left']>=84 and r['right']<=996 for r in rects),(n,rects)
   print(f'{n:02}: images loaded; copy and text bounds OK' if n!=1 else '01: exact approved raster cover; image loaded',flush=True)
  cards=''.join(f'<figure><img src="stills/slide-{n:02d}.png"><figcaption>{n:02d}/09</figcaption></figure>' for n in range(1,10))

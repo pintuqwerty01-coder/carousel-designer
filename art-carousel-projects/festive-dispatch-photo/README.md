@@ -1,11 +1,15 @@
-# Festive dispatch — photo-based static redesign
+# Festive dispatch — static redesign v2
 
-Nine static slides for design review: approved cover plus slides 02–09 rebuilt in the user's full-bleed photographic reference style. Exact draft copy retained. All eight new slides use a dimensional aqua pixel-block mascot with distinct task actions, rather than the earlier flat library sprite.
+Nine static slides for review. Exact approved cover remains. Slides 02–06 now use crisp solid ink text panels over unobscured warehouse artwork: the white fading overlay is removed.
 
-Review files: `static-review.pdf` (nine pages), `proof/all-slides.png` (overview), `stills/slide-01.png` through `slide-09.png` (individual full-resolution proofs), `review.html` (local gallery). `artwork/` holds generated scene plates; `slides/` holds editable typography layouts and fonts. The imagery is generated, not licensed stock.
+The closing sequence has three distinct visual roles and page colours:
 
-Cover static is the exact approved artwork. Earlier motion proof `festive-dispatch-realistic/first-motion-proof.mp4` is superseded because it changed the mascot and typography. The revised cover motion uses isolated dimensional mascot artwork with fixed approved text. Rest of this redesign remains static pending design approval; no remaining slide motion is claimed complete.
+- 07 — aqua brand reveal: a connected rail of order, stock, document and customer-update icons shows the automation layer linking existing processes. Mascot celebrates. Original ART logo is intact on its ink patch.
+- 08 — white benefit summary: four ink cards turn the four claims into a scannable recap; relaxed mascot holds a cup and gives a thumbs-up.
+- 09 — ink CTA: a large message symbol and pointing mascot focus attention on the exact DM invitation; bookmark reinforces the save line. No new claims or metrics.
 
-Rebuild static layouts with `build-statics.py`, capture through `capture-statics.py` via the kit's `run-system-browser.py`, then `make-review.py` for copy/image checks and the review PDF/overview. Scripts use `/workspace/art-carousel-kit` and `/workspace/art-carousel-venv`.
+Fonts, brand palette, mascot identity and exact source draft copy retained. The imagery is generated, not licensed stock. New mascot assets are transparent layers suitable for later scene animation.
 
-All newly typeset slides use Preahvihear/Poppins and aqua #04ADC3. Cover retains the already approved image typography. Source draft status continues. No fictitious dashboard metrics. See `design-plan.md` for task actions and the later motion approval sequence.
+Review files: `static-review.pdf`, `proof/all-slides.png`, `stills/slide-01.png` through `slide-09.png`, and local gallery `review.html`. Earlier layouts remain in Git history. These revised layouts have not been animated; review approval comes first, as requested. `corrected-cover.mp4` is the previously checked cover motion, unchanged by this revision.
+
+Rebuild: `build-statics.py`; capture via `capture-statics.py` through the kit browser adapter; `make-review.py` checks exact copy, image loading and text bounds, then creates PDF and overview. Source assets are in `artwork/`, layouts in `slides/`. Cloud scripts resolve `/workspace/art-carousel-kit` and `/workspace/art-carousel-venv`.

@@ -56,20 +56,22 @@ canvas { image-rendering: pixelated; }
 
 
 .photo{position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover}
-.wash{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.96) 28%,rgba(255,255,255,.82) 34%,rgba(255,255,255,0) 43%,transparent 67%,rgba(0,0,0,.25) 92%,rgba(0,0,0,.45) 100%)}
-.kicker{position:absolute;left:84px;top:58px;border-radius:999px;padding:12px 22px;background:#1A1A1A;color:white;font:500 23px/1 Poppins}.kicker b{color:#04ADC3;padding-right:12px}
-.photo-h{position:absolute;left:84px;right:84px;top:116px;font-size:62px;line-height:1.12;color:#1A1A1A}.photo-h em{color:#04ADC3;font-style:normal}
-.photo-pain{position:absolute;left:84px;right:84px;top:345px;font:500 27px/1.36 Poppins;color:#1A1A1A}
-.photo-whatif{position:absolute;left:84px;right:84px;top:948px;background:#04ADC3;border-radius:30px;padding:19px 25px;font:600 27px/1.35 Poppins;color:#1A1A1A}
+.header{position:absolute;left:0;top:0;width:1080px;height:420px;background:#1A1A1A;border-bottom:3px solid #04ADC3}
+.footer{position:absolute;left:0;top:1108px;bottom:0;width:1080px;background:#1A1A1A}
+.kicker{position:absolute;left:84px;top:48px;border-radius:999px;padding:12px 22px;background:white;color:#1A1A1A;font:500 23px/1 Poppins}.kicker b{color:#04ADC3;padding-right:12px}
+.photo-h{position:absolute;left:84px;right:84px;top:106px;font-size:62px;line-height:1.12;color:white}.photo-h em{color:#04ADC3;font-style:normal}
+.photo-pain{position:absolute;left:84px;right:84px;top:274px;font:500 27px/1.36 Poppins;color:#DEDEDE}
+.photo-whatif{display:block;z-index:10;position:absolute;left:84px;right:84px;top:948px;background:#04ADC3;border-radius:30px;padding:19px 25px;font:600 27px/1.35 Poppins;color:#1A1A1A}
 .photo-result{position:absolute;left:84px;right:84px;top:1130px;min-height:62px;border-radius:999px;background:white;padding:15px 23px;font:600 25px/1.35 Poppins;color:#1A1A1A;display:flex;gap:14px;align-items:center}
 .photo-result .check{flex:none;width:34px;height:34px;background:#2B907F;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.handle,.count{color:white!important;text-shadow:0 1px 4px #000}
- .slide.light{background:#1A1A1A} .photo-h{top:100px;font-size:76px}.cta-body{position:absolute;left:84px;right:84px;top:358px;font:500 34px/1.4 Poppins;color:#1A1A1A}.cta-dm{position:absolute;left:84px;right:84px;top:1000px;background:#04ADC3;border-radius:28px;padding:24px;font:600 32px/1.3 Poppins;color:#1A1A1A}.cta-save{position:absolute;left:84px;right:84px;top:1145px;font:500 27px/1.35 Poppins;color:white}
+.handle,.count{color:white!important;text-shadow:none}
+.mascot{position:absolute;overflow:hidden}.mascot img{position:absolute;max-width:none}
+ .photo-h{top:84px;font-size:76px}.cta-body{position:absolute;left:84px;right:84px;top:310px;font:500 34px/1.4 Poppins;color:#DEDEDE}.message{position:absolute;left:112px;top:470px;width:510px;height:400px;transform:rotate(-4deg)}.message svg{width:100%;height:100%}.cta-dm{position:absolute;left:84px;right:84px;top:990px;background:#04ADC3;border-radius:28px;padding:24px;font:600 32px/1.3 Poppins;color:#1A1A1A}.cta-save{position:absolute;left:132px;right:84px;top:1140px;font:500 27px/1.35 Poppins;color:white}.save-icon{position:absolute;left:84px;top:1142px;width:30px;height:40px;background:#04ADC3;clip-path:polygon(0 0,100% 0,100% 100%,50% 76%,0 100%)}
 </style></head>
 <body>
-<div id="root" data-composition-id="photo-09" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30">
-  <div id="s" class="clip slide light" data-start="0" data-duration="4">
-<img class="photo" src="assets/art-09.png"><div class="wash"></div><div class="h-display photo-h">Diwali is only weeks away.</div><div class="cta-body">The best time to fix the rush is before it starts.</div><div class="cta-dm">DM us to see how ART could fit your business this season.</div><div class="col cta-save">Save this and share it with whoever runs your dispatch.</div>
+<div id="root" data-composition-id="photo-v2-09" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30">
+  <div id="s" class="clip slide dark" data-start="0" data-duration="4">
+<div class="h-display photo-h"><em>Diwali</em> is only weeks away.</div><div class="cta-body">The best time to fix the rush is before it starts.</div><div class="message"><svg viewBox="0 0 510 400"><path d="M45 10h420a30 30 0 0130 30v275a30 30 0 01-30 30H167l-76 45v-45H45a30 30 0 01-30-30V40a30 30 0 0130-30z" fill="#04ADC3"/><rect x="106" y="87" width="300" height="191" rx="19" fill="white"/><path d="M112 98l144 112 144-112" fill="none" stroke="#1A1A1A" stroke-width="12" stroke-linejoin="round"/></svg></div><div class="mascot" style="left:650px;top:675px;width:330px;height:280px"><img src="assets/cta-mascot.png" style="width:295.55555555555554px;height:295.55555555555554px;left:24.764309764309765px;top:-6.363636363636364px"></div><div class="cta-dm">DM us to see how ART could fit your business this season.</div><div class="save-icon"></div><div class="col cta-save">Save this and share it with whoever runs your dispatch.</div>
     <div class="handle">@arealtimetech</div>
     <div class="count">09/09</div>
     <canvas id="trail" width="1080" height="80"></canvas>
@@ -850,6 +852,6 @@ const tl = gsap.timeline({ paused: true });
 tl.to(st, { t: 4, duration: 4, ease: "none", onUpdate: render }, 0);
 document.fonts.load('40px Preahvihear');document.fonts.load('600 40px Poppins');
 render();
-window.__timelines["photo-09"] = tl;
+window.__timelines["photo-v2-09"] = tl;
 </script>
 </body></html>
