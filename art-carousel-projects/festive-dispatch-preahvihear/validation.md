@@ -7,3 +7,5 @@
 - Actual rendered glyphs use embedded Preahvihear throughout, with symbols drawn as vectors.
 - Copy and actual rendered text bounds/separation checks passed on all nine slides.
 - PDF has nine pages in order; every exported page decoded and visually reviewed.
+
+- Additional box/point audit: all nine slides passed text clearance, SVG containment, text-block/mascot separation and expected point counts. Source copy and all nine PNGs are unchanged from the previous delivery.

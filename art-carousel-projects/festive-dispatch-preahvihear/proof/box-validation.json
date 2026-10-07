@@ -1,0 +1,753 @@
+[
+  {
+    "slide": 1,
+    "boxes": [
+      {
+        "class": "cover-cta",
+        "box": {
+          "left": 84,
+          "top": 1100,
+          "right": 996,
+          "bottom": 1188.5,
+          "width": 912,
+          "height": 88.5
+        },
+        "textRects": [
+          {
+            "left": 112,
+            "top": 1116,
+            "right": 790.828125,
+            "bottom": 1171,
+            "width": 678.828125,
+            "height": 55
+          }
+        ],
+        "text": "Swipe to see where the rush usually breaks.",
+        "iconRects": []
+      }
+    ],
+    "status": "passed"
+  },
+  {
+    "slide": 2,
+    "boxes": [
+      {
+        "class": "setup-next",
+        "box": {
+          "left": 672.3125,
+          "top": 997,
+          "right": 996,
+          "bottom": 1071,
+          "width": 323.6875,
+          "height": 74
+        },
+        "textRects": [
+          {
+            "left": 700.3125,
+            "top": 1008.203125,
+            "right": 920,
+            "bottom": 1058.203125,
+            "width": 219.6875,
+            "height": 50
+          }
+        ],
+        "text": "HERE'S WHERE\n\u2193",
+        "iconRects": [
+          {
+            "left": 934,
+            "top": 1017,
+            "right": 968,
+            "bottom": 1051,
+            "width": 34,
+            "height": 34
+          }
+        ]
+      },
+      {
+        "class": "setup-topics",
+        "box": {
+          "left": 84,
+          "top": 1103,
+          "right": 996,
+          "bottom": 1186.6875,
+          "width": 912,
+          "height": 83.6875
+        },
+        "textRects": [
+          {
+            "left": 109,
+            "top": 1121,
+            "right": 119.203125,
+            "bottom": 1168,
+            "width": 10.203125,
+            "height": 47
+          },
+          {
+            "left": 119.203125,
+            "top": 1121,
+            "right": 224.734375,
+            "bottom": 1168,
+            "width": 105.53125,
+            "height": 47
+          },
+          {
+            "left": 336.015625,
+            "top": 1121,
+            "right": 351.46875,
+            "bottom": 1168,
+            "width": 15.453125,
+            "height": 47
+          },
+          {
+            "left": 351.46875,
+            "top": 1121,
+            "right": 435.171875,
+            "bottom": 1168,
+            "width": 83.703125,
+            "height": 47
+          },
+          {
+            "left": 546.453125,
+            "top": 1121,
+            "right": 562.3125,
+            "bottom": 1168,
+            "width": 15.859375,
+            "height": 47
+          },
+          {
+            "left": 562.3125,
+            "top": 1121,
+            "right": 716.265625,
+            "bottom": 1168,
+            "width": 153.953125,
+            "height": 47
+          },
+          {
+            "left": 827.546875,
+            "top": 1121,
+            "right": 843.359375,
+            "bottom": 1168,
+            "width": 15.8125,
+            "height": 47
+          },
+          {
+            "left": 843.359375,
+            "top": 1121,
+            "right": 971,
+            "bottom": 1168,
+            "width": 127.640625,
+            "height": 47
+          }
+        ],
+        "text": "1 Orders\n\u00b7\n2 Stock\n\u00b7\n3 Paperwork\n\u00b7\n4 Dispatch",
+        "iconRects": [
+          {
+            "left": 278.375,
+            "top": 1142.84375,
+            "right": 282.375,
+            "bottom": 1146.84375,
+            "width": 4,
+            "height": 4
+          },
+          {
+            "left": 488.8125,
+            "top": 1142.84375,
+            "right": 492.8125,
+            "bottom": 1146.84375,
+            "width": 4,
+            "height": 4
+          },
+          {
+            "left": 769.90625,
+            "top": 1142.84375,
+            "right": 773.90625,
+            "bottom": 1146.84375,
+            "width": 4,
+            "height": 4
+          }
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  {
+    "slide": 3,
+    "boxes": [
+      {
+        "class": "photo-whatif",
+        "box": {
+          "left": 84,
+          "top": 955.71875,
+          "right": 996,
+          "bottom": 1082,
+          "width": 912,
+          "height": 126.28125
+        },
+        "textRects": [
+          {
+            "left": 110,
+            "top": 972.71875,
+            "right": 716.484375,
+            "bottom": 1024.71875,
+            "width": 606.484375,
+            "height": 52
+          },
+          {
+            "left": 110,
+            "top": 1011.859375,
+            "right": 413,
+            "bottom": 1063.859375,
+            "width": 303,
+            "height": 52
+          }
+        ],
+        "text": "What if every order, from every channel,\nlanded in one place?",
+        "iconRects": []
+      },
+      {
+        "class": "photo-result",
+        "box": {
+          "left": 84,
+          "top": 1110,
+          "right": 996,
+          "bottom": 1184,
+          "width": 912,
+          "height": 74
+        },
+        "textRects": [
+          {
+            "left": 137,
+            "top": 1122,
+            "right": 374.984375,
+            "bottom": 1169,
+            "width": 237.984375,
+            "height": 47
+          },
+          {
+            "left": 434.875,
+            "top": 1122,
+            "right": 700.234375,
+            "bottom": 1169,
+            "width": 265.359375,
+            "height": 47
+          }
+        ],
+        "text": "\u2713\n No order missed \n\u00b7\n \n\u2713\n No festive sale lost",
+        "iconRects": [
+          {
+            "left": 108,
+            "top": 1136.03125,
+            "right": 130,
+            "bottom": 1158.03125,
+            "width": 22,
+            "height": 22
+          },
+          {
+            "left": 383.984375,
+            "top": 1145.03125,
+            "right": 387.984375,
+            "bottom": 1149.03125,
+            "width": 4,
+            "height": 4
+          },
+          {
+            "left": 405.875,
+            "top": 1136.03125,
+            "right": 427.875,
+            "bottom": 1158.03125,
+            "width": 22,
+            "height": 22
+          }
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  {
+    "slide": 4,
+    "boxes": [
+      {
+        "class": "photo-whatif",
+        "box": {
+          "left": 84,
+          "top": 955.71875,
+          "right": 996,
+          "bottom": 1082,
+          "width": 912,
+          "height": 126.28125
+        },
+        "textRects": [
+          {
+            "left": 110,
+            "top": 972.71875,
+            "right": 830.640625,
+            "bottom": 1024.71875,
+            "width": 720.640625,
+            "height": 52
+          },
+          {
+            "left": 110,
+            "top": 1011.859375,
+            "right": 418.421875,
+            "bottom": 1063.859375,
+            "width": 308.421875,
+            "height": 52
+          }
+        ],
+        "text": "How about a reorder drafted before it runs low,\nwaiting for your OK?",
+        "iconRects": []
+      },
+      {
+        "class": "photo-result",
+        "box": {
+          "left": 84,
+          "top": 1110,
+          "right": 996,
+          "bottom": 1184,
+          "width": 912,
+          "height": 74
+        },
+        "textRects": [
+          {
+            "left": 137,
+            "top": 1122,
+            "right": 423.234375,
+            "bottom": 1169,
+            "width": 286.234375,
+            "height": 47
+          },
+          {
+            "left": 483.125,
+            "top": 1122,
+            "right": 780.53125,
+            "bottom": 1169,
+            "width": 297.40625,
+            "height": 47
+          }
+        ],
+        "text": "\u2713\n Stock that keeps up \n\u00b7\n \n\u2713\n No sales turned away",
+        "iconRects": [
+          {
+            "left": 108,
+            "top": 1136.03125,
+            "right": 130,
+            "bottom": 1158.03125,
+            "width": 22,
+            "height": 22
+          },
+          {
+            "left": 432.234375,
+            "top": 1145.03125,
+            "right": 436.234375,
+            "bottom": 1149.03125,
+            "width": 4,
+            "height": 4
+          },
+          {
+            "left": 454.125,
+            "top": 1136.03125,
+            "right": 476.125,
+            "bottom": 1158.03125,
+            "width": 22,
+            "height": 22
+          }
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  {
+    "slide": 5,
+    "boxes": [
+      {
+        "class": "photo-whatif",
+        "box": {
+          "left": 84,
+          "top": 955.71875,
+          "right": 996,
+          "bottom": 1082,
+          "width": 912,
+          "height": 126.28125
+        },
+        "textRects": [
+          {
+            "left": 110,
+            "top": 972.71875,
+            "right": 783.34375,
+            "bottom": 1024.71875,
+            "width": 673.34375,
+            "height": 52
+          },
+          {
+            "left": 110,
+            "top": 1011.859375,
+            "right": 601.125,
+            "bottom": 1063.859375,
+            "width": 491.125,
+            "height": 52
+          }
+        ],
+        "text": "What if every document was checked against\nthe order before the goods left?",
+        "iconRects": []
+      },
+      {
+        "class": "photo-result",
+        "box": {
+          "left": 84,
+          "top": 1110,
+          "right": 996,
+          "bottom": 1184,
+          "width": 912,
+          "height": 74
+        },
+        "textRects": [
+          {
+            "left": 137,
+            "top": 1122,
+            "right": 331.390625,
+            "bottom": 1169,
+            "width": 194.390625,
+            "height": 47
+          },
+          {
+            "left": 391.28125,
+            "top": 1122,
+            "right": 664.8125,
+            "bottom": 1169,
+            "width": 273.53125,
+            "height": 47
+          }
+        ],
+        "text": "\u2713\n Fewer errors \n\u00b7\n \n\u2713\n Goods leave on time",
+        "iconRects": [
+          {
+            "left": 108,
+            "top": 1136.03125,
+            "right": 130,
+            "bottom": 1158.03125,
+            "width": 22,
+            "height": 22
+          },
+          {
+            "left": 340.390625,
+            "top": 1145.03125,
+            "right": 344.390625,
+            "bottom": 1149.03125,
+            "width": 4,
+            "height": 4
+          },
+          {
+            "left": 362.28125,
+            "top": 1136.03125,
+            "right": 384.28125,
+            "bottom": 1158.03125,
+            "width": 22,
+            "height": 22
+          }
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  {
+    "slide": 6,
+    "boxes": [
+      {
+        "class": "photo-whatif",
+        "box": {
+          "left": 84,
+          "top": 955.71875,
+          "right": 996,
+          "bottom": 1082,
+          "width": 912,
+          "height": 126.28125
+        },
+        "textRects": [
+          {
+            "left": 110,
+            "top": 972.71875,
+            "right": 834.8125,
+            "bottom": 1024.71875,
+            "width": 724.8125,
+            "height": 52
+          },
+          {
+            "left": 110,
+            "top": 1011.859375,
+            "right": 716.90625,
+            "bottom": 1063.859375,
+            "width": 606.90625,
+            "height": 52
+          }
+        ],
+        "text": "Imagine delays flagged the moment they happen,\nand customers updated before they ask.",
+        "iconRects": []
+      },
+      {
+        "class": "photo-result",
+        "box": {
+          "left": 84,
+          "top": 1110,
+          "right": 996,
+          "bottom": 1184,
+          "width": 912,
+          "height": 74
+        },
+        "textRects": [
+          {
+            "left": 137,
+            "top": 1122,
+            "right": 304.515625,
+            "bottom": 1169,
+            "width": 167.515625,
+            "height": 47
+          },
+          {
+            "left": 364.40625,
+            "top": 1122,
+            "right": 725.734375,
+            "bottom": 1169,
+            "width": 361.328125,
+            "height": 47
+          }
+        ],
+        "text": "\u2713\n Fewer calls \n\u00b7\n \n\u2713\n Customers who come back",
+        "iconRects": [
+          {
+            "left": 108,
+            "top": 1136.03125,
+            "right": 130,
+            "bottom": 1158.03125,
+            "width": 22,
+            "height": 22
+          },
+          {
+            "left": 313.515625,
+            "top": 1145.03125,
+            "right": 317.515625,
+            "bottom": 1149.03125,
+            "width": 4,
+            "height": 4
+          },
+          {
+            "left": 335.40625,
+            "top": 1136.03125,
+            "right": 357.40625,
+            "bottom": 1158.03125,
+            "width": 22,
+            "height": 22
+          }
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  {
+    "slide": 7,
+    "boxes": [],
+    "status": "passed"
+  },
+  {
+    "slide": 8,
+    "boxes": [
+      {
+        "class": "benefit",
+        "box": {
+          "left": 84,
+          "top": 380,
+          "right": 996,
+          "bottom": 498,
+          "width": 912,
+          "height": 118
+        },
+        "textRects": [
+          {
+            "left": 265,
+            "top": 408,
+            "right": 614.203125,
+            "bottom": 463,
+            "width": 349.203125,
+            "height": 55
+          }
+        ],
+        "text": "\u2713\n Every order captured",
+        "iconRects": [
+          {
+            "left": 110,
+            "top": 400,
+            "right": 196,
+            "bottom": 486,
+            "width": 86,
+            "height": 86
+          },
+          {
+            "left": 238,
+            "top": 425.953125,
+            "right": 260,
+            "bottom": 447.953125,
+            "width": 22,
+            "height": 22
+          }
+        ]
+      },
+      {
+        "class": "benefit",
+        "box": {
+          "left": 84,
+          "top": 516,
+          "right": 996,
+          "bottom": 642,
+          "width": 912,
+          "height": 126
+        },
+        "textRects": [
+          {
+            "left": 265,
+            "top": 549,
+            "right": 585.015625,
+            "bottom": 604,
+            "width": 320.015625,
+            "height": 55
+          }
+        ],
+        "text": "\u2713\n Stock that keeps up",
+        "iconRects": [
+          {
+            "left": 110,
+            "top": 536,
+            "right": 196,
+            "bottom": 622,
+            "width": 86,
+            "height": 86
+          },
+          {
+            "left": 238,
+            "top": 566.953125,
+            "right": 260,
+            "bottom": 588.953125,
+            "width": 22,
+            "height": 22
+          }
+        ]
+      },
+      {
+        "class": "benefit",
+        "box": {
+          "left": 84,
+          "top": 662,
+          "right": 996,
+          "bottom": 780,
+          "width": 912,
+          "height": 118
+        },
+        "textRects": [
+          {
+            "left": 265,
+            "top": 690,
+            "right": 744.765625,
+            "bottom": 745,
+            "width": 479.765625,
+            "height": 55
+          }
+        ],
+        "text": "\u2713\n Paperwork right the first time",
+        "iconRects": [
+          {
+            "left": 110,
+            "top": 682,
+            "right": 196,
+            "bottom": 768,
+            "width": 86,
+            "height": 86
+          },
+          {
+            "left": 238,
+            "top": 707.953125,
+            "right": 260,
+            "bottom": 729.953125,
+            "width": 22,
+            "height": 22
+          }
+        ]
+      },
+      {
+        "class": "benefit",
+        "box": {
+          "left": 84,
+          "top": 798,
+          "right": 996,
+          "bottom": 924,
+          "width": 912,
+          "height": 126
+        },
+        "textRects": [
+          {
+            "left": 265,
+            "top": 831,
+            "right": 689.828125,
+            "bottom": 886,
+            "width": 424.828125,
+            "height": 55
+          }
+        ],
+        "text": "\u2713\n Customers kept in the loop",
+        "iconRects": [
+          {
+            "left": 110,
+            "top": 818,
+            "right": 196,
+            "bottom": 904,
+            "width": 86,
+            "height": 86
+          },
+          {
+            "left": 238,
+            "top": 848.953125,
+            "right": 260,
+            "bottom": 870.953125,
+            "width": 22,
+            "height": 22
+          }
+        ]
+      }
+    ],
+    "status": "passed"
+  },
+  {
+    "slide": 9,
+    "boxes": [
+      {
+        "class": "cta-dm",
+        "box": {
+          "left": 84,
+          "top": 942,
+          "right": 996,
+          "bottom": 1074,
+          "width": 912,
+          "height": 132
+        },
+        "textRects": [
+          {
+            "left": 114,
+            "top": 959,
+            "right": 595.984375,
+            "bottom": 1014,
+            "width": 481.984375,
+            "height": 55
+          },
+          {
+            "left": 114,
+            "top": 1001,
+            "right": 517.859375,
+            "bottom": 1056,
+            "width": 403.859375,
+            "height": 55
+          }
+        ],
+        "text": "DM us to see how ART could fit\nyour business this season.",
+        "iconRects": []
+      }
+    ],
+    "status": "passed"
+  }
+]
