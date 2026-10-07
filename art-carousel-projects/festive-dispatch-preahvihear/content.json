@@ -1,5 +1,5 @@
 {
-  "status": "COPY UPDATED — user supplied script; design proof for review",
+  "status": "LATEST USER SCRIPT — updated static design review",
   "handle": "@arealtimetech",
   "typography": "Preahvihear throughout",
   "slides": [
@@ -19,11 +19,7 @@
         "Cashew, sweets and gifting orders pile up before the festive season, and the rush tends to crack in four places.",
         "HERE'S WHERE ↓",
         "1 Orders · 2 Stock · 3 Paperwork · 4 Dispatch"
-      ],
-      "design_notes": {
-        "background_word": "FESTIVE RUSH",
-        "orientation": "vertical"
-      }
+      ]
     },
     {
       "number": 3,
@@ -50,10 +46,7 @@
         "One wrong detail can hold a consignment back.",
         "What if every document was checked against the order before the goods left?",
         "✓ Fewer errors · ✓ Goods leave on time"
-      ],
-      "design_notes": {
-        "background_word": "PAPERWORK"
-      }
+      ]
     },
     {
       "number": 6,
@@ -71,11 +64,7 @@
         "That's where **ART (A Realtime Tech)** comes in. Aiotrix's Governed Automation Platform sits on top of the systems you already use and keeps every order, shelf, invoice and delivery in step, in real time. You decide what it runs on its own.",
         "Even more ease, this festive season.",
         "From our team in Mangaluru to yours: here's to your best festive season yet 🪔"
-      ],
-      "design_notes": {
-        "background_word": "CLOCKWORK",
-        "clock_hands": "Sweep beside unchanged original ART logo; PDF shows still, MP4 shows motion."
-      }
+      ]
     },
     {
       "number": 8,

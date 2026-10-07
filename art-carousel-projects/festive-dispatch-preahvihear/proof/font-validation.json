@@ -97,18 +97,6 @@
   },
   {
     "slide": 2,
-    "selector": ".scene-word",
-    "fonts": [
-      {
-        "familyName": "Preahvihear",
-        "postScriptName": "Preahvihear-Regular",
-        "isCustomFont": true,
-        "glyphCount": 12
-      }
-    ]
-  },
-  {
-    "slide": 2,
     "selector": ".photo-h",
     "fonts": [
       {
@@ -373,18 +361,6 @@
   },
   {
     "slide": 5,
-    "selector": ".scene-word",
-    "fonts": [
-      {
-        "familyName": "Preahvihear",
-        "postScriptName": "Preahvihear-Regular",
-        "isCustomFont": true,
-        "glyphCount": 9
-      }
-    ]
-  },
-  {
-    "slide": 5,
     "selector": ".photo-h",
     "fonts": [
       {
@@ -584,18 +560,6 @@
         "postScriptName": "Preahvihear-Regular",
         "isCustomFont": true,
         "glyphCount": 36
-      }
-    ]
-  },
-  {
-    "slide": 7,
-    "selector": ".scene-word",
-    "fonts": [
-      {
-        "familyName": "Preahvihear",
-        "postScriptName": "Preahvihear-Regular",
-        "isCustomFont": true,
-        "glyphCount": 9
       }
     ]
   },

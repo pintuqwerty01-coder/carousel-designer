@@ -11,7 +11,7 @@ slides=[
 ["Your business already runs the rush **like clockwork.** What if it took even less effort?","That's where **ART (A Realtime Tech)** comes in. Aiotrix's Governed Automation Platform sits on top of the systems you already use and keeps every order, shelf, invoice and delivery in step, in real time. You decide what it runs on its own.","Even more ease, this festive season.","From our team in Mangaluru to yours: here's to your best festive season yet 🪔"],
 ["This festive season, **everything moves seamlessly.**","✓ Every order captured","✓ Stock that keeps up","✓ Paperwork right the first time","✓ Customers kept in the loop","And a team that spends the rush with its customers."],
 ["The festive season is only **weeks away.**","The best time to get ready for the rush is before it starts.","DM us to see how ART could fit your business this season.","Save this and share it with whoever runs your dispatch.","♥ Like the post · 💬 Leave a comment · 🔖 Save & share it"]]
-notes={2:{'background_word':'FESTIVE RUSH','orientation':'vertical'},5:{'background_word':'PAPERWORK'},7:{'background_word':'CLOCKWORK','clock_hands':'Sweep beside unchanged original ART logo; PDF shows still, MP4 shows motion.'}}
+notes={}
 content={'status':'COPY UPDATED — user supplied script; design proof for review','handle':'@arealtimetech','typography':'Preahvihear throughout','slides':[{'number':n,'copy':copy,**({'design_notes':notes[n]} if n in notes else {})} for n,copy in enumerate(slides,1)]}
 (p/'content.json').write_text(json.dumps(content,indent=2,ensure_ascii=False)+'\n')
 def symbol(char,paths):
@@ -71,8 +71,8 @@ for n,copy in enumerate(slides,1):
   block('h-display photo-h',rich(copy[0]));block('reveal-body',rich(copy[1]));block('reveal-sign',rich(copy[3]))
   if 'class="reveal-ease"' not in s:s=s.replace('<div class="reveal-sign">','<div class="reveal-ease">'+rich(copy[2])+'</div><div class="reveal-sign">',1)
   clock='<svg class="brand-clock" viewBox="0 0 80 80"><circle cx="40" cy="40" r="34" fill="none" stroke="#04ADC3" stroke-width="2"/><path d="M40 10v4M70 40h-4M40 70v-4M10 40h4" stroke="white" stroke-width="2"/><path class="hand hour-hand" d="M40 40V21" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/><path class="hand minute-hand" d="M40 40V12" fill="none" stroke="#04ADC3" stroke-width="2" stroke-linecap="round"/><circle cx="40" cy="40" r="3" fill="white"/></svg>'
-  if 'class="brand-clock"' not in s:s=s.replace('<img class="logo"',clock+'<img class="logo"',1)
-  if 'tl.to(".minute-hand"' not in s:s=s.replace('document.fonts.load(', 'tl.to(".minute-hand",{svgOrigin:"40 40",rotation:360,duration:4,ease:"none"},0);tl.to(".hour-hand",{svgOrigin:"40 40",rotation:30,duration:4,ease:"none"},0);\ndocument.fonts.load(',1)
+  # Latest script omits clock treatment.
+  # Clock sweep omitted in latest script.
  elif n==8:
   block('h-display photo-h',rich(copy[0]));block('col summary-end',rich(copy[5]))
   texts=iter(copy[1:5]);s,count=re.subn(r'<p>.*?</p>',lambda m:'<p>'+rich(next(texts))+'</p>',s,flags=re.S);assert count==4
