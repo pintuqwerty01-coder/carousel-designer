@@ -1,19 +1,13 @@
-# Festive dispatch — static redesign v3
+# Festive dispatch — photographic motion revision 5
 
-Nine static slides for review. Exact approved cover remains. Slides 02–06 use full photographic backgrounds with smoothly blended ink shading behind the text and footer. Hard panel edges and the white fading overlay are removed.
+Exact source draft copy retained. Slides 01–06 use photographic camera motion: a gently eased pan/push across the existing image behind separate live copy; the baked cover uses a softly feathered scene mask below its lettering. Headlines, body copy, CTAs, footer and shading remain stationary. All added moving vector slips, boxes, scan bars, route lines and extra check marks have been removed. There is no articulated character animation; the mascot is part of the original photo plate.
 
-The closing sequence has three distinct visual roles and page colours:
+Typography on slides 02–07 is explicitly locked: Preahvihear 400 for the headline and its accent words; Poppins 500 for body, what-if, outcome and reveal copy. The result arrow is an SVG alongside the preserved source character, avoiding a visible fallback font. The approved cover lettering remains exactly as supplied in its raster artwork.
 
-- 07 — aqua brand reveal: a connected rail of order, stock, document and customer-update icons shows the automation layer linking existing processes. Mascot celebrates. Original ART logo is intact on its ink patch.
-- 08 — white benefit summary: four ink cards turn the four claims into a scannable recap; relaxed mascot holds a cup and gives a thumbs-up.
-- 09 — ink CTA: a large message symbol and pointing mascot focus attention on the exact DM invitation; bookmark reinforces the save line. No new claims or metrics.
+Slide 07 now uses ink with white/grey copy and aqua emphasis. A white process strip and dark central inset make the aqua mascot distinct. Slide 08 and 09 HTML and still pixels are unchanged from their accepted versions. These three remain static for review.
 
-Fonts, brand palette, mascot identity and exact source draft copy retained. The imagery is generated, not licensed stock. New mascot assets are transparent layers suitable for later scene animation.
+Deliveries: `motion/render/out/slide-01.mp4` through `slide-06.mp4`; combined `motion/first-six-preview.mp4`. Format: 1080×1350, four seconds, 30fps, H.264 High/yuv420p and faststart. Static review: `proof/last-three.png`, `static-review.pdf` and `stills/`.
 
-Review files: `static-review.pdf`, `proof/all-slides.png`, `stills/slide-01.png` through `slide-09.png`, and local gallery `review.html`. Earlier layouts remain in Git history. These revised layouts have not been animated; review approval comes first, as requested. `corrected-cover.mp4` is the previously checked cover motion, unchanged by this revision.
+Rebuild: `build-statics.py` → `revise-endings.py` → `refine-photo-style.py` → `capture-statics.py` → `make-review.py` → `preview-endings.py` → `build-motion.py` → `motion/render-frames.py 1,2,3,4,5,6` → `validate-motion.py`. Browser scripts run through `/workspace/art-carousel-kit/run-system-browser.py` with `/workspace/art-carousel-venv/bin/python`. `audit-fonts.py` checks actual rendered font families through Chromium, not just CSS declarations. `motion/browser-check.py` tests actual video playback.
 
-Rebuild: `build-statics.py`; capture via `capture-statics.py` through the kit browser adapter; `make-review.py` checks exact copy, image loading and text bounds, then creates PDF and overview. Source assets are in `artwork/`, layouts in `slides/`. Cloud scripts resolve `/workspace/art-carousel-kit` and `/workspace/art-carousel-venv`.
-
-## Revision 4
-
-Slides 01–06 now have motion deliveries in `motion/render/out/`. Closing slides 07–09 have new static concepts: connected hub, flowing benefits and calendar deadline CTA. See `proof/last-three.png`. These closing designs await approval before motion. Exact copy remains unchanged. Build instructions are in `design-plan.md`; scene actions and rendering details are in `motion/README.md`.
+Draft is a design review, not production publication approval. GitHub assets are pushed for review.

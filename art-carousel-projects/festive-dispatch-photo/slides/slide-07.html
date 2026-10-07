@@ -68,6 +68,25 @@ canvas { image-rendering: pixelated; }
 .mascot{position:absolute;overflow:hidden}.mascot img{position:absolute;max-width:none}
  .handle,.count{color:#1A1A1A!important}.logo{position:absolute;top:58px;left:84px;width:220px}.photo-h{top:235px;font-size:51px;color:#1A1A1A}.reveal-body{position:absolute;left:84px;right:84px;top:445px;font:400 28px/1.43 Poppins;color:#1A1A1A}.reveal-body .em{color:#1A1A1A;background:white;padding:0 3px}.reveal-sign{position:absolute;left:84px;right:380px;top:790px;font:500 27px/1.4 Poppins;color:#1A1A1A}.system-rail{position:absolute;left:84px;top:987px;width:640px;height:172px;background:#1A1A1A;border-radius:32px;display:flex;align-items:center;justify-content:space-around}.node{width:118px;height:118px;border-radius:22px;background:white;padding:13px;position:relative}.node:not(:last-child):after{content:"";position:absolute;left:118px;top:55px;width:42px;height:4px;background:#04ADC3}.node svg{width:92px;height:92px}.link{position:absolute;left:720px;top:1068px;width:64px;border-top:4px solid #1A1A1A}.orbital{position:absolute;left:761px;top:974px;width:217px;height:217px;border:3px solid #1A1A1A;border-radius:50%}
 .logo{top:54px}.photo-h{top:188px;font-size:49px}.reveal-body{top:390px;font-size:27px;line-height:1.42}.reveal-sign{top:727px;right:84px;font-size:25px}.system-rail{left:84px;top:914px;width:912px;height:270px;background:transparent;display:block;border:2px solid rgba(26,26,26,.3);border-radius:140px}.node{position:absolute;width:105px;height:105px;border-radius:50%;box-shadow:0 8px 0 rgba(26,26,26,.12)}.node:nth-child(1){left:36px;top:30px}.node:nth-child(2){left:194px;top:125px}.node:nth-child(3){right:194px;top:125px}.node:nth-child(4){right:36px;top:30px}.node svg{width:79px;height:79px}.node:after{display:none}.orbital{left:413px;top:900px;width:254px;height:254px;background:#1A1A1A;border:10px solid white;box-shadow:0 0 0 18px rgba(255,255,255,.2)}.link{display:none}.mascot{left:414px!important;top:897px!important}.hub-lines{position:absolute;left:84px;top:905px;width:912px;height:270px}
+
+/* Revision 5: fixed typography within each text role; no synthetic font styles. */
+.photo-h,.photo-h em,.photo-h span{font-family:"Preahvihear",sans-serif;font-weight:400;font-style:normal;font-synthesis:none}
+.photo-pain,.photo-whatif,.photo-result,.setup-next,.reveal-body,.reveal-sign{font-family:"Poppins",sans-serif;font-weight:500;font-style:normal;font-synthesis:none}
+.photo-pain *, .photo-whatif *, .photo-result *, .reveal-body *, .reveal-sign *{font-family:inherit;font-weight:inherit;font-style:inherit;font-synthesis:none}
+.source-arrow{display:inline-block;width:24px;height:26px;vertical-align:middle;position:relative;color:transparent;font-size:0;line-height:0}
+.source-arrow:after{content:"";position:absolute;left:0;top:6px;width:24px;height:16px;background:currentColor}
+.source-arrow svg{position:absolute;left:0;top:4px;width:24px;height:20px;color:#1A1A1A}
+
+.slide.aqua{background:#1A1A1A;color:white}
+.photo-h{color:white}.logo{background:transparent}
+.reveal-body,.reveal-sign{color:#DEDEDE}
+.reveal-body .em{background:transparent;color:#04ADC3;padding:0}
+.handle,.count{color:white!important}
+.system-rail{background:#FFFFFF;border-color:#FFFFFF;box-shadow:none}
+.node{background:#DDF3F7;box-shadow:none}
+.orbital{background:#1A1A1A;border-color:white;box-shadow:0 0 0 10px #04ADC3}
+.hub-lines{z-index:1}.hub-lines path{stroke:#04ADC3}
+.system-rail{z-index:0}.node{z-index:2}.orbital{z-index:2}.mascot{z-index:3}
 </style></head>
 <body>
 <div id="root" data-composition-id="photo-v2-07" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30">
@@ -846,7 +865,7 @@ function render() {
   if (SC && SCENE && SCENES_DYN[SCENE]) { const c = SC.getContext("2d"); c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, SC.width, SC.height);
     const k = Number(SC.dataset.scale || 1); c.setTransform(k, 0, 0, k, 0, 0); SCENES_DYN[SCENE](c, t, S, SC.width / k, SC.height / k); c.setTransform(1, 0, 0, 1, 0, 0); }
   TRX.clearRect(0, 0, 1080, 80); TRX.save(); TRX.translate(0, 26);
-  const k = Math.min(1, t / 0.8); drawTrail(TRX, 1080, 7, 9, 1 - Math.pow(1 - k, 3), false, true); TRX.restore();
+  const k = Math.min(1, t / 0.8); drawTrail(TRX, 1080, 7, 9, 1 - Math.pow(1 - k, 3), true, false); TRX.restore();
 }
 window.__timelines = window.__timelines || {};
 const tl = gsap.timeline({ paused: true });

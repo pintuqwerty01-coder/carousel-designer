@@ -67,11 +67,19 @@ canvas { image-rendering: pixelated; }
 .handle,.count{color:white!important;text-shadow:none}
 .mascot{position:absolute;overflow:hidden}.mascot img{position:absolute;max-width:none}
  .photo{top:-72px} .photo{top:0}
+
+/* Revision 5: fixed typography within each text role; no synthetic font styles. */
+.photo-h,.photo-h em,.photo-h span{font-family:"Preahvihear",sans-serif;font-weight:400;font-style:normal;font-synthesis:none}
+.photo-pain,.photo-whatif,.photo-result,.setup-next,.reveal-body,.reveal-sign{font-family:"Poppins",sans-serif;font-weight:500;font-style:normal;font-synthesis:none}
+.photo-pain *, .photo-whatif *, .photo-result *, .reveal-body *, .reveal-sign *{font-family:inherit;font-weight:inherit;font-style:inherit;font-synthesis:none}
+.source-arrow{display:inline-block;width:24px;height:26px;vertical-align:middle;position:relative;color:transparent;font-size:0;line-height:0}
+.source-arrow:after{content:"";position:absolute;left:0;top:6px;width:24px;height:16px;background:currentColor}
+.source-arrow svg{position:absolute;left:0;top:4px;width:24px;height:20px;color:#1A1A1A}
 </style></head>
 <body>
 <div id="root" data-composition-id="photo-v2-03" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30">
   <div id="s" class="clip slide dark" data-start="0" data-duration="4">
-<img class="photo" src="assets/art-03.png"><div class="header"></div><div class="footer"></div><div class="kicker"><b>1/4</b>ORDERS</div><div class="h-display photo-h">Orders buried in <br><em>multiple places?</em></div><div class="photo-pain">Orders come in by phone, chat and email, all at once. One gets lost in the scroll, and you only find out when the customer calls asking where it is.</div><div class="photo-whatif">What if every order, from every channel, landed in one place, logged and tracked from the moment it came in?</div><div class="photo-result"><span class="check"><svg viewBox="0 0 34 34" width="34" height="34"><circle cx="17" cy="17" r="17" fill="#2B907F"/><path d="M9 17l6 6 11-13" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>→ No order missed. No festive sale lost.</span></div>
+<img class="photo" src="assets/art-03.png"><div class="header"></div><div class="footer"></div><div class="kicker"><b>1/4</b>ORDERS</div><div class="h-display photo-h">Orders buried in <br><em>multiple places?</em></div><div class="photo-pain">Orders come in by phone, chat and email, all at once. One gets lost in the scroll, and you only find out when the customer calls asking where it is.</div><div class="photo-whatif">What if every order, from every channel, landed in one place, logged and tracked from the moment it came in?</div><div class="photo-result"><span class="check"><svg viewBox="0 0 34 34" width="34" height="34"><circle cx="17" cy="17" r="17" fill="#2B907F"/><path d="M9 17l6 6 11-13" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="source-arrow">→<svg viewBox="0 0 24 20" aria-hidden="true"><path d="M2 10h19m-7-6 7 6-7 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span> No order missed. No festive sale lost.</span></div>
     <div class="handle">@arealtimetech</div>
     <div class="count">03/09</div>
     <canvas id="trail" width="1080" height="80"></canvas>

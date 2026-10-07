@@ -1,9 +1,7 @@
-# First six slides — approved static designs animated
+# Photographic camera motion — revision 5
 
-Files: `render/out/slide-01.mp4` through `slide-06.mp4`, in posting order. Each is 1080×1350, 30fps, four seconds, H.264 High/yuv420p with faststart.
+Posting order: `render/out/slide-01.mp4` through `slide-06.mp4`. Each: 1080×1350, 30fps, four seconds, 120 frames, H.264 High/yuv420p with faststart.
 
-01 retains the corrected approved-image cover balance motion. 02 parcels build into a queue. 03 three order slips converge into one destination. 04 a carton travels along a replenishment path and confirms. 05 a scan crosses the invoice then confirms. 06 a delivery marker travels along a route and turns into an update confirmation. These are scene/prop actions over the approved photo plates; the task mascots remain embedded in the photographs, without articulated limb animation. Text and shading stay stationary. No new copy, claims or numerical metrics.
+The original photo scene itself moves gently behind stationary text and shading. Live copy and shading remain stationary over the moving photo on slides 02–06. The cover alone uses a fixed feathered scene mask to preserve its baked lettering. Camera focus: 01 mascot/dispatch area; 02 rush scene; 03 orders destination; 04 stock shelves; 05 document area; 06 customer update area. Smooth cosine easing, 1–1.4% push and 2–7px pan, no repeat bounce, no new illustrative props or scanning effects. Embedded mascots are not independently articulated. This is camera animation of still photography, not generated character video.
 
-Rebuild with `../build-motion.py`, then `render-frames.py` through `/workspace/art-carousel-kit/run-system-browser.py`. Cover source is in `../cover-motion/`. Validate with `../validate-motion.py`. Browser timeline rendering uses the original GSAP timeline and deterministic 120-frame sampling, encoded directly through ffmpeg.
-
-Slides 07–09 are revised static concepts awaiting review; not animated.
+Build with `../build-motion.py`; render `render-frames.py 1,2,3,4,5,6` through `/workspace/art-carousel-kit/run-system-browser.py`. Validation: `../validate-motion.py`, `browser-check.py`. All live copy stays outside the moving layer; baked cover copy stays outside the scene mask. Slides 07–09 remain static.

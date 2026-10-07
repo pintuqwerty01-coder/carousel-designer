@@ -67,6 +67,14 @@ canvas { image-rendering: pixelated; }
 .handle,.count{color:white!important;text-shadow:none}
 .mascot{position:absolute;overflow:hidden}.mascot img{position:absolute;max-width:none}
  .header{--fade-start:365px}.photo-h{top:80px;font-size:68px}.photo-pain{top:284px;font-size:30px;line-height:1.4}.setup-next{position:absolute;left:84px;top:1000px;border-radius:999px;background:#04ADC3;color:#1A1A1A;padding:18px 28px;font:600 32px/1.2 Poppins}
+
+/* Revision 5: fixed typography within each text role; no synthetic font styles. */
+.photo-h,.photo-h em,.photo-h span{font-family:"Preahvihear",sans-serif;font-weight:400;font-style:normal;font-synthesis:none}
+.photo-pain,.photo-whatif,.photo-result,.setup-next,.reveal-body,.reveal-sign{font-family:"Poppins",sans-serif;font-weight:500;font-style:normal;font-synthesis:none}
+.photo-pain *, .photo-whatif *, .photo-result *, .reveal-body *, .reveal-sign *{font-family:inherit;font-weight:inherit;font-style:inherit;font-synthesis:none}
+.source-arrow{display:inline-block;width:24px;height:26px;vertical-align:middle;position:relative;color:transparent;font-size:0;line-height:0}
+.source-arrow:after{content:"";position:absolute;left:0;top:6px;width:24px;height:16px;background:currentColor}
+.source-arrow svg{position:absolute;left:0;top:4px;width:24px;height:20px;color:#1A1A1A}
 </style></head>
 <body>
 <div id="root" data-composition-id="photo-v2-02" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30">

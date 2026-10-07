@@ -26,3 +26,16 @@ Revision 3: all nine image-loading/copy/text-bound checks pass. Photographic sli
 - Inspected action-frame overview for all six and document/order frame details, plus all three closing static designs.
 - Task animation acts on props and process cues, not articulated embedded mascot limbs. Cover retains previously approved balancing motion.
 - Closing three remain static pending approval. Source draft copy is unchanged; no capability/production approval inferred.
+
+
+## Revision 5 verification — photographic motion
+
+- All nine static slides: image loading, exact source copy and safe text bounds passed after typography/reveal revision.
+- Chromium font audit (actual rendered glyph fonts): affected 02–07 headlines/accents Preahvihear; body/what-if/outcome/reveal text Poppins Medium, with no serif fallback arrow. The original cover raster lettering is preserved.
+- Typography-isolation render at 0s and 3.9s: every text-layer pixel identical on 02–06. Exact source lines present. Only the brand trail canvas remains; no extra illustrated scene overlays. Cover camera mask begins below its baked headline/subline.
+- All six deliveries: 1080×1350, 30fps, four seconds, 120 frames, H.264 High/yuv420p; faststart encoding. ffprobe passed.
+- All six decoded and played in Chromium with no media errors. Scene-region pixel changes confirm that camera motion exists.
+- Moving photo backgrounds can change pixels behind headlines; validation isolates the text layer rather than interpreting these as moving letters.
+- Inspected all six camera-frame proofs and the final document frame: original photographic textures and imagery retained. Reveal 07 inspected on ink with white process strip and distinct aqua mascot.
+- Slides 08 and 09: HTML byte-identical and still images pixel-identical to accepted versions.
+- This is photographic camera motion. Embedded mascots are not articulated character video. Exact draft remains a review proof.

@@ -33,3 +33,11 @@ User authorised animation of slides 01–06. Retain their approved photographic 
 Closing static alternatives: 07 governed hub with mascot at centre and four connected processes; 08 staggered continuous flow of four outcomes, alternating ink/aqua on white; 09 deadline/calendar metaphor with the pointing mascot and prominent DM panel. No fabricated date, metric or claim. Exact draft copy retained. These three wait for static design approval before animation.
 
 Rebuild order: build-statics.py, revise-endings.py, capture-statics.py, make-review.py, build-motion.py, motion/render-frames.py, validate-motion.py. Browser scripts use the kit system-browser adapter. The existing cover master is reused unchanged.
+
+## Revision 5 — photograph-first motion and typography/contrast correction
+
+User rejected flat prop overlays because they conflicted with the photographic style. Remove all of these overlays. Use slow, smoothly eased camera motion in the photograph, behind stationary live copy. Use a feathered scene mask only for the cover's baked lettering. No independent character articulation is claimed. Keep the exact imagery, textures, copy, shading and layout.
+
+Audit actual font glyph rendering: headline and accent words use Preahvihear; body varied between Poppins Medium and SemiBold, and the outcome arrow used Liberation Serif. Lock affected body copy to Poppins Medium and draw the arrow as SVG while keeping its source text. Keep Preahvihear headlines as the branding requires. Cover keeps its original approved raster lettering.
+
+Reveal 07 becomes ink, with grey/white copy, aqua ART emphasis, a white process strip and a dark mascot inset. Reconfigure bottom trail for ink contrast. Preserve 08 and 09 exactly; compare both HTML bytes and PNG pixels against their accepted versions.
