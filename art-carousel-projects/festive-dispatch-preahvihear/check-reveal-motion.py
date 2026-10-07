@@ -11,7 +11,7 @@ with sync_playwright() as w:
   points=page.evaluate('''() => {const r=document.querySelector('.brand-clock').getBoundingClientRect();return [...document.querySelectorAll('.brand-clock .hand')].map(e=>{const pt=new DOMPoint(40,40).matrixTransform(e.getScreenCTM());return {x:pt.x,y:pt.y,cx:r.x+r.width/2,cy:r.y+r.height/2};});}''')
   assert all(abs(pt['x']-pt['cx'])<.5 and abs(pt['y']-pt['cy'])<.5 for pt in points),(t,points)
   frames.append(page.screenshot(clip={'x':894,'y':54,'width':82,'height':82}))
-  copy.append(page.screenshot(clip={'x':84,'y':180,'width':912,'height':640}))
+  copy.append(page.screenshot(clip={'x':84,'y':180,'width':912,'height':670}))
   page.screenshot(path=str(p/f'proof/clock-{t}.png'),clip={'x':874,'y':34,'width':122,'height':122})
  assert frames[0]!=frames[1] and frames[1]!=frames[2]
  assert copy[0]==copy[1]==copy[2]

@@ -19,3 +19,9 @@ Deliverables: `stills/slide-01.png` through `slide-09.png` (1080 × 1350), nine-
 `update-content.py` records this content revision. Regenerate with `capture-statics.py`, `make-review.py`, `preview-endings.py` and `audit-fonts.py`. Reveal motion uses `render-reveal.py 7` and `check-reveal-motion.py`. `check-pdf.py` assembles the Poppler-decoded exported pages for visual review.
 
 Unused prior hand asset: Twemoji v14.0.2, Twitter and contributors, CC-BY 4.0. Original attribution retained in `slides/assets/point-down-attribution.txt`.
+
+## Placement refinement
+
+The latest script is unchanged. The cover uses a stronger headline and balanced reassurance lines. Setup topics have even spacing and aqua numerals. Task headlines put the highlighted concept on its own line; body and question copy use deliberate clause breaks. Questions share a lower edge and sit 28px above the outcome cards. The reveal separates the ART introduction from its explanation, enlarges body text and groups the ease line and greeting. Outcome cards sit closer to their heading and summary. The CTA calendar is scaled to create space for a distinct DM card, save line and engagement row.
+
+`improve-layout.py` records these placement changes after `update-content.py`. All nine stills and the full PDF were refreshed; the reveal video was re-rendered to match.

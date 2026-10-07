@@ -11,3 +11,11 @@
 - Reveal MP4: 1080 × 1350, 30fps, four seconds, 120 frames, H264/yuv420p; actually decoded and played in Chromium.
 - Original ART mark preserved. Clock motion is beside the logo, with a still frame in the PDF and motion in the separate MP4.
 - This revision updates all nine static designs and one reveal motion clip. It does not re-export videos for older first-six scripts.
+
+## Placement revision checks
+
+- `content.json` is byte-identical to the previous script delivery; wording and emphasis unchanged.
+- All nine actual rendered heading/body fonts and safe text bounds passed after resizing and reflow.
+- The exported nine-page PDF was decoded and every page visually reviewed, including balanced line endings, separated prompt/outcome groups and CTA spacing.
+- Background PAPERWORK is positioned clear of the mascot antenna; final-three mascots remain clear of copy and footer.
+- Reveal MP4 refreshed with matching content placement. Clock-centre, stationary-copy and actual playback checks passed.
