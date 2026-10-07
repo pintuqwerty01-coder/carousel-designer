@@ -8,7 +8,7 @@ with sync_playwright() as w:
  for n in range(1,10):
   page.goto((p/f'slides/slide-{n:02d}.html').as_uri(),wait_until='networkidle');page.evaluate('document.fonts.ready')
   c=page.context.new_cdp_session(page);c.send('DOM.enable');c.send('CSS.enable');root=c.send('DOM.getDocument')['root']['nodeId']
-  selectors=['.cover-note','.setup-topic','.reveal-ease','.engagement-box','.scene-word','.cover-h','.cover-h em','.cover-sub','.cover-cta','.photo-h','.photo-h em','.photo-pain','.photo-whatif','.point-box','.setup-next','.reveal-body','.reveal-body strong','.reveal-sign','.benefit p','.summary-end','.cta-body','.cta-dm','.cta-save','.handle','.count','.kicker']
+  selectors=['.calendar-grid text','.cover-note','.setup-topic','.reveal-ease','.engagement-box','.scene-word','.cover-h','.cover-h em','.cover-sub','.cover-cta','.photo-h','.photo-h em','.photo-pain','.photo-whatif','.point-box','.setup-next','.reveal-body','.reveal-body strong','.reveal-sign','.benefit p','.summary-end','.cta-body','.cta-dm','.cta-save','.handle','.count','.kicker']
   for selector in selectors:
    nodes=c.send('DOM.querySelectorAll',{'nodeId':root,'selector':selector})['nodeIds']
    for node in nodes:

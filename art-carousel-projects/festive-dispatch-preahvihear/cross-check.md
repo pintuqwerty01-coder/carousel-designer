@@ -14,3 +14,6 @@ Evidence: `proof/font-validation.json`, `proof/box-validation.json`, `proof/expo
 
 
 Individual point cards: setup topics are four separate cards; slides 3–6 use two separate outcome cards; slide 8 retains four illustrated benefit cards with distinct accent cues; slide 9 uses three separate engagement cards. Exact copy, rendered Preahvihear, padding, icon containment and all nine PDF pages checked.
+
+
+Slide 2: all four topic cards now use one aqua accent. Slide 9: rebuilt illustrative calendar with seven aligned weekday columns, sequential dates and a single green marked date; calendar text verified as Preahvihear. All nine pages regenerated and validated.
