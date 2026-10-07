@@ -1,15 +1,13 @@
-# Validation
+# Latest script validation
 
-- Nine 1080 × 1350 PNGs exported; all source images loaded.
-- All nine slides, including retyped cover, contain every exact source copy line.
-- Chromium actual rendered glyph fonts are exclusively the embedded Preahvihear font, including highlighted words, body, CTA, handle and counter. No body font or native emoji substitutes. Evidence: `proof/font-validation.json`.
-- Synthetic bold/italic disabled. Symbols and script emoji use vector artwork while retaining their original characters in HTML.
-- All text blocks and rendered text rectangles pass horizontal safe bounds and bottom bounds. Headline/body, body/signoff, prompt/outcome and CTA/save blocks pass separation checks.
-- All nine stills visually inspected in the overview.
-- Closing concepts derive from the user-selected commit `1e624103470e03b236a48151f680b5bf5f8bc660`, now refined into a consistent ink/white sequence. Brand ink background confirmed in all three exports; original mascot and logo retained. Aqua full-slide background removed.
-- Slides 01–06 are byte-identical to the previous delivered Preahvihear stills.
-- Closing preview visually reviewed after checking vector-symbol size, logo clearance, mascot/footer separation and visible bottom progress trails.
-- All copy remains draft review. No new animation generated in this revision.
-
-- Slide 02 prompt moved to the right-hand side (right edge 996px) and downward hand replaced with a clear right arrow, as requested. Source copy updated only for the explicitly authorised symbol change.
-- Rebuilt PDF has nine pages. All nine actual PDF pages decoded with Poppler and visually checked in `proof/exported-pdf-overview.png`.
+- All nine PNGs exported at 1080 × 1350 with all images loaded.
+- Every displayed line in the latest user-supplied script is retained, including setup topics, two checks per task, reveal ease/greeting and CTA engagement prompts.
+- Large FESTIVE RUSH (vertical), PAPERWORK and faded CLOCKWORK are present. The setup direction is the downward arrow in the latest script.
+- Actual Chromium rendered glyph fonts are exclusively embedded Preahvihear for headings, body, footer, CTA, added prompts, engagement line and decorative words. Details: `proof/font-validation.json`.
+- Checks, arrows, separators, lamp and engagement icons use vector artwork with original characters retained in HTML. Synthetic bold and italic are disabled.
+- Text blocks and actual rendered rectangles pass safe bounds. Headline/body, body/ease/signoff, prompt/outcome, CTA/save/engagement separation checks passed.
+- Nine-page PDF regenerated. Every exported page decoded with Poppler and visually reviewed in `proof/exported-pdf-overview.png`.
+- Clock hands rotate around the exact clock centre at 0, 1 and 2 seconds; clock frames differ while the entire copy area stays pixel-identical.
+- Reveal MP4: 1080 × 1350, 30fps, four seconds, 120 frames, H264/yuv420p; actually decoded and played in Chromium.
+- Original ART mark preserved. Clock motion is beside the logo, with a still frame in the PDF and motion in the separate MP4.
+- This revision updates all nine static designs and one reveal motion clip. It does not re-export videos for older first-six scripts.
