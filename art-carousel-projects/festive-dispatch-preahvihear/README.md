@@ -10,4 +10,4 @@ Deliverables: `stills/slide-01.png` through `slide-09.png` (1080 × 1350), `stat
 
 Regenerate with `capture-statics.py`, `make-review.py`, `preview-endings.py` and `audit-fonts.py` using Playwright/Chromium. `use-preahvihear.py` records the initial typography conversion and is idempotent. `refine-closing.py` records the shared closing design; `capture-closing.py` refreshes only slides 07–09.
 
-Slide 02 hand artwork: Twemoji v14.0.2, Twitter and contributors, CC-BY 4.0. Source and licence are recorded in `slides/assets/point-down-attribution.txt`.
+Slide 02 prompt is right-aligned inside the 84px safe margin and reads “Here's where →”. The user requested replacing the downward hand with a right arrow; the original pointing-hand asset and its attribution remain archived as unused assets.

@@ -11,5 +11,5 @@
 - Closing preview visually reviewed after checking vector-symbol size, logo clearance, mascot/footer separation and visible bottom progress trails.
 - All copy remains draft review. No new animation generated in this revision.
 
-- Slide 02 pointing hand corrected with a recognisable Twemoji vector asset, sized 34px and aligned with the CTA.
+- Slide 02 prompt moved to the right-hand side (right edge 996px) and downward hand replaced with a clear right arrow, as requested. Source copy updated only for the explicitly authorised symbol change.
 - Rebuilt PDF has nine pages. All nine actual PDF pages decoded with Poppler and visually checked in `proof/exported-pdf-overview.png`.

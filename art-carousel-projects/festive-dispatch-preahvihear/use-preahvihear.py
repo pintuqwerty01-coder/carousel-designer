@@ -18,14 +18,14 @@ body,body * {font-family:"Preahvihear",sans-serif!important;font-weight:400!impo
 .handle {font-size:24px;}.count {font-size:22px;}.kicker {font-size:21px;}
 .copy-symbol {display:inline-block;vertical-align:middle;width:22px;height:22px;position:relative;margin-right:5px;}
 .copy-symbol svg {width:100%;height:100%;display:block;background:none;padding:0;border-radius:0;}
-.setup-next .copy-symbol{width:34px;height:34px;margin-left:10px;margin-right:0;vertical-align:-7px}.setup-next .copy-symbol img{display:block;width:100%;height:100%}
+.setup-next{left:auto;right:84px;display:flex;align-items:center;gap:14px}.setup-next .copy-symbol{width:34px;height:34px;margin:0;vertical-align:middle}.setup-next .copy-symbol img{display:block;width:100%;height:100%}
 .copy-symbol .source-symbol {position:absolute;opacity:0;width:0;height:0;font-size:0!important;overflow:hidden;}
 '''
 def symbol(char,paths):
  return f'<span class="copy-symbol"><span class="source-symbol">{char}</span><svg aria-hidden="true" viewBox="0 0 24 24">{paths}</svg></span>'
 check=symbol('✓','<path d="m4 12 5 5 11-12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>')
 arrow=symbol('→','<path d="M3 12h18m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
-finger='<span class="copy-symbol"><span class="source-symbol">👇</span><img src="assets/point-down.svg" alt="" aria-hidden="true"></span>'
+finger='<span class="copy-symbol"><span class="source-symbol">→</span><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M4 16h24M19 7l9 9-9 9" fill="none" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'
 lamp=symbol('🪔','<path d="M3 14q9 13 18 0z" fill="#FFD166"/><path d="M12 14q-6-4 0-12 6 8 0 12z" fill="#F27A7A"/>')
 for n in range(1,10):
  f=p/f'slides/slide-{n:02d}.html';s=f.read_text()
