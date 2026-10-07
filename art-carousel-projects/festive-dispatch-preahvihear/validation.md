@@ -9,3 +9,6 @@
 - PDF has nine pages in order; every exported page decoded and visually reviewed.
 
 - Additional box/point audit: all nine slides passed text clearance, SVG containment, text-block/mascot separation and expected point counts. Source copy and all nine PNGs are unchanged from the previous delivery.
+
+
+Individual point cards: setup topics are four separate cards; slides 3–6 use two separate outcome cards; slide 8 retains four illustrated benefit cards with distinct accent cues; slide 9 uses three separate engagement cards. Exact copy, rendered Preahvihear, padding, icon containment and all nine PDF pages checked.

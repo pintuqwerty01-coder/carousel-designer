@@ -9,3 +9,6 @@ Deliverables: `stills/slide-01.png` through `slide-09.png`, `static-review.pdf` 
 Rebuild/check with `capture-statics.py`, `make-review.py`, `audit-fonts.py`, `preview-endings.py` and `check-pdf.py`. `update-content.py` records the current wording; `improve-layout.py` records the improved reading layout.
 
 Unused hand asset: Twemoji v14.0.2, Twitter and contributors, CC-BY 4.0; its original attribution file is retained.
+
+
+Individual point cards: setup topics are four separate cards; slides 3–6 use two separate outcome cards; slide 8 retains four illustrated benefit cards with distinct accent cues; slide 9 uses three separate engagement cards. Exact copy, rendered Preahvihear, padding, icon containment and all nine PDF pages checked.

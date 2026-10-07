@@ -85,13 +85,49 @@
   },
   {
     "slide": 2,
-    "selector": ".setup-topics",
+    "selector": ".setup-topic",
     "fonts": [
       {
         "familyName": "Preahvihear",
         "postScriptName": "Preahvihear-Regular",
         "isCustomFont": true,
-        "glyphCount": 32
+        "glyphCount": 7
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "selector": ".setup-topic",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 6
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "selector": ".setup-topic",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 10
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "selector": ".setup-topic",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 9
       }
     ]
   },
@@ -217,13 +253,25 @@
   },
   {
     "slide": 3,
-    "selector": ".photo-result",
+    "selector": ".point-box",
     "fonts": [
       {
         "familyName": "Preahvihear",
         "postScriptName": "Preahvihear-Regular",
         "isCustomFont": true,
-        "glyphCount": 39
+        "glyphCount": 15
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "selector": ".point-box",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 20
       }
     ]
   },
@@ -313,13 +361,25 @@
   },
   {
     "slide": 4,
-    "selector": ".photo-result",
+    "selector": ".point-box",
     "fonts": [
       {
         "familyName": "Preahvihear",
         "postScriptName": "Preahvihear-Regular",
         "isCustomFont": true,
-        "glyphCount": 43
+        "glyphCount": 19
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".point-box",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 20
       }
     ]
   },
@@ -409,13 +469,25 @@
   },
   {
     "slide": 5,
-    "selector": ".photo-result",
+    "selector": ".point-box",
     "fonts": [
       {
         "familyName": "Preahvihear",
         "postScriptName": "Preahvihear-Regular",
         "isCustomFont": true,
-        "glyphCount": 35
+        "glyphCount": 12
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "selector": ".point-box",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 19
       }
     ]
   },
@@ -505,13 +577,25 @@
   },
   {
     "slide": 6,
-    "selector": ".photo-result",
+    "selector": ".point-box",
     "fonts": [
       {
         "familyName": "Preahvihear",
         "postScriptName": "Preahvihear-Regular",
         "isCustomFont": true,
-        "glyphCount": 38
+        "glyphCount": 11
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "selector": ".point-box",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 23
       }
     ]
   },
@@ -745,13 +829,37 @@
   },
   {
     "slide": 9,
-    "selector": ".engagement",
+    "selector": ".engagement-box",
     "fonts": [
       {
         "familyName": "Preahvihear",
         "postScriptName": "Preahvihear-Regular",
         "isCustomFont": true,
-        "glyphCount": 46
+        "glyphCount": 13
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "selector": ".engagement-box",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 15
+      }
+    ]
+  },
+  {
+    "slide": 9,
+    "selector": ".engagement-box",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 15
       }
     ]
   },

@@ -64,108 +64,128 @@
         ]
       },
       {
-        "class": "setup-topics",
+        "class": "setup-topic",
         "box": {
           "left": 84,
-          "top": 1103,
-          "right": 996,
-          "bottom": 1186.6875,
-          "width": 912,
-          "height": 83.6875
+          "top": 1090,
+          "right": 279.5,
+          "bottom": 1180,
+          "width": 195.5,
+          "height": 90
         },
         "textRects": [
           {
-            "left": 109,
-            "top": 1121,
-            "right": 119.203125,
-            "bottom": 1168,
-            "width": 10.203125,
-            "height": 47
+            "left": 127.9375,
+            "top": 1114.703125,
+            "right": 137.359375,
+            "bottom": 1157.703125,
+            "width": 9.421875,
+            "height": 43
           },
           {
-            "left": 119.203125,
-            "top": 1121,
-            "right": 224.734375,
-            "bottom": 1168,
-            "width": 105.53125,
-            "height": 47
-          },
-          {
-            "left": 336.015625,
-            "top": 1121,
-            "right": 351.46875,
-            "bottom": 1168,
-            "width": 15.453125,
-            "height": 47
-          },
-          {
-            "left": 351.46875,
-            "top": 1121,
-            "right": 435.171875,
-            "bottom": 1168,
-            "width": 83.703125,
-            "height": 47
-          },
-          {
-            "left": 546.453125,
-            "top": 1121,
-            "right": 562.3125,
-            "bottom": 1168,
-            "width": 15.859375,
-            "height": 47
-          },
-          {
-            "left": 562.3125,
-            "top": 1121,
-            "right": 716.265625,
-            "bottom": 1168,
-            "width": 153.953125,
-            "height": 47
-          },
-          {
-            "left": 827.546875,
-            "top": 1121,
-            "right": 843.359375,
-            "bottom": 1168,
-            "width": 15.8125,
-            "height": 47
-          },
-          {
-            "left": 843.359375,
-            "top": 1121,
-            "right": 971,
-            "bottom": 1168,
-            "width": 127.640625,
-            "height": 47
+            "left": 146.359375,
+            "top": 1114.703125,
+            "right": 235.5625,
+            "bottom": 1157.703125,
+            "width": 89.203125,
+            "height": 43
           }
         ],
-        "text": "1 Orders\n\u00b7\n2 Stock\n\u00b7\n3 Paperwork\n\u00b7\n4 Dispatch",
-        "iconRects": [
+        "text": "1\nOrders",
+        "iconRects": []
+      },
+      {
+        "class": "setup-topic",
+        "box": {
+          "left": 293.5,
+          "top": 1090,
+          "right": 489,
+          "bottom": 1180,
+          "width": 195.5,
+          "height": 90
+        },
+        "textRects": [
           {
-            "left": 278.375,
-            "top": 1142.84375,
-            "right": 282.375,
-            "bottom": 1146.84375,
-            "width": 4,
-            "height": 4
+            "left": 345.078125,
+            "top": 1114.703125,
+            "right": 359.34375,
+            "bottom": 1157.703125,
+            "width": 14.265625,
+            "height": 43
           },
           {
-            "left": 488.8125,
-            "top": 1142.84375,
-            "right": 492.8125,
-            "bottom": 1146.84375,
-            "width": 4,
-            "height": 4
-          },
-          {
-            "left": 769.90625,
-            "top": 1142.84375,
-            "right": 773.90625,
-            "bottom": 1146.84375,
-            "width": 4,
-            "height": 4
+            "left": 368.34375,
+            "top": 1114.703125,
+            "right": 437.40625,
+            "bottom": 1157.703125,
+            "width": 69.0625,
+            "height": 43
           }
-        ]
+        ],
+        "text": "2\nStock",
+        "iconRects": []
+      },
+      {
+        "class": "setup-topic",
+        "box": {
+          "left": 503,
+          "top": 1090,
+          "right": 747.390625,
+          "bottom": 1180,
+          "width": 244.390625,
+          "height": 90
+        },
+        "textRects": [
+          {
+            "left": 546.421875,
+            "top": 1114.703125,
+            "right": 561.0625,
+            "bottom": 1157.703125,
+            "width": 14.640625,
+            "height": 43
+          },
+          {
+            "left": 570.0625,
+            "top": 1114.703125,
+            "right": 703.96875,
+            "bottom": 1157.703125,
+            "width": 133.90625,
+            "height": 43
+          }
+        ],
+        "text": "3\nPaperwork",
+        "iconRects": []
+      },
+      {
+        "class": "setup-topic",
+        "box": {
+          "left": 761.390625,
+          "top": 1090,
+          "right": 996,
+          "bottom": 1180,
+          "width": 234.609375,
+          "height": 90
+        },
+        "textRects": [
+          {
+            "left": 812.078125,
+            "top": 1114.703125,
+            "right": 826.671875,
+            "bottom": 1157.703125,
+            "width": 14.59375,
+            "height": 43
+          },
+          {
+            "left": 835.671875,
+            "top": 1114.703125,
+            "right": 945.296875,
+            "bottom": 1157.703125,
+            "width": 109.625,
+            "height": 43
+          }
+        ],
+        "text": "4\nDispatch",
+        "iconRects": []
       }
     ],
     "status": "passed"
@@ -205,58 +225,66 @@
         "iconRects": []
       },
       {
-        "class": "photo-result",
+        "class": "point-box",
         "box": {
           "left": 84,
-          "top": 1110,
-          "right": 996,
-          "bottom": 1184,
-          "width": 912,
-          "height": 74
+          "top": 1106,
+          "right": 531,
+          "bottom": 1196,
+          "width": 447,
+          "height": 90
         },
         "textRects": [
           {
-            "left": 137,
-            "top": 1122,
-            "right": 374.984375,
-            "bottom": 1169,
-            "width": 237.984375,
-            "height": 47
-          },
-          {
-            "left": 434.875,
-            "top": 1122,
-            "right": 700.234375,
-            "bottom": 1169,
-            "width": 265.359375,
-            "height": 47
+            "left": 225.859375,
+            "top": 1128.796875,
+            "right": 429.125,
+            "bottom": 1171.796875,
+            "width": 203.265625,
+            "height": 43
           }
         ],
-        "text": "\u2713\n No order missed \n\u00b7\n \n\u2713\n No festive sale lost",
+        "text": "\u2713\nNo order missed",
         "iconRects": [
           {
-            "left": 108,
-            "top": 1136.03125,
-            "right": 130,
-            "bottom": 1158.03125,
-            "width": 22,
-            "height": 22
-          },
+            "left": 190.859375,
+            "top": 1139,
+            "right": 214.859375,
+            "bottom": 1163,
+            "width": 24,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "class": "point-box",
+        "box": {
+          "left": 549,
+          "top": 1106,
+          "right": 996,
+          "bottom": 1196,
+          "width": 447,
+          "height": 90
+        },
+        "textRects": [
           {
-            "left": 383.984375,
-            "top": 1145.03125,
-            "right": 387.984375,
-            "bottom": 1149.03125,
-            "width": 4,
-            "height": 4
-          },
+            "left": 669.125,
+            "top": 1128.796875,
+            "right": 905.875,
+            "bottom": 1171.796875,
+            "width": 236.75,
+            "height": 43
+          }
+        ],
+        "text": "\u2713\nNo festive sale lost",
+        "iconRects": [
           {
-            "left": 405.875,
-            "top": 1136.03125,
-            "right": 427.875,
-            "bottom": 1158.03125,
-            "width": 22,
-            "height": 22
+            "left": 634.125,
+            "top": 1139,
+            "right": 658.125,
+            "bottom": 1163,
+            "width": 24,
+            "height": 24
           }
         ]
       }
@@ -298,58 +326,66 @@
         "iconRects": []
       },
       {
-        "class": "photo-result",
+        "class": "point-box",
         "box": {
           "left": 84,
-          "top": 1110,
-          "right": 996,
-          "bottom": 1184,
-          "width": 912,
-          "height": 74
+          "top": 1106,
+          "right": 531,
+          "bottom": 1196,
+          "width": 447,
+          "height": 90
         },
         "textRects": [
           {
-            "left": 137,
-            "top": 1122,
-            "right": 423.234375,
-            "bottom": 1169,
-            "width": 286.234375,
-            "height": 47
-          },
-          {
-            "left": 483.125,
-            "top": 1122,
-            "right": 780.53125,
-            "bottom": 1169,
-            "width": 297.40625,
-            "height": 47
+            "left": 203.59375,
+            "top": 1128.796875,
+            "right": 451.40625,
+            "bottom": 1171.796875,
+            "width": 247.8125,
+            "height": 43
           }
         ],
-        "text": "\u2713\n Stock that keeps up \n\u00b7\n \n\u2713\n No sales turned away",
+        "text": "\u2713\nStock that keeps up",
         "iconRects": [
           {
-            "left": 108,
-            "top": 1136.03125,
-            "right": 130,
-            "bottom": 1158.03125,
-            "width": 22,
-            "height": 22
-          },
+            "left": 168.59375,
+            "top": 1139,
+            "right": 192.59375,
+            "bottom": 1163,
+            "width": 24,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "class": "point-box",
+        "box": {
+          "left": 549,
+          "top": 1106,
+          "right": 996,
+          "bottom": 1196,
+          "width": 447,
+          "height": 90
+        },
+        "textRects": [
           {
-            "left": 432.234375,
-            "top": 1145.03125,
-            "right": 436.234375,
-            "bottom": 1149.03125,
-            "width": 4,
-            "height": 4
-          },
+            "left": 654.328125,
+            "top": 1128.796875,
+            "right": 920.65625,
+            "bottom": 1171.796875,
+            "width": 266.328125,
+            "height": 43
+          }
+        ],
+        "text": "\u2713\nNo sales turned away",
+        "iconRects": [
           {
-            "left": 454.125,
-            "top": 1136.03125,
-            "right": 476.125,
-            "bottom": 1158.03125,
-            "width": 22,
-            "height": 22
+            "left": 619.328125,
+            "top": 1139,
+            "right": 643.328125,
+            "bottom": 1163,
+            "width": 24,
+            "height": 24
           }
         ]
       }
@@ -391,58 +427,66 @@
         "iconRects": []
       },
       {
-        "class": "photo-result",
+        "class": "point-box",
         "box": {
           "left": 84,
-          "top": 1110,
-          "right": 996,
-          "bottom": 1184,
-          "width": 912,
-          "height": 74
+          "top": 1106,
+          "right": 531,
+          "bottom": 1196,
+          "width": 447,
+          "height": 90
         },
         "textRects": [
           {
-            "left": 137,
-            "top": 1122,
-            "right": 331.390625,
-            "bottom": 1169,
-            "width": 194.390625,
-            "height": 47
-          },
-          {
-            "left": 391.28125,
-            "top": 1122,
-            "right": 664.8125,
-            "bottom": 1169,
-            "width": 273.53125,
-            "height": 47
+            "left": 245.984375,
+            "top": 1128.796875,
+            "right": 409.015625,
+            "bottom": 1171.796875,
+            "width": 163.03125,
+            "height": 43
           }
         ],
-        "text": "\u2713\n Fewer errors \n\u00b7\n \n\u2713\n Goods leave on time",
+        "text": "\u2713\nFewer errors",
         "iconRects": [
           {
-            "left": 108,
-            "top": 1136.03125,
-            "right": 130,
-            "bottom": 1158.03125,
-            "width": 22,
-            "height": 22
-          },
+            "left": 210.984375,
+            "top": 1139,
+            "right": 234.984375,
+            "bottom": 1163,
+            "width": 24,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "class": "point-box",
+        "box": {
+          "left": 549,
+          "top": 1106,
+          "right": 996,
+          "bottom": 1196,
+          "width": 447,
+          "height": 90
+        },
+        "textRects": [
           {
-            "left": 340.390625,
-            "top": 1145.03125,
-            "right": 344.390625,
-            "bottom": 1149.03125,
-            "width": 4,
-            "height": 4
-          },
+            "left": 665.359375,
+            "top": 1128.796875,
+            "right": 909.640625,
+            "bottom": 1171.796875,
+            "width": 244.28125,
+            "height": 43
+          }
+        ],
+        "text": "\u2713\nGoods leave on time",
+        "iconRects": [
           {
-            "left": 362.28125,
-            "top": 1136.03125,
-            "right": 384.28125,
-            "bottom": 1158.03125,
-            "width": 22,
-            "height": 22
+            "left": 630.359375,
+            "top": 1139,
+            "right": 654.359375,
+            "bottom": 1163,
+            "width": 24,
+            "height": 24
           }
         ]
       }
@@ -484,58 +528,66 @@
         "iconRects": []
       },
       {
-        "class": "photo-result",
+        "class": "point-box",
         "box": {
           "left": 84,
-          "top": 1110,
-          "right": 996,
-          "bottom": 1184,
-          "width": 912,
-          "height": 74
+          "top": 1106,
+          "right": 531,
+          "bottom": 1196,
+          "width": 447,
+          "height": 90
         },
         "textRects": [
           {
-            "left": 137,
-            "top": 1122,
-            "right": 304.515625,
-            "bottom": 1169,
-            "width": 167.515625,
-            "height": 47
-          },
-          {
-            "left": 364.40625,
-            "top": 1122,
-            "right": 725.734375,
-            "bottom": 1169,
-            "width": 361.328125,
-            "height": 47
+            "left": 258.390625,
+            "top": 1128.796875,
+            "right": 396.609375,
+            "bottom": 1171.796875,
+            "width": 138.21875,
+            "height": 43
           }
         ],
-        "text": "\u2713\n Fewer calls \n\u00b7\n \n\u2713\n Customers who come back",
+        "text": "\u2713\nFewer calls",
         "iconRects": [
           {
-            "left": 108,
-            "top": 1136.03125,
-            "right": 130,
-            "bottom": 1158.03125,
-            "width": 22,
-            "height": 22
-          },
+            "left": 223.390625,
+            "top": 1139,
+            "right": 247.390625,
+            "bottom": 1163,
+            "width": 24,
+            "height": 24
+          }
+        ]
+      },
+      {
+        "class": "point-box",
+        "box": {
+          "left": 549,
+          "top": 1106,
+          "right": 996,
+          "bottom": 1196,
+          "width": 447,
+          "height": 90
+        },
+        "textRects": [
           {
-            "left": 313.515625,
-            "top": 1145.03125,
-            "right": 317.515625,
-            "bottom": 1149.03125,
-            "width": 4,
-            "height": 4
-          },
+            "left": 624.828125,
+            "top": 1128.796875,
+            "right": 950.15625,
+            "bottom": 1171.796875,
+            "width": 325.328125,
+            "height": 43
+          }
+        ],
+        "text": "\u2713\nCustomers who come back",
+        "iconRects": [
           {
-            "left": 335.40625,
-            "top": 1136.03125,
-            "right": 357.40625,
-            "bottom": 1158.03125,
-            "width": 22,
-            "height": 22
+            "left": 589.828125,
+            "top": 1139,
+            "right": 613.828125,
+            "bottom": 1163,
+            "width": 24,
+            "height": 24
           }
         ]
       }
@@ -562,10 +614,10 @@
         },
         "textRects": [
           {
-            "left": 265,
-            "top": 408,
-            "right": 614.203125,
-            "bottom": 463,
+            "left": 260,
+            "top": 409,
+            "right": 609.203125,
+            "bottom": 464,
             "width": 349.203125,
             "height": 55
           }
@@ -573,18 +625,18 @@
         "text": "\u2713\n Every order captured",
         "iconRects": [
           {
-            "left": 110,
-            "top": 400,
-            "right": 196,
-            "bottom": 486,
+            "left": 105,
+            "top": 401,
+            "right": 191,
+            "bottom": 487,
             "width": 86,
             "height": 86
           },
           {
-            "left": 238,
-            "top": 425.953125,
-            "right": 260,
-            "bottom": 447.953125,
+            "left": 233,
+            "top": 426.953125,
+            "right": 255,
+            "bottom": 448.953125,
             "width": 22,
             "height": 22
           }
@@ -603,9 +655,9 @@
         "textRects": [
           {
             "left": 265,
-            "top": 549,
+            "top": 550,
             "right": 585.015625,
-            "bottom": 604,
+            "bottom": 605,
             "width": 320.015625,
             "height": 55
           }
@@ -614,17 +666,17 @@
         "iconRects": [
           {
             "left": 110,
-            "top": 536,
+            "top": 537,
             "right": 196,
-            "bottom": 622,
+            "bottom": 623,
             "width": 86,
             "height": 86
           },
           {
             "left": 238,
-            "top": 566.953125,
+            "top": 567.953125,
             "right": 260,
-            "bottom": 588.953125,
+            "bottom": 589.953125,
             "width": 22,
             "height": 22
           }
@@ -642,10 +694,10 @@
         },
         "textRects": [
           {
-            "left": 265,
-            "top": 690,
-            "right": 744.765625,
-            "bottom": 745,
+            "left": 260,
+            "top": 691,
+            "right": 739.765625,
+            "bottom": 746,
             "width": 479.765625,
             "height": 55
           }
@@ -653,18 +705,18 @@
         "text": "\u2713\n Paperwork right the first time",
         "iconRects": [
           {
-            "left": 110,
-            "top": 682,
-            "right": 196,
-            "bottom": 768,
+            "left": 105,
+            "top": 683,
+            "right": 191,
+            "bottom": 769,
             "width": 86,
             "height": 86
           },
           {
-            "left": 238,
-            "top": 707.953125,
-            "right": 260,
-            "bottom": 729.953125,
+            "left": 233,
+            "top": 708.953125,
+            "right": 255,
+            "bottom": 730.953125,
             "width": 22,
             "height": 22
           }
@@ -683,9 +735,9 @@
         "textRects": [
           {
             "left": 265,
-            "top": 831,
+            "top": 832,
             "right": 689.828125,
-            "bottom": 886,
+            "bottom": 887,
             "width": 424.828125,
             "height": 55
           }
@@ -694,17 +746,17 @@
         "iconRects": [
           {
             "left": 110,
-            "top": 818,
+            "top": 819,
             "right": 196,
-            "bottom": 904,
+            "bottom": 905,
             "width": 86,
             "height": 86
           },
           {
             "left": 238,
-            "top": 848.953125,
+            "top": 849.953125,
             "right": 260,
-            "bottom": 870.953125,
+            "bottom": 871.953125,
             "width": 22,
             "height": 22
           }
@@ -746,6 +798,102 @@
         ],
         "text": "DM us to see how ART could fit\nyour business this season.",
         "iconRects": []
+      },
+      {
+        "class": "engagement-box",
+        "box": {
+          "left": 84,
+          "top": 1158,
+          "right": 357.671875,
+          "bottom": 1218,
+          "width": 273.671875,
+          "height": 60
+        },
+        "textRects": [
+          {
+            "left": 169.28125,
+            "top": 1170,
+            "right": 303.375,
+            "bottom": 1206,
+            "width": 134.09375,
+            "height": 36
+          }
+        ],
+        "text": "\u2665\nLike the post",
+        "iconRects": [
+          {
+            "left": 138.28125,
+            "top": 1177,
+            "right": 160.28125,
+            "bottom": 1199,
+            "width": 22,
+            "height": 22
+          }
+        ]
+      },
+      {
+        "class": "engagement-box",
+        "box": {
+          "left": 371.671875,
+          "top": 1158,
+          "right": 680.9375,
+          "bottom": 1218,
+          "width": 309.265625,
+          "height": 60
+        },
+        "textRects": [
+          {
+            "left": 453.5625,
+            "top": 1170,
+            "right": 630.046875,
+            "bottom": 1206,
+            "width": 176.484375,
+            "height": 36
+          }
+        ],
+        "text": "\ud83d\udcac\nLeave a comment",
+        "iconRects": [
+          {
+            "left": 422.5625,
+            "top": 1177,
+            "right": 444.5625,
+            "bottom": 1199,
+            "width": 22,
+            "height": 22
+          }
+        ]
+      },
+      {
+        "class": "engagement-box",
+        "box": {
+          "left": 694.9375,
+          "top": 1158,
+          "right": 996,
+          "bottom": 1218,
+          "width": 301.0625,
+          "height": 60
+        },
+        "textRects": [
+          {
+            "left": 783.328125,
+            "top": 1170,
+            "right": 938.59375,
+            "bottom": 1206,
+            "width": 155.265625,
+            "height": 36
+          }
+        ],
+        "text": "\ud83d\udd16\nSave & share it",
+        "iconRects": [
+          {
+            "left": 752.328125,
+            "top": 1177,
+            "right": 774.328125,
+            "bottom": 1199,
+            "width": 22,
+            "height": 22
+          }
+        ]
       }
     ],
     "status": "passed"

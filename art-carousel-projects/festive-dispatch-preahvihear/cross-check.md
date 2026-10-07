@@ -11,3 +11,6 @@ Result: passed. No copy or design changes were needed.
 - The full nine-page PDF was decoded and all exported pages visually reviewed.
 
 Evidence: `proof/font-validation.json`, `proof/box-validation.json`, `proof/exported-pdf-overview.png`.
+
+
+Individual point cards: setup topics are four separate cards; slides 3–6 use two separate outcome cards; slide 8 retains four illustrated benefit cards with distinct accent cues; slide 9 uses three separate engagement cards. Exact copy, rendered Preahvihear, padding, icon containment and all nine PDF pages checked.
