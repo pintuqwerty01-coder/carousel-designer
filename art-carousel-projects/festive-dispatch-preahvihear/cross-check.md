@@ -17,3 +17,6 @@ Individual point cards: setup topics are four separate cards; slides 3–6 use t
 
 
 Slide 2: all four topic cards now use one aqua accent. Slide 9: rebuilt illustrative calendar with seven aligned weekday columns, sequential dates and a single green marked date; calendar text verified as Preahvihear. All nine pages regenerated and validated.
+
+
+Latest revision: HERE'S WHERE uses a right arrow. Slide 9 replaces the dated calendar with a date-free preparation milestone card, completion check and finish flag. Fonts, point boxes and the full nine-page export checked.
