@@ -1,6 +1,6 @@
-# Festive dispatch — static redesign v2
+# Festive dispatch — static redesign v3
 
-Nine static slides for review. Exact approved cover remains. Slides 02–06 now use crisp solid ink text panels over unobscured warehouse artwork: the white fading overlay is removed.
+Nine static slides for review. Exact approved cover remains. Slides 02–06 use full photographic backgrounds with smoothly blended ink shading behind the text and footer. Hard panel edges and the white fading overlay are removed.
 
 The closing sequence has three distinct visual roles and page colours:
 

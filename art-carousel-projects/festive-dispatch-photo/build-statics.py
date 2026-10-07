@@ -12,8 +12,8 @@ def icon(kind):
  return '<svg viewBox="0 0 100 100" fill="none" stroke="#1A1A1A" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">'+shapes[kind]+'</svg>'
 common='''
 .photo{position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover}
-.header{position:absolute;left:0;top:0;width:1080px;height:420px;background:#1A1A1A;border-bottom:3px solid #04ADC3}
-.footer{position:absolute;left:0;top:1108px;bottom:0;width:1080px;background:#1A1A1A}
+.header{--fade-start:330px;position:absolute;inset:0;width:1080px;height:1350px;background:linear-gradient(180deg,rgba(26,26,26,.92) 0px,rgba(26,26,26,.88) 180px,rgba(26,26,26,.84) var(--fade-start),rgba(26,26,26,.62) calc(var(--fade-start) + 75px),rgba(26,26,26,.20) calc(var(--fade-start) + 125px),transparent calc(var(--fade-start) + 175px))}
+.footer{position:absolute;left:0;top:900px;bottom:0;width:1080px;background:linear-gradient(180deg,transparent,rgba(26,26,26,.12) 130px,rgba(26,26,26,.62) 260px,rgba(26,26,26,.92) 390px,#1A1A1A 450px)}
 .kicker{position:absolute;left:84px;top:48px;border-radius:999px;padding:12px 22px;background:white;color:#1A1A1A;font:500 23px/1 Poppins}.kicker b{color:#04ADC3;padding-right:12px}
 .photo-h{position:absolute;left:84px;right:84px;top:106px;font-size:62px;line-height:1.12;color:white}.photo-h em{color:#04ADC3;font-style:normal}
 .photo-pain{position:absolute;left:84px;right:84px;top:274px;font:500 27px/1.36 Poppins;color:#DEDEDE}
@@ -38,12 +38,12 @@ for slide in source['slides']:
   inner=f'<img class="photo" src="assets/art-{n:02d}.png"><div class="header"></div><div class="footer"></div>'
   if n!=2:
    css+=' .photo{top:-72px}'
-   if n==3:css+=' .photo{top:20px}'
-   if n==5:css+=' .photo{top:-52px}.header{height:450px}.photo-pain{top:326px}'
+   if n==3:css+=' .photo{top:0}'
+   if n==5:css+=' .photo{top:-52px}.header{--fade-start:390px}.photo-pain{top:326px}'
    label=['ORDERS','STOCK','PAPERWORK','DISPATCH'][n-3];a=accents[n];h=html.escape(lines[0]).replace(html.escape(a),('<br>' if n in (3,6) else '')+'<em>'+html.escape(a)+'</em>')
    inner+=f'<div class="kicker"><b>{n-2}/4</b>{label}</div><div class="h-display photo-h">{h}</div><div class="photo-pain">{html.escape(lines[1])}</div><div class="photo-whatif">{html.escape(lines[2])}</div><div class="photo-result"><span class="check"><svg viewBox="0 0 34 34" width="34" height="34"><circle cx="17" cy="17" r="17" fill="#2B907F"/><path d="M9 17l6 6 11-13" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>{html.escape(lines[3])}</span></div>'
   else:
-   css+=' .header{height:450px}.photo-h{top:80px;font-size:68px}.photo-pain{top:284px;font-size:30px;line-height:1.4}.setup-next{position:absolute;left:84px;top:1000px;border-radius:999px;background:#04ADC3;color:#1A1A1A;padding:18px 28px;font:600 32px/1.2 Poppins}'
+   css+=' .header{--fade-start:365px}.photo-h{top:80px;font-size:68px}.photo-pain{top:284px;font-size:30px;line-height:1.4}.setup-next{position:absolute;left:84px;top:1000px;border-radius:999px;background:#04ADC3;color:#1A1A1A;padding:18px 28px;font:600 32px/1.2 Poppins}'
    inner+=f'<div class="h-display photo-h">{html.escape(lines[0])}</div><div class="photo-pain">{html.escape(lines[1])}</div><div class="setup-next">{html.escape(lines[2])}</div>'
  elif n==7:
   theme='aqua';dark=False

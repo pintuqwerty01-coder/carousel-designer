@@ -13,3 +13,5 @@ Corrected cover MP4: zero lint/JavaScript errors; 1080×1350, 30fps, four second
 ## Static revision 2
 
 White fade removed from slides 02–06; 07–09 use solid aqua, white and ink pages. Newly generated transparent character layers reviewed. All images load, every source copy line remains, and all text bounds pass. PNGs are 1080×1350. Final statics are captured in fresh browser pages; what-if panels use block layout and vector result checks to avoid partial text painting. Updated PDF and overview use final PNGs. No new motion rendered for this revision.
+
+Revision 3: all nine image-loading/copy/text-bound checks pass. Photographic slides 02–06 use blended dark overlays instead of opaque sheets. Readability and final PNG/PDF composition reviewed; source copy retained. No new motion rendered.

@@ -56,8 +56,8 @@ canvas { image-rendering: pixelated; }
 
 
 .photo{position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover}
-.header{position:absolute;left:0;top:0;width:1080px;height:420px;background:#1A1A1A;border-bottom:3px solid #04ADC3}
-.footer{position:absolute;left:0;top:1108px;bottom:0;width:1080px;background:#1A1A1A}
+.header{--fade-start:330px;position:absolute;inset:0;width:1080px;height:1350px;background:linear-gradient(180deg,rgba(26,26,26,.92) 0px,rgba(26,26,26,.88) 180px,rgba(26,26,26,.84) var(--fade-start),rgba(26,26,26,.62) calc(var(--fade-start) + 75px),rgba(26,26,26,.20) calc(var(--fade-start) + 125px),transparent calc(var(--fade-start) + 175px))}
+.footer{position:absolute;left:0;top:900px;bottom:0;width:1080px;background:linear-gradient(180deg,transparent,rgba(26,26,26,.12) 130px,rgba(26,26,26,.62) 260px,rgba(26,26,26,.92) 390px,#1A1A1A 450px)}
 .kicker{position:absolute;left:84px;top:48px;border-radius:999px;padding:12px 22px;background:white;color:#1A1A1A;font:500 23px/1 Poppins}.kicker b{color:#04ADC3;padding-right:12px}
 .photo-h{position:absolute;left:84px;right:84px;top:106px;font-size:62px;line-height:1.12;color:white}.photo-h em{color:#04ADC3;font-style:normal}
 .photo-pain{position:absolute;left:84px;right:84px;top:274px;font:500 27px/1.36 Poppins;color:#DEDEDE}

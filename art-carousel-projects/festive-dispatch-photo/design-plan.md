@@ -21,3 +21,7 @@ After static approval, produce cover plus one task motion proof that matches the
 ## Revision 2 — user feedback
 
 Remove white fading text overlays. Setup/task slides use solid ink header/footer bands and clear photographic scenes. Closing pages now separate brand reveal (aqua orchestration rail), benefit recap (white page, four ink benefit cards) and contact action (ink page, oversized message symbol). Dimensional mascot has celebration, relaxed cup/thumbs-up and pointing poses respectively. Exact script retained; static approval required before new motion.
+
+## Revision 3 — blend the shade into the photo
+
+Replace opaque header/footer sheets on 02–06 with full-frame ink-to-transparent gradients. The warehouse continues behind the headline; the hero image and footer have no abrupt rectangular boundary. Fade depth adapts to the longer setup/paperwork copy. Reveal, solution and CTA retain the revision 2 page colours and composition. Still a static review revision.
