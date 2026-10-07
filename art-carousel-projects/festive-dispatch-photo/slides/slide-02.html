@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1350" />
+<script src="assets/gsap.min.js"></script>
+<style>
+/* ART carousel house style (ART-carousel-design skill). Tokens come from the ART brand guidelines (2026). */
+@font-face { font-family: "Preahvihear"; src: url("assets/fonts/Preahvihear-Regular.ttf"); font-weight: 400; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-Regular.ttf"); font-weight: 400; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-Medium.ttf"); font-weight: 500; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-SemiBold.ttf"); font-weight: 600; }
+@font-face { font-family: "Poppins"; src: url("assets/fonts/Poppins-Bold.ttf"); font-weight: 700; }
+
+:root {
+  --aqua: #04ADC3;      /* primary */
+  --ink: #1A1A1A;       /* secondary */
+  --white: #FFFFFF;
+  --body-dark: #3D3D3D; /* body text on white */
+  --body-light: #CFCFCF;/* body text on ink */
+  --aqua-tint: rgba(4, 173, 195, 0.12);
+  --pad: 84px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1350px; overflow: hidden; background: var(--ink); }
+.slide { position: absolute; inset: 0; width: 1080px; height: 1350px; overflow: hidden; }
+.slide.light { background: var(--white); color: var(--ink); }
+.slide.dark  { background: var(--ink); color: var(--white); }
+.slide.aqua  { background: var(--aqua); color: var(--ink); }
+
+.h-display { font-family: "Preahvihear", sans-serif; font-weight: 400; letter-spacing: -0.01em; }
+.p { font-family: "Poppins", sans-serif; }
+
+/* handle, bottom-left on every slide */
+.handle { position: absolute; left: var(--pad); bottom: 64px; font: 500 26px/1 "Poppins", sans-serif; letter-spacing: 0.02em; z-index: 30; }
+.light .handle { color: #8A8A8A; } .dark .handle { color: #8A8A8A; } .aqua .handle { color: rgba(26,26,26,0.7); }
+
+/* swipe hint, bottom-right */
+.swipe { position: absolute; right: var(--pad); bottom: 56px; font: 600 26px/1 "Poppins", sans-serif; color: var(--aqua); z-index: 30; display: flex; align-items: center; gap: 12px; }
+.swipe .arr { display: inline-block; }
+
+
+/* content column */
+.col { position: absolute; left: var(--pad); right: var(--pad); z-index: 10; display: flex; flex-direction: column; }
+
+
+:root { --g-lite: #41A486; --g-mid: #2B907F; --g-deep: #1C5E55; --g-dark: #173331; }   /* accent: teal-green (approved swatch). ONLY on result chips, shop windows and check marks */
+.hl { background: linear-gradient(var(--aqua), var(--aqua)) no-repeat 0 80% / 100% 50%; padding: 0 .1em; margin: 0 -.04em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.dark .hl { background: none; color: var(--aqua); padding: 0; margin: 0; }
+.aqua .hl { background: linear-gradient(var(--white), var(--white)) no-repeat 0 80% / 100% 50%; }
+.em { color: var(--aqua); font-weight: 600; }
+.handle { bottom: 92px; }
+.count { position:absolute; right: var(--pad); bottom: 92px; font: 600 24px/1 "Poppins", sans-serif; color:#8A8A8A; z-index:30; letter-spacing:.06em; }
+.dark .handle, .dark .count { color: rgba(255,255,255,.75); }
+.aqua .handle, .aqua .count { color: rgba(26,26,26,.75); }
+#trail { position:absolute; left:0; bottom:0; width:1080px; height:80px; z-index: 40; image-rendering: pixelated; }
+canvas { image-rendering: pixelated; }
+
+
+.photo{position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover}
+.wash{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.96) 28%,rgba(255,255,255,.82) 34%,rgba(255,255,255,0) 43%,transparent 67%,rgba(0,0,0,.25) 92%,rgba(0,0,0,.45) 100%)}
+.kicker{position:absolute;left:84px;top:58px;border-radius:999px;padding:12px 22px;background:#1A1A1A;color:white;font:500 23px/1 Poppins}.kicker b{color:#04ADC3;padding-right:12px}
+.photo-h{position:absolute;left:84px;right:84px;top:116px;font-size:62px;line-height:1.12;color:#1A1A1A}.photo-h em{color:#04ADC3;font-style:normal}
+.photo-pain{position:absolute;left:84px;right:84px;top:345px;font:500 27px/1.36 Poppins;color:#1A1A1A}
+.photo-whatif{position:absolute;left:84px;right:84px;top:948px;background:#04ADC3;border-radius:30px;padding:19px 25px;font:600 27px/1.35 Poppins;color:#1A1A1A}
+.photo-result{position:absolute;left:84px;right:84px;top:1130px;min-height:62px;border-radius:999px;background:white;padding:15px 23px;font:600 25px/1.35 Poppins;color:#1A1A1A;display:flex;gap:14px;align-items:center}
+.photo-result .check{flex:none;width:34px;height:34px;background:#2B907F;color:white;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.handle,.count{color:white!important;text-shadow:0 1px 4px #000}
+ .slide.light{background:#1A1A1A} .photo-h{top:108px;font-size:68px}.photo-pain{top:392px;font-size:30px;line-height:1.4}.setup-next{position:absolute;left:84px;top:1100px;border-radius:999px;background:#04ADC3;color:#1A1A1A;padding:18px 28px;font:600 32px/1.2 Poppins}.wash{background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.94) 43%,transparent 56%,transparent 79%,rgba(0,0,0,.4))}
+</style></head>
+<body>
+<div id="root" data-composition-id="photo-02" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30">
+  <div id="s" class="clip slide light" data-start="0" data-duration="4">
+<img class="photo" src="assets/art-02.png"><div class="wash"></div><div class="h-display photo-h">More orders. Same team. Same system?</div><div class="photo-pain">In the weeks before Diwali, cashew, sweets and gifting orders pile up fast. What works on a normal day starts to crack, and it usually cracks in the same four places.</div><div class="setup-next">Here&#x27;s where 👇</div>
+    <div class="handle">@arealtimetech</div>
+    <div class="count">02/09</div>
+    <canvas id="trail" width="1080" height="80"></canvas>
+  </div>
+</div>
+<script>
+// ART pixel robot, canvas engine (frame-by-frame poses). Aiotrix kit only.
+// Grid 24x24 art pixels. drawBot(ctx, x, y, u, pose): (x,y) = top-left of grid, u = px per art pixel.
+// Poses step at 8/s (S = floor(t*8)); travel snaps to 4px. Deterministic: no random, no clocks.
+const C8 = { A: "#04ADC3", W: "#FFFFFF", K: "#1A1A1A", S: "#9BE3EC", R: "#F27A7A", Y: "#FFD166", G: "#D9D9D9", D: "#5A5A5A" };
+const snap = v => Math.round(v / 4) * 4;
+
+function _pts(list, color) { return list.map(([x, y, w = 1, h = 1]) => [x, y, w, h, color]); }
+
+function botParts(p) {
+  const L = p.dark ? C8.W : C8.K;
+  const out = [];
+  const add = (list, c) => out.push(..._pts(list, c));
+  // antenna
+  add([[11, 2, 1, 2]], L);
+  if (!p.bulbOff) add([[10, 0, 3, 2]], p.bulb === "red" ? C8.R : p.bulb === "yellow" ? C8.Y : C8.A);
+  // head
+  add([[5, 4, 13, 1], [4, 5, 15, 1], [4, 6, 2, 6], [17, 6, 2, 6], [4, 12, 15, 1], [5, 13, 13, 1]], C8.A);
+  add([[3, 7, 1, 4], [19, 7, 1, 4]], C8.A); // ears
+  add([[6, 6, 11, 6]], C8.W);                 // face screen
+  // body
+  add([[6, 14, 11, 6]], C8.A);
+  add([[9, 16, 5, 3]], C8.W);
+  add([[10, 17]], p.light2 ? C8.Y : C8.A); add([[12, 17]], C8.S);
+  // legs
+  const legs = {
+    stand: [[8, 20, 2, 2], [13, 20, 2, 2], [7, 22, 3, 1], [13, 22, 3, 1]],
+    stepL: [[8, 20, 2, 1], [7, 21, 3, 1], [13, 20, 2, 2], [13, 22, 3, 1]],
+    stepR: [[8, 20, 2, 2], [7, 22, 3, 1], [13, 20, 2, 1], [13, 21, 3, 1]],
+    tuck:  [[8, 20, 2, 1], [13, 20, 2, 1], [7, 21, 3, 1], [13, 21, 3, 1]],
+  }[p.legs || "stand"];
+  add(legs, L);
+  // arms (A)
+  const AL = {
+    down: [[5, 15], [5, 16], [4, 17], [4, 18]],
+    up:   [[5, 15], [4, 15], [4, 14], [3, 13], [3, 12], [3, 11]],
+    flex: [[5, 15], [4, 15], [3, 14], [3, 13], [4, 12], [5, 12]],
+    out:  [[5, 15], [4, 15], [3, 15], [2, 15]],
+  }[p.armL || "down"];
+  const AR = {
+    down:  [[17, 15], [17, 16], [18, 17], [18, 18]],
+    up:    [[17, 15], [18, 15], [18, 14], [19, 13], [19, 12], [19, 11]],
+    wave1: [[17, 15], [18, 15], [19, 14], [20, 13], [21, 12]],
+    wave2: [[17, 15], [18, 15], [18, 14], [18, 13], [18, 12]],
+    flex:  [[17, 15], [18, 15], [19, 14], [19, 13], [18, 12], [17, 12]],
+    reach: [[17, 15], [18, 15], [19, 15], [20, 15], [21, 15]],
+    hold:  [[17, 15], [17, 16], [18, 16]],
+    tap:   [[17, 15], [18, 16], [19, 17], [20, 18]],
+  }[p.armR || "down"];
+  add(AL, C8.A); add(AR, C8.A);
+  // eyes
+  const EY = {
+    open:  [[[8, 7, 2, 2], [13, 7, 2, 2]], C8.K, [[8, 7], [13, 7]]],
+    lookL: [[[7, 7, 2, 2], [12, 7, 2, 2]], C8.K, [[7, 7], [12, 7]]],
+    lookR: [[[9, 7, 2, 2], [14, 7, 2, 2]], C8.K, [[9, 7], [14, 7]]],
+    blink: [[[8, 8, 2, 1], [13, 8, 2, 1]], C8.K, []],
+    happy: [[[7, 8], [8, 7, 2, 1], [10, 8], [12, 8], [13, 7, 2, 1], [15, 8]], C8.K, []],
+    wide:  [[[8, 6, 2, 3], [13, 6, 2, 3]], C8.K, [[8, 6], [13, 6]]],
+    squint:[[[7, 8, 4, 1], [13, 7, 2, 2]], C8.K, []],
+    focus: [[[7, 8, 3, 1], [13, 8, 3, 1]], C8.K, []],
+  }[p.eyes || "open"];
+  add(EY[0], EY[1]); add(EY[2], C8.W);
+  const MO = {
+    smile: [[9, 10], [10, 11, 3, 1], [13, 10]],
+    grin:  [[9, 10, 5, 1], [10, 11, 3, 1]],
+    wobble:[[8, 11], [9, 10, 2, 1], [11, 11, 2, 1], [13, 10, 2, 1]],
+    o:     [[10, 10, 3, 2]],
+    flat:  [[9, 10, 5, 1]],
+    open:  [[10, 10, 3, 2]],
+  }[p.mouth || "smile"];
+  add(MO, C8.K);
+  return out;
+}
+
+function drawBot(ctx, x, y, u, p = {}) {
+  x = snap(x); y = snap(y);
+  const parts = botParts(p);
+  const flip = !!p.flip;
+  const put = (gx, gy, w, h, c, dx = 0, dy = 0) => {
+    const X = flip ? (24 - gx - w) : gx;
+    ctx.fillStyle = c; ctx.fillRect(x + X * u + dx, y + gy * u + dy, w * u, h * u);
+  };
+  if (p.halo) {                                   // cream/white halo on dark scenes
+    const h = 4;
+    for (const [dx, dy] of [[-h, 0], [h, 0], [0, -h], [0, h], [-h, -h], [h, h], [-h, h], [h, -h]])
+      for (const [gx, gy, w, hh] of parts) put(gx, gy, w, hh, p.haloColor || "#FFFFFF", dx, dy);
+  }
+  for (const [gx, gy, w, h, c] of parts) put(gx, gy, w, h, c);
+}
+
+// soft flat shadow under feet
+function botShadow(ctx, cx, feetY, w, dark) {
+  ctx.fillStyle = dark ? "rgba(0,0,0,.35)" : "rgba(26,26,26,.12)";
+  ctx.fillRect(snap(cx - w / 2), snap(feetY), snap(w), 8);
+}
+
+// ---- generic pixel helpers for props (u = art pixel size) ----
+function pxr(ctx, x, y, w, h, c) { ctx.fillStyle = c; ctx.fillRect(snap(x), snap(y), w, h); }
+function blitRows(ctx, rows, x, y, u, pal) {
+  rows.forEach((r, j) => [...r].forEach((ch, i) => { if (ch !== ".") { ctx.fillStyle = pal[ch] || ch; ctx.fillRect(snap(x) + i * u, snap(y) + j * u, u, u); } }));
+}
+const SPR = {
+  q:    [".KKK.", "K...K", "....K", "...K.", "..K..", ".....", "..K.."],
+  bang: ["R", "R", "R", ".", "R"],
+  check:["....A", "...A.", "A.A..", ".A..."],
+  phone:["KKKKK", "KAAAK", "KAAAK", "KAAAK", "KAAAK", "KKWKK"],
+  ringL:["K.", ".K", "K."],
+  paper:["KKKKKK", "KWWWWK", "KWGGWK", "KWWWWK", "KWGGWK", "KWWWWK", "KKKKKK"],
+  bubble:["AAAAAAA", "AWWWWWA", "AAAAAAA", ".AA...."],
+  mug:  ["KKKK.", "KKKKK", "KKKK.", "KKKK."],
+  steam:[".S", "S.", ".S"],
+  lens: [".KKK.", "KSSSK", "KSSSK", "KSSSK", ".KKK.", "....K", ".....K"],
+  box:  ["AAAAA", "ASSSA", "AAAAA", "ASSSA", "AAAAA"],
+  plane:["A....", "AAA..", "AAAAA", "AAA..", "A...."],
+  shop: ["AWAWAWAWA", "AWAWAWAWA", ".KKKKKKK.", ".KWWKWWK.", ".KWWKWWK.", ".KKKKAAK.", ".KWWKAAK.", ".KKKKKKK."],
+  kbd:  ["KKKKKKKKK", "KWKWKWKWK", "KKKKKKKKK"],
+  flag: ["RRR.", "RRRR", "RRR.", "K...", "K...", "K..."],
+  slip: ["KKKKK", "KWWWK", "KWAWK", "KWWWK", "KWAWK", "KKKKK"],
+  stamp:["..AAA..", ".AAAAA.", "AAAAAWA", "AAAAWAA", "AWAWAAA", ".AAWAA.", "..AAA.."],
+  bell: ["..K..", ".YYY.", ".YYY.", "YYYYY", "..K.."],
+  arrow:["..AAA", "...AA", "..A.A", ".A...", "A...."],
+  tray: ["K.........K", "K.........K", "KKKKKKKKKKK"],
+  big:  ["YYYYYY", "YWWWWY", "YWKKWY", "YWWWWY", "YWKKWY", "YWWWWY", "YWKKWY", "YYYYYY"],
+  small:["KKKK", "KWWK", "KWAK", "KKKK"],
+  heart:[".R.R.", "RRRRR", "RRRRR", ".RRR.", "..R.."],
+  poof: ["S.S", ".S.", "S.S"],
+  gear: ["..A.A..", ".AAAAA.", "AAA.AAA", ".A...A.", "AAA.AAA", ".AAAAA.", "..A.A.."],
+};
+const PAL = { K: C8.K, A: C8.A, W: C8.W, S: C8.S, R: C8.R, G: C8.G, Y: C8.Y };
+
+// ART smooth vector props (Aiotrix kit). RULE: only the robot mascot is pixel art; every other element is
+// smooth, anti-aliased flat vector, and moves on continuous time t with easing (the robot steps at 8 poses/s).
+// GL/GM/GD = accent teal-green (light -> mid -> deep). ONLY for result chips, lit shop windows and check marks
+const VC = { GL: "#41A486", GM: "#2B907F", GD: "#1C5E55", A: "#04ADC3", K: "#1A1A1A", W: "#FFFFFF", T: "#DDF3F7", S: "#9BE3EC", R: "#F27A7A", Y: "#FFD166", G: "#D9D9D9", D: "#5A5A5A" };
+const clamp01 = k => Math.max(0, Math.min(1, k));
+const eOut = k => 1 - Math.pow(1 - clamp01(k), 3);
+const eInOut = k => { k = clamp01(k); return k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; };
+const eBack = k => { k = clamp01(k); const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(k - 1, 3) + c1 * Math.pow(k - 1, 2); };
+const rr = (ctx, x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
+const fs = (ctx, fill, stroke, lw) => { if (fill) { ctx.fillStyle = fill; ctx.fill(); } if (stroke) { ctx.strokeStyle = stroke; ctx.lineWidth = lw || 3; ctx.lineJoin = "round"; ctx.stroke(); } };
+
+// soft ellipse shadow under the robot's feet (shrinks while it hops)
+function vShadow(ctx, cx, y, w, lift = 0, dark = false) {
+  const s = 1 - Math.min(0.5, lift / 80);
+  ctx.save(); ctx.globalAlpha = dark ? 0.35 : 0.13; ctx.fillStyle = VC.K;
+  ctx.beginPath(); ctx.ellipse(cx, y, (w / 2) * s, 7 * s, 0, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+}
+
+// desk: rounded ink top + soft aqua front panel with drawer handles
+function vDesk(ctx, x0, x1, top, h = 44) {
+  rr(ctx, x0 + 10, top + 8, x1 - x0 - 20, h, [0, 0, 12, 12]); fs(ctx, VC.T);
+  ctx.fillStyle = "rgba(4,173,195,.35)";
+  for (const dx of [0.22, 0.5, 0.78]) { rr(ctx, x0 + (x1 - x0) * dx - 22, top + 24, 44, 6, 3); ctx.fill(); }
+  rr(ctx, x0, top, x1 - x0, 14, 7); fs(ctx, VC.K);
+}
+
+// Material "call" handset glyph (Apache 2.0), 24x24 box
+const HANDSET = new Path2D("M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z");
+function tick(ctx, cx, cy, s, color, lw, k = 1) {   // self-drawing check mark, k = 0..1
+  const P = [[-0.5, 0.05], [-0.15, 0.4], [0.55, -0.4]].map(([a, b]) => [cx + a * s, cy + b * s]);
+  const L1 = Math.hypot(P[1][0] - P[0][0], P[1][1] - P[0][1]), L2 = Math.hypot(P[2][0] - P[1][0], P[2][1] - P[1][1]);
+  let d = clamp01(k) * (L1 + L2);
+  ctx.save(); ctx.strokeStyle = color; ctx.lineWidth = lw; ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.beginPath(); ctx.moveTo(...P[0]);
+  if (d <= L1) ctx.lineTo(P[0][0] + (P[1][0] - P[0][0]) * d / L1, P[0][1] + (P[1][1] - P[0][1]) * d / L1);
+  else { ctx.lineTo(...P[1]); d -= L1; ctx.lineTo(P[1][0] + (P[2][0] - P[1][0]) * d / L2, P[1][1] + (P[2][1] - P[1][1]) * d / L2); }
+  ctx.stroke(); ctx.restore();
+}
+
+// smartphone standing on the desk. ring = buzzing with an incoming call; else quiet with a check on the screen.
+function vPhone(ctx, cx, bottom, t, ring, quietK = 1, icon = "call") {
+  const w = 38, h = 62, ang = ring ? Math.sin(t * 52) * 0.1 : 0;
+  ctx.save(); ctx.translate(cx, bottom); ctx.rotate(ang);
+  rr(ctx, -w / 2, -h, w, h, 9); fs(ctx, VC.K);
+  rr(ctx, -w / 2 + 4, -h + 7, w - 8, h - 16, 5); fs(ctx, ring ? VC.A : VC.T);
+  rr(ctx, -6, -6, 12, 3, 1.5); fs(ctx, "#5A5A5A");
+  if (ring) {
+    const p = 1 + Math.sin(t * 18) * 0.08;
+    if (icon === "bell") { ctx.save(); ctx.translate(0, -h / 2 - 2); ctx.scale(p, p); bellPath(ctx); fs(ctx, VC.W); ctx.beginPath(); ctx.arc(0, 11, 3, 0, 7); fs(ctx, VC.W); ctx.restore(); }
+    else { ctx.save(); ctx.translate(0, -h / 2 - 2); ctx.scale(p, p); ctx.translate(-12, -12); ctx.fillStyle = VC.W; ctx.fill(HANDSET); ctx.restore(); }
+  } else tick(ctx, 0, -h / 2 - 2, 18, VC.GM, 4, quietK);
+  ctx.restore();
+}
+
+// expanding ring waves either side of a ringing phone
+function vRings(ctx, cx, cy, t) {
+  ctx.save(); ctx.lineCap = "round"; ctx.strokeStyle = VC.A; ctx.lineWidth = 3.5;
+  for (let j = 0; j < 2; j++) {
+    const ph = (t * 2.4 + j * 0.5) % 1, r = 26 + ph * 22;
+    ctx.globalAlpha = (1 - ph) * 0.9;
+    ctx.beginPath(); ctx.arc(cx, cy, r, -0.55, 0.55); ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx, cy, r, Math.PI - 0.55, Math.PI + 0.55); ctx.stroke();
+  }
+  ctx.restore();
+}
+
+// little impact burst where the robot's hand taps (k = 0..1)
+function vTapBurst(ctx, x, y, k) {
+  if (k <= 0 || k >= 1) return;
+  ctx.save(); ctx.strokeStyle = VC.K; ctx.lineWidth = 3; ctx.lineCap = "round"; ctx.globalAlpha = 1 - k;
+  for (const a of [-2.3, -1.57, -0.85]) {
+    const r0 = 8 + k * 8, r1 = 16 + k * 10;
+    ctx.beginPath(); ctx.moveTo(x + Math.cos(a) * r0, y + Math.sin(a) * r0); ctx.lineTo(x + Math.cos(a) * r1, y + Math.sin(a) * r1); ctx.stroke();
+  }
+  ctx.restore();
+}
+
+// client storefront: striped scalloped awning, window, door. lit = update received (warm window), bump = 0..1 squash on arrival
+function vShop(ctx, cx, top, lit, bump = 1) {
+  const w = 96, x = -w / 2, sq = bump < 1 ? 1 - Math.sin(clamp01(bump) * Math.PI) * 0.07 : 1;
+  ctx.save(); ctx.translate(cx, top + 76); ctx.scale(1 / sq, sq); ctx.translate(0, -76);
+  rr(ctx, x + 6, 18, w - 12, 58, [0, 0, 6, 6]); fs(ctx, VC.W, VC.K, 3);
+  let win = VC.T;
+  if (lit) { win = ctx.createLinearGradient(0, 36, 0, 62); win.addColorStop(0, VC.GL); win.addColorStop(1, VC.GD);
+    ctx.save(); ctx.shadowColor = "rgba(65,164,134,.85)"; ctx.shadowBlur = 16; rr(ctx, x + 16, 36, 36, 26, 4); fs(ctx, win); ctx.restore(); }
+  rr(ctx, x + 16, 36, 36, 26, 4); fs(ctx, win, VC.K, 2.5);
+  ctx.strokeStyle = VC.K; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(x + 34, 36); ctx.lineTo(x + 34, 62); ctx.stroke();
+  rr(ctx, x + 60, 38, 22, 38, [5, 5, 0, 0]); fs(ctx, VC.K);
+  ctx.fillStyle = VC.Y; ctx.beginPath(); ctx.arc(x + 76, 58, 2, 0, 7); ctx.fill();
+  // awning
+  const n = 6, sw = w / n;
+  for (let i = 0; i < n; i++) {
+    const c = i % 2 ? VC.W : VC.A, sx = x + i * sw;
+    ctx.beginPath(); ctx.moveTo(sx, 4); ctx.lineTo(sx + sw, 4); ctx.lineTo(sx + sw, 18); ctx.arc(sx + sw / 2, 18, sw / 2, 0, Math.PI); ctx.closePath(); fs(ctx, c);
+  }
+  ctx.beginPath(); ctx.moveTo(x, 18); ctx.lineTo(x, 4); ctx.quadraticCurveTo(x, 0, x + 4, 0); ctx.lineTo(x + w - 4, 0); ctx.quadraticCurveTo(x + w, 0, x + w, 4); ctx.lineTo(x + w, 18);
+  for (let i = n - 1; i >= 0; i--) ctx.arc(x + i * sw + sw / 2, 18, sw / 2, 0, Math.PI);
+  ctx.closePath(); fs(ctx, null, VC.K, 3);
+  ctx.restore();
+}
+
+// paper plane pointing along angle ang, scale s
+function vPlane(ctx, x, y, ang, s = 1, alpha = 1) {
+  ctx.save(); ctx.globalAlpha = alpha; ctx.translate(x, y); ctx.rotate(ang); ctx.scale(s, s);
+  ctx.beginPath(); ctx.moveTo(16, 0); ctx.lineTo(-14, -12); ctx.lineTo(-6, 0); ctx.closePath(); fs(ctx, VC.W, VC.K, 2.5);
+  ctx.beginPath(); ctx.moveTo(16, 0); ctx.lineTo(-6, 0); ctx.lineTo(-14, 11); ctx.closePath(); fs(ctx, VC.A, VC.K, 2.5);
+  ctx.restore();
+}
+// quadratic bezier point + tangent
+const qb = (p0, p1, p2, k) => [(1 - k) * (1 - k) * p0[0] + 2 * (1 - k) * k * p1[0] + k * k * p2[0], (1 - k) * (1 - k) * p0[1] + 2 * (1 - k) * k * p1[1] + k * k * p2[1]];
+const qbAng = (p0, p1, p2, k) => Math.atan2(2 * (1 - k) * (p1[1] - p0[1]) + 2 * k * (p2[1] - p1[1]), 2 * (1 - k) * (p1[0] - p0[0]) + 2 * k * (p2[0] - p1[0]));
+// a plane flying p0 -> p2 along a curve with a dashed trail behind it; k = 0..1 (already eased by caller)
+function vFlight(ctx, p0, p1, p2, k) {
+  if (k <= 0 || k >= 1) return;
+  ctx.save(); ctx.setLineDash([6, 8]); ctx.lineCap = "round"; ctx.strokeStyle = VC.A; ctx.lineWidth = 3; ctx.globalAlpha = 0.55;
+  ctx.beginPath(); ctx.moveTo(...p0);
+  for (let j = 1; j <= 24; j++) ctx.lineTo(...qb(p0, p1, p2, (k * j) / 24));
+  ctx.stroke(); ctx.restore();
+  const [x, y] = qb(p0, p1, p2, k), s = k > 0.8 ? 1 - (k - 0.8) / 0.2 * 0.6 : 1;
+  vPlane(ctx, x, y, qbAng(p0, p1, p2, k), s);
+}
+
+// aqua check badge that pops in with overshoot (k = 0..1 over the pop)
+function vBadge(ctx, cx, cy, k, r = 15) {
+  if (k <= 0) return;
+  const s = eBack(k);
+  ctx.save(); ctx.translate(cx, cy); ctx.scale(s, s);
+  const g = ctx.createLinearGradient(-r, -r, r, r); g.addColorStop(0, VC.GL); g.addColorStop(1, VC.GD);
+  ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); fs(ctx, g, VC.W, 3);
+  tick(ctx, 0, 0, r * 1.05, VC.W, 3.5, clamp01(k * 1.6 - 0.4));
+  ctx.restore();
+}
+
+// sweat drops flicking off the robot's head (stress)
+function vSweat(ctx, x, y, t, dir = 1) {
+  for (let j = 0; j < 2; j++) {
+    const ph = (t * 1.8 + j * 0.5) % 1;
+    const dx = dir * (6 + ph * 26), dy = -18 * Math.sin(ph * Math.PI) + ph * 22;
+    ctx.save(); ctx.globalAlpha = 1 - ph * ph; ctx.translate(x + dx, y + dy); ctx.rotate(dir * 0.5);
+    ctx.beginPath(); ctx.moveTo(0, -9); ctx.bezierCurveTo(6, -2, 7, 4, 0, 7); ctx.bezierCurveTo(-7, 4, -6, -2, 0, -9); fs(ctx, VC.S, VC.A, 2);
+    ctx.restore();
+  }
+}
+
+// mug with the handle on the left (towards the robot's hand) + soft wavy steam; t = time since it appeared
+function vMug(ctx, x, bottom, t) {
+  const w = 32, h = 34, top = bottom - h, k = eBack(t / 0.3);
+  ctx.save(); ctx.translate(x + w / 2, bottom); ctx.scale(k, k); ctx.translate(-x - w / 2, -bottom);
+  ctx.save(); ctx.strokeStyle = VC.K; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(x, top + 15, 9, Math.PI * 0.5, Math.PI * 1.5); ctx.stroke(); ctx.restore();
+  rr(ctx, x, top, w, h, [3, 3, 9, 9]); fs(ctx, VC.W, VC.K, 3);
+  rr(ctx, x + 1.5, top + 12, w - 3, 8, 0); fs(ctx, VC.A);
+  ctx.restore();
+  ctx.save(); ctx.strokeStyle = "rgba(90,90,90,.55)"; ctx.lineWidth = 3; ctx.lineCap = "round";
+  for (let j = 0; j < 3; j++) {
+    const ph = (t * 0.8 + j / 3) % 1; ctx.globalAlpha = Math.sin(ph * Math.PI) * clamp01(t / 0.3);
+    const sx = x + 6 + j * 10, sy = top - 4 - ph * 14;
+    ctx.beginPath();
+    for (let q = 0; q <= 14; q++) { const yy = sy - q * 2, xx = sx + Math.sin(q * 0.55 + t * 5 + j * 2) * 3; q ? ctx.lineTo(xx, yy) : ctx.moveTo(xx, yy); }
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+
+// gear (for the trail seams). evenodd hole.
+function vGear(ctx, cx, cy, r, color, rot = 0, teeth = 8) {
+  const ri = r * 0.74, N = teeth * 4;
+  ctx.save(); ctx.translate(cx, cy); ctx.rotate(rot); ctx.beginPath();
+  for (let j = 0; j <= N; j++) { const a = (j / N) * Math.PI * 2, rad = (j % 4 < 2) ? r : ri; j ? ctx.lineTo(Math.cos(a) * rad, Math.sin(a) * rad) : ctx.moveTo(Math.cos(a) * rad, Math.sin(a) * rad); }
+  ctx.closePath(); ctx.moveTo(r * 0.32, 0); ctx.arc(0, 0, r * 0.32, 0, Math.PI * 2, true);
+  ctx.fillStyle = color; ctx.fill("evenodd"); ctx.restore();
+}
+
+// ---- props for the other scenes ----
+const _ink = (ctx, font, color) => { ctx.font = font; ctx.fillStyle = color; ctx.textAlign = "center"; ctx.textBaseline = "middle"; };
+
+// speech mark over the robot: "?" (white) or "!" (red); pops in with overshoot. s = size factor
+function vMark(ctx, cx, cy, ch, k, kind = "q", s = 1) {
+  if (k <= 0) return;
+  const bg = kind === "bang" ? VC.R : VC.W, fg = kind === "bang" ? VC.W : VC.K, z = eBack(k) * s;
+  ctx.save(); ctx.translate(cx, cy); ctx.scale(z, z);
+  ctx.beginPath(); ctx.moveTo(-7, 16); ctx.lineTo(-4, 32); ctx.lineTo(8, 17); ctx.closePath(); fs(ctx, bg, VC.K, 3);
+  ctx.beginPath(); ctx.arc(0, 0, 22, 0, Math.PI * 2); fs(ctx, bg, VC.K, 3);
+  ctx.beginPath(); ctx.moveTo(-6, 16); ctx.lineTo(-3, 28); ctx.lineTo(7, 17); ctx.closePath(); fs(ctx, bg);
+  _ink(ctx, "700 28px Poppins, sans-serif", fg); ctx.fillText(ch, 0, 2);
+  ctx.restore();
+}
+
+// document with a folded corner, coloured header (optional label) and grey text lines
+function vPaper(ctx, x, y, w, h, o = {}) {
+  const f = 12;
+  ctx.save(); ctx.globalAlpha = o.alpha == null ? 1 : o.alpha; ctx.translate(x + w / 2, y + h / 2); ctx.rotate(o.rot || 0); ctx.translate(-w / 2, -h / 2);
+  ctx.beginPath(); ctx.moveTo(5, 0); ctx.lineTo(w - f, 0); ctx.lineTo(w, f); ctx.lineTo(w, h - 5); ctx.quadraticCurveTo(w, h, w - 5, h);
+  ctx.lineTo(5, h); ctx.quadraticCurveTo(0, h, 0, h - 5); ctx.lineTo(0, 5); ctx.quadraticCurveTo(0, 0, 5, 0); ctx.closePath(); fs(ctx, VC.W, VC.K, 3);
+  ctx.beginPath(); ctx.moveTo(w - f, 0); ctx.lineTo(w - f, f); ctx.lineTo(w, f); ctx.closePath(); fs(ctx, VC.T, VC.K, 2.5);
+  let ly = 12;
+  if (o.head) { rr(ctx, 7, 8, w - f - 11, 13, 3); fs(ctx, o.head); if (o.label) { _ink(ctx, "700 9px Poppins, sans-serif", VC.W); ctx.fillText(o.label, 7 + (w - f - 11) / 2, 15); } ly = 28; }
+  ctx.fillStyle = VC.G;
+  for (let j = 0; ly + j * 9 < h - 8; j++) { rr(ctx, 7, ly + j * 9, (w - 14) * (j % 2 ? 0.6 : 0.85), 4, 2); ctx.fill(); }
+  ctx.restore();
+}
+
+// keyboard seen from the side: slab with a row of key caps; one cap lights up per keystroke while typing
+function vKeyboard(ctx, x, y, w, t, typing) {
+  const n = Math.floor((w - 8) / 12), lit = typing ? Math.floor(t * 14) % n : -1;
+  for (let j = 0; j < n; j++) { rr(ctx, x + 5 + j * 12, y - (j === lit ? 2 : 5), 9, 7, 2); fs(ctx, j === lit ? VC.A : VC.W, VC.K, 2); }
+  rr(ctx, x, y, w, 12, 5); fs(ctx, VC.K);
+}
+
+// red flag on a pole that springs up (k 0..1) and waves
+function vFlag(ctx, x, bottom, t, k) {
+  if (k <= 0) return;
+  const s = eBack(k);
+  ctx.save(); ctx.translate(x, bottom); ctx.scale(1, s);
+  ctx.strokeStyle = VC.K; ctx.lineWidth = 3.5; ctx.lineCap = "round"; ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(0, -48); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(0, -48);
+  for (let q = 0; q <= 8; q++) ctx.lineTo(q * 3.5, -48 + Math.sin(q * 0.8 - t * 9) * 2.5);
+  for (let q = 8; q >= 0; q--) ctx.lineTo(q * 3.5, -30 + Math.sin(q * 0.8 - t * 9) * 2.5);
+  ctx.closePath(); fs(ctx, VC.R, VC.K, 2.5);
+  ctx.restore();
+}
+
+// vertical scan beam with a soft glow
+function vBeam(ctx, x, y0, y1) {
+  const g = ctx.createLinearGradient(x - 18, 0, x + 18, 0);
+  g.addColorStop(0, "rgba(4,173,195,0)"); g.addColorStop(0.5, "rgba(4,173,195,.45)"); g.addColorStop(1, "rgba(4,173,195,0)");
+  ctx.fillStyle = g; ctx.fillRect(x - 18, y0, 36, y1 - y0);
+  rr(ctx, x - 1.5, y0, 3, y1 - y0, 1.5); fs(ctx, VC.A);
+}
+
+// shelf unit: light back panel, ink posts and boards
+function vShelf(ctx, x0, x1, top, boards) {
+  const bottom = boards[boards.length - 1];
+  rr(ctx, x0, top, x1 - x0, bottom - top, 6); fs(ctx, "#E4F6F9");
+  rr(ctx, x0, top - 4, x1 - x0, 8, 4); fs(ctx, VC.K);
+  for (const b of boards) { rr(ctx, x0, b, x1 - x0, 8, 4); fs(ctx, VC.K); }
+  rr(ctx, x0, top - 4, 8, bottom - top + 12, 4); fs(ctx, VC.K); rr(ctx, x1 - 8, top - 4, 8, bottom - top + 12, 4); fs(ctx, VC.K);
+}
+
+// carton box with tape stripe; scales from its bottom centre
+function vBox(ctx, x, y, w, h, alpha = 1, scale = 1) {
+  if (scale <= 0 || alpha <= 0) return;
+  ctx.save(); ctx.globalAlpha = alpha; ctx.translate(x + w / 2, y + h); ctx.scale(scale, scale); ctx.translate(-w / 2, -h);
+  rr(ctx, 0, 0, w, h, 5); fs(ctx, VC.A, VC.K, 2.5);
+  rr(ctx, 1.5, 1.5, w - 3, 10, [4, 4, 0, 0]); fs(ctx, "#36C2D4");
+  ctx.strokeStyle = VC.K; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(1.5, 12); ctx.lineTo(w - 1.5, 12); ctx.stroke();
+  rr(ctx, w / 2 - 5, 1.5, 10, h - 3, 0); fs(ctx, VC.S);
+  ctx.restore();
+}
+
+// puff of smoke (k 0..1)
+function vPoof(ctx, cx, cy, k) {
+  if (k <= 0 || k >= 1) return;
+  ctx.save(); ctx.globalAlpha = (1 - k) * 0.9; ctx.fillStyle = VC.S;
+  for (let j = 0; j < 6; j++) { const a = j / 6 * Math.PI * 2, d = 6 + k * 18; ctx.beginPath(); ctx.arc(cx + Math.cos(a) * d, cy + Math.sin(a) * d * 0.7, 8 + k * 5, 0, 7); ctx.fill(); }
+  ctx.restore();
+}
+
+// slip of paper (reorder / purchase). big = yellow purchase slip
+function vSlip(ctx, x, y, w, h, o = {}) {
+  ctx.save(); ctx.globalAlpha = o.alpha == null ? 1 : o.alpha;
+  rr(ctx, x, y, w, h, 5); fs(ctx, o.big ? VC.Y : VC.W, VC.K, 2.5);
+  if (o.big) { _ink(ctx, "700 17px Poppins, sans-serif", VC.K); ctx.fillText("₹₹₹", x + w / 2, y + h / 2 + 1); }
+  else { ctx.fillStyle = o.line || VC.A; for (let j = 0; j < 3 && 7 + j * 8 < h - 6; j++) { rr(ctx, x + 6, y + 7 + j * 8, (w - 12) * (j === 1 ? 0.6 : 1), 4, 2); ctx.fill(); } }
+  ctx.restore();
+}
+
+// teal approval mark (ring + check) left by the stamp
+function vStampMark(ctx, cx, cy, k) {
+  if (k <= 0) return;
+  ctx.save(); ctx.globalAlpha = clamp01(k * 3); ctx.strokeStyle = VC.GM; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(cx, cy, 13, 0, 7); ctx.stroke(); ctx.restore();
+  tick(ctx, cx, cy, 15, VC.GM, 3.5, clamp01(k * 1.5));
+}
+
+// rubber stamp: knob, neck, aqua base; bottom edge at y
+function vStamp(ctx, cx, y) {
+  ctx.beginPath(); ctx.arc(cx, y - 40, 9, 0, 7); fs(ctx, VC.K);
+  rr(ctx, cx - 5, y - 34, 10, 16, 3); fs(ctx, VC.K);
+  rr(ctx, cx - 22, y - 20, 44, 12, 4); fs(ctx, VC.A, VC.K, 2.5);
+  rr(ctx, cx - 18, y - 8, 36, 8, [0, 0, 3, 3]); fs(ctx, VC.D);
+}
+
+// magnifying glass held from (hx,hy)
+function vLens(ctx, cx, cy, r, hx, hy) {
+  ctx.save(); ctx.strokeStyle = VC.K; ctx.lineWidth = 7; ctx.lineCap = "round";
+  const a = Math.atan2(hy - cy, hx - cx); ctx.beginPath(); ctx.moveTo(hx, hy); ctx.lineTo(cx + Math.cos(a) * r, cy + Math.sin(a) * r); ctx.stroke(); ctx.restore();
+  ctx.beginPath(); ctx.arc(cx, cy, r, 0, 7); fs(ctx, "rgba(155,227,236,.38)", VC.K, 4);
+  ctx.save(); ctx.strokeStyle = "rgba(255,255,255,.95)"; ctx.lineWidth = 3; ctx.lineCap = "round"; ctx.beginPath(); ctx.arc(cx, cy, r - 6, -2.6, -1.7); ctx.stroke(); ctx.restore();
+}
+
+// dotted curve p0 -> p2 drawn up to k (links, follow-up arrows); arrow head optional
+function vCurve(ctx, p0, p1, p2, k, color, o = {}) {
+  if (k <= 0) return;
+  ctx.save(); ctx.strokeStyle = color; ctx.lineWidth = o.lw || 3.5; ctx.lineCap = "round"; ctx.setLineDash(o.dash || [2, 9]);
+  ctx.beginPath(); ctx.moveTo(...p0); const kk = clamp01(k);
+  for (let j = 1; j <= 30; j++) ctx.lineTo(...qb(p0, p1, p2, (kk * j) / 30));
+  ctx.stroke(); ctx.setLineDash([]);
+  if (o.arrow && kk > 0.95) { const [x, y] = p2, a = qbAng(p0, p1, p2, 1); ctx.translate(x, y); ctx.rotate(a);
+    ctx.beginPath(); ctx.moveTo(-10, -7); ctx.lineTo(0, 0); ctx.lineTo(-10, 7); ctx.stroke(); }
+  ctx.restore();
+}
+
+// chat bubble with a tail and three typing dots; (x,y) top-left, s = scale
+function vBubble(ctx, x, y, s, color, t, seed = 0, alpha = 1) {
+  ctx.save(); ctx.globalAlpha = alpha; ctx.translate(x, y); ctx.scale(s, s);
+  ctx.beginPath(); ctx.moveTo(10, 30); ctx.lineTo(6, 44); ctx.lineTo(22, 32); ctx.closePath(); fs(ctx, color, VC.K, 2.5);
+  rr(ctx, 0, 0, 64, 36, 14); fs(ctx, color, VC.K, 2.5);
+  ctx.beginPath(); ctx.moveTo(11, 29); ctx.lineTo(8, 40); ctx.lineTo(21, 30); ctx.closePath(); fs(ctx, color);
+  ctx.fillStyle = color === VC.Y ? VC.K : VC.W;
+  for (let j = 0; j < 3; j++) { ctx.beginPath(); ctx.arc(19 + j * 13, 18 + Math.sin(t * 10 + j * 0.9 + seed) * 2.5, 4, 0, 7); ctx.fill(); }
+  ctx.restore();
+}
+
+// inbox tray: back drawn first, then contents, then front lip
+function vTrayBack(ctx, x, y, w, h) { rr(ctx, x + 6, y - 16, w - 12, h + 16, 6); fs(ctx, "#E4F6F9", VC.K, 2.5); }
+function vTrayFront(ctx, x, y, w, h) {
+  ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x + w, y); ctx.lineTo(x + w - 8, y + h); ctx.lineTo(x + 8, y + h); ctx.closePath(); fs(ctx, VC.W, VC.K, 3);
+  rr(ctx, x + w / 2 - 14, y + 8, 28, 5, 2.5); fs(ctx, VC.A);
+}
+
+// conveyor belt: top rail with moving marks, body, rollers that turn
+function vBelt(ctx, x0, x1, y, h, off) {
+  rr(ctx, x0, y + 8, x1 - x0, h - 8, 0); fs(ctx, VC.T);
+  ctx.save(); ctx.beginPath(); ctx.rect(x0, y, x1 - x0, 10); ctx.clip();
+  rr(ctx, x0 - 10, y, x1 - x0 + 20, 10, 5); fs(ctx, VC.K);
+  ctx.fillStyle = VC.D; for (let bx = x0 - 32 + (off % 32); bx < x1; bx += 32) { rr(ctx, bx, y + 3, 14, 4, 2); ctx.fill(); }
+  ctx.restore();
+  for (let rx = x0 + 24; rx < x1; rx += 64) {
+    ctx.beginPath(); ctx.arc(rx, y + h / 2 + 5, 9, 0, 7); fs(ctx, VC.W, VC.K, 2.5);
+    const a = off / 9; ctx.save(); ctx.strokeStyle = VC.K; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(rx, y + h / 2 + 5); ctx.lineTo(rx + Math.cos(a) * 7, y + h / 2 + 5 + Math.sin(a) * 7); ctx.stroke(); ctx.restore();
+  }
+}
+
+// gate: two posts, top bar and a signal light (colour) with glow
+function vGate(ctx, x, w, top, bottom, light) {
+  rr(ctx, x, top, 8, bottom - top, 4); fs(ctx, VC.K); rr(ctx, x + w - 8, top, 8, bottom - top, 4); fs(ctx, VC.K);
+  rr(ctx, x - 4, top - 4, w + 8, 10, 5); fs(ctx, VC.K);
+  ctx.save(); if (light !== VC.G) { ctx.shadowColor = light; ctx.shadowBlur = 18; }
+  ctx.beginPath(); ctx.arc(x + w / 2, top - 18, 12, 0, 7); fs(ctx, light, VC.K, 3); ctx.restore();
+}
+
+// bell shape (centred, ~24 wide); swings by ang around its top
+function bellPath(ctx) {
+  ctx.beginPath(); ctx.moveTo(-12, 8); ctx.quadraticCurveTo(-10, 4, -10, -2); ctx.bezierCurveTo(-10, -13, 10, -13, 10, -2); ctx.quadraticCurveTo(10, 4, 12, 8); ctx.closePath();
+}
+function vBell(ctx, cx, cy, ang, ringing, t, s = 1.4) {
+  ctx.save(); ctx.translate(cx, cy - 14 * s); ctx.rotate(ang); ctx.translate(0, 14 * s); ctx.scale(s, s);
+  ctx.beginPath(); ctx.arc(0, 12, 3.5, 0, 7); fs(ctx, VC.K);
+  bellPath(ctx); fs(ctx, VC.Y, VC.K, 2.5 / s);
+  ctx.beginPath(); ctx.arc(0, -13, 2.5, 0, 7); fs(ctx, VC.K);
+  ctx.restore();
+  if (ringing) { ctx.save(); ctx.strokeStyle = VC.K; ctx.lineWidth = 2.5; ctx.lineCap = "round"; ctx.globalAlpha = 0.5 + 0.5 * Math.sin(t * 20);
+    for (const d of [-1, 1]) { ctx.beginPath(); ctx.arc(cx, cy, 26 * s / 1.4, d < 0 ? Math.PI - 0.5 : -0.5, d < 0 ? Math.PI + 0.5 : 0.5); ctx.stroke(); }
+    ctx.restore(); }
+}
+
+// heart
+function vHeart(ctx, cx, cy, s) {
+  if (s <= 0) return;
+  ctx.save(); ctx.translate(cx, cy); ctx.scale(s, s);
+  ctx.beginPath(); ctx.moveTo(0, 14); ctx.bezierCurveTo(-26, -2, -14, -24, 0, -10); ctx.bezierCurveTo(14, -24, 26, -2, 0, 14); ctx.closePath(); fs(ctx, VC.R, VC.K, 3 / s);
+  ctx.restore();
+}
+
+// ART carousel scene LIBRARY (art-carousel skill). cover / reveal / cta are generic; the task scenes
+// (calls, docs, stock, bills, chats, approvals) come from the "6 things" post and double as worked examples.
+// A post adds its own scenes in <project>/scenes.js (Object.assign(SCENES_DYN, {...})).
+// Per-slide options from content.json "opts" arrive as the global SCENE_OPTS.
+// Each scene(ctx, t, S, W, H) redraws one frame.
+// ONLY the robot is pixel art (pixelbot.js, posed by S = 8 steps/s). Every prop is smooth vector (props-vector.js) moving on t.
+// S = pose step (0..31 over 4s). Deterministic: same t -> same frame.
+// STAGE scenes (task slides) are drawn on a virtual 728x336 stage that the page scales by exactly 1.25
+// (912x420 on screen). Keep every size/position a multiple of 4 so pixels stay crisp after scaling.
+const lerp = (a, b, k) => a + (b - a) * Math.max(0, Math.min(1, k));
+const walkLegs = S => (S % 2 ? "stepL" : "stepR");
+const VF = 316, VY = VF - 23 * 8;            // stage floor (feet) and robot top for u=8
+
+const SCENES_DYN = {
+
+  // COVER (full frame): robot walks in along the desk, spots the paper pile, "?" -> "!", then rolls up its sleeves.
+  cover(ctx, t, S, W, H) {
+    // u = 10 matches task slides (8 x 1.25 stage scale). opts: x = where the robot stops (must sit on a clear patch of the
+    // cover image), feet = y of its feet, from = x it walks in from (off the right edge).
+    const o = (typeof SCENE_OPTS !== "undefined" && SCENE_OPTS) || {}, X = o.x ?? 812, FROM = o.from ?? 1100;
+    const u = 10, FEET = o.feet ?? 1172, Y = FEET - 23 * u;
+    let x = X, legs = "stand", armL = "down", armR = "down", eyes = "lookL", mouth = "o", bulb = "aqua";
+    if (S < 10) { x = lerp(FROM, X, S / 9); legs = walkLegs(S); eyes = "open"; mouth = "smile"; }
+    else if (S < 14) { eyes = "lookL"; mouth = "o"; }
+    else if (S < 18) { eyes = "wide"; mouth = "open"; bulb = "red"; }
+    else if (S < 24) { armL = S % 2 ? "flex" : "up"; armR = S % 2 ? "flex" : "up"; eyes = "focus"; mouth = "grin"; bulb = "yellow"; }
+    else { armL = "flex"; armR = "flex"; eyes = S === 29 ? "blink" : "happy"; mouth = "grin"; bulb = "aqua"; }
+    const hop = (S >= 24 && S <= 25) ? -20 : 0;
+    vShadow(ctx, x + 120, FEET + 8, 190, -hop, true);
+    drawBot(ctx, x, Y + hop, u, { legs, armL, armR, eyes, mouth, bulb, dark: true, halo: true, flip: FROM > X });   // faces the way it walks
+    if (S >= 10 && S < 14) vMark(ctx, x + 120, Y - 44, "?", (t - 10 / 8) / 0.2, "q", 1.2);
+    if (S >= 14 && S < 18) vMark(ctx, x + 120, Y - 44, "!", (t - 14 / 8) / 0.2, "bang", 1.2);
+  },
+
+  // 1 CLIENT UPDATES (vector props, pixel robot only): phones buzz on the desk; the robot hops from phone to phone and
+  // taps each quiet; a paper plane carries the update up to that client's shop, whose window lights up with a check.
+  calls(ctx, t, S) {
+    // robot stands in the gap left of each phone (arms x+24..x+168; tapping hand tip = phone's left edge), never overlapping one
+    const cxs = [300, 484, 668], Q = [8, 15, 22], stops = [112, 296, 480], FLY = 0.6, TOP = 292;
+    const land = Q.map(q => q / 8 + FLY);
+    cxs.forEach((cx, i) => vShop(ctx, cx, 6, t >= land[i], (t - land[i]) / 0.3));
+    let x, legs = "stand", armR = "down", eyes = "wide", mouth = "wobble", hopY = 0;
+    if (S < 6) { x = lerp(-140, stops[0], S / 6); legs = walkLegs(S); }
+    else if (S >= 25) { x = stops[2]; armR = "hold"; eyes = S === 30 ? "blink" : "happy"; mouth = "smile"; }
+    else {
+      const i = Math.min(2, Math.floor((S - 6) / 7)), r = S - 6 - 7 * i;
+      if (r < 3) { x = stops[i]; armR = r === 0 ? "reach" : "tap"; eyes = "focus"; mouth = "flat"; }
+      else if (i === 2) { x = stops[2]; eyes = "happy"; mouth = "grin"; legs = r === 3 ? "tuck" : "stand"; hopY = r === 3 ? -24 : 0; }   // little victory hop
+      else { const h = r - 3; x = lerp(stops[i], stops[i + 1], h / 3); legs = "tuck"; hopY = [-24, -40, -24, 0][h]; }
+    }
+    x = snap(x);
+    vShadow(ctx, x + 96, VF + 4, 120, -hopY);
+    drawBot(ctx, x, VY + hopY, 8, { legs, armR, eyes, mouth, bulb: S < 22 ? "red" : "aqua", bulbOff: S < 22 && S % 2 === 0 });
+    if (S < 22) vSweat(ctx, x + 160, VY + 48 + hopY, t, 1);
+    vDesk(ctx, 264, 724, TOP);
+    if (S >= 25) vMug(ctx, x + 116, TOP, t - 25 / 8);
+    cxs.forEach((cx, i) => {
+      const q = Q[i] / 8, ring = t < q;
+      vPhone(ctx, cx, TOP, t, ring, (t - q) / 0.25);
+      if (ring) vRings(ctx, cx, TOP - 34, t);
+      vTapBurst(ctx, cx - 22, TOP - 14, (t - (q - 0.2)) / 0.35);
+      vFlight(ctx, [cx, TOP - 66], [Math.min(cx + 64, 708), 170], [cx + 4, 78], eInOut((t - q) / FLY));
+      vBadge(ctx, cx + 40, 10, (t - land[i]) / 0.35);
+    });
+  },
+
+  // 2 RETYPING DOCUMENTS: papers tumble onto the desk while the robot types frantically; a beam scans them once,
+  // they merge into one clean document with a check, and a red flag springs up on the one mismatch.
+  docs(ctx, t, S) {
+    const x = 220, TOP = 284, P = [492, 572, 652], PW = 52, PH = 64, PY = TOP - PH;
+    let armR = "down", eyes = "wide", mouth = "wobble", bulb = "red", bulbOff = S % 2 === 0;
+    if (S < 9) { armR = S % 2 ? "tap" : "reach"; }
+    else if (S < 17) { armR = "reach"; eyes = "focus"; mouth = "flat"; bulbOff = false; bulb = "yellow"; }
+    else if (S < 22) { eyes = "open"; mouth = "o"; bulb = "aqua"; bulbOff = false; }
+    else { armR = S % 2 ? "wave1" : "wave2"; eyes = S === 30 ? "blink" : "happy"; mouth = "grin"; bulb = "aqua"; bulbOff = false; }
+    drawBot(ctx, x, VY, 8, { armR, eyes, mouth, bulb, bulbOff });
+    if (S < 9) vSweat(ctx, x + 160, VY + 48, t, 1);
+    vDesk(ctx, 260, 724, TOP);
+    vKeyboard(ctx, 388, TOP - 12, 92, t, S < 9);
+    const scanX = 484 + (712 - 484) * clamp01((t - 9 / 8) / 1.0), m = eInOut((t - 17 / 8) / 0.5);
+    [0, 2, 1].forEach(i => {
+      const px0 = P[i], land = (2 + 2 * i) / 8, k = (t - (land - 0.25)) / 0.25;
+      if (k <= 0) return;
+      let px = px0, py = PY, rot = 0, alpha = 1;
+      if (k < 1) { py = lerp(-90, PY, k * k); rot = (1 - k) * (i === 1 ? 0.5 : -0.6); }
+      else if (t - land < 0.16) py = PY - Math.sin((t - land) / 0.16 * Math.PI) * 6;
+      if (m > 0) { px = lerp(px0, 572, m); if (i !== 1) alpha = 1 - m; }
+      if (alpha <= 0) return;
+      vPaper(ctx, px, py, PW, PH, { rot, alpha, head: i === 1 ? VC.A : VC.D });
+      const scanned = t > 9 / 8 && scanX > px0 + PW / 2;
+      if (!scanned && t >= land) vMark(ctx, px0 + PW - 4, PY - 6, "?", (t - land) / 0.2, "bang", 0.5);
+    });
+    if (t >= 9 / 8 && t < 17 / 8) vBeam(ctx, scanX, PY - 18, TOP);
+    vFlag(ctx, 584, PY + 22, t, (t - 22 / 8) / 0.3);
+    vBadge(ctx, 572 + PW - 2, PY + 2, (t - 21 / 8) / 0.35);
+  },
+
+  // 3 STOCK: boxes vanish from the shelf one by one; the robot's bulb flashes, it holds up a reorder slip,
+  // an approval stamp thumps down on it (teal check), and new boxes drop into the gaps.
+  stock(ctx, t, S) {
+    vShelf(ctx, 400, 712, 112, [204, 296]);
+    const BW = 52, BH = 44, slots = [];
+    for (const by of [160, 252]) for (let c = 0; c < 4; c++) slots.push([418 + c * 72, by]);
+    const goneAt = { 4: 0.25, 6: 0.5, 1: 0.75, 7: 1.0 }, backAt = { 4: 2.5, 6: 2.75, 1: 3.0, 7: 3.25 };
+    slots.forEach(([bx, by], k) => {
+      const g = goneAt[k];
+      if (g === undefined || t < g) { vBox(ctx, bx, by, BW, BH); return; }
+      const b = backAt[k];
+      if (t < b) { vBox(ctx, bx, by, BW, BH, 1, 1 - eOut((t - g) / 0.15)); vPoof(ctx, bx + BW / 2, by + BH / 2, (t - g) / 0.4); }
+      if (t >= b - 0.2) { const q = clamp01((t - (b - 0.2)) / 0.2); vBox(ctx, bx, lerp(by - 36, by, q * q), BW, BH, clamp01(q * 2)); }
+    });
+    let x, legs = "stand", armR = "down", eyes = "open", mouth = "smile", bulb = "aqua", bulbOff = false;
+    if (S < 6) { x = lerp(-60, 160, S / 6); legs = walkLegs(S); eyes = "lookR"; }
+    else if (S < 10) { x = 160; eyes = "wide"; mouth = "o"; bulb = "red"; bulbOff = S % 2 === 0; }
+    else if (S < 20) { x = 160; armR = "up"; eyes = "focus"; mouth = "flat"; bulb = "yellow"; }
+    else if (S < 28) { x = 160; armR = "up"; eyes = "happy"; mouth = "grin"; }
+    else { x = 160; armR = S % 2 ? "wave1" : "wave2"; eyes = S === 30 ? "blink" : "happy"; mouth = "grin"; }
+    x = snap(x);
+    vShadow(ctx, x + 96, VF + 4, 120);
+    drawBot(ctx, x, VY, 8, { legs, armR, eyes, mouth, bulb, bulbOff });
+    if (S >= 6 && S < 10) vMark(ctx, x + 96, VY - 40, "!", (t - 6 / 8) / 0.2, "bang");
+    if (t >= 1.25 && t < 3.6) {                          // reorder slip held up by the raised hand
+      const a = Math.min(clamp01((t - 1.25) / 0.12), clamp01((3.6 - t) / 0.12));
+      vSlip(ctx, 324, 160, 44, 56, { alpha: a });
+      vStampMark(ctx, 346, 196, (t - 2.125) / 0.3);
+      let sy = null;                                     // stamp: drops, thumps, lifts away
+      if (t >= 1.875 && t < 2.125) { const q = (t - 1.875) / 0.25; sy = lerp(-10, 200, q * q); }
+      else if (t >= 2.125 && t < 2.275) sy = 200;
+      else if (t >= 2.275 && t < 2.55) sy = lerp(200, -10, eOut((t - 2.275) / 0.275));
+      if (sy !== null) vStamp(ctx, 346, sy);
+    }
+  },
+
+  // 4 MATCHING BILLS: detective robot hops from document to document with a magnifier (standing in the gap left of each);
+  // PO and delivery note link up in aqua with checks, the invoice links in red and gets flagged.
+  bills(ctx, t, S) {
+    const cxs = [296, 480, 664], stops = [112, 296, 480], TOP = 292, DW = 44, DH = 60, DY = TOP - DH;   // doc right edge < next stop's left arm
+    let x, legs = "stand", eyes = "squint", mouth = "smile", armR = "reach", hopY = 0, bulb = "aqua";
+    if (S < 6) { x = lerp(-140, stops[0], S / 6); legs = walkLegs(S); eyes = "open"; }
+    else if (S < 12) { x = stops[0]; eyes = S % 3 === 0 ? "lookR" : "squint"; }
+    else if (S < 15) { x = lerp(stops[0], stops[1], (S - 11) / 3); legs = "tuck"; hopY = [-20, -28, 0][S - 12]; }
+    else if (S < 18) { x = stops[1]; }
+    else if (S < 21) { x = lerp(stops[1], stops[2], (S - 17) / 3); legs = "tuck"; hopY = [-20, -28, 0][S - 18]; }
+    else if (S < 25) { x = stops[2]; if (S >= 22) { eyes = "wide"; mouth = "o"; bulb = "red"; } }
+    else { x = stops[2]; eyes = S === 30 ? "blink" : "happy"; mouth = "grin"; armR = S % 2 ? "wave1" : "wave2"; }
+    x = snap(x);
+    // links arc high above the robot's head, drawn behind everything
+    vCurve(ctx, [cxs[0], DY - 4], [(cxs[0] + cxs[1]) / 2, -20], [cxs[1], DY - 4], (t - 15 / 8) / 0.25, VC.A);
+    vCurve(ctx, [cxs[1], DY - 4], [(cxs[1] + cxs[2]) / 2, -20], [cxs[2], DY - 4], (t - 22 / 8) / 0.3, VC.R);
+    vShadow(ctx, x + 96, VF + 4, 120, -hopY);
+    drawBot(ctx, x, VY + hopY, 8, { legs, eyes, mouth, armR, bulb });
+    vDesk(ctx, 256, 724, TOP);
+    [[VC.A, "PO"], [VC.D, "DN"], [VC.K, "INV"]].forEach(([head, label], i) => vPaper(ctx, cxs[i] - DW / 2, DY, DW, DH, { head, label }));
+    vBadge(ctx, cxs[0] + 22, DY + 4, (t - 17 / 8) / 0.35);
+    vBadge(ctx, cxs[1] + 22, DY + 4, (t - 17 / 8 - 0.08) / 0.35);
+    vMark(ctx, cxs[2] + 22, DY - 18, "!", (t - 24 / 8) / 0.2, "bang", 0.7);
+    if (armR === "reach") vLens(ctx, x + 194 + Math.sin(t * 9) * 5, VY + hopY + 106 + Math.cos(t * 7) * 3, 17, x + 172, VY + hopY + 124);
+  },
+
+  // 5 CHASING VENDORS: chat bubbles chase the robot across the stage; it sets down a tray, the bubbles file in neatly,
+  // a follow-up flies out, the reply lands on the stack, check. Ends with tea.
+  chats(ctx, t, S) {
+    let x, flip = false, legs = "stand", armR = "down", eyes = "wide", mouth = "wobble", bulb = "red";
+    if (S < 13) { x = lerp(420, 40, S / 12); flip = true; legs = walkLegs(S); }
+    else if (S < 19) { x = 40; eyes = "focus"; mouth = "flat"; bulb = "yellow"; armR = "reach"; }
+    else if (S < 25) { x = 40; eyes = "open"; mouth = "smile"; bulb = "aqua"; armR = S < 21 ? "tap" : "down"; }
+    else { x = 40; armR = "hold"; eyes = S === 29 ? "blink" : "happy"; mouth = "smile"; bulb = "aqua"; }
+    x = snap(x);
+    const T = { x: 276, y: 292, w: 96, h: 24 }, tFile = 13 / 8;
+    const xcAt = tt => lerp(420, 40, clamp01(tt * 8 / 12));
+    vShadow(ctx, x + 96, VF + 4, 120);
+    drawBot(ctx, x, VY, 8, { legs, armR, eyes, mouth, bulb, flip });
+    if (S < 13) vSweat(ctx, x + 160, VY + 48, t, 1);
+    if (S >= 25) vMug(ctx, x + 150, VY + 146, t - 25 / 8);
+    const trayIn = clamp01((t - tFile + 0.15) / 0.15);
+    if (trayIn > 0) { ctx.save(); ctx.globalAlpha = trayIn; vTrayBack(ctx, T.x, T.y, T.w, T.h); ctx.restore(); }
+    for (let j = 0; j < 6; j++) {
+      const tb = (1 + 2 * j) / 8; if (t < tb) continue;
+      const col = j % 2 ? VC.S : VC.A;
+      const chase = tt => [lerp(760, xcAt(tt) + 190 + (j % 3) * 64 + Math.floor(j / 3) * 96, eOut((tt - tb) / 0.5)), 20 + (j % 3) * 62 + Math.floor(j / 3) * 30 + Math.sin(tt * 8 + j) * 6];
+      if (t < tFile) { const [bx, by] = chase(t); vBubble(ctx, bx, by, 1, col, t, j); continue; }
+      const k = eInOut((t - tFile - j * 0.06) / 0.4), [x0, y0] = chase(tFile);
+      vBubble(ctx, lerp(x0, T.x + 10 + (j % 2) * 40, k), lerp(y0, T.y - 22 - Math.floor(j / 2) * 12, k), lerp(1, 0.6, k), col, t, j);
+    }
+    const kr = eInOut((t - 22 / 8) / 0.45);
+    if (kr > 0) vBubble(ctx, lerp(700, T.x + 26, kr), lerp(24, T.y - 58, kr), lerp(1, 0.6, kr), VC.Y, t, 9);
+    if (trayIn > 0) { ctx.save(); ctx.globalAlpha = trayIn; vTrayFront(ctx, T.x, T.y, T.w, T.h); ctx.restore(); }
+    vFlight(ctx, [340, 250], [560, 260], [716, 44], eInOut((t - 19 / 8) / 0.5));
+    vBadge(ctx, T.x + T.w + 18, T.y - 34, (t - 26 / 8) / 0.35);
+  },
+
+  // 6 SMALL APPROVALS: the robot runs a booth beside a conveyor gate; small slips roll through and get a check,
+  // the big one stops, a bell rings and a ping goes to your phone; you approve and it rolls on.
+  approvals(ctx, t, S) {
+    const RX = 200, RY = VY - 24, gate = 440, GW = 64, BT = 300, stopA = 2.5, stopB = 3.25;
+    const travel = tt => 256 * Math.min(tt, stopA) + 320 * Math.max(0, tt - stopB);
+    const stopped = t >= stopA && t < stopB, off = travel(t);
+    let armR = "down", eyes = "open", mouth = "smile", bulb = "aqua";
+    if (S >= 20 && S < 26) { armR = "reach"; eyes = "wide"; mouth = "o"; bulb = "yellow"; }
+    else if (S >= 27) { armR = "hold"; eyes = S === 30 ? "blink" : "happy"; mouth = "smile"; }
+    else if (S % 4 < 2) { armR = "wave1"; }
+    drawBot(ctx, RX, RY, 8, { armR, eyes, mouth, bulb });
+    rr(ctx, RX + 24, RY + 160, 160, BT - RY - 160, [8, 8, 0, 0]); fs(ctx, VC.T, VC.K, 3);      // booth front (hides legs)
+    rr(ctx, RX + 18, RY + 156, 172, 9, 4.5); fs(ctx, VC.K);
+    if (S >= 27) vMug(ctx, RX + 152, RY + 156, t - 27 / 8);
+    const small = [200, 60, -80].map(x0 => x0 + off), big = -276 + off;
+    const passing = small.some(px => px > gate - 32 && px < gate + GW);
+    vGate(ctx, gate, GW, 156, BT, stopped ? VC.R : passing ? VC.A : VC.G);
+    vBelt(ctx, 0, 728, BT, 36, off);
+    small.forEach(px => { vSlip(ctx, px, BT - 28, 32, 28); if (px > gate + GW) vBadge(ctx, px + 16, BT - 46, (px - gate - GW) / 60, 12); });
+    vSlip(ctx, big, BT - 32, 76, 32, { big: true });
+    if (t >= stopB && big > gate + GW) vBadge(ctx, big + 38, BT - 50, (big - gate - GW) / 60);
+    if (t >= stopA) {
+      if (stopped) {
+        vBell(ctx, 556, 100, Math.sin(t * 22) * 0.35, true, t);
+        vCurve(ctx, [586, 80], [612, 40], [640, 64], (t - stopA - 0.12) / 0.25, VC.A, { arrow: true, dash: [6, 7], lw: 3 });
+        vMark(ctx, 702, 26, "!", (t - stopA - 0.3) / 0.2, "bang", 0.55);
+      }
+      vPhone(ctx, 676, 104, t, stopped, (t - stopB) / 0.25, "bell");
+    }
+  },
+
+  // REVEAL (full frame, dark): robot walks in, looks up at the logo, hops, waves with a heart.
+  reveal(ctx, t, S) {
+    const u = 10, FEET = 1196, Y = FEET - 23 * u;   // u = 10 matches task slides
+    let x = 788, legs = "stand", armR = "down", eyes = "open", mouth = "smile";
+    if (S < 9) { x = lerp(1100, 788, S / 8); legs = walkLegs(S); }
+    else if (S < 13) { eyes = "lookL"; mouth = "o"; }
+    else if (S < 15) { legs = "tuck"; eyes = "happy"; mouth = "grin"; }
+    else if (S < 25) { armR = S % 2 ? "wave1" : "wave2"; eyes = "happy"; mouth = "grin"; }
+    else { armR = "wave2"; eyes = S === 29 ? "blink" : "happy"; mouth = "grin"; }
+    const hop = (S === 13 || S === 14) ? -28 : 0;
+    vShadow(ctx, x + 120, FEET + 8, 190, -hop, true);
+    drawBot(ctx, x, Y + hop, u, { legs, armR, eyes, mouth, dark: true, halo: true, flip: true });
+    vHeart(ctx, x + 120, Y - 44 + Math.sin(t * 6) * 6, eBack((t - 2) / 0.3) * 1.5);
+  },
+
+  // CTA (white card on aqua): robot pops up, points left at the chips as they light up one by one, then grins.
+  cta(ctx, t, S) {
+    const u = 10, FEET = 272, Y = FEET - 23 * u, x = 56;   // u = 10 matches task slides; centred in the card
+    let armR = "reach", eyes = "lookL", mouth = "grin", legs = "stand";
+    const y = S < 4 ? lerp(320, Y, S / 3) : (S === 4 ? Y - 20 : Y);
+    if (S < 5) { armR = "up"; legs = "tuck"; eyes = "happy"; }
+    else if (S >= 20) { armR = S % 2 ? "wave1" : "wave2"; eyes = S === 28 ? "blink" : "happy"; }
+    else if (S % 2) armR = "tap";
+    vShadow(ctx, x + 120, FEET + 6, 150, FEET - 230 - y);
+    drawBot(ctx, x, y, u, { legs, armR, eyes, mouth, flip: true });
+  },
+};
+
+// bottom trail (smooth vector): dotted aqua line across the full width, solid up to this slide's progress,
+// half-gears on the seams so the swipe joins up, and a tiny pixel robot head (the mascot) as the marker.
+function drawTrail(ctx, W, i, n, k, dark, aqua) {
+  const y = 22, dot = aqua ? "rgba(26,26,26,.35)" : dark ? "rgba(4,173,195,.55)" : "rgba(4,173,195,.45)", main = aqua ? VC.K : VC.A;
+  ctx.fillStyle = dot;
+  for (let x = 12; x < W; x += 24) { ctx.beginPath(); ctx.arc(x, y, 4, 0, Math.PI * 2); ctx.fill(); }
+  const end = lerp((i - 1) / n, i / n, k) * W;
+  ctx.save(); ctx.strokeStyle = main; ctx.lineWidth = 8; ctx.lineCap = "round";
+  ctx.beginPath(); ctx.moveTo(-8, y); ctx.lineTo(Math.max(0, end), y); ctx.stroke(); ctx.restore();
+  if (i > 1) vGear(ctx, 0, y, 24, main);
+  if (i < n) vGear(ctx, W, y, 24, main);
+  const mx = snap(end) - 20;
+  pxr(ctx, mx, 0, 40, 40, main); pxr(ctx, mx + 6, 8, 28, 22, C8.W);
+  pxr(ctx, mx + 11, 13, 6, 6, C8.K); pxr(ctx, mx + 23, 13, 6, 6, C8.K);
+  pxr(ctx, mx + 17, -12, 6, 12, dark ? C8.W : C8.K); pxr(ctx, mx + 14, -18, 12, 8, aqua ? C8.W : C8.A);
+}
+
+const SCENE_OPTS = {};
+const SCENE = null, SC = document.getElementById("scene");
+const TR = document.getElementById("trail"), TRX = TR.getContext("2d");
+const st = { t: 0 };
+function render() {
+  const t = st.t, S = Math.min(31, Math.floor(t * 8 + 1e-6));
+  if (SC && SCENE && SCENES_DYN[SCENE]) { const c = SC.getContext("2d"); c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, SC.width, SC.height);
+    const k = Number(SC.dataset.scale || 1); c.setTransform(k, 0, 0, k, 0, 0); SCENES_DYN[SCENE](c, t, S, SC.width / k, SC.height / k); c.setTransform(1, 0, 0, 1, 0, 0); }
+  TRX.clearRect(0, 0, 1080, 80); TRX.save(); TRX.translate(0, 26);
+  const k = Math.min(1, t / 0.8); drawTrail(TRX, 1080, 2, 9, 1 - Math.pow(1 - k, 3), true, false); TRX.restore();
+}
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+tl.to(st, { t: 4, duration: 4, ease: "none", onUpdate: render }, 0);
+document.fonts.load('40px Preahvihear');document.fonts.load('600 40px Poppins');
+render();
+window.__timelines["photo-02"] = tl;
+</script>
+</body></html>
