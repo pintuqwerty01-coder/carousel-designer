@@ -9,3 +9,5 @@ Slides 07–09 use the user's selected closing layouts at `1e624103470e03b236a48
 Deliverables: `stills/slide-01.png` through `slide-09.png` (1080 × 1350), `static-review.pdf` (nine pages), `proof/all-slides.png`, `proof/last-three.png`. This is a static review, not a new animation export. Exact draft copy retained.
 
 Regenerate with `capture-statics.py`, `make-review.py`, `preview-endings.py` and `audit-fonts.py` using Playwright/Chromium. `use-preahvihear.py` records the initial typography conversion and is idempotent. `refine-closing.py` records the shared closing design; `capture-closing.py` refreshes only slides 07–09.
+
+Slide 02 hand artwork: Twemoji v14.0.2, Twitter and contributors, CC-BY 4.0. Source and licence are recorded in `slides/assets/point-down-attribution.txt`.

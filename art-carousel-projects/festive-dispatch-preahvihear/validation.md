@@ -10,3 +10,6 @@
 - Slides 01–06 are byte-identical to the previous delivered Preahvihear stills.
 - Closing preview visually reviewed after checking vector-symbol size, logo clearance, mascot/footer separation and visible bottom progress trails.
 - All copy remains draft review. No new animation generated in this revision.
+
+- Slide 02 pointing hand corrected with a recognisable Twemoji vector asset, sized 34px and aligned with the CTA.
+- Rebuilt PDF has nine pages. All nine actual PDF pages decoded with Poppler and visually checked in `proof/exported-pdf-overview.png`.

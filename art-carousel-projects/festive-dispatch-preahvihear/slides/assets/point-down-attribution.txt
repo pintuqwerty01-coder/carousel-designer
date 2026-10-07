@@ -1,0 +1,1 @@
+Pointing down hand: Twemoji v14.0.2, Twitter and contributors. Graphics licensed CC-BY 4.0. Source: https://github.com/twitter/twemoji/blob/v14.0.2/assets/svg/1f447.svg License: https://creativecommons.org/licenses/by/4.0/
