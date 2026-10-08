@@ -1,0 +1,44 @@
+{
+  "copy": "exact",
+  "fonts": [
+    {
+      "selector": ".big",
+      "fonts": [
+        {
+          "familyName": "Poppins",
+          "postScriptName": "Poppins-Bold",
+          "isCustomFont": true,
+          "glyphCount": 43
+        }
+      ]
+    },
+    {
+      "selector": ".hd",
+      "fonts": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 63
+        }
+      ]
+    },
+    {
+      "selector": ".bd",
+      "fonts": [
+        {
+          "familyName": "Poppins Medium",
+          "postScriptName": "Poppins-Medium",
+          "isCustomFont": true,
+          "glyphCount": 20
+        },
+        {
+          "familyName": "Poppins",
+          "postScriptName": "Poppins-Bold",
+          "isCustomFont": true,
+          "glyphCount": 18
+        }
+      ]
+    }
+  ]
+}
