@@ -197,28 +197,20 @@
         "class": "photo-whatif",
         "box": {
           "left": 84,
-          "top": 967.71875,
-          "right": 610,
+          "top": 1010.90625,
+          "right": 956.28125,
           "bottom": 1082,
-          "width": 526,
-          "height": 114.28125
+          "width": 872.28125,
+          "height": 71.09375
         },
         "textRects": [
           {
             "left": 108,
-            "top": 978.71875,
-            "right": 581.4375,
-            "bottom": 1030.71875,
-            "width": 473.4375,
-            "height": 52
-          },
-          {
-            "left": 108,
-            "top": 1017.859375,
-            "right": 544.0625,
-            "bottom": 1069.859375,
-            "width": 436.0625,
-            "height": 52
+            "top": 1022.90625,
+            "right": 932.28125,
+            "bottom": 1069.90625,
+            "width": 824.28125,
+            "height": 47
           }
         ],
         "text": "What if every order, from every channel, landed in one place?",
@@ -298,28 +290,20 @@
         "class": "photo-whatif",
         "box": {
           "left": 84,
-          "top": 967.71875,
-          "right": 686,
+          "top": 1013.609375,
+          "right": 991.828125,
           "bottom": 1082,
-          "width": 602,
-          "height": 114.28125
+          "width": 907.828125,
+          "height": 68.390625
         },
         "textRects": [
           {
             "left": 108,
-            "top": 978.71875,
-            "right": 657.515625,
-            "bottom": 1030.71875,
-            "width": 549.515625,
-            "height": 52
-          },
-          {
-            "left": 108,
-            "top": 1017.859375,
-            "right": 587.546875,
-            "bottom": 1069.859375,
-            "width": 479.546875,
-            "height": 52
+            "top": 1025.609375,
+            "right": 967.828125,
+            "bottom": 1068.609375,
+            "width": 859.828125,
+            "height": 43
           }
         ],
         "text": "How about a reorder drafted before it runs low, waiting for your OK?",
@@ -399,31 +383,31 @@
         "class": "photo-whatif",
         "box": {
           "left": 84,
-          "top": 967.71875,
-          "right": 748,
+          "top": 960.8125,
+          "right": 764,
           "bottom": 1082,
-          "width": 664,
-          "height": 114.28125
+          "width": 680,
+          "height": 121.1875
         },
         "textRects": [
           {
-            "left": 108,
-            "top": 978.71875,
-            "right": 661.09375,
-            "bottom": 1030.71875,
+            "left": 115,
+            "top": 974.8125,
+            "right": 668.09375,
+            "bottom": 1026.8125,
             "width": 553.09375,
             "height": 52
           },
           {
-            "left": 108,
-            "top": 1017.859375,
-            "right": 719.375,
-            "bottom": 1069.859375,
+            "left": 115,
+            "top": 1015.40625,
+            "right": 726.375,
+            "bottom": 1067.40625,
             "width": 611.375,
             "height": 52
           }
         ],
-        "text": "What if every document was checked against the order before the goods left?",
+        "text": "What if every document was checked\nagainst the order before the goods left?",
         "iconRects": []
       },
       {

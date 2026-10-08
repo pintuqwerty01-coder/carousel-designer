@@ -30,3 +30,6 @@ Callout sizing revision: slides 1, 3–6 and 9 now use content-sized boxes with 
 
 
 Slides 3–6 correction: blue prompt cards now have individually measured widths of 526, 602, 664 and 777px, replacing the 912px maximum-width layout. Two-line wrapping and 24px side padding verified in browser and actual PDF pages. Copy unchanged.
+
+
+Latest prompt refinement: slides 3 and 4 now fit on one line at 26px and 24px respectively; slide 5 uses a 680px two-line card with a semantic break after checked, 26px side padding and a slim white edge. Exact copy, rendered Preahvihear and box containment validated.
