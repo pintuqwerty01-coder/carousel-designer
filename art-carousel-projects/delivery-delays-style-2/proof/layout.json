@@ -1,0 +1,42 @@
+[
+  {
+    "slide": 1,
+    "text": [
+      {
+        "text": "CATCH DELIVERY DELAYS BEFORE YOUR CUSTOMER DOES.",
+        "left": 56,
+        "top": 165,
+        "right": 956,
+        "bottom": 387.28125
+      },
+      {
+        "text": "Your team already handles the unexpected. What if you heard first?",
+        "left": 56,
+        "top": 490,
+        "right": 696,
+        "bottom": 635.734375
+      },
+      {
+        "text": "Delays start small. Swipe to see where.",
+        "left": 56,
+        "top": 745,
+        "right": 576,
+        "bottom": 829.09375
+      }
+    ],
+    "assets": "loaded"
+  },
+  {
+    "slide": 4,
+    "text": [
+      {
+        "text": "2/4 \u00b7 IN TRANSIT\nShipment gone quiet?\nYou find out when someone asks.\nHow about a nudge the moment it stalls?\nNo silent stalls\nDetails ready",
+        "left": 84,
+        "top": 190,
+        "right": 704,
+        "bottom": 707.59375
+      }
+    ],
+    "assets": "loaded"
+  }
+]

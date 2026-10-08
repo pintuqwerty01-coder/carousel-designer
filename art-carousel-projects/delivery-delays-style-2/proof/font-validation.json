@@ -1,0 +1,104 @@
+[
+  {
+    "slide": 1,
+    "selector": ".big",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Bold",
+        "isCustomFont": true,
+        "glyphCount": 46
+      }
+    ]
+  },
+  {
+    "slide": 1,
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 64
+      }
+    ]
+  },
+  {
+    "slide": 1,
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins Medium",
+        "postScriptName": "Poppins-Medium",
+        "isCustomFont": true,
+        "glyphCount": 20
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Bold",
+        "isCustomFont": true,
+        "glyphCount": 18
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 19
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins Medium",
+        "postScriptName": "Poppins-Medium",
+        "isCustomFont": true,
+        "glyphCount": 31
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".wi",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 38
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".res>span",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 16
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "selector": ".res>span",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 13
+      }
+    ]
+  }
+]
