@@ -1,9 +1,6 @@
 {
-  "option": "B",
-  "name": "Race to know",
-  "animation_treatment": "A \u2014 Reference composition",
-  "state": "User-selected treatment; all nine slides completed",
-  "deliverables": "final/",
-  "cover": "final/slide-01.html",
-  "task": "final/slide-04.html"
+  "state": "Previous full set rejected; new physical-object reference rebuild awaiting two-proof review",
+  "current_proofs": "reference-rebuild/",
+  "previous_concept": "Race to know / reference composition",
+  "production_approved": false
 }

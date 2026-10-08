@@ -1,3 +1,7 @@
+# Current status: previous full set rejected
+
+The user rejected the preceding designs and animation. The current revision is `reference-rebuild/`, using the supplied Style 2 kit, physical logistics objects and HyperFrames. Only the cover and in-transit review proofs are completed in that folder. Review them before extending to all nine. Earlier `final/` files and ZIP remain historical, rejected exports.
+
 # Delivery delays — Style 2 / Race to know
 
 Completed nine-slide carousel using the user-selected A — Reference composition animation treatment. The cover and in-transit composition are retained from the approved previews; pickup, arrival and customer-update slides have distinct alert actions.

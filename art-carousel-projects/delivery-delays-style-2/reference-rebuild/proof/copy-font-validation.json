@@ -1,0 +1,86 @@
+[
+  {
+    "slide": 1,
+    "copy": "exact",
+    "fonts": [
+      {
+        "selector": ".big",
+        "fonts": [
+          {
+            "familyName": "Poppins",
+            "postScriptName": "Poppins-Bold",
+            "isCustomFont": true,
+            "glyphCount": 43
+          }
+        ]
+      },
+      {
+        "selector": ".hd",
+        "fonts": [
+          {
+            "familyName": "Preahvihear",
+            "postScriptName": "Preahvihear-Regular",
+            "isCustomFont": true,
+            "glyphCount": 63
+          }
+        ]
+      },
+      {
+        "selector": ".bd",
+        "fonts": [
+          {
+            "familyName": "Poppins Medium",
+            "postScriptName": "Poppins-Medium",
+            "isCustomFont": true,
+            "glyphCount": 20
+          },
+          {
+            "familyName": "Poppins",
+            "postScriptName": "Poppins-Bold",
+            "isCustomFont": true,
+            "glyphCount": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "copy": "exact",
+    "fonts": [
+      {
+        "selector": ".hd",
+        "fonts": [
+          {
+            "familyName": "Preahvihear",
+            "postScriptName": "Preahvihear-Regular",
+            "isCustomFont": true,
+            "glyphCount": 19
+          }
+        ]
+      },
+      {
+        "selector": ".bd",
+        "fonts": [
+          {
+            "familyName": "Poppins Medium",
+            "postScriptName": "Poppins-Medium",
+            "isCustomFont": true,
+            "glyphCount": 31
+          }
+        ]
+      },
+      {
+        "selector": ".wi",
+        "fonts": [
+          {
+            "familyName": "Poppins SemiBold",
+            "postScriptName": "Poppins-SemiBold",
+            "isCustomFont": true,
+            "glyphCount": 38
+          }
+        ]
+      }
+    ]
+  }
+]

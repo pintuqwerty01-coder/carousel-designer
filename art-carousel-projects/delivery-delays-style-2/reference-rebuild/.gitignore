@@ -1,0 +1,12 @@
+render/*
+!render/out/
+render/out/*
+!render/out/slide-01.mp4
+!render/out/slide-04.mp4
+slides/slide-*.html
+!slides/slide-01.html
+!slides/slide-04.html
+stills/slide-*.png
+!stills/slide-01.png
+!stills/slide-04.png
+preview-all-slides.jpg
