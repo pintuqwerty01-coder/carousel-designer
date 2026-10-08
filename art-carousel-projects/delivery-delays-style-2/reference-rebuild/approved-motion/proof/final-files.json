@@ -1,0 +1,87 @@
+{
+  "clips": [
+    {
+      "slide": 1,
+      "bytes": 614102,
+      "sha256": "59fe0e6e053836f53dd16ea8c2c1be9d301d7e2495541bd140195616ce5813d4",
+      "width": 1080,
+      "height": 1350,
+      "r_frame_rate": "30/1",
+      "duration": "4.000000"
+    },
+    {
+      "slide": 2,
+      "bytes": 508531,
+      "sha256": "b7c9ab74386812474d45c87217926faec3f057afe3822c3829e435abe13dfd52",
+      "width": 1080,
+      "height": 1350,
+      "r_frame_rate": "30/1",
+      "duration": "4.000000"
+    },
+    {
+      "slide": 3,
+      "bytes": 203066,
+      "sha256": "6b30430a913679beaac22b3458488bcab31755f8dba9b60e92a4d6b23efb263a",
+      "width": 1080,
+      "height": 1350,
+      "r_frame_rate": "30/1",
+      "duration": "4.000000"
+    },
+    {
+      "slide": 4,
+      "bytes": 705953,
+      "sha256": "7aa4d01446e915d978dd513340d8dc3e7266bfd9bbc8168f09d40302d6984b27",
+      "width": 1080,
+      "height": 1350,
+      "r_frame_rate": "30/1",
+      "duration": "4.000000"
+    },
+    {
+      "slide": 5,
+      "bytes": 184390,
+      "sha256": "a132d58775af766ad72c48e5bcfe60636c30448f5370495592cdf6b467fe65db",
+      "width": 1080,
+      "height": 1350,
+      "r_frame_rate": "30/1",
+      "duration": "4.000000"
+    },
+    {
+      "slide": 6,
+      "bytes": 503484,
+      "sha256": "260a5e8c8dba15009fb7bb4a98d8161cdb88caa588a8bb7e501907b7634ff9f0",
+      "width": 1080,
+      "height": 1350,
+      "r_frame_rate": "30/1",
+      "duration": "4.000000"
+    },
+    {
+      "slide": 7,
+      "bytes": 640135,
+      "sha256": "8774146c6d1446d4244237c55b8507de895a5b6a3feea26f9adc1857c505d607",
+      "width": 1080,
+      "height": 1350,
+      "r_frame_rate": "30/1",
+      "duration": "4.000000"
+    },
+    {
+      "slide": 8,
+      "bytes": 738939,
+      "sha256": "58436f1da9dc62c420f4b447fbbd9aee3a55dc6357b29296602b26fbe4d19c2c",
+      "width": 1080,
+      "height": 1350,
+      "r_frame_rate": "30/1",
+      "duration": "4.000000"
+    },
+    {
+      "slide": 9,
+      "bytes": 607529,
+      "sha256": "202af20b56f5ce09aff2258ccb33a360a113ac3059c858fd93e434330b7e8bb0",
+      "width": 1080,
+      "height": 1350,
+      "r_frame_rate": "30/1",
+      "duration": "4.000000"
+    }
+  ],
+  "review_duration": "36.000000",
+  "checks": "All clips lint 0, stationary text 0\u20131 changed pixels, exact copy and custom fonts verified; all stills and frame sheets inspected."
+}

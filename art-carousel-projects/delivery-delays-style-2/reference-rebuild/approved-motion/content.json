@@ -1,0 +1,300 @@
+{
+  "title": "Catch delivery delays before your customer does.",
+  "handle": "@arealtimetech",
+  "palette": [
+    "dark",
+    "aqua",
+    "light",
+    "aqua",
+    "light",
+    "dark",
+    "dark",
+    "teal",
+    "dark"
+  ],
+  "warm_bokeh": false,
+  "slides": [
+    {
+      "template": "cover",
+      "big": "**Catch delivery delays** before your customer does.",
+      "question": "Your team already handles the unexpected. What if you heard first?",
+      "sub": "Delays start small.",
+      "swipe": "Swipe to see where.",
+      "streaks": [
+        3,
+        1.0
+      ],
+      "flare": [
+        900,
+        170,
+        1.1
+      ],
+      "big_top": 150,
+      "q_top": 815,
+      "q_size": 56,
+      "sub_top": 1120,
+      "arrow": [
+        595,
+        1100
+      ]
+    },
+    {
+      "template": "setup",
+      "headline": "Delays happen. **Who hears first?**",
+      "body": "Between the port, the highway and the ghat roads, small slips start in four places.",
+      "cue": "Here's where:",
+      "stops": [
+        "Pickup",
+        "In transit",
+        "Arrival time",
+        "The update"
+      ],
+      "vword": {
+        "text": "Delivery delays",
+        "top": 130
+      },
+      "streaks": [
+        7,
+        0.9
+      ]
+    },
+    {
+      "template": "task",
+      "n": 1,
+      "of": 4,
+      "label": "Pickup",
+      "headline": "Pickup **missed?**",
+      "pain": "Nobody notices until the slot is gone.",
+      "whatif": "What if it was flagged the moment it happened?",
+      "outcome": [
+        "Caught early",
+        "Time to re-plan"
+      ],
+      "x": 200,
+      "y": 220,
+      "w": 600,
+      "ghost": {
+        "side": "right",
+        "offset": -60,
+        "top": 330
+      }
+    },
+    {
+      "template": "task",
+      "n": 2,
+      "of": 4,
+      "label": "In transit",
+      "headline": "Shipment **gone quiet?**",
+      "pain": "You find out when someone asks.",
+      "whatif": "How about a nudge the moment it stalls?",
+      "outcome": [
+        "No silent stalls",
+        "Details ready"
+      ],
+      "x": 440,
+      "y": 230,
+      "w": 580,
+      "blob": [
+        250,
+        90,
+        1000,
+        1040
+      ],
+      "ghost": {
+        "side": "left",
+        "offset": 20,
+        "top": 420
+      },
+      "streaks": [
+        11,
+        0.8
+      ]
+    },
+    {
+      "template": "task",
+      "n": 3,
+      "of": 4,
+      "label": "Arrival time",
+      "headline": "Arrival time **slipping?**",
+      "pain": "One slow checkpoint, and the promise quietly moves.",
+      "whatif": "Imagine knowing early enough to plan around it.",
+      "outcome": [
+        "Plans that adjust",
+        "Promises kept"
+      ],
+      "x": 56,
+      "y": 240,
+      "w": 640,
+      "ghost": {
+        "side": "right",
+        "offset": -40,
+        "top": 260
+      },
+      "giant": "ARRIVAL"
+    },
+    {
+      "template": "task",
+      "n": 4,
+      "of": 4,
+      "label": "The update",
+      "headline": "Who tells the customer **first?**",
+      "pain": "News from anyone else makes a small delay feel big.",
+      "whatif": "What if you heard first, and chose what they hear?",
+      "outcome": [
+        "You speak first",
+        "Trust intact"
+      ],
+      "x": 450,
+      "y": 200,
+      "w": 580,
+      "ghost": {
+        "side": "left",
+        "offset": -30,
+        "top": 330
+      },
+      "streaks": [
+        13,
+        1.0
+      ],
+      "flare": [
+        980,
+        120,
+        0.8
+      ]
+    },
+    {
+      "template": "reveal",
+      "headline": "Your team already handles delays well. **What if you always heard first?**",
+      "body": "That's where **ART (A Realtime Tech)** comes in. Aiotrix's Governed Automation Platform sits on top of the systems you already use and flags a slip the moment it starts. You decide who hears and what your customer is told.",
+      "line": "Your customer hears it from you, first.",
+      "sign": "From a Mangaluru team that knows the ghat roads too.",
+      "ghost_word": "FIRST",
+      "streaks": [
+        17,
+        1.0
+      ],
+      "flare": [
+        940,
+        260,
+        1.0
+      ],
+      "body_top": 640,
+      "line_top": 1045,
+      "sign_top": 1140
+    },
+    {
+      "template": "outcome",
+      "headline": "Delays still happen. **Surprises don't.**",
+      "rows": [
+        "Missed pickups caught",
+        "Stalled shipments flagged",
+        "Arrival times you can plan around",
+        "Customers who hear it from you"
+      ],
+      "closing": "And a reputation that holds.",
+      "streaks": [
+        19,
+        0.8
+      ],
+      "x": 440,
+      "w": 590,
+      "y": 210
+    },
+    {
+      "template": "cta",
+      "headline": "Who hears about a delay **first?**",
+      "line": "Your team, or your customer? Tell us below.",
+      "main": "DM us to see how early you could know.",
+      "save": "Save this for your next ops meeting.",
+      "streaks": [
+        23,
+        1.0
+      ],
+      "flare": [
+        540,
+        150,
+        0.9
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "cover-pallet",
+      "image": "cover-pallet.png",
+      "slide": 1,
+      "x": 770,
+      "y": 300,
+      "w": 650,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "pickup",
+      "image": "pickup.png",
+      "slide": 3,
+      "x": 550,
+      "y": 850,
+      "w": 690,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "stall-truck",
+      "image": "truck.png",
+      "slide": 4,
+      "x": -180,
+      "y": 850,
+      "w": 760,
+      "float": false,
+      "moment": {
+        "type": "drive",
+        "dx": 90,
+        "at": 0.2,
+        "dur": 1.0
+      }
+    },
+    {
+      "id": "checkpoint",
+      "image": "checkpoint.png",
+      "slide": 5,
+      "x": 715,
+      "y": 460,
+      "w": 530,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "phone",
+      "image": "phone.png",
+      "slide": 6,
+      "x": -90,
+      "y": 850,
+      "w": 720,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "outcome-truck",
+      "image": "truck.png",
+      "slide": 8,
+      "x": -200,
+      "y": 885,
+      "w": 580,
+      "float": false,
+      "moment": {
+        "type": "drive",
+        "dx": 30,
+        "at": 0.3,
+        "dur": 1.4
+      }
+    }
+  ]
+}
