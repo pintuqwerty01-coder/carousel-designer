@@ -1,0 +1,5 @@
+render/*
+!render/out/
+render/out/*
+!render/out/slide-01.mp4
+preview-all-slides.jpg
