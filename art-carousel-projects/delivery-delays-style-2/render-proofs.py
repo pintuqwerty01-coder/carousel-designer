@@ -1,12 +1,12 @@
 from pathlib import Path
 from playwright.sync_api import sync_playwright
-import subprocess,json
+import subprocess,json,sys
 p=Path(__file__).resolve().parent
 out=p/'render/out';out.mkdir(parents=True,exist_ok=True)
 reports=[]
 with sync_playwright() as w:
  b=w.chromium.launch();page=b.new_page(viewport={'width':1080,'height':1350},device_scale_factor=1)
- for n in [1,4]:
+ for n in ([int(x) for x in sys.argv[1].split(",")] if len(sys.argv)>1 else [1,4]):
   frames=p/f'render/frames-{n:02}';frames.mkdir(exist_ok=True)
   page.goto((p/f'slides/slide-{n:02}.html').as_uri(),wait_until='networkidle');page.evaluate('document.fonts.ready')
   bounds=[]

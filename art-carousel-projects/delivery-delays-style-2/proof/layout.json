@@ -3,25 +3,25 @@
     "slide": 1,
     "text": [
       {
-        "text": "CATCH DELIVERY DELAYS BEFORE YOUR CUSTOMER DOES.",
-        "left": 56,
-        "top": 165,
-        "right": 956,
-        "bottom": 387.28125
+        "text": "CATCH DELIVERY\nDELAYS\nBEFORE YOUR CUSTOMER DOES.",
+        "left": 84,
+        "top": 164,
+        "right": 996,
+        "bottom": 442.0625
       },
       {
-        "text": "Your team already handles the unexpected. What if you heard first?",
-        "left": 56,
-        "top": 490,
-        "right": 696,
-        "bottom": 635.734375
+        "text": "Your team already handles the unexpected.\nWhat if you heard first?",
+        "left": 84,
+        "top": 448,
+        "right": 934,
+        "bottom": 536.15625
       },
       {
         "text": "Delays start small. Swipe to see where.",
-        "left": 56,
-        "top": 745,
-        "right": 576,
-        "bottom": 829.09375
+        "left": 84,
+        "top": 1096,
+        "right": 996,
+        "bottom": 1141
       }
     ],
     "assets": "loaded"
@@ -30,11 +30,39 @@
     "slide": 4,
     "text": [
       {
-        "text": "2/4 \u00b7 IN TRANSIT\nShipment gone quiet?\nYou find out when someone asks.\nHow about a nudge the moment it stalls?\nNo silent stalls\nDetails ready",
+        "text": "2/4 \u00b7 IN TRANSIT",
         "left": 84,
-        "top": 190,
-        "right": 704,
-        "bottom": 707.59375
+        "top": 145,
+        "right": 996,
+        "bottom": 184
+      },
+      {
+        "text": "Shipment gone quiet?",
+        "left": 84,
+        "top": 211,
+        "right": 996,
+        "bottom": 301.46875
+      },
+      {
+        "text": "You find out when someone asks.",
+        "left": 84,
+        "top": 335,
+        "right": 996,
+        "bottom": 383
+      },
+      {
+        "text": "How about a nudge the moment it stalls?",
+        "left": 84,
+        "top": 400,
+        "right": 996,
+        "bottom": 448
+      },
+      {
+        "text": "No silent stalls\nDetails ready",
+        "left": 84,
+        "top": 478,
+        "right": 996,
+        "bottom": 542
       }
     ],
     "assets": "loaded"

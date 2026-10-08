@@ -1,18 +1,13 @@
-# Delivery delays — Style 2 review proofs
+# Delivery delays — revised Style 2 proofs
 
-The user approved the nine-slide visual plan and selected in-chat image generation. The current delivery contains **two review proofs only**: the cover (slide 1) and in-transit task (slide 4). The remaining seven HTML layouts are preliminary and have not been delivered as completed slides.
+Two review slides have been rebuilt following the user's rejection of the initial direction. The current PDF and videos contain the cover (1) and in-transit task (4); the other seven layouts remain preliminary and are not completed deliverables.
 
-Generated transparent van and truck/road assets are preserved in `images/raw/` and `images/cut/`. Text remains editable and matches `source-content.json`. Style 2 fonts are Poppins for the cover hook and supporting text, and Preahvihear for headlines. No mascot is used.
+The cover now uses a generated 3D parcel and notification bell, with an animated alert branching to the team before the customer. The in-transit slide shows the shipment signal stopping at an alert marker, alongside the stationary 3D truck/road object. Motion explains early warning. Text stays stationary; the exact supplied script is retained. Small diagram labels are explanatory visual annotations.
 
-Review files:
+The palette remains Style 2 dark blue-green and aqua, with Poppins cover/supporting text and Preahvihear headlines. Following feedback, decorative flares, bokeh and ghost numbers have been removed from these two proofs. No mascot is present. All checkmarks are vectors.
 
-- `first-two-proof.pdf` — two pages, cover then slide 4.
-- `proof/first-two.png` — side-by-side overview.
-- `stills/slide-01.png` and `stills/slide-04.png`.
-- `render/out/slide-01.mp4` and `render/out/slide-04.mp4` — four-second motion proofs.
+Files: `first-two-proof.pdf`, `proof/first-two.png`, `stills/slide-01.png`, `stills/slide-04.png`, and the two corresponding MP4s in `render/out/`. Initial rejected files are preserved in `proof/archive-v1/`.
 
-The stalled-truck proof pulses its warning marker while keeping the vehicle and road stationary, instead of sliding the flattened truck/road group. This preserves contact with the road and gives a clear early-warning cue. The ART logo remains intact; internal clock-hand animation has not been approved or delivered.
+Validation: exact script copy, actual custom fonts, glyph bounds, loaded assets, text-block separation, two-page PDF inspection, four-second 1080×1350 30fps export, unchanged first/last text positions and visible animation. Rendering uses browser frames and ffmpeg; no HyperFrames lint result is claimed.
 
-Checks: exact visible copy, actual custom-font rendering, assets loaded, text bounds/overlap, two-page PDF decoded, 1080×1350 30fps four-second video export and unchanged first/last text positions. Videos use browser frame rendering, not HyperFrames; no HyperFrames lint result is claimed.
-
-Approve these two design/motion proofs before the remaining seven slides are completed, as required by the supplied Style 2 guide's “Show two before all” workflow.
+Review these two revisions before completing all nine, following the Style 2 “Show two before all” approval step. The canonical script is `source-content.json`; `content.json` contains the earlier full-strip implementation and does not rebuild the revised standalone proofs. Edit the current two HTML compositions directly, then use `proof.py` and `render-proofs.py`.

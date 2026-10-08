@@ -37,3 +37,7 @@ The guide defaults to free generation in Google AI Studio/Gemini. `images/PROMPT
 ## Approval requirement
 
 The selected [Style 2 guide](../../source-documents/ART-carousel-design-style2.md), workflow step 2, says: “Plan objects and moments, get an OK” and “Wait for approval.” This plan is prepared for that review. It does not require re-approving the supplied copy; any capability or publishing sign-off remains separate.
+
+## Revised first two proofs after user feedback
+
+The user rejected the initial overall design. Cover: replace the cropped van with a 3D parcel/bell and a graphic split showing the alert reaching the team first. Transit: retain the truck as a secondary context object, make a stopped shipment signal the primary explanatory visual, and reveal a warning at the stopping point. Simplify decoration, strengthen hierarchy, and keep the Style 2 palette and fonts. These revisions await two-proof review before the rest is completed.

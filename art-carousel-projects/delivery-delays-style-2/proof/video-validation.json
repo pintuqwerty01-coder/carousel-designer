@@ -15,7 +15,7 @@
         "duration": "4.000000"
       }
     },
-    "text_bounds_unchanged": true
+    "text_positions_unchanged": true
   },
   {
     "slide": 4,
@@ -33,6 +33,6 @@
         "duration": "4.000000"
       }
     },
-    "text_bounds_unchanged": true
+    "text_positions_unchanged": true
   }
 ]
