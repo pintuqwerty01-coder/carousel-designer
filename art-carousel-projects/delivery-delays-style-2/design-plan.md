@@ -41,3 +41,7 @@ The selected [Style 2 guide](../../source-documents/ART-carousel-design-style2.m
 ## Revised first two proofs after user feedback
 
 The user rejected the initial overall design. Cover: replace the cropped van with a 3D parcel/bell and a graphic split showing the alert reaching the team first. Transit: retain the truck as a secondary context object, make a stopped shipment signal the primary explanatory visual, and reveal a warning at the stopping point. Simplify decoration, strengthen hierarchy, and keep the Style 2 palette and fonts. These revisions await two-proof review before the rest is completed.
+
+## Selected direction: B — Race to know
+
+The user chose B after comparing three visual concepts. Develop the aqua early-alert shortcut versus the longer ivory customer route throughout the story. The first two implementations are the selected cover and a new stalled-truck/shortcut scene for slide 4. Animate only the alert along the short route; keep the route sculpture, truck and typography stable. Await review of these implementations before completing the remaining seven slides.

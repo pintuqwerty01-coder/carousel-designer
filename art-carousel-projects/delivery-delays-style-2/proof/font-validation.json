@@ -42,30 +42,6 @@
     ]
   },
   {
-    "slide": 1,
-    "selector": ".diagram text",
-    "fonts": [
-      {
-        "familyName": "Poppins SemiBold",
-        "postScriptName": "Poppins-SemiBold",
-        "isCustomFont": true,
-        "glyphCount": 9
-      }
-    ]
-  },
-  {
-    "slide": 1,
-    "selector": ".diagram text",
-    "fonts": [
-      {
-        "familyName": "Poppins SemiBold",
-        "postScriptName": "Poppins-SemiBold",
-        "isCustomFont": true,
-        "glyphCount": 8
-      }
-    ]
-  },
-  {
     "slide": 4,
     "selector": ".hd",
     "fonts": [
@@ -134,18 +110,6 @@
         "postScriptName": "Poppins-SemiBold",
         "isCustomFont": true,
         "glyphCount": 13
-      }
-    ]
-  },
-  {
-    "slide": 4,
-    "selector": ".diagram text",
-    "fonts": [
-      {
-        "familyName": "Poppins SemiBold",
-        "postScriptName": "Poppins-SemiBold",
-        "isCustomFont": true,
-        "glyphCount": 15
       }
     ]
   }
