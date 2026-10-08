@@ -1,0 +1,74 @@
+[
+  {
+    "slide": 1,
+    "file_bytes": 440027,
+    "width": 1080,
+    "height": 1350,
+    "r_frame_rate": "30/1",
+    "duration": "4.000000"
+  },
+  {
+    "slide": 2,
+    "file_bytes": 530927,
+    "width": 1080,
+    "height": 1350,
+    "r_frame_rate": "30/1",
+    "duration": "4.000000"
+  },
+  {
+    "slide": 3,
+    "file_bytes": 252199,
+    "width": 1080,
+    "height": 1350,
+    "r_frame_rate": "30/1",
+    "duration": "4.000000"
+  },
+  {
+    "slide": 4,
+    "file_bytes": 481012,
+    "width": 1080,
+    "height": 1350,
+    "r_frame_rate": "30/1",
+    "duration": "4.000000"
+  },
+  {
+    "slide": 5,
+    "file_bytes": 297126,
+    "width": 1080,
+    "height": 1350,
+    "r_frame_rate": "30/1",
+    "duration": "4.000000"
+  },
+  {
+    "slide": 6,
+    "file_bytes": 524671,
+    "width": 1080,
+    "height": 1350,
+    "r_frame_rate": "30/1",
+    "duration": "4.000000"
+  },
+  {
+    "slide": 7,
+    "file_bytes": 623817,
+    "width": 1080,
+    "height": 1350,
+    "r_frame_rate": "30/1",
+    "duration": "4.000000"
+  },
+  {
+    "slide": 8,
+    "file_bytes": 401069,
+    "width": 1080,
+    "height": 1350,
+    "r_frame_rate": "30/1",
+    "duration": "4.000000"
+  },
+  {
+    "slide": 9,
+    "file_bytes": 612875,
+    "width": 1080,
+    "height": 1350,
+    "r_frame_rate": "30/1",
+    "duration": "4.000000"
+  }
+]

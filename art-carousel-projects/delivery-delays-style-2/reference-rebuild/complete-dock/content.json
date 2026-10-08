@@ -1,0 +1,322 @@
+{
+  "title": "Catch delivery delays before your customer does.",
+  "handle": "@arealtimetech",
+  "palette": [
+    "dark",
+    "aqua",
+    "light",
+    "aqua",
+    "light",
+    "dark",
+    "dark",
+    "teal",
+    "dark"
+  ],
+  "warm_bokeh": false,
+  "slides": [
+    {
+      "template": "cover",
+      "big": "**Catch delivery delays** before your customer does.",
+      "question": "Your team already handles the unexpected. What if you heard first?",
+      "sub": "Delays start small.",
+      "swipe": "Swipe to see where.",
+      "streaks": [
+        3,
+        1.0
+      ],
+      "flare": [
+        900,
+        170,
+        1.1
+      ],
+      "big_top": 150,
+      "q_top": 815,
+      "q_size": 56,
+      "sub_top": 1120,
+      "arrow": [
+        595,
+        1100
+      ]
+    },
+    {
+      "template": "setup",
+      "headline": "Delays happen. **Who hears first?**",
+      "body": "Between the port, the highway and the ghat roads, small slips start in four places.",
+      "cue": "Here's where:",
+      "stops": [
+        "Pickup",
+        "In transit",
+        "Arrival time",
+        "The update"
+      ],
+      "vword": {
+        "text": "Delivery delays",
+        "top": 130
+      },
+      "streaks": [
+        7,
+        0.9
+      ],
+      "x": 64,
+      "y": 180,
+      "w": 820
+    },
+    {
+      "template": "task",
+      "n": 1,
+      "of": 4,
+      "label": "Pickup",
+      "headline": "Pickup **missed?**",
+      "pain": "Nobody notices until the slot is gone.",
+      "whatif": "What if it was flagged the moment it happened?",
+      "outcome": [
+        "Caught early",
+        "Time to re-plan"
+      ],
+      "x": 200,
+      "y": 175,
+      "w": 820,
+      "ghost": {
+        "side": "right",
+        "offset": -20,
+        "top": 440
+      }
+    },
+    {
+      "template": "task",
+      "n": 2,
+      "of": 4,
+      "label": "In transit",
+      "headline": "Shipment **gone quiet?**",
+      "pain": "You find out when someone asks.",
+      "whatif": "How about a nudge the moment it stalls?",
+      "outcome": [
+        "No silent stalls",
+        "Details ready"
+      ],
+      "x": 64,
+      "y": 175,
+      "w": 900,
+      "ghost": {
+        "side": "right",
+        "offset": -20,
+        "top": 440
+      },
+      "streaks": [
+        11,
+        0.8
+      ],
+      "blob": [
+        -80,
+        80,
+        1200,
+        730
+      ]
+    },
+    {
+      "template": "task",
+      "n": 3,
+      "of": 4,
+      "label": "Arrival time",
+      "headline": "Arrival time **slipping?**",
+      "pain": "One slow checkpoint, and the promise quietly moves.",
+      "whatif": "Imagine knowing early enough to plan around it.",
+      "outcome": [
+        "Plans that adjust",
+        "Promises kept"
+      ],
+      "x": 64,
+      "y": 175,
+      "w": 900,
+      "ghost": {
+        "side": "right",
+        "offset": -20,
+        "top": 440
+      },
+      "giant": "ARRIVAL"
+    },
+    {
+      "template": "task",
+      "n": 4,
+      "of": 4,
+      "label": "The update",
+      "headline": "Who tells the customer **first?**",
+      "pain": "News from anyone else makes a small delay feel big.",
+      "whatif": "What if you heard first, and chose what they hear?",
+      "outcome": [
+        "You speak first",
+        "Trust intact"
+      ],
+      "x": 64,
+      "y": 175,
+      "w": 900,
+      "ghost": {
+        "side": "right",
+        "offset": -20,
+        "top": 440
+      },
+      "streaks": [
+        13,
+        1.0
+      ],
+      "flare": [
+        980,
+        120,
+        0.8
+      ]
+    },
+    {
+      "template": "reveal",
+      "headline": "Your team already handles delays well. **What if you always heard first?**",
+      "body": "That's where **ART (A Realtime Tech)** comes in. Aiotrix's Governed Automation Platform sits on top of the systems you already use and flags a slip the moment it starts. You decide who hears and what your customer is told.",
+      "line": "Your customer hears it from you, first.",
+      "sign": "From a Mangaluru team that knows the ghat roads too.",
+      "ghost_word": "FIRST",
+      "streaks": [
+        17,
+        1.0
+      ],
+      "flare": [
+        940,
+        260,
+        1.0
+      ],
+      "body_top": 670,
+      "line_top": 1060,
+      "sign_top": 1150
+    },
+    {
+      "template": "outcome",
+      "headline": "Delays still happen. **Surprises don't.**",
+      "rows": [
+        "Missed pickups caught",
+        "Stalled shipments flagged",
+        "Arrival times you can plan around",
+        "Customers who hear it from you"
+      ],
+      "closing": "And a reputation that holds.",
+      "streaks": [
+        19,
+        0.8
+      ],
+      "x": 64,
+      "y": 170,
+      "w": 920,
+      "hd_size": 62
+    },
+    {
+      "template": "cta",
+      "headline": "Who hears about a delay **first?**",
+      "line": "Your team, or your customer? Tell us below.",
+      "main": "DM us to see how early you could know.",
+      "save": "Save this for your next ops meeting.",
+      "streaks": [
+        23,
+        1.0
+      ],
+      "flare": [
+        540,
+        150,
+        0.9
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "pickup",
+      "image": "pickup.png",
+      "slide": 3,
+      "x": 330,
+      "y": 790,
+      "w": 820,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "transit",
+      "image": "transit.png",
+      "slide": 4,
+      "x": 200,
+      "y": 795,
+      "w": 950,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "arrival",
+      "image": "arrival.png",
+      "slide": 5,
+      "x": 330,
+      "y": 790,
+      "w": 820,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "update",
+      "image": "update.png",
+      "slide": 6,
+      "x": 350,
+      "y": 825,
+      "w": 800,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "setup-dock",
+      "image": "pickup.png",
+      "slide": 2,
+      "x": 530,
+      "y": 850,
+      "w": 620,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "outcome-dock",
+      "image": "pickup.png",
+      "slide": 8,
+      "x": -80,
+      "y": 865,
+      "w": 650,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "outcome-call",
+      "image": "update.png",
+      "slide": 8,
+      "x": 650,
+      "y": 905,
+      "w": 500,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    },
+    {
+      "id": "cta-call",
+      "image": "update.png",
+      "slide": 9,
+      "x": 690,
+      "y": 975,
+      "w": 440,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    }
+  ]
+}
