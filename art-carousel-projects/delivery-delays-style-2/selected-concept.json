@@ -1,7 +1,9 @@
 {
   "option": "B",
   "name": "Race to know",
-  "state": "Selected by user; two-slide implementation proof awaiting review",
-  "cover": "slides/slide-01.html",
-  "task": "slides/slide-04.html"
+  "animation_treatment": "A \u2014 Reference composition",
+  "state": "User-selected treatment; all nine slides completed",
+  "deliverables": "final/",
+  "cover": "final/slide-01.html",
+  "task": "final/slide-04.html"
 }

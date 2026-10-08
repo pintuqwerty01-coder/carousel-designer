@@ -1,0 +1,428 @@
+[
+  {
+    "name": "slide-01",
+    "selector": ".big",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Bold",
+        "isCustomFont": true,
+        "glyphCount": 45
+      }
+    ]
+  },
+  {
+    "name": "slide-01",
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 64
+      }
+    ]
+  },
+  {
+    "name": "slide-01",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 20
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 18
+      }
+    ]
+  },
+  {
+    "name": "slide-02",
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 30
+      }
+    ]
+  },
+  {
+    "name": "slide-02",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 82
+      }
+    ]
+  },
+  {
+    "name": "slide-02",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 13
+      }
+    ]
+  },
+  {
+    "name": "slide-03",
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ]
+  },
+  {
+    "name": "slide-03",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 38
+      }
+    ]
+  },
+  {
+    "name": "slide-03",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 45
+      }
+    ]
+  },
+  {
+    "name": "slide-03",
+    "selector": ".result",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 12
+      }
+    ]
+  },
+  {
+    "name": "slide-03",
+    "selector": ".result",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 15
+      }
+    ]
+  },
+  {
+    "name": "slide-04",
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 19
+      }
+    ]
+  },
+  {
+    "name": "slide-04",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 31
+      }
+    ]
+  },
+  {
+    "name": "slide-04",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 38
+      }
+    ]
+  },
+  {
+    "name": "slide-04",
+    "selector": ".result",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 16
+      }
+    ]
+  },
+  {
+    "name": "slide-04",
+    "selector": ".result",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 13
+      }
+    ]
+  },
+  {
+    "name": "slide-05",
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 21
+      }
+    ]
+  },
+  {
+    "name": "slide-05",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 50
+      }
+    ]
+  },
+  {
+    "name": "slide-05",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 46
+      }
+    ]
+  },
+  {
+    "name": "slide-05",
+    "selector": ".result",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 17
+      }
+    ]
+  },
+  {
+    "name": "slide-05",
+    "selector": ".result",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 13
+      }
+    ]
+  },
+  {
+    "name": "slide-06",
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 28
+      }
+    ]
+  },
+  {
+    "name": "slide-06",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 50
+      }
+    ]
+  },
+  {
+    "name": "slide-06",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 49
+      }
+    ]
+  },
+  {
+    "name": "slide-06",
+    "selector": ".result",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 15
+      }
+    ]
+  },
+  {
+    "name": "slide-06",
+    "selector": ".result",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 12
+      }
+    ]
+  },
+  {
+    "name": "slide-07",
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 68
+      }
+    ]
+  },
+  {
+    "name": "slide-07",
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 39
+      }
+    ]
+  },
+  {
+    "name": "slide-07",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 215
+      }
+    ]
+  },
+  {
+    "name": "slide-07",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 52
+      }
+    ]
+  },
+  {
+    "name": "slide-08",
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 36
+      }
+    ]
+  },
+  {
+    "name": "slide-08",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 28
+      }
+    ]
+  },
+  {
+    "name": "slide-09",
+    "selector": ".hd",
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 29
+      }
+    ]
+  },
+  {
+    "name": "slide-09",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 43
+      }
+    ]
+  },
+  {
+    "name": "slide-09",
+    "selector": ".bd",
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 36
+      }
+    ]
+  }
+]

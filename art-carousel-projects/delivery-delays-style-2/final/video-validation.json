@@ -1,0 +1,110 @@
+[
+  {
+    "slide": "slide-01",
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "duration": 4,
+    "motion_mean_difference": [
+      3.8673593964334705,
+      3.6087256515775032,
+      3.4419451303155006
+    ]
+  },
+  {
+    "slide": "slide-02",
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "duration": 4,
+    "motion_mean_difference": [
+      4.046454046639232,
+      2.2831433470507543,
+      2.022142661179698
+    ]
+  },
+  {
+    "slide": "slide-03",
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "duration": 4,
+    "motion_mean_difference": [
+      2.202054183813443,
+      2.0210665294924555,
+      2.1740109739369
+    ]
+  },
+  {
+    "slide": "slide-04",
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "duration": 4,
+    "motion_mean_difference": [
+      3.9503024691358024,
+      2.9445699588477368,
+      2.7914197530864198
+    ]
+  },
+  {
+    "slide": "slide-05",
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "duration": 4,
+    "motion_mean_difference": [
+      2.105023319615912,
+      1.5718223593964336,
+      1.5636598079561042
+    ]
+  },
+  {
+    "slide": "slide-06",
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "duration": 4,
+    "motion_mean_difference": [
+      3.1892023319615914,
+      3.4357921810699588,
+      3.2374821673525376
+    ]
+  },
+  {
+    "slide": "slide-07",
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "duration": 4,
+    "motion_mean_difference": [
+      2.7874046639231826,
+      2.5351783264746226,
+      2.295270919067215
+    ]
+  },
+  {
+    "slide": "slide-08",
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "duration": 4,
+    "motion_mean_difference": [
+      2.8669183813443073,
+      1.926227023319616,
+      2.175270233196159
+    ]
+  },
+  {
+    "slide": "slide-09",
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "duration": 4,
+    "motion_mean_difference": [
+      3.777684499314129,
+      3.376986282578875,
+      3.100540466392318
+    ]
+  }
+]

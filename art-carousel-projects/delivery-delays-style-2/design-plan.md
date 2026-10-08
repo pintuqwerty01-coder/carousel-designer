@@ -50,3 +50,8 @@ The user chose B after comparing three visual concepts. Develop the aqua early-a
 ## User video references added
 
 Read `../../source-documents/style-2-video-references/README.md` and inspect its five MP4s before the next revision. B — Race to know remains selected. Recompose it in the actual Style 2 reference language: off-centre columns, edge-crossing cutouts, ghost typography, dark blob on the aqua task and restrained light effects. Previous B proofs are pending revision against these videos, not approved finals. The supplied festive text is not new delivery-delay copy.
+
+
+## Completed selected treatment
+
+User selected A — Reference composition from the two animated alternatives for Race to know. All nine slides are now completed in `final/`; its standalone HTML and assets supersede earlier proof implementations. The canonical script is unchanged. See README for exports and verification.
