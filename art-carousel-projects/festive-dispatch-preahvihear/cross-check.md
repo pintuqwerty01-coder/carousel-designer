@@ -35,3 +35,6 @@ Slides 3–6 correction: blue prompt cards now have individually measured widths
 
 
 Latest prompt refinement: slides 3 and 4 now fit on one line at 26px and 24px respectively; slide 5 uses a 680px two-line card with a semantic break after checked, 26px side padding and a slim white edge. Exact copy, rendered Preahvihear and box containment validated.
+
+
+Slide 5 now matches the shared blue-box styling: removed the white edge and restored shared padding, corner radius and line height. Fitted width and two-line copy retained.
