@@ -226,7 +226,8 @@
       "glow": false,
       "moment": {
         "type": "none"
-      }
+      },
+      "float": false
     },
     {
       "id": "truck",

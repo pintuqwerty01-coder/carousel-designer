@@ -11,6 +11,7 @@ cover=kit.t_cover
 kit.TEMPLATES['cover']=lambda s,c:cover(s,c).replace('width:640px','width:720px',1)
 original=kit.object_html
 def obj(o,sx,imgdir,project):
+ o=dict(o);o["float"]=False  # User preference applies to every future prop in this post.
  html,after=original(o,sx,imgdir,project)
  # Beacon flash remains attached to its actual glass dome rather than travelling on a diagram.
  if o.get('moment',{}).get('type')=='blink':
@@ -23,6 +24,6 @@ kit.object_html=obj
 # CTA's extra engagement copy is absent from the user's script.
 cta=kit.t_cta
 kit.TEMPLATES['cta']=lambda s,c:cta(s,c).split('<div class="icons tx">')[0]
-kit.JS=kit.JS.replace('r = o.rot + 0.25 * Math.sin(TAU * t * 2);','y=0; r = o.rot + ((t>o.drive.at && t<o.drive.at+o.drive.dur)?0.18*Math.sin(TAU*t*2):0);')
+kit.JS=kit.JS.replace('r = o.rot + 0.25 * Math.sin(TAU * t * 2);','y=0; r = o.rot;')
 kit.JS=kit.JS.replace('  FLC.forEach', "  Q('.stallbeacon').forEach(e=>{let a=(t-1.55)/.55;e.style.opacity=a>0&&a<1?Math.pow(Math.sin(a*Math.PI),2):0;});\n  FLC.forEach")
 kit.main(Path(__file__).resolve().parent)

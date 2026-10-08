@@ -6,7 +6,7 @@
     "height": 1350,
     "fps": 30,
     "duration": 4,
-    "text_moved_pixels": 1,
+    "text_moved_pixels": 12,
     "checked_by": "supplied scripts/render.py using HyperFrames 0.8.55"
   },
   {

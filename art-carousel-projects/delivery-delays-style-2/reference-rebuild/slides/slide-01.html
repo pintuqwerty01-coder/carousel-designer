@@ -643,7 +643,7 @@ html, body { width:1080px; height:1350px; overflow:hidden; background:#03161B; }
         <div class="bd tx" style="margin:30px auto 0;width:760px">Your team, or your customer? Tell us below.</div>
         <div style="margin-top:56px"><span class="pill" id="dm">DM us to see how early you could know.</span></div>
         <div class="bd tx" style="margin:26px auto 0;width:760px;font-size:28px;color:#B9CBCE">Save this for your next ops meeting.</div></div>
-      <div class="cnt">09/09</div><div class="foot">@arealtimetech</div></div><div class="layer"><div class="flt" id="o-cover" data-rot="0" data-ph="0" style="position:absolute;left:740px;top:185px;width:600px;transform:rotate(0deg)"><img src="assets/img/01-cover.png" style="display:block;width:100%;filter:drop-shadow(0 34px 30px rgba(0,0,0,.28))"></div><div class="bg-aqua" style="position:absolute;left:2160px;top:0;width:150px;height:1350px"></div><div class="vword" style="left:2310px;top:130px">Delivery delays</div><div class="flt" id="o-truck" data-rot="0" data-ph="2.1" data-float="0" data-drive='{"dx": 65, "at": 0.35, "dur": 1.1}' style="position:absolute;left:3440px;top:855px;width:860px;transform:rotate(0deg)"><img src="assets/img/04-truck.png" style="display:block;width:100%;filter:drop-shadow(0 34px 30px rgba(0,0,0,.28))"><div class="stallbeacon" style="position:absolute;left:71.5%;top:5%;width:6%;height:10%;border-radius:50%;background:radial-gradient(ellipse,rgba(235,255,255,1),rgba(54,194,212,.65) 35%,rgba(54,194,212,0) 72%);mix-blend-mode:screen;filter:blur(2px);opacity:0"></div></div></div></div>
+      <div class="cnt">09/09</div><div class="foot">@arealtimetech</div></div><div class="layer"><div class="flt" id="o-cover" data-rot="0" data-ph="0" data-float="0" style="position:absolute;left:740px;top:185px;width:600px;transform:rotate(0deg)"><img src="assets/img/01-cover.png" style="display:block;width:100%;filter:drop-shadow(0 34px 30px rgba(0,0,0,.28))"></div><div class="bg-aqua" style="position:absolute;left:2160px;top:0;width:150px;height:1350px"></div><div class="vword" style="left:2310px;top:130px">Delivery delays</div><div class="flt" id="o-truck" data-rot="0" data-ph="2.1" data-float="0" data-drive='{"dx": 65, "at": 0.35, "dur": 1.1}' style="position:absolute;left:3440px;top:855px;width:860px;transform:rotate(0deg)"><img src="assets/img/04-truck.png" style="display:block;width:100%;filter:drop-shadow(0 34px 30px rgba(0,0,0,.28))"><div class="stallbeacon" style="position:absolute;left:71.5%;top:5%;width:6%;height:10%;border-radius:50%;background:radial-gradient(ellipse,rgba(235,255,255,1),rgba(54,194,212,.65) 35%,rgba(54,194,212,0) 72%);mix-blend-mode:screen;filter:blur(2px);opacity:0"></div></div></div></div>
   </div>
 </div>
 <script>
@@ -678,7 +678,7 @@ function R(t) {
   FLT.forEach(o => {
     let x = 0, y = fy(o.ph, t), r = o.rot + 0.6 * Math.sin(TAU * t / 4 + o.ph + 1.2);
     if (!o.fl) { y = 0; r = o.rot; }
-    if (o.drive) { x = o.drive.dx * eio(cl((t - o.drive.at) / o.drive.dur)); y=0; r = o.rot + ((t>o.drive.at && t<o.drive.at+o.drive.dur)?0.18*Math.sin(TAU*t*2):0); }
+    if (o.drive) { x = o.drive.dx * eio(cl((t - o.drive.at) / o.drive.dur)); y=0; r = o.rot; }
     o.e.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
   });
   Q('.stallbeacon').forEach(e=>{let a=(t-1.55)/.55;e.style.opacity=a>0&&a<1?Math.pow(Math.sin(a*Math.PI),2):0;});
