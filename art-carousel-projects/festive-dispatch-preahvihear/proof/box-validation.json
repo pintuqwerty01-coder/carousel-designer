@@ -198,9 +198,9 @@
         "box": {
           "left": 84,
           "top": 967.71875,
-          "right": 996,
+          "right": 610,
           "bottom": 1082,
-          "width": 912,
+          "width": 526,
           "height": 114.28125
         },
         "textRects": [
@@ -299,9 +299,9 @@
         "box": {
           "left": 84,
           "top": 967.71875,
-          "right": 996,
+          "right": 686,
           "bottom": 1082,
-          "width": 912,
+          "width": 602,
           "height": 114.28125
         },
         "textRects": [
@@ -400,9 +400,9 @@
         "box": {
           "left": 84,
           "top": 967.71875,
-          "right": 996,
+          "right": 748,
           "bottom": 1082,
-          "width": 912,
+          "width": 664,
           "height": 114.28125
         },
         "textRects": [
@@ -501,9 +501,9 @@
         "box": {
           "left": 84,
           "top": 967.71875,
-          "right": 996,
+          "right": 861,
           "bottom": 1082,
-          "width": 912,
+          "width": 777,
           "height": 114.28125
         },
         "textRects": [

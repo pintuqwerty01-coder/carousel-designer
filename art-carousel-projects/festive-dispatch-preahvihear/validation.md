@@ -27,3 +27,6 @@ Cover readability: black gradient now holds 88% opacity through all supporting c
 
 
 Callout sizing revision: slides 1, 3–6 and 9 now use content-sized boxes with 18px vertical and 24px horizontal padding. Forced breaks removed from these callouts; slide 9 DM prompt fits one line. Copy is unchanged, Preahvihear retained and font/box/export checks passed.
+
+
+Slides 3–6 correction: blue prompt cards now have individually measured widths of 526, 602, 664 and 777px, replacing the 912px maximum-width layout. Two-line wrapping and 24px side padding verified in browser and actual PDF pages. Copy unchanged.
