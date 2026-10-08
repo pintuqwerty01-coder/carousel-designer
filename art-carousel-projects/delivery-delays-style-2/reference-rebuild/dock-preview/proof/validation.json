@@ -1,0 +1,10 @@
+{
+  "width": 1080,
+  "height": 1350,
+  "fps": 30,
+  "duration_seconds": 4,
+  "text_moved_pixels": 0,
+  "lint_errors": 0,
+  "lint_warnings": 0,
+  "note": "Renderer parser expects old lint wording; standalone lint verified 0 errors, 0 warnings. Still and six-frame sheet plus MP4 frame inspected."
+}
