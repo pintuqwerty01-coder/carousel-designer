@@ -1,0 +1,87 @@
+[
+  {
+    "file": "slide-01.mp4",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "slide-02.mp4",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "slide-04.mp4",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "slide-05.mp4",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "slide-06.mp4",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  }
+]

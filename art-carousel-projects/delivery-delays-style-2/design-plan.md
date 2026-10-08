@@ -45,3 +45,8 @@ The user rejected the initial overall design. Cover: replace the cropped van wit
 ## Selected direction: B — Race to know
 
 The user chose B after comparing three visual concepts. Develop the aqua early-alert shortcut versus the longer ivory customer route throughout the story. The first two implementations are the selected cover and a new stalled-truck/shortcut scene for slide 4. Animate only the alert along the short route; keep the route sculpture, truck and typography stable. Await review of these implementations before completing the remaining seven slides.
+
+
+## User video references added
+
+Read `../../source-documents/style-2-video-references/README.md` and inspect its five MP4s before the next revision. B — Race to know remains selected. Recompose it in the actual Style 2 reference language: off-centre columns, edge-crossing cutouts, ghost typography, dark blob on the aqua task and restrained light effects. Previous B proofs are pending revision against these videos, not approved finals. The supplied festive text is not new delivery-delay copy.
