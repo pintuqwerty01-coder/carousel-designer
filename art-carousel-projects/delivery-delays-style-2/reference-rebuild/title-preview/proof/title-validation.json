@@ -1,0 +1,77 @@
+{
+  "copy": "exact",
+  "fonts": [
+    {
+      "selector": ".big",
+      "fonts": [
+        {
+          "familyName": "Poppins",
+          "postScriptName": "Poppins-Bold",
+          "isCustomFont": true,
+          "glyphCount": 45
+        }
+      ]
+    },
+    {
+      "selector": ".hd",
+      "fonts": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 63
+        }
+      ]
+    },
+    {
+      "selector": ".bd",
+      "fonts": [
+        {
+          "familyName": "Poppins Medium",
+          "postScriptName": "Poppins-Medium",
+          "isCustomFont": true,
+          "glyphCount": 20
+        },
+        {
+          "familyName": "Poppins",
+          "postScriptName": "Poppins-Bold",
+          "isCustomFont": true,
+          "glyphCount": 18
+        }
+      ]
+    }
+  ],
+  "narrative_samples": [
+    {
+      "time": 0,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "received": 0,
+      "packet": 0
+    },
+    {
+      "time": 0.6,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "received": 0,
+      "packet": 0
+    },
+    {
+      "time": 1.4,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "received": 0,
+      "packet": 1
+    },
+    {
+      "time": 2.2,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "received": 0.944444,
+      "packet": 0
+    },
+    {
+      "time": 3.9,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "received": 1,
+      "packet": 0
+    }
+  ],
+  "phone": "quiet throughout; no phone animation or outgoing path"
+}

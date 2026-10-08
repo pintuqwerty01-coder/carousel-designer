@@ -1,3 +1,5 @@
+Latest review candidate: `reference-rebuild/title-preview/`. A single cover now illustrates a delay at a checkpoint and an alert reaching the team before a customer call. Previous scan motion was rejected for not matching the title. Review this preview before extending to all nine.
+
 # Current status: previous full set rejected
 
 The user rejected the preceding designs and animation. The current revision is `reference-rebuild/`, using the supplied Style 2 kit, physical logistics objects and HyperFrames. Only the cover and in-transit review proofs are completed in that folder. Review them before extending to all nine. Earlier `final/` files and ZIP remain historical, rejected exports.

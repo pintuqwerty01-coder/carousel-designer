@@ -1,0 +1,48 @@
+{
+  "title": "Catch delivery delays before your customer does.",
+  "handle": "@arealtimetech",
+  "palette": [
+    "dark"
+  ],
+  "warm_bokeh": false,
+  "slides": [
+    {
+      "template": "cover",
+      "big": "**Catch delivery delays** before your customer does.",
+      "question": "Your team already handles the unexpected. What if you heard first?",
+      "sub": "Delays start small.",
+      "swipe": "Swipe to see where.",
+      "streaks": [
+        3,
+        1.0
+      ],
+      "flare": [
+        900,
+        170,
+        1.1
+      ],
+      "big_top": 150,
+      "q_top": 650,
+      "q_size": 48,
+      "sub_top": 960,
+      "arrow": [
+        160,
+        1100
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "delay-story",
+      "image": "delay-team-customer.png",
+      "slide": 1,
+      "x": 590,
+      "y": 600,
+      "w": 500,
+      "float": false,
+      "moment": {
+        "type": "none"
+      }
+    }
+  ]
+}

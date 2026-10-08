@@ -1,6 +1,6 @@
 {
-  "state": "Previous full set rejected; new physical-object reference rebuild awaiting two-proof review",
-  "current_proofs": "reference-rebuild/",
-  "previous_concept": "Race to know / reference composition",
+  "state": "Title-specific cover preview awaiting feedback",
+  "current_preview": "reference-rebuild/title-preview/render/out/slide-01.mp4",
+  "concept": "Stopped shipment \u2192 early team alert \u2192 quiet customer phone",
   "production_approved": false
 }
