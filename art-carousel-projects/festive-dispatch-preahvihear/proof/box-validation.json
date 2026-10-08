@@ -7,17 +7,17 @@
         "box": {
           "left": 84,
           "top": 1100,
-          "right": 996,
-          "bottom": 1188.5,
-          "width": 912,
-          "height": 88.5
+          "right": 810.828125,
+          "bottom": 1176.5,
+          "width": 726.828125,
+          "height": 76.5
         },
         "textRects": [
           {
-            "left": 112,
-            "top": 1116,
-            "right": 790.828125,
-            "bottom": 1171,
+            "left": 108,
+            "top": 1110,
+            "right": 786.828125,
+            "bottom": 1165,
             "width": 678.828125,
             "height": 55
           }
@@ -197,31 +197,31 @@
         "class": "photo-whatif",
         "box": {
           "left": 84,
-          "top": 955.71875,
+          "top": 967.71875,
           "right": 996,
           "bottom": 1082,
           "width": 912,
-          "height": 126.28125
+          "height": 114.28125
         },
         "textRects": [
           {
-            "left": 110,
-            "top": 972.71875,
-            "right": 716.484375,
-            "bottom": 1024.71875,
-            "width": 606.484375,
+            "left": 108,
+            "top": 978.71875,
+            "right": 581.4375,
+            "bottom": 1030.71875,
+            "width": 473.4375,
             "height": 52
           },
           {
-            "left": 110,
-            "top": 1011.859375,
-            "right": 413,
-            "bottom": 1063.859375,
-            "width": 303,
+            "left": 108,
+            "top": 1017.859375,
+            "right": 544.0625,
+            "bottom": 1069.859375,
+            "width": 436.0625,
             "height": 52
           }
         ],
-        "text": "What if every order, from every channel,\nlanded in one place?",
+        "text": "What if every order, from every channel, landed in one place?",
         "iconRects": []
       },
       {
@@ -298,31 +298,31 @@
         "class": "photo-whatif",
         "box": {
           "left": 84,
-          "top": 955.71875,
+          "top": 967.71875,
           "right": 996,
           "bottom": 1082,
           "width": 912,
-          "height": 126.28125
+          "height": 114.28125
         },
         "textRects": [
           {
-            "left": 110,
-            "top": 972.71875,
-            "right": 830.640625,
-            "bottom": 1024.71875,
-            "width": 720.640625,
+            "left": 108,
+            "top": 978.71875,
+            "right": 657.515625,
+            "bottom": 1030.71875,
+            "width": 549.515625,
             "height": 52
           },
           {
-            "left": 110,
-            "top": 1011.859375,
-            "right": 418.421875,
-            "bottom": 1063.859375,
-            "width": 308.421875,
+            "left": 108,
+            "top": 1017.859375,
+            "right": 587.546875,
+            "bottom": 1069.859375,
+            "width": 479.546875,
             "height": 52
           }
         ],
-        "text": "How about a reorder drafted before it runs low,\nwaiting for your OK?",
+        "text": "How about a reorder drafted before it runs low, waiting for your OK?",
         "iconRects": []
       },
       {
@@ -399,31 +399,31 @@
         "class": "photo-whatif",
         "box": {
           "left": 84,
-          "top": 955.71875,
+          "top": 967.71875,
           "right": 996,
           "bottom": 1082,
           "width": 912,
-          "height": 126.28125
+          "height": 114.28125
         },
         "textRects": [
           {
-            "left": 110,
-            "top": 972.71875,
-            "right": 783.34375,
-            "bottom": 1024.71875,
-            "width": 673.34375,
+            "left": 108,
+            "top": 978.71875,
+            "right": 661.09375,
+            "bottom": 1030.71875,
+            "width": 553.09375,
             "height": 52
           },
           {
-            "left": 110,
-            "top": 1011.859375,
-            "right": 601.125,
-            "bottom": 1063.859375,
-            "width": 491.125,
+            "left": 108,
+            "top": 1017.859375,
+            "right": 719.375,
+            "bottom": 1069.859375,
+            "width": 611.375,
             "height": 52
           }
         ],
-        "text": "What if every document was checked against\nthe order before the goods left?",
+        "text": "What if every document was checked against the order before the goods left?",
         "iconRects": []
       },
       {
@@ -500,31 +500,31 @@
         "class": "photo-whatif",
         "box": {
           "left": 84,
-          "top": 955.71875,
+          "top": 967.71875,
           "right": 996,
           "bottom": 1082,
           "width": 912,
-          "height": 126.28125
+          "height": 114.28125
         },
         "textRects": [
           {
-            "left": 110,
-            "top": 972.71875,
-            "right": 834.8125,
-            "bottom": 1024.71875,
+            "left": 108,
+            "top": 978.71875,
+            "right": 832.8125,
+            "bottom": 1030.71875,
             "width": 724.8125,
             "height": 52
           },
           {
-            "left": 110,
-            "top": 1011.859375,
-            "right": 716.90625,
-            "bottom": 1063.859375,
+            "left": 108,
+            "top": 1017.859375,
+            "right": 714.90625,
+            "bottom": 1069.859375,
             "width": 606.90625,
             "height": 52
           }
         ],
-        "text": "Imagine delays flagged the moment they happen,\nand customers updated before they ask.",
+        "text": "Imagine delays flagged the moment they happen, and customers updated before they ask.",
         "iconRects": []
       },
       {
@@ -773,30 +773,22 @@
         "box": {
           "left": 84,
           "top": 942,
-          "right": 996,
-          "bottom": 1074,
-          "width": 912,
-          "height": 132
+          "right": 825.5625,
+          "bottom": 1018.59375,
+          "width": 741.5625,
+          "height": 76.59375
         },
         "textRects": [
           {
             "left": 114,
-            "top": 959,
-            "right": 595.984375,
-            "bottom": 1014,
-            "width": 481.984375,
-            "height": 55
-          },
-          {
-            "left": 114,
-            "top": 1001,
-            "right": 333.046875,
-            "bottom": 1056,
-            "width": 219.046875,
-            "height": 55
+            "top": 954,
+            "right": 801.5625,
+            "bottom": 1006,
+            "width": 687.5625,
+            "height": 52
           }
         ],
-        "text": "DM us to see how ART could fit\nyour business.",
+        "text": "DM us to see how ART could fit your business.",
         "iconRects": []
       },
       {

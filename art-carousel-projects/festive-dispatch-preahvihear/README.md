@@ -24,3 +24,6 @@ Latest copy revision: retained FESTIVE SEASON in the cover headline only; replac
 
 
 Cover readability: black gradient now holds 88% opacity through all supporting copy before fading into the scene. White supporting text has a subtle shadow; the order urgency line increased to 32px. Copy, Preahvihear and text bounds checked; PDF regenerated.
+
+
+Callout sizing revision: slides 1, 3–6 and 9 now use content-sized boxes with 18px vertical and 24px horizontal padding. Forced breaks removed from these callouts; slide 9 DM prompt fits one line. Copy is unchanged, Preahvihear retained and font/box/export checks passed.
