@@ -27,3 +27,29 @@ shutil.copy(root/'reference-transit/slides/slide-04.html',p/'slides/slide-04.htm
 (p/'render/out').mkdir(parents=True,exist_ok=True);shutil.copy(root/'reference-transit/render/out/slide-04.mp4',p/'render/out/slide-04.mp4')
 (p/'.gitignore').write_text('render/assets/\nrender/index.html\nrender/meta.json\npreview-all-slides.jpg\n__pycache__/\n')
 print(p)
+
+
+def patch_story(p):
+ c=json.loads((p/'content.json').read_text());motions={'cover-pallet':{'type':'drive','dx':22,'at':.2,'dur':1.0},'pickup':{'type':'drive','dx':-45,'at':.2,'dur':1.0},'checkpoint':{'type':'clock_sweep','degrees':75,'at':.4,'dur':1.7}}
+ for o in c['objects']:
+  if o['id'] in motions:o['moment']=motions[o['id']]
+ c['objects']=[o for o in c['objects'] if o['id']!='update-envelope'];c['objects'].append({'id':'update-envelope','image':'envelope.png','slide':6,'x':340,'y':915,'w':290,'float':False,'moment':{'type':'drive','dx':85,'at':.65,'dur':1.0}})
+ (p/'content.json').write_text(json.dumps(c,indent=2))
+ for n in [1,3,5,6]:
+  f=p/'slides'/f'slide-{n:02}.html';s=f.read_text()
+  if n in [1,3]:
+   id='cover-pallet' if n==1 else 'pickup';d=json.dumps({k:v for k,v in motions[id].items() if k!='type'})
+   s=s.replace(f'id="o-{id}"',f'id="o-{id}" data-drive=\'{d}\'',1)
+   if n==1:s=s.replace('if(minute){','if(minute){document.querySelector(\'.clockUnit\').style.transform=`translateX(${22*eio(cl((t-.2)/1.0))}px)`;')
+   else:s=s.replace("if(flag)flag.style.opacity=cl((t-.8)/.4)*.75;", "if(flag){flag.style.transform=`translateX(${-45*eio(cl((t-.2)/1.0))}px)`;flag.style.opacity=cl((t-1.35)/.3)*.75;}")
+  if n==5:
+   s=re.sub(r'<div class="moment scan"[^>]*></div>','',s)
+   clock='<svg class="moment" style="left:735px;top:572px;width:120px;height:120px;filter:drop-shadow(0 0 2px #ffaa40)" viewBox="0 0 120 120"><line id="checkpoint-hour" x1="60" y1="60" x2="60" y2="34" stroke="#ffc36b" stroke-width="4" stroke-linecap="round" style="transform-origin:60px 60px"/><line id="checkpoint-minute" x1="60" y1="60" x2="60" y2="18" stroke="#ffc36b" stroke-width="3" stroke-linecap="round" style="transform-origin:60px 60px"/><circle cx="60" cy="60" r="4" fill="#ffcd80"/></svg>'
+   s=s.replace('\n</div>\n<script>\nconst SLIDE',clock+'\n</div>\n<script>\nconst SLIDE',1)
+   s=s.replace('function R(t) {','function R(t) {const cm=document.getElementById(\'checkpoint-minute\'),ch=document.getElementById(\'checkpoint-hour\');if(cm){const cu=eio(cl((t-.4)/1.7));cm.style.transform=`rotate(${60+75*cu}deg)`;ch.style.transform=`rotate(${305+75*cu/12}deg)`;}')
+  if n==6:
+   s=re.sub(r'<svg class="moment callSignal".*?</svg>','',s,flags=re.S)
+   envelope='''<div class="flt" id="o-update-envelope" data-rot="0" data-ph="0" data-float="0" data-drive='{"dx":85,"at":0.65,"dur":1.0}' style="position:absolute;left:340px;top:915px;width:290px;z-index:4"><img src="assets/img/envelope.png" style="display:block;width:100%;filter:drop-shadow(0 12px 14px rgba(0,0,0,.2))"></div>'''
+   s=s.replace('\n</div>\n<script>\nconst SLIDE',envelope+'\n</div>\n<script>\nconst SLIDE',1)
+  f.write_text(s)
+patch_story(p)

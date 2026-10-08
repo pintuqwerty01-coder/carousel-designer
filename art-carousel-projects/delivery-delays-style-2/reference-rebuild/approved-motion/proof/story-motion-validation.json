@@ -1,0 +1,319 @@
+[
+  {
+    "slide": 1,
+    "snapshots": [
+      {
+        "props": [
+          {
+            "selector": "#o-cover-pallet",
+            "x": 770,
+            "transform": "translate(0px, 0px) rotate(0deg)"
+          },
+          {
+            "selector": ".clockUnit",
+            "x": 799,
+            "transform": "translateX(0px)"
+          }
+        ],
+        "text": [
+          [
+            56,
+            150,
+            720,
+            615.5625
+          ],
+          [
+            56,
+            815,
+            600,
+            253.0625
+          ],
+          [
+            56,
+            1120,
+            520,
+            84.09375
+          ]
+        ]
+      },
+      {
+        "props": [
+          {
+            "selector": "#o-cover-pallet",
+            "x": 792,
+            "transform": "translate(22px, 0px) rotate(0deg)"
+          },
+          {
+            "selector": ".clockUnit",
+            "x": 821,
+            "transform": "translateX(22px)"
+          }
+        ],
+        "text": [
+          [
+            56,
+            150,
+            720,
+            615.5625
+          ],
+          [
+            56,
+            815,
+            600,
+            253.0625
+          ],
+          [
+            56,
+            1120,
+            520,
+            84.09375
+          ]
+        ]
+      },
+      {
+        "props": [
+          {
+            "selector": "#o-cover-pallet",
+            "x": 792,
+            "transform": "translate(22px, 0px) rotate(0deg)"
+          },
+          {
+            "selector": ".clockUnit",
+            "x": 821,
+            "transform": "translateX(22px)"
+          }
+        ],
+        "text": [
+          [
+            56,
+            150,
+            720,
+            615.5625
+          ],
+          [
+            56,
+            815,
+            600,
+            253.0625
+          ],
+          [
+            56,
+            1120,
+            520,
+            84.09375
+          ]
+        ]
+      }
+    ],
+    "text_static": true,
+    "visible_prop_action": true,
+    "end_state_held": true
+  },
+  {
+    "slide": 3,
+    "snapshots": [
+      {
+        "props": [
+          {
+            "selector": "#o-pickup",
+            "x": 550,
+            "transform": "translate(0px, 0px) rotate(0deg)"
+          },
+          {
+            "selector": ".pickupFlag",
+            "x": 923,
+            "transform": "translateX(0px)"
+          }
+        ],
+        "text": [
+          [
+            200,
+            220,
+            600,
+            445.28125
+          ]
+        ]
+      },
+      {
+        "props": [
+          {
+            "selector": "#o-pickup",
+            "x": 505,
+            "transform": "translate(-45px, 0px) rotate(0deg)"
+          },
+          {
+            "selector": ".pickupFlag",
+            "x": 878,
+            "transform": "translateX(-45px)"
+          }
+        ],
+        "text": [
+          [
+            200,
+            220,
+            600,
+            445.28125
+          ]
+        ]
+      },
+      {
+        "props": [
+          {
+            "selector": "#o-pickup",
+            "x": 505,
+            "transform": "translate(-45px, 0px) rotate(0deg)"
+          },
+          {
+            "selector": ".pickupFlag",
+            "x": 878,
+            "transform": "translateX(-45px)"
+          }
+        ],
+        "text": [
+          [
+            200,
+            220,
+            600,
+            445.28125
+          ]
+        ]
+      }
+    ],
+    "text_static": true,
+    "visible_prop_action": true,
+    "end_state_held": true
+  },
+  {
+    "slide": 5,
+    "snapshots": [
+      {
+        "props": [
+          {
+            "selector": "#checkpoint-minute",
+            "x": 795,
+            "transform": "rotate(60deg)"
+          },
+          {
+            "selector": "#checkpoint-hour",
+            "x": 773.7020263671875,
+            "transform": "rotate(305deg)"
+          }
+        ],
+        "text": [
+          [
+            56,
+            240,
+            640,
+            562.53125
+          ]
+        ]
+      },
+      {
+        "props": [
+          {
+            "selector": "#checkpoint-minute",
+            "x": 795,
+            "transform": "rotate(135deg)"
+          },
+          {
+            "selector": "#checkpoint-hour",
+            "x": 775.4521484375,
+            "transform": "rotate(311.25deg)"
+          }
+        ],
+        "text": [
+          [
+            56,
+            240,
+            640,
+            562.53125
+          ]
+        ]
+      },
+      {
+        "props": [
+          {
+            "selector": "#checkpoint-minute",
+            "x": 795,
+            "transform": "rotate(135deg)"
+          },
+          {
+            "selector": "#checkpoint-hour",
+            "x": 775.4521484375,
+            "transform": "rotate(311.25deg)"
+          }
+        ],
+        "text": [
+          [
+            56,
+            240,
+            640,
+            562.53125
+          ]
+        ]
+      }
+    ],
+    "text_static": true,
+    "visible_prop_action": true,
+    "end_state_held": true
+  },
+  {
+    "slide": 6,
+    "snapshots": [
+      {
+        "props": [
+          {
+            "selector": "#o-update-envelope",
+            "x": 340,
+            "transform": "translate(0px, 0px) rotate(0deg)"
+          }
+        ],
+        "text": [
+          [
+            450,
+            200,
+            580,
+            562.53125
+          ]
+        ]
+      },
+      {
+        "props": [
+          {
+            "selector": "#o-update-envelope",
+            "x": 425,
+            "transform": "translate(85px, 0px) rotate(0deg)"
+          }
+        ],
+        "text": [
+          [
+            450,
+            200,
+            580,
+            562.53125
+          ]
+        ]
+      },
+      {
+        "props": [
+          {
+            "selector": "#o-update-envelope",
+            "x": 425,
+            "transform": "translate(85px, 0px) rotate(0deg)"
+          }
+        ],
+        "text": [
+          [
+            450,
+            200,
+            580,
+            562.53125
+          ]
+        ]
+      }
+    ],
+    "text_static": true,
+    "visible_prop_action": true,
+    "end_state_held": true
+  }
+]

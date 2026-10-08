@@ -1,87 +1,200 @@
-{
-  "clips": [
-    {
-      "slide": 1,
-      "bytes": 614102,
-      "sha256": "59fe0e6e053836f53dd16ea8c2c1be9d301d7e2495541bd140195616ce5813d4",
-      "width": 1080,
-      "height": 1350,
-      "r_frame_rate": "30/1",
-      "duration": "4.000000"
-    },
-    {
-      "slide": 2,
-      "bytes": 508531,
-      "sha256": "b7c9ab74386812474d45c87217926faec3f057afe3822c3829e435abe13dfd52",
-      "width": 1080,
-      "height": 1350,
-      "r_frame_rate": "30/1",
-      "duration": "4.000000"
-    },
-    {
-      "slide": 3,
-      "bytes": 203066,
-      "sha256": "6b30430a913679beaac22b3458488bcab31755f8dba9b60e92a4d6b23efb263a",
-      "width": 1080,
-      "height": 1350,
-      "r_frame_rate": "30/1",
-      "duration": "4.000000"
-    },
-    {
-      "slide": 4,
-      "bytes": 705953,
-      "sha256": "7aa4d01446e915d978dd513340d8dc3e7266bfd9bbc8168f09d40302d6984b27",
-      "width": 1080,
-      "height": 1350,
-      "r_frame_rate": "30/1",
-      "duration": "4.000000"
-    },
-    {
-      "slide": 5,
-      "bytes": 184390,
-      "sha256": "a132d58775af766ad72c48e5bcfe60636c30448f5370495592cdf6b467fe65db",
-      "width": 1080,
-      "height": 1350,
-      "r_frame_rate": "30/1",
-      "duration": "4.000000"
-    },
-    {
-      "slide": 6,
-      "bytes": 503484,
-      "sha256": "260a5e8c8dba15009fb7bb4a98d8161cdb88caa588a8bb7e501907b7634ff9f0",
-      "width": 1080,
-      "height": 1350,
-      "r_frame_rate": "30/1",
-      "duration": "4.000000"
-    },
-    {
-      "slide": 7,
-      "bytes": 640135,
-      "sha256": "8774146c6d1446d4244237c55b8507de895a5b6a3feea26f9adc1857c505d607",
-      "width": 1080,
-      "height": 1350,
-      "r_frame_rate": "30/1",
-      "duration": "4.000000"
-    },
-    {
-      "slide": 8,
-      "bytes": 738939,
-      "sha256": "58436f1da9dc62c420f4b447fbbd9aee3a55dc6357b29296602b26fbe4d19c2c",
-      "width": 1080,
-      "height": 1350,
-      "r_frame_rate": "30/1",
-      "duration": "4.000000"
-    },
-    {
-      "slide": 9,
-      "bytes": 607529,
-      "sha256": "202af20b56f5ce09aff2258ccb33a360a113ac3059c858fd93e434330b7e8bb0",
-      "width": 1080,
-      "height": 1350,
-      "r_frame_rate": "30/1",
-      "duration": "4.000000"
+[
+  {
+    "file": "render/out/slide-01.mp4",
+    "sha256": "64e88d480a26bcf70839a376028075b99f01b94fd570fcc46e28a6071e36b2c7",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
     }
-  ],
-  "review_duration": "36.000000",
-  "checks": "All clips lint 0, stationary text 0\u20131 changed pixels, exact copy and custom fonts verified; all stills and frame sheets inspected."
-}
+  },
+  {
+    "file": "render/out/slide-02.mp4",
+    "sha256": "b7c9ab74386812474d45c87217926faec3f057afe3822c3829e435abe13dfd52",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "render/out/slide-03.mp4",
+    "sha256": "c6d91bd70b4371db03742b7f4a7fe96da074d2a02ef4c09ee8020c8ea540e01b",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "render/out/slide-04.mp4",
+    "sha256": "7aa4d01446e915d978dd513340d8dc3e7266bfd9bbc8168f09d40302d6984b27",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "render/out/slide-05.mp4",
+    "sha256": "2c9a76948a58bf35facc758ba0094e5af8d4d89f25a4ac7e6e5dc588f44c43cc",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "render/out/slide-06.mp4",
+    "sha256": "c8ef124cb6365d57b0abd2665479304ae665f4bd3753d541ddaee8136aade4bf",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "render/out/slide-07.mp4",
+    "sha256": "8774146c6d1446d4244237c55b8507de895a5b6a3feea26f9adc1857c505d607",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "render/out/slide-08.mp4",
+    "sha256": "58436f1da9dc62c420f4b447fbbd9aee3a55dc6357b29296602b26fbe4d19c2c",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "render/out/slide-09.mp4",
+    "sha256": "202af20b56f5ce09aff2258ccb33a360a113ac3059c858fd93e434330b7e8bb0",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "4.000000"
+      }
+    }
+  },
+  {
+    "file": "review.mp4",
+    "sha256": "8ffd445834194ebeb2d7a7601b76ac7a2c59753f1fa8278b86835a950b9b8267",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "36.000000"
+      }
+    }
+  },
+  {
+    "file": "motion-corrections.mp4",
+    "sha256": "871b6ea727ce3546a5fe95f263ef9075b5d2ccbcd9ac2053bc8c9a6749f0a972",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "width": 1080,
+          "height": 1350,
+          "r_frame_rate": "30/1"
+        }
+      ],
+      "format": {
+        "duration": "16.000000"
+      }
+    }
+  }
+]

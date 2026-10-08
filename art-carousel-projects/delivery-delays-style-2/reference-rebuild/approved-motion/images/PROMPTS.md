@@ -7,3 +7,7 @@
 - Update: realistic aqua/ivory desk telephone and envelope; one outward call signal.
 
 Transparent images generated in chat. All inspected. No warehouse panoramas, miniature roads, sirens, mascots, readable product screens or recurring floating motion. Mirror layout transforms keep the cover clock and arrival clock inside the canvas.
+
+## Motion-layer edits
+
+Generated edits remove baked checkpoint hands and remove the envelope from the phone tray. A separately generated matching envelope provides a real moving message layer. Checkpoint background was removed again to produce clean alpha without a translucent rectangular haze. Previous unedited assets remain for provenance.
