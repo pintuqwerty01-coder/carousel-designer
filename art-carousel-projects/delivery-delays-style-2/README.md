@@ -1,3 +1,5 @@
+Latest candidate: `reference-rebuild/style-synced-preview/`. Return to the supplied MD’s narrow cover format and single edge-crossing prop: truck rolls, stops and triggers an early message. One cover preview only; all production remains unapproved.
+
 Latest review candidate: `reference-rebuild/title-preview/`. A single cover now illustrates a delay at a checkpoint and an alert reaching the team before a customer call. Previous scan motion was rejected for not matching the title. Review this preview before extending to all nine.
 
 # Current status: previous full set rejected

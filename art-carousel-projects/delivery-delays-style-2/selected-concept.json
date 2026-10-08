@@ -1,6 +1,6 @@
 {
-  "state": "Title-specific cover preview awaiting feedback",
-  "current_preview": "reference-rebuild/title-preview/render/out/slide-01.mp4",
-  "concept": "Stopped shipment \u2192 early team alert \u2192 quiet customer phone",
+  "state": "MD-style single-hero cover preview awaiting feedback",
+  "current_preview": "reference-rebuild/style-synced-preview/render/out/slide-01.mp4",
+  "concept": "Delivery truck stops and triggers early delay message",
   "production_approved": false
 }

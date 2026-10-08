@@ -1,0 +1,51 @@
+{
+  "title": "Catch delivery delays before your customer does.",
+  "handle": "@arealtimetech",
+  "palette": [
+    "dark"
+  ],
+  "warm_bokeh": false,
+  "slides": [
+    {
+      "template": "cover",
+      "big": "**Catch delivery delays** before your customer does.",
+      "question": "Your team already handles the unexpected. What if you heard first?",
+      "sub": "Delays start small.",
+      "swipe": "Swipe to see where.",
+      "streaks": [
+        3,
+        1.0
+      ],
+      "flare": [
+        900,
+        170,
+        1.1
+      ],
+      "big_top": 150,
+      "q_top": 815,
+      "q_size": 56,
+      "sub_top": 1120,
+      "arrow": [
+        600,
+        1100
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "id": "truck-hero",
+      "image": "truck-hero.png",
+      "slide": 1,
+      "x": 800,
+      "y": 200,
+      "w": 540,
+      "float": false,
+      "moment": {
+        "type": "drive",
+        "dx": -28,
+        "at": 0.2,
+        "dur": 0.7
+      }
+    }
+  ]
+}
