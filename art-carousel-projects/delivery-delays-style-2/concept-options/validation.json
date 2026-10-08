@@ -1,0 +1,233 @@
+[
+  {
+    "option": "a",
+    "copy": "exact",
+    "fonts": "verified",
+    "glyph_bounds": [
+      {
+        "left": 84,
+        "right": 800.609375,
+        "bottom": 273
+      },
+      {
+        "left": 800.609375,
+        "right": 800.609375,
+        "bottom": 273
+      },
+      {
+        "left": 84,
+        "right": 405.125,
+        "bottom": 365.6875
+      },
+      {
+        "left": 84,
+        "right": 800.609375,
+        "bottom": 273
+      },
+      {
+        "left": 84,
+        "right": 405.125,
+        "bottom": 365.6875
+      },
+      {
+        "left": 405.125,
+        "right": 405.125,
+        "bottom": 365.6875
+      },
+      {
+        "left": 84,
+        "right": 811.46875,
+        "bottom": 443.375
+      },
+      {
+        "left": 84,
+        "right": 811.46875,
+        "bottom": 443.375
+      },
+      {
+        "left": 84,
+        "right": 932.53125,
+        "bottom": 504
+      },
+      {
+        "left": 932.53125,
+        "right": 932.53125,
+        "bottom": 504
+      },
+      {
+        "left": 84,
+        "right": 555.578125,
+        "bottom": 548.078125
+      },
+      {
+        "left": 84,
+        "right": 364.921875,
+        "bottom": 1194
+      },
+      {
+        "left": 364.921875,
+        "right": 663.375,
+        "bottom": 1194
+      },
+      {
+        "left": 364.921875,
+        "right": 663.375,
+        "bottom": 1194
+      }
+    ]
+  },
+  {
+    "option": "b",
+    "copy": "exact",
+    "fonts": "verified",
+    "glyph_bounds": [
+      {
+        "left": 84,
+        "right": 800.609375,
+        "bottom": 273
+      },
+      {
+        "left": 800.609375,
+        "right": 800.609375,
+        "bottom": 273
+      },
+      {
+        "left": 84,
+        "right": 405.125,
+        "bottom": 365.6875
+      },
+      {
+        "left": 84,
+        "right": 800.609375,
+        "bottom": 273
+      },
+      {
+        "left": 84,
+        "right": 405.125,
+        "bottom": 365.6875
+      },
+      {
+        "left": 405.125,
+        "right": 405.125,
+        "bottom": 365.6875
+      },
+      {
+        "left": 84,
+        "right": 811.46875,
+        "bottom": 443.375
+      },
+      {
+        "left": 84,
+        "right": 811.46875,
+        "bottom": 443.375
+      },
+      {
+        "left": 84,
+        "right": 932.53125,
+        "bottom": 504
+      },
+      {
+        "left": 932.53125,
+        "right": 932.53125,
+        "bottom": 504
+      },
+      {
+        "left": 84,
+        "right": 555.578125,
+        "bottom": 548.078125
+      },
+      {
+        "left": 84,
+        "right": 364.921875,
+        "bottom": 1194
+      },
+      {
+        "left": 364.921875,
+        "right": 663.375,
+        "bottom": 1194
+      },
+      {
+        "left": 364.921875,
+        "right": 663.375,
+        "bottom": 1194
+      }
+    ]
+  },
+  {
+    "option": "c",
+    "copy": "exact",
+    "fonts": "verified",
+    "glyph_bounds": [
+      {
+        "left": 84,
+        "right": 800.609375,
+        "bottom": 273
+      },
+      {
+        "left": 800.609375,
+        "right": 800.609375,
+        "bottom": 273
+      },
+      {
+        "left": 84,
+        "right": 405.125,
+        "bottom": 365.6875
+      },
+      {
+        "left": 84,
+        "right": 800.609375,
+        "bottom": 273
+      },
+      {
+        "left": 84,
+        "right": 405.125,
+        "bottom": 365.6875
+      },
+      {
+        "left": 405.125,
+        "right": 405.125,
+        "bottom": 365.6875
+      },
+      {
+        "left": 84,
+        "right": 811.46875,
+        "bottom": 443.375
+      },
+      {
+        "left": 84,
+        "right": 811.46875,
+        "bottom": 443.375
+      },
+      {
+        "left": 84,
+        "right": 932.53125,
+        "bottom": 504
+      },
+      {
+        "left": 932.53125,
+        "right": 932.53125,
+        "bottom": 504
+      },
+      {
+        "left": 84,
+        "right": 555.578125,
+        "bottom": 548.078125
+      },
+      {
+        "left": 84,
+        "right": 364.921875,
+        "bottom": 1194
+      },
+      {
+        "left": 364.921875,
+        "right": 663.375,
+        "bottom": 1194
+      },
+      {
+        "left": 364.921875,
+        "right": 663.375,
+        "bottom": 1194
+      }
+    ]
+  }
+]
