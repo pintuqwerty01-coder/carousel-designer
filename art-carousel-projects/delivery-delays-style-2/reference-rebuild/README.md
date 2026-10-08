@@ -4,8 +4,8 @@ The preceding nine-slide set was rejected. This revision returns to the supplied
 
 Only the cover and in-transit slides are finished review proofs. The remaining content.json entries are exact-copy scaffolding, not completed design or animation.
 
-- Cover: 108px Poppins bold hook, 56px Preahvihear question; narrow text column enlarged to 720px for the longer approved hook. Photoreal parcel tower crosses the right edge. Its attached beacon blinks; the object drifts 7px and rocks ±0.6°, with the original guide's ambient light and arrow motion.
-- In-transit: 64px Preahvihear headline, 31px Poppins pain/what-if, fitted 27px result pills. Ghost 2 opposite the text and original dark blob. A physical truck rolls 65px, settles, then its beacon flashes. It stays stopped rather than jittering or travelling across the canvas. Checks draw in.
+- Cover: 108px Poppins bold hook, 56px Preahvihear question; narrow text column enlarged to 720px for the longer approved hook. Photoreal parcel tower crosses the right edge. The siren has been removed from the image; the object drifts 7px and rocks ±0.6°, with the original guide's ambient light and arrow motion.
+- In-transit: 64px Preahvihear headline, 31px Poppins pain/what-if, fitted 27px result pills. Ghost 2 opposite the text and original dark blob. A physical truck rolls 65px, settles, then its beacon flashes once for 0.55 seconds. It stays stopped rather than jittering or travelling across the canvas. Checks draw in.
 
 The exact supplied copy and original guide are unchanged. No mascot, human-shaped nodes, readable object labels, real brands or product screens. The cover van was removed after an attempted badge-removal edit did not remove the detail reliably. The standalone truck has a plain front panel.
 
@@ -16,3 +16,5 @@ See `TOOLS.md` for the installed workflow and `PLAN.md` for the remaining propos
 The kit's stills script flags an image-box overlap on the unrendered setup scaffold. This is transparent right-hand image padding: the cover tower's opaque continuation reaches roughly 100px into slide 2, before its text at 150px. The reviewed cover and in-transit report no text/object overlap. Remaining slides need proper prop work and review before final rendering.
 
 The supplied workflow says: “Render the cover plus one slide with a story moment first … After approval, render the rest.” Review these two before completing all nine. Technical checks establish export correctness; they do not establish aesthetic approval.
+
+Latest user correction: remove unnecessary sirens. Cover has no siren object or blink layer. The truck carries the only beacon and emits one brief flash after stopping; it does not keep blinking or stay illuminated by an animated overlay. Remaining slide concepts must not repeat it.

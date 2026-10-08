@@ -5,3 +5,6 @@ Photoreal 3D premium commercial product render: tall staggered stack of five par
 
 ## 2. `04-truck.png` — short-roll freight truck
 Photoreal 3D premium commercial studio cut-out of a compact fictional freight truck pointing right in three-quarter view. Plain ivory cab, aqua cargo box, silver hardware, realistic rubber tires, visible aqua glass beacon above the cab. Smooth plain front panel: no emblem, medallion, manufacturer resemblance or lettering. Single isolated vehicle; no road, route diagram or scenery. Transparent background, soft top-left studio key light and cool aqua rim light. No people, hands, faces, logos, text, numbers or product screens.
+
+## Cover revision — remove siren
+Image edit: remove the entire top beacon and its base, restore the highest ivory parcel surface, preserve parcel positions, colors, lighting, canvas and transparency. No replacement prop. Inspect the returned image before rebuilding.

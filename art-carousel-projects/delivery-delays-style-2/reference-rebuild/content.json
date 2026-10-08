@@ -225,13 +225,7 @@
       "ph": 0,
       "glow": false,
       "moment": {
-        "type": "blink",
-        "box": [
-          0.345,
-          0.023,
-          0.2,
-          0.14
-        ]
+        "type": "none"
       }
     },
     {

@@ -24,5 +24,5 @@ kit.object_html=obj
 cta=kit.t_cta
 kit.TEMPLATES['cta']=lambda s,c:cta(s,c).split('<div class="icons tx">')[0]
 kit.JS=kit.JS.replace('r = o.rot + 0.25 * Math.sin(TAU * t * 2);','y=0; r = o.rot + ((t>o.drive.at && t<o.drive.at+o.drive.dur)?0.18*Math.sin(TAU*t*2):0);')
-kit.JS=kit.JS.replace('  FLC.forEach', "  Q('.stallbeacon').forEach(e=>{let a=t-1.5;e.style.opacity=a<0?0:a>1.3?.65:Math.pow(Math.max(0,Math.sin(a*Math.PI*3)),2);});\n  FLC.forEach")
+kit.JS=kit.JS.replace('  FLC.forEach', "  Q('.stallbeacon').forEach(e=>{let a=(t-1.55)/.55;e.style.opacity=a>0&&a<1?Math.pow(Math.sin(a*Math.PI),2):0;});\n  FLC.forEach")
 kit.main(Path(__file__).resolve().parent)
