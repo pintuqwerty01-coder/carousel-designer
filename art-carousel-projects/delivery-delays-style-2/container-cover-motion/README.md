@@ -1,0 +1,1 @@
+Container cover motion proof: 4 seconds, 1080×1350, 30 fps. Photoreal 3D cutout recreated from the supplied cover direction. Top container settles 35 px once under a gravity curve; lower containers and parcels remain grounded. Text remains fixed. No rocking, stretching or repeated floating. Source is index.html and assets/stack.png. Preview only, not approved for all nine slides.
