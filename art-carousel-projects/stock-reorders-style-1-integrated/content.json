@@ -1,0 +1,17 @@
+{
+  "title": "Low stock. Next order, handled.",
+  "style": "Style 1",
+  "status": "Integrated photographic scenes with typography and foreground anchors designed together; approved copy unchanged",
+  "threshold_example": {"currency": "INR", "approval_limit": 10000, "automatic_order": 6000, "approval_required_order": 15000, "note": "Illustrative values, not configured business rules."},
+  "handle": "@arealtimetech",
+  "slides": [
+    {"headline": ["Low stock.", "Next order, handled."], "body": ["ART reorders within your limits."]},
+    {"headline": ["Stop chasing stock."], "body": ["Manual checks. Late orders.", "Avoidable shortages."]},
+    {"headline": ["ART spots what’s running low."], "body": ["Your stock rules trigger the next step."]},
+    {"headline": ["Check first. Reorder what’s needed."], "body": ["ART checks stock and incoming orders."]},
+    {"headline": ["Your limit. Two clear paths."], "panels": [{"headline": "Within your amount limit", "body": "ART places the order."}, {"headline": "Above your amount limit", "body": "ART sends it for approval."}]},
+    {"headline": ["An exception needs your call."], "body": ["Review. Adjust. Approve or hold."]},
+    {"headline": ["Routine orders move.", "Exceptions reach you."], "body": ["Less chasing. Control where it counts."]},
+    {"headline": ["Set the rules.", "Let ART handle the routine."], "body": ["Make stock replenishment flow."]}
+  ]
+}

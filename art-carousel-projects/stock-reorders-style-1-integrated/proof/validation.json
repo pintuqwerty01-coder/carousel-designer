@@ -1,0 +1,148 @@
+[
+  {
+    "slide": 1,
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "actual_rendered_fonts": {
+      "h1": [
+        "Preahvihear"
+      ],
+      ".body": [
+        "Poppins Medium"
+      ]
+    },
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
+    "slide": 2,
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "actual_rendered_fonts": {
+      "h1": [
+        "Preahvihear"
+      ],
+      ".body": [
+        "Poppins Medium"
+      ]
+    },
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
+    "slide": 3,
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "actual_rendered_fonts": {
+      "h1": [
+        "Poppins",
+        "Preahvihear"
+      ],
+      ".body": [
+        "Poppins Medium"
+      ]
+    },
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
+    "slide": 4,
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "actual_rendered_fonts": {
+      "h1": [
+        "Poppins",
+        "Preahvihear"
+      ],
+      ".body": [
+        "Poppins Medium"
+      ]
+    },
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
+    "slide": 5,
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "actual_rendered_fonts": {
+      "h1": [
+        "Preahvihear"
+      ],
+      ".panel h2": [
+        "Poppins Medium"
+      ]
+    },
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
+    "slide": 6,
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "actual_rendered_fonts": {
+      "h1": [
+        "Preahvihear"
+      ],
+      ".body": [
+        "Poppins Medium"
+      ]
+    },
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
+    "slide": 7,
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "actual_rendered_fonts": {
+      "h1": [
+        "Preahvihear"
+      ],
+      ".body": [
+        "Poppins Medium"
+      ]
+    },
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
+    "slide": 8,
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "actual_rendered_fonts": {
+      "h1": [
+        "Preahvihear"
+      ],
+      ".body": [
+        "Poppins Medium"
+      ]
+    },
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  }
+]
