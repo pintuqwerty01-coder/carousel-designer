@@ -61,7 +61,7 @@
     "text_layout": "within margins",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
-    "video": "1080x1350 / 30fps / 6s"
+    "video": "1080x1350 / 30fps / 7s"
   },
   {
     "slide": 4,
@@ -83,7 +83,7 @@
     "text_layout": "within margins",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
-    "video": "1080x1350 / 30fps / 6s"
+    "video": "1080x1350 / 30fps / 7s"
   },
   {
     "slide": 5,
@@ -105,7 +105,7 @@
     "text_layout": "within margins",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
-    "video": "1080x1350 / 30fps / 6s"
+    "video": "1080x1350 / 30fps / 8s"
   },
   {
     "slide": 6,
@@ -147,7 +147,7 @@
     "text_layout": "within margins",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
-    "video": "1080x1350 / 30fps / 6s"
+    "video": "1080x1350 / 30fps / 8s"
   },
   {
     "slide": 8,
@@ -168,7 +168,7 @@
     "text_layout": "within margins",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
-    "video": "1080x1350 / 30fps / 6s"
+    "video": "1080x1350 / 30fps / 7s"
   },
   {
     "slide": 9,
@@ -189,6 +189,6 @@
     "text_layout": "within margins",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
-    "video": "1080x1350 / 30fps / 6s"
+    "video": "1080x1350 / 30fps / 7s"
   }
 ]

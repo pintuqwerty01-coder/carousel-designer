@@ -50,7 +50,7 @@ headlines=[
  'Your limit.<br><span class="accent">Two clear paths.</span>',
  'An exception<br>needs <span class="accent">your call.</span>',
  'Routine orders move.<br><span class="accent">Exceptions reach you.</span>',
- 'Set the rules.<br>Let ART handle<br><span class="accent">the routine.</span>'
+ 'Stock handled.<br><span class="accent">Time handed back.</span>'
 ]
 for i,s in enumerate(C['slides'],1):
  sid=f'slide-{i:02d}';panels=''

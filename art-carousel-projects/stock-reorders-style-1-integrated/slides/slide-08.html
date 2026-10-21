@@ -60,7 +60,7 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 .amount {font:600 52px/1.2 Poppins;font-variant-numeric:tabular-nums;letter-spacing:-1px;margin-top:15px;}
 .panel p {font:400 27px/1.4 Poppins;margin-top:15px;}
 </style></head><body>
- <div id="root" data-composition-id="slide-08" data-start="0" data-duration="6" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s8 " data-start="0" data-duration="6">
+ <div id="root" data-composition-id="slide-08" data-start="0" data-duration="7" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s8 " data-start="0" data-duration="7">
  <div class="backdrop"><img src="assets/incoming.png" alt="Photorealistic stockroom scene"></div><div class="shade"></div>
  <div class="topline"><span class="brand-dot"></span>ART<span class="rule"></span></div>
  <div class="col"><h1 class="headline">Routine orders move.<br><span class="accent">Exceptions reach you.</span></h1><p class="body">Less chasing. Control where it counts.<br>Everyday replenishment keeps moving within your rules.</p></div>
@@ -882,6 +882,86 @@ function heroArm(c,points){
  c.fillStyle='#04ADC3';for(const [x,y] of cells)c.fillRect(x,y,10,10);
 }
 
+// All new foreground props follow the approved opening's stepped pixel geometry.
+function actor(c,x,top,S,p={}){
+ x=snap(x);top=snap(top);const lift=snap(p.lift||0),panic=p.mood==='panic',urgent=p.mood==='urgent',joy=p.mood==='joy',relief=p.mood==='relief';
+ vShadow(c,x+120,top+234,155,lift,true);
+ drawBot(c,x,top-lift,10,{dark:true,halo:true,haloColor:'#F0EEE7',flip:!!p.flip,legs:lift?'tuck':p.walk?(S%2?'stepL':'stepR'):'stand',armL:p.left||(p.walk?'out':'down'),armR:p.arm||'down',eyes:panic||urgent?'wide':S%31===0?'blink':joy||relief?'happy':p.eyes||'focus',mouth:panic?'o':urgent?'wobble':joy?'grin':relief?'smile':'flat',bulb:panic||urgent?'red':joy||relief?'aqua':'yellow',bulbOff:(panic||urgent)&&S%4===0});
+ if((panic||urgent)&&p.sweat){const y=top-lift+70+(S%3)*10;pixelCells(c,[[x+200,y,1,2],[x+210,y+30,1,1]],'#9BE3EC');}
+}
+function stockBox(c,x,y,checked=false,w=140,h=140){
+ x=snap(x);y=snap(y);surfaceShadow(c,x+w/2,y+h+4,w+35);
+ pixelCells(c,[[x+10,y,w/10-2,h/10],[x,y+10,w/10,h/10-2]],'#F0EEE7');
+ pixelCells(c,[[x+10,y+10,w/10-2,h/10-2]],'#96643E');
+ pixelCells(c,[[x+10,y+10,w/10-4,h/10-3]],'#CB965F');
+ pixelCells(c,[[x+20,y+20,w/10-6,1],[x+w/2-10,y+10,2,h/10-2]],'#E4C79E');
+ pixelCells(c,[[x+30,y+h-70,8,5]],'#F0EEE7');
+ if(checked)pixelTick(c,x+40,y+h-60,10);
+ else pixelCells(c,[[x+40,y+h-60,1,3],[x+60,y+h-60,1,3],[x+80,y+h-60,1,3]],'#8A9290');
+}
+function pixelPaper(c,x,y,k=1,checked=false,amount=''){
+ x=snap(x);y=snap(y);surfaceShadow(c,x+70,y+184,145);
+ pixelCells(c,[[x+10,y,12,18],[x,y+10,14,16]],'#F0EEE7');
+ pixelCells(c,[[x+20,y+20,10,1]],'#04ADC3');
+ if(amount)text(c,amount,x+16,y+62,24,'#203136',600);
+ for(let j=0;j<3;j++){
+  const q=clamp01(k*3-j),count=Math.floor((9-j%2)*q);
+  if(count)pixelCells(c,[[x+20,y+(amount?80:55)+j*20,count,1]],'#A5B3B0');
+ }
+ if(checked)pixelTick(c,x+80,y+135,7);
+}
+function pixelTray(c,x,y,w=160){pixelCells(c,[[x,y,w/10,2],[x-10,y-10,1,3],[x+w,y-10,1,3],[x+10,y+20,w/10-2,1]],'#6D817F');pixelCells(c,[[x+10,y,w/10-2,1]],'#DDECE9');}
+function warning(c,x,y,S,colour='#F27A7A'){
+ pixelCells(c,[[x-10,y,2,4],[x-10,y+50,2,1]],colour);
+ if(S%4<2)pixelCells(c,[[x-30,y-10,1,2],[x+20,y-10,1,2],[x-10,y-30,2,1]],'#FFD166');
+}
+function pixelTruck(c,x,sec,checked){
+ x=snap(x);c.save();c.translate(x,0);
+ // The cab leads leftward into frame; cartons remain attached to the trailer.
+ pixelCells(c,[[90,1080,30,2],[10,990,8,11],[10,980,5,1],[0,1010,1,9],[0,1100,9,1]],'#F0EEE7');
+ pixelCells(c,[[100,1090,28,1],[20,1020,6,7]],'#04ADC3');
+ pixelCells(c,[[20,1000,5,4]],'#203136');pixelCells(c,[[30,1010,3,2]],'#9BE3EC');
+ pixelCells(c,[[0,1070,2,1]],'#FFD166');
+ for(const cx of [45,145,345]){
+  pixelCells(c,[[cx-15,1100,3,3],[cx-25,1110,5,1]],'#203136');
+  const phase=Math.floor(Math.min(sec,2.7)*8)%2;pixelCells(c,[[cx-5,1110,1,1],[cx+(phase?5:-15),1110,1,1]],'#DDECE9');
+ }
+ stockBox(c,100,940,checked);stockBox(c,250,940,checked);
+ c.restore();
+}
+function tabletInHands(c,x,top,sec,update){
+ heroTablet(c,x+50,top+140,update);
+ pixelCells(c,[[x+40,top+170,2,2]],'#04ADC3');
+ const tap=Math.floor(sec*5)%3===0;
+ heroArm(c,[[x+170,top+150],[x+180,top+140],[x+160,top+140],[x+160,top+(tap?160:130)]]);
+}
+function reviewHand(c,edge,y){
+ edge=snap(edge);y=snap(y);
+ // A person reaches from outside the frame and physically grips the request edge.
+ pixelCells(c,[[edge+30,y-10,20,5]],'#203136');
+ pixelCells(c,[[edge+30,y-10,4,5]],'#F0EEE7');
+ pixelCells(c,[[edge,y,4,3],[edge-10,y+10,1,1],[edge+10,y-10,2,1]],'#D4A47B');
+ pixelCells(c,[[edge,y,1,1],[edge+10,y-10,1,1]],'#ECC7A0');
+}
+function confetti(c,sec,start,x){
+ const k=(sec-start)/1.2;if(k<0||k>1)return;
+ const colours=['#04ADC3','#F0EEE7','#FFD166'];
+ for(let j=0;j<8;j++){
+  const dx=(j-3.5)*30*k,dy=-110*Math.sin(Math.PI*k)+j%3*15;
+  pixelCells(c,[[snap(x+dx),snap(850+dy),1,1]],colours[j%3]);
+ }
+}
+function pixelClock(c,x,y,k){
+ surfaceShadow(c,x+80,1134,200);
+ pixelCells(c,[[x+20,y,12,16],[x,y+20,16,12]],'#F0EEE7');
+ pixelCells(c,[[x+20,y+10,12,14],[x+10,y+20,14,12]],'#04ADC3');
+ pixelCells(c,[[x+30,y+20,10,12],[x+20,y+30,12,10]],'#EAF1EB');
+ const angle=-Math.PI/2+Math.PI*1.8*(1-eOut(k));
+ heroArm(c,[[x+75,y+75],[x+75+Math.cos(angle)*40,y+75+Math.sin(angle)*40]]);
+ pixelCells(c,[[x+70,y+50,1,3],[x+80,y+80,3,1]],'#203136');
+ pixelCells(c,[[x+50,y+160,6,2],[x+30,y+180,10,2]],'#6D817F');
+}
+
 const SCENES={
  1(c,t,S){
   const sec=t*2; // The opening runs eight seconds, with five deliberate beats.
@@ -916,76 +996,92 @@ const SCENES={
   if(done)text(c,'Stock updated',x+23,1180,25,'#DDECE9');
  },
  2(c,t,S){
-  // The stock check leads to an automatically prepared order, then collection.
-  // ART remains on the photographed tabletop at y=920 throughout.
-  const sec=t*1.5,collect=eInOut((sec-3.35)/.45),x=595,y=752-collect*20;
-  robot(c,380,920,S,{arm:sec>3.2?'reach':'down',done:sec>3.65,eyes:'lookR'});
-  c.save();c.shadowColor='rgba(0,0,0,.23)';c.shadowBlur=12;c.shadowOffsetY=6;
-  rr(c,x,y,158,168,3);fs(c,'#F4F0E7');c.shadowColor='transparent';
-  ink(c,[[x+14,y+24],[x+144,y+24]],'#04ADC3',5);
-  for(let j=0;j<4;j++){
-   const k=eInOut((sec-.65-j*.45)/.4),w=125-(j%2)*18;
-   if(k>0)ink(c,[[x+14,y+48+j*19],[x+14+w*k,y+48+j*19]],'#9BA8A7',2);
-  }
-  if(sec>2.6)vBadge(c,x+120,y+135,eOut((sec-2.6)/.5),21);
-  c.restore();
+  const sec=t*1.5,ready=sec>3.1,lift=eInOut((sec-3.35)/.45)*20;
+  actor(c,380,690,S,{arm:sec>3.2?'reach':'down',mood:ready?'relief':'work',eyes:'lookR'});
+  pixelPaper(c,595,740-lift,clamp01((sec-.65)/1.8),sec>2.6);
  },
  3(c,t,S){
-  // Manual checking is the only scene with a pile of paperwork.
-  robot(c,360-eInOut((t-2.4)/.5)*24,980,S,{arm:t>2.8?'up':t>.8?'reach':'down',alert:true});
-  for(let j=2;j>=0;j--){const k=eInOut((t-.5-j*.3)/.75);paper(c,737+j*12-k*(142+j*5),867+j*10,104,103,-.07+j*.04);}
+  const sec=t*1.75,shock=sec>2.8&&sec<4.1,x=320-eInOut((sec-3)/.4)*24;
+  actor(c,x,750,S,{arm:shock?'up':'reach',left:shock?'up':'down',mood:shock?'panic':'urgent',sweat:true});
+  for(let j=2;j>=0;j--){
+   const k=eInOut((sec-.4-j*.7)/.8);
+   pixelPaper(c,760+j*20-k*(225+j*12),750-j*10,1,false);
+  }
  },
  4(c,t,S){
-  // A stock-data threshold, not a physical barcode scan.
-  const x=96,y=810,w=252,k=eInOut((t-.6)/1.4),fill=236-k*151;
-  ink(c,[[x,y],[x+w,y]],'rgba(255,255,255,.38)',5);
-  ink(c,[[x,y],[x+fill,y]],'#04ADC3',5);
-  ink(c,[[x+85,y-14],[x+85,y+14]],'#FFD166',3);
-  text(c,'Reorder point',96,858,25);
-  if(t>2.1)reveal(c,(t-2.1)/.35,()=>pill(c,'Rule triggered',96,910,'#FFD166'));
-  robot(c,440,1120,S,{flip:true,arm:t>2?'up':'down',done:t>2.8});
+  const sec=t*1.75,open=clamp01((sec-1.3)/.9),lid=Math.round(eOut(open)*4)*10;
+  // A large cutaway carton makes the shortage visible, rather than a tiny meter.
+  surfaceShadow(c,780,1134,300);
+  pixelCells(c,[[660,920,24,21],[650,930,26,19]],'#F0EEE7');
+  pixelCells(c,[[660,930,24,19]],'#96643E');
+  pixelCells(c,[[670,940,21,15]],'#CB965F');
+  pixelCells(c,[[680,950,20,10]],'#473C32');
+  for(let j=0;j<3;j++){
+   const used=j<2?clamp01((sec-.4-j*.5)/.65):0;
+   if(used<1){c.save();c.globalAlpha=1-used;c.translate(690+j*60,970);c.scale(.5,.5);stockBox(c,0,0,false,120,140);c.restore();}
+  }
+  pixelCells(c,[[660,920-lid,24,2],[670,940-lid,22,1]],'#E4C79E');
+  const alarm=sec>2.1,recoil=sec>2.15&&sec<3.3,x=430-(recoil?eOut((sec-2.15)/.3)*36:0);
+  actor(c,x,900,S,{arm:recoil?'up':sec>3.3?'reach':'down',left:recoil?'up':'down',mood:recoil?'panic':alarm&&sec<4?'urgent':'work',sweat:recoil});
+  if(alarm){warning(c,930,900,S);text(c,'LOW STOCK',697,1100,25,'#FFF5E8',600);}
+  if(sec>4.3)text(c,'Check incoming next',610,1180,26);
  },
  5(c,t,S){
-  // Labels identify the pictured stock and incoming trolley; no invented quantities.
-  pill(c,'On hand',500,654);pill(c,'Incoming',111,715);
-  if(t>.55)reveal(c,(t-.55)/.4,()=>{ink(c,[[494,695],[494,857]],'#04ADC3',2);ink(c,[[111,864],[111,886],[314,886]],'#04ADC3',2);});
-  const flip=t<1.8;
-  robot(c,406,1092,S,{flip,arm:t>.7&&t<2.7?'up':'down',done:t>2.8});
-  if(t>2.65)reveal(c,(t-2.65)/.4,()=>pill(c,'Reorder only the gap',681,884));
+  const sec=t*2,arrive=eInOut((sec-.6)/2.1),truckX=1110-510*arrive;
+  text(c,'On hand',105,945,27);text(c,'Incoming stock',635,892,27);
+  stockBox(c,110,990,sec>1);
+  pixelTruck(c,truckX,sec,sec>4.3);
+  const working=sec>4.4;
+  actor(c,350,900,S,{flip:sec<2.4,arm:working?'hold':sec>1.3?'up':'down',mood:sec>6.7?'relief':'work',eyes:sec<2.4?'lookL':'lookR'});
+  if(working)tabletInHands(c,350,900,sec,clamp01((sec-4.55)/1.6));
+  if(sec>6.5)text(c,'Incoming counted. Reorder only the gap.',275,1180,25);
  },
  6(c,t,S){
-  // The approved amount panels are the visual. No second set of mini screens.
-  const left=eInOut((t-.15)/.8),right=eInOut((t-1.9)/1.1),x=430-left*140+right*280;
-  robot(c,x,1170,S,{flip:t<1.9,walk:t>.15&&t<.95||t>1.9&&t<3,arm:t>1&&t<1.8||t>3?'up':'down',done:t>3.55});
-  if(t>1.1)vBadge(c,270,939,eOut((t-1.1)/.3),34);
-  if(t>3.05)reveal(c,(t-3.05)/.3,()=>{rr(c,787,898,85,89,15);fs(c,'#F4F0E7');person(c,830,923);c.beginPath();c.arc(866,902,8,0,Math.PI*2);fs(c,'#FFD166');});
+  const sec=t*2,leftDone=sec>2.2,right=sec>3.8;
+  pixelTray(c,180,1110,175);pixelTray(c,800,1110,175);
+  pixelPaper(c,198,930,clamp01((sec-.4)/1.2),leftDone);
+  if(right)pixelPaper(c,818,930,clamp01((sec-3.8)/1.1),false);
+  actor(c,420,900,S,{flip:!right,arm:right?'up':'reach',left:right?'up':'down',mood:right&&sec<6.4?'urgent':leftDone&&!right?'relief':'work',sweat:right&&sec<6.4});
+  if(right)warning(c,972,865,S,'#FFD166');
  },
  7(c,t,S){
-  // Only the human-review slide uses a device. ART waits; it never approves itself.
-  surfaceShadow(c,797,1046,188);
-  c.save();c.translate(720,802);c.transform(1,.025,-.04,1,0,0);
-  rr(c,0,0,156,237,17);fs(c,'#253337','#A0ABA6',2);rr(c,8,12,140,207,10);fs(c,'#F2EFE8');
-  person(c,78,54);text(c,'₹15,000',29,127,23,'#18272A',600);
-  text(c,'For your review',16,156,16,'#344E50');
-  text(c,'Approve  /  Hold',15,193,15,'#344E50');
-  if(t>1.5){c.beginPath();c.arc(143,17,8,0,Math.PI*2);fs(c,'#FFD166');}
-  c.restore();
-  robot(c,352,1016,S,{arm:t>.7&&t<1.8?'reach':'down',eyes:t>2?'open':'lookR'});
+  const sec=t*2,approach=eInOut((sec-.55)/1.25),handoff=eInOut((sec-3.2)/1.2);
+  const x=snap(260+170*approach),paperX=x+215+handoff*165;
+  pixelTray(c,795,1120,180);
+  text(c,'Your decision',790,865,27);
+  actor(c,x,900,S,{walk:sec>.55&&sec<1.8,arm:sec<4.5?'reach':'down',left:sec<2.5?'up':'down',mood:sec<3.2?'urgent':'work',sweat:sec<3.2,eyes:'lookR'});
+  pixelPaper(c,paperX,940,1,false,'₹15,000');
+  if(sec<2.8)warning(c,985,892,S);
+  if(sec>2.2){
+   const reach=eInOut((sec-2.2)/.8),edge=1120+(x+355-1120)*reach+handoff*165;
+   reviewHand(c,edge,1010);
+  }
+  if(sec>4.5)text(c,'Awaiting your decision',690,1180,25,'#FFD166');
  },
  8(c,t,S){
-  // Completion is attached to the actual dispatch carton, not another screen.
-  const k=eInOut((t-.2)/1.5);
-  robot(c,350+k*170,1120,S,{walk:t>.2&&t<1.7,arm:t>2.1?'flex':'down',done:t>2.1});
-  if(t>1.8)vBadge(c,285,800,eOut((t-1.8)/.35),24);
+  const sec=t*1.75,release=eInOut((sec-1.25)/3.25)*690;
+  // Checked routine orders leave on a physical pixel roller belt.
+  pixelCells(c,[[90,1080,53,2],[100,1100,2,3],[610,1100,2,3]],'#6D817F');
+  for(let j=0;j<12;j++)pixelCells(c,[[100+j*45,1080+(Math.floor(sec*8)%2)*5,2,1]],'#DDECE9');
+  for(let j=0;j<3;j++)stockBox(c,110+j*180-release,940,true);
+  pixelCells(c,[[625,1070,3,3],[635,1050,1,2]],'#04ADC3');
+  text(c,'Routine orders',100,893,27);
+  pixelTray(c,860,1120,135);pixelPaper(c,866,940,1,false);
+  text(c,'Human review',832,900,25,'#FFD166');
+  const jump=sec>4.9&&sec<5.7?Math.max(0,Math.sin((sec-4.9)/.8*Math.PI))*40:0;
+  actor(c,620,900,S,{flip:true,arm:sec<1.25?'tap':sec>4.6?'up':'down',left:sec>4.6?'up':'down',mood:sec>4.6?'joy':'work',lift:jump,eyes:'lookL'});
+  confetti(c,sec,5,740);
  },
  9(c,t,S){
-  // Quiet close: the mascot, the working environment and the existing call to action.
-  const k=eInOut((t-.15)/1.05);
-  robot(c,650-k*230,1128,S,{flip:true,walk:t>.15&&t<1.2,arm:t>1.8?'flex':'down',left:t>2.7?'up':'down',done:t>2.7,eyes:'open'});
+  const sec=t*1.75;
+  pixelClock(c,220,930,clamp01((sec-.4)/1.8));
+  stockBox(c,810,990,sec>2.6);
+  actor(c,470,900,S,{arm:sec>3.3?'up':'flex',left:sec>3.3?'up':'down',mood:sec>3.3?'joy':'relief',eyes:sec<2.4?'lookL':'open'});
+  if(sec>3.5)text(c,'Put ART to work.',438,1180,26);
  }
 };
 
  const st={t:0},c=document.getElementById('scene').getContext('2d'),tr=document.getElementById('trail').getContext('2d');
- function render(){c.clearRect(0,0,1080,1350);SCENES[8](c,st.t*4/6,Math.floor(st.t*8));tr.clearRect(0,0,1080,80);for(let j=0;j<9;j++){tr.fillStyle=j<8?'#04ADC3':'rgba(255,255,255,.18)';tr.fillRect(84+j*103,39,88,3);}}
- const tl=gsap.timeline({paused:true});tl.to(st,{t:6,duration:6,ease:'none',onUpdate:render},0);window.__timelines={'slide-08':tl};render();
+ function render(){c.clearRect(0,0,1080,1350);SCENES[8](c,st.t*4/7,Math.floor(st.t*8));tr.clearRect(0,0,1080,80);for(let j=0;j<9;j++){tr.fillStyle=j<8?'#04ADC3':'rgba(255,255,255,.18)';tr.fillRect(84+j*103,39,88,3);}}
+ const tl=gsap.timeline({paused:true});tl.to(st,{t:7,duration:7,ease:'none',onUpdate:render},0);window.__timelines={'slide-08':tl};render();
  </script></body></html>

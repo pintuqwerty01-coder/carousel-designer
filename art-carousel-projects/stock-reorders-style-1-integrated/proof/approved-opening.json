@@ -1,0 +1,11 @@
+{
+  "approved_revision": "stock-reorders-style-1-v11",
+  "artifacts": {
+    "render/out/slide-01.mp4": "ac2b851598ff64b5a025c0d36f6184d26a88019daf8e1b8d9d7e5d35d2827947",
+    "stills/slide-01.png": "3f672e2580cf6142118fe933d3140e53550e52fa1b24c6367a1f04e41fc7b0de",
+    "delivery/slide-01.jpg": "aba5b2eb699fa39e46a5ed8f1823a565c5f01e7d8a950816fb5d64e056c5dbe8"
+  },
+  "scene_function_sha256": "7db31cbc20ac8aab953526c26f227c30a901e1995511d3ca15880c66a9383bbe",
+  "pixel_helpers_sha256": "b84c41ba21209c1fb10b69a0ce5ab829b5918bdb2fe2aeb3a72c87f3e41af632",
+  "mascot_engine_sha256": "719ee97499ee6b92aaa164aa6a4dc0858d7097983125397b07eba7179a04eaac"
+}

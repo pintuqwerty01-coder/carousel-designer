@@ -1,60 +1,50 @@
-# ART stock replenishment — Style 1, revision 11
+# ART stock replenishment — Style 1, revision 12
 
-Revision 11 applies the approved marketing headline “Your shelves called. ART’s already on it.” and its supporting copy. The opening does not mention spending limits. “ART (A Realtime Tech)” appears in the brand line on slides 1 and 9, in the approved Poppins family. The existing animated opening is preserved. Masters 1, 2 and 9 are rerendered for this revision. Slide 2 is the next scene: its order form fills automatically, confirms completion and is lifted slightly as ART reaches to collect it. The mascot stays anchored to the tabletop at y=920.
+Slide 1 is the user-approved reference. Its video, still image, scene function and pixel-prop helpers are preserved. The original mascot engine stays unchanged: 240px scale, identical body/head geometry, approved facial poses, palette and outline. Emotion comes from poses, facial expressions, antenna states, stepped movement and a single victory jump—not a redesigned mascot.
 
-The user explicitly requested a new opening: ART walks in from the side, checks animated boxes in the mascot's pixel-art style, takes a tablet and updates the stock. This overrides the default guide's vector-prop rule for these opening props.
+The remaining scenes now use foreground elements in the opening's pixel-art style over the existing photographic backgrounds. This follows the user's explicit request to match the liked opening, including incoming stock in the mascot's animation style.
 
-## Opening choreography
+## Scene direction
 
-| Time | Action and visible response |
-| --- | --- |
-| 0–1.5s | ART walks in from the left, using the original 240px mascot and stepped legs. |
-| 1.65–2.7s | ART inspects the first carton. Its label changes from grey to aqua, then to a pixel completion mark. Its lid remains closed because the tablet is resting on it. |
-| 3–4.05s | ART inspects the second carton. Its lid opens and closes in pixel steps, and the label resolves to a completion mark. |
-| 4.2–5.3s | ART takes the tablet that has been visibly resting on the first carton since frame one. The device lowers beside the face, then crosses to both hands below the face. |
-| 5.55–7.1s | The left hand supports the tablet; the right forearm taps its screen. Stock rows update in sequence and a completion mark appears. |
-| 7.1–8s | ART holds the updated tablet; “Stock updated” confirms the result. |
+| Slide | Action and cause/result | Emotion |
+| --- | --- | --- |
+| 01 | Approved side entrance, two carton checks, tablet pickup and stock update. Unchanged. | Focus → satisfaction. |
+| 02 | A pixel purchase order forms, confirms, then is collected from the tabletop. | Concentration → relief. |
+| 03 | Checking paperwork builds up at the records table. ART recoils and sweats. | Urgency and overwhelm; no false completion. |
+| 04 | A cutaway carton visibly dwindles to a remaining stock symbol. ART recoils, the low-stock alert appears, then ART starts checking incoming stock. | Shock → urgency → focused action. |
+| 05 | A loaded pixel truck enters with its cab leading leftward. ART checks on-hand stock first, counts the incoming cartons, then compares them on the tablet. The loaded truck remains in transit; it does not unload into on-hand stock. | Attention → verification → relief. |
+| 06 | The existing ₹10,000 example limit remains clear: the ₹6,000 path completes; the ₹15,000 request remains pending. Pixel documents and reactions replace mixed-style icons. | Routine confidence → exception urgency. |
+| 07 | ART hurries the above-limit request to a person. A hand reaches from the frame edge, grips the request and takes it to the review tray. It remains awaiting a decision. | Urgency → attentive waiting; no automatic approval. |
+| 08 | ART releases completed routine orders along a pixel roller belt. They leave before ART jumps and celebrates. The separate human-review tray stays pending. | Focus → relief → celebration. |
+| 09 | “Stock handled. Time handed back.” A pixel clock settles, the routine-order box confirms and ART raises both arms. “Put ART to work.” provides the closing action. | Pride and celebration. |
 
-The opening uses pixel cartons, a pixel tablet and pixel arm extensions, with the same stepped geometry and light outline treatment as the mascot. The realistic background, stationary headline and established fonts stay in place. Boxes stand on the same floor line as ART. No stock quantities or business settings are invented.
+ART (A Realtime Tech) remains on the first and final slides. The new closing emphasises the team's time, rather than repeating rule settings.
 
-The opening choreography was introduced in revision 10. The corrected slide 2 tabletop placement and slides 3–9 are preserved. The opening is now eight seconds, bringing the complete carousel to 58 seconds. The separate opening preview shows only this eight-second sequence.
+All stock symbols are illustrative. No quantities, delivery guarantees or numeric time-saving claims are added. The ₹10,000/₹6,000/₹15,000 values remain illustrative spending examples. A completion mark on incoming cartons means they have been included in the check, not received into stock. Exception handoff means sent for review, not approved.
 
-## What changed
+## Visual system and timing
 
-The repeated scanner, printer and terminal scenes have been removed. ART's role is represented as responding to stock rules, checking on-hand and incoming stock, placing within-limit orders and sending above-limit requests to a person. No barcode scanner or printer is used. The opening stock check and tablet update are the user-requested mascot metaphor.
+- Canonical Preahvihear Regular headlines and Poppins body text; no synthetic weights.
+- Main copy stays stationary and readable from frame one.
+- Same mascot model and 240px scale across scenes; pixel cartons, papers, truck, hand, roller belt and clock support the story.
+- 84px text margins, photographed backgrounds at native resolution and consistent white/ink/aqua branding.
+- Red antenna and wide eyes communicate urgency. Green appears only on completion marks. One restrained pixel-confetti burst follows the dispatch celebration.
+- Durations: 8, 6, 7, 7, 8, 8, 8, 7 and 7 seconds. Total: 66 seconds. Every frame and JPEG is 1080 × 1350; videos run at 30fps.
 
-Each slide now has a specific visual purpose:
-
-| Slide | Visual purpose |
-| --- | --- |
-| 01 | Side entrance → inspect two pixel cartons → pick up tablet → update stock. |
-| 02 | An order form builds automatically, confirms completion, then ART collects it while standing on the tabletop. |
-| 03 | A pile of papers represents manual checking, with an unresolved mascot reaction. |
-| 04 | A stock-data bar reaches its reorder point and triggers the rule. This is a data annotation, not a shelf scanner. |
-| 05 | The pictured incoming trolley and on-hand stock are identified before the reorder gap is considered. No quantities are invented. |
-| 06 | The existing two amount panels carry the explanation. A completion mark and human-review symbol identify the two paths; duplicate miniature terminals are gone. |
-| 07 | A human-review phone appears only on this slide, distinct from the opening inventory tablet. ART waits for the person's decision; approval is not assumed. |
-| 08 | A completion mark attaches to a dispatch carton while ART moves through the aisle. No extra screen or repeated flow diagram. |
-| 09 | A centred closing composition and mascot complete the existing call to action without added controls or props. |
-
-Consistency comes from Preahvihear Regular headlines, Poppins body copy, the 84px grid, a single 240px mascot scale, white/aqua/ink colours and the same photographic environment. Opening boxes and tablet use the pixel style specifically requested by the user. Green is reserved for completion. The outcome and closing slides use centred text to distinguish them from the explanation slides. Main copy stays still and visible from the first frame. Dotted connectors and the dotted footer remain removed.
-
-Existing generated photographs are reused unchanged from `festive-dispatch-realistic` and `festive-dispatch-photo`; no paid image generation was used. These are illustrative backgrounds, not images of an identified real business. Preahvihear lacks the curly apostrophe, which uses the approved Poppins family. Actual rendered font names are checked through Chrome DevTools.
-
-Timing: 8 seconds for the opening, 8 seconds for the amount comparison, 6 seconds for every other slide. All videos and JPEGs are 1080 × 1350. Videos run at 30fps. The ₹10,000 limit, ₹6,000 order and ₹15,000 request are examples, not configured business rules.
+Background files remain unchanged. No new paid generation was used. The existing generated images are illustrative and do not depict an identified real business. Preahvihear lacks the curly apostrophe, which alone uses the approved Poppins family.
 
 ## Reproduce
 
 ```bash
 source /workspace/art-carousel-venv/bin/activate
 python build.py
-python /workspace/art-carousel-kit/run-system-browser.py /workspace/art-carousel-kit/scripts/stills.py "$PWD"
-python motion-sheets.py
-python render-lossless.py
+python stills.py 2,3,4,5,6,7,8,9
+python motion-sheets.py 2,3,4,5,6,7,8,9
+python render-lossless.py 2,3,4,5,6,7,8,9
 python audit.py
 python package.py
 ```
 
-The ZIP contains nine MP4 masters, nine high-quality native-size JPEGs, a nine-page PDF and validation reports. The combined video is a compressed viewing copy; the storyboard comes from actual exported frames.
+Keep the approved opening master and still in place. The audit checks their hashes and the approved scene/model source. It also checks copy, actual rendered fonts, margins, fixed text, scene motion, image loading, JavaScript errors and per-video metadata. Exported video frames are compared against the browser reference stills. The ZIP includes nine native MP4s, nine high-quality JPEGs, a nine-page PDF and validation reports.
 
-Delivered on `stock-reorders-style-1-v11`. Previous revisions remain on their own branches.
+Delivered on `stock-reorders-style-1-v12`. Earlier versions stay on their separate branches.

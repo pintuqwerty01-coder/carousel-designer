@@ -1,7 +1,7 @@
 {
   "title": "Your shelves called. ART’s already on it.",
   "style": "Style 1",
-  "status": "Revision 11: approved marketing opening; ART full name on first and final slides; next slide shows automatic order preparation",
+  "status": "Revision 12: approved opener preserved; pixel stock flow, urgency, human handoff, routine dispatch and stronger closing",
   "threshold_example": {
     "currency": "INR",
     "approval_limit": 10000,
@@ -42,7 +42,7 @@
         "Avoidable shortages.",
         "By the time someone notices, the shelf can already be empty."
       ],
-      "duration": 6
+      "duration": 7
     },
     {
       "headline": [
@@ -52,7 +52,7 @@
         "Your stock rules trigger the next step.",
         "When stock hits your reorder point, ART starts the check."
       ],
-      "duration": 6
+      "duration": 7
     },
     {
       "headline": [
@@ -62,7 +62,7 @@
         "ART checks stock and incoming orders.",
         "What’s already on the way helps shape the next order."
       ],
-      "duration": 6
+      "duration": 8
     },
     {
       "headline": [
@@ -88,7 +88,7 @@
         "Review. Adjust. Approve or hold.",
         "See the request and decide what happens next."
       ],
-      "duration": 6
+      "duration": 8
     },
     {
       "headline": [
@@ -99,18 +99,18 @@
         "Less chasing. Control where it counts.",
         "Everyday replenishment keeps moving within your rules."
       ],
-      "duration": 6
+      "duration": 7
     },
     {
       "headline": [
-        "Set the rules.",
-        "Let ART handle the routine."
+        "Stock handled.",
+        "Time handed back."
       ],
       "body": [
-        "Make stock replenishment flow.",
-        "Choose your reorder points and spending limits."
+        "Let ART handle replenishment.",
+        "Put your team’s time into what’s next."
       ],
-      "duration": 6
+      "duration": 7
     }
   ],
   "brand_full_name": "ART (A Realtime Tech)"

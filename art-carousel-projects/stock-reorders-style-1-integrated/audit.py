@@ -4,6 +4,17 @@ from playwright.sync_api import sync_playwright
 
 P=pathlib.Path(__file__).resolve().parent
 content=json.loads((P/'content.json').read_text())
+# The user approved only slide 1: pin its media, choreography and model.
+opening_ref=json.loads((P/'proof/approved-opening.json').read_text())
+for name,expected in opening_ref['artifacts'].items():
+    assert hashlib.sha256((P/name).read_bytes()).hexdigest()==expected,('approved opening changed',name)
+scene_source=(P/'scenes.js').read_text()
+opening_source=scene_source[scene_source.index(' 1(c,t,S){'):scene_source.index(' 2(c,t,S){')]
+opening_helpers=scene_source[scene_source.index('// Opening-specific pixel props:'):scene_source.index('// All new foreground props')].strip()
+assert hashlib.sha256(opening_source.encode()).hexdigest()==opening_ref['scene_function_sha256']
+assert hashlib.sha256(opening_helpers.encode()).hexdigest()==opening_ref['pixel_helpers_sha256']
+assert hashlib.sha256((P.parents[1]/'art-carousel-kit/assets/kit/js/pixelbot.js').read_bytes()).hexdigest()==opening_ref['mascot_engine_sha256']
+
 class Quiet(http.server.SimpleHTTPRequestHandler):
     def log_message(self,*args):pass
 server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Quiet,directory=str(P/'slides')))
