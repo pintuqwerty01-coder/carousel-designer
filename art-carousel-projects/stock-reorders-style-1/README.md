@@ -1,38 +1,44 @@
-# Stock reorders — Style 1 motion preview
+# Stock reorders — Style 1, revision 2
 
-Approved script: `content.json`. User explicitly requested ART from the beginning, the within-limit/over-limit split, and a new illustrated cover instead of photography. These take precedence over the older curiosity/reveal and photo-cover defaults in the Style 1 guide.
+Approved script: `content.json`. The user approved the illustrated direction and requested clearer, cleaner execution and a price-threshold example on slide 5. ART appears from the beginning. No photos or paid image generation are used.
 
-## Concept: Inside ART's stockroom
+## Motion and clarity
 
-One connected visual world follows a stock need into a reorder and through the spending rules. Smooth vector shelving, order cards and conveyors; original pixel mascot at the same 240px scale. White/ink/aqua, Preahvihear headlines and Poppins body text. Text is stationary and readable from the first frame. Green checks indicate completed work only.
+The original 240px pixel mascot operates inside smooth vector stockroom scenes. Preahvihear headlines, Poppins body text, white/ink/aqua layouts, and green only for completion checks. All text is visible from frame one and remains stationary.
 
-First motion studies: cover (01), stock chasing (02), and the two rule paths (05). They are for visual review, not a finished eight-slide delivery. No paid image service or photo is used.
+Actions proceed in sequence, then hold their outcomes. Repeated waving, flashing antennae, phone vibration, expanding rings and simultaneous actions have been removed. The cover depicts a reorder prepared against low stock, rather than implying that delivery instantly fills the shelf.
 
-| Slide | Planned action |
+| Slide | Action |
 | --- | --- |
-| 01 | An empty shelf triggers a reorder card; the mascot handles it and the stock flow resumes. |
-| 02 | Stock disappears while the mascot chases a shelf, spreadsheet and ringing phone. |
-| 03 | A scanner spots the stock threshold and signals the mascot. |
-| 04 | The mascot compares on-hand stock with an incoming shipment before drafting a request. |
-| 05 | A smaller order passes automatically; a larger request stops and notifies a person. |
-| 06 | The exception request reaches a human review desk with review/adjust/approve/hold choices. |
-| 07 | Routine and exception routes operate together without blocking one another. |
-| 08 | The mascot sets the rule controls and watches the replenishment loop run. |
+| 01 | A low-stock shelf leads to a prepared reorder card. |
+| 02 | Stock dwindles while manual checking sends the mascot between shelf and records. |
+| 03 | A stock-level indicator crosses the marked reorder point; ART flags it. |
+| 04 | ART compares stock on hand with an incoming order before the reorder check completes. |
+| 05 | Example approval limit ₹10,000. The ₹6,000 order passes automatically first; the ₹15,000 request then stops at a closed gate and reaches a human notification. Both outcomes hold. |
+| 06 | The exception request is routed to a person, with review/adjust/approve/hold choices. No approval is assumed. |
+| 07 | Routine orders complete while exceptions remain with a person. |
+| 08 | Rule controls are set; the order flow proceeds within them. |
 
-## Reproduce
+The currency values are illustrative examples requested for clarity, not real configured spending rules. An amount within the limit is eligible for automatic ordering; an amount above it requires approval.
 
-From this directory, with the prepared Python virtual environment:
+## Build, render and validate
+
+Use the existing checkout and prepared virtual environment, with Node, Chromium and ffmpeg installed.
 
 ```bash
+source /workspace/art-carousel-venv/bin/activate
+cd /workspace/carousel-designer/art-carousel-projects/stock-reorders-style-1
 python build.py
 python /workspace/art-carousel-kit/run-system-browser.py /workspace/art-carousel-kit/scripts/stills.py "$PWD"
-python /workspace/art-carousel-kit/run-system-browser.py /workspace/art-carousel-kit/scripts/sheets.py "$PWD" 01,02,05
+python /workspace/art-carousel-kit/run-system-browser.py /workspace/art-carousel-kit/scripts/sheets.py "$PWD"
 export npm_config_cache=/workspace/art-carousel-npm-cache HYPERFRAMES_BROWSER_PATH=/usr/bin/chromium
-python /workspace/art-carousel-kit/scripts/render.py "$PWD" 02,05
-python render-lossless.py 01
+python render-lossless.py
 python audit.py
+python package.py
 ```
 
-The cover uses supported lossless H.264 encoding because the default delivery encode produced one changed headline pixel in the static-copy comparison. Per-slide masters remain at 1080 × 1350, 30fps and four seconds. Review MP4/GIF files are compressed viewing copies.
+Each per-slide master is 1080 × 1350, 30fps, 120 frames and four seconds. Lossless H.264 preserves stationary text. The combined 32-second MP4 and GIF are compressed review copies; the ZIP contains individual masters in posting order and static JPEGs.
 
-Following the Style 1 guide's instruction to show a finished sample before completing all slides, the remaining five slide animations await visual approval of these first studies.
+Validation compares approved copy, checks the requested price examples and their relation to the limit, verifies fonts and margins, compares text screenshots across three moments, confirms scene motion, checks JavaScript errors and probes the final videos. Frame sheets support visual review of transitions and mascot/prop separation.
+
+Earlier three-slide studies remain in Git history and on the `stock-reorders-style-1-preview` branch. The current revision is delivered separately on `stock-reorders-style-1-v2`.

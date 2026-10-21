@@ -46,13 +46,19 @@ body {background:white;} #root {position:relative;width:1080px;height:1350px;ove
 #trail {position:absolute;bottom:0;left:0;width:1080px;height:80px;}
 .branch h1 {font-size:84px;} .panels {position:absolute;left:84px;top:510px;width:912px;display:grid;grid-template-columns:1fr 1fr;gap:24px;}
 .panel {height:638px;border:2px solid #BBDDE2;background:#F0F9FA;border-radius:28px;padding:30px 27px;} .panel:last-child {background:#FFF9EC;border-color:#EADCB9;}
-.panel h2 {font:600 33px/1.35 Poppins;letter-spacing:-.4px;} .panel p {font:400 28px/1.45 Poppins;margin-top:18px;max-width:365px;}
-.branch .stage {top:690px;height:458px;border:0;background:transparent;border-radius:0;}
+.panel h2 {font:600 30px/1.35 Poppins;letter-spacing:-.4px;} .panel p {font:400 26px/1.45 Poppins;margin-top:18px;max-width:365px;}
+.example-limit {position:absolute;top:414px;left:84px;width:912px;height:62px;background:#1A1A1A;color:white;border-radius:15px;display:flex;align-items:center;justify-content:center;gap:12px;font:500 25px Poppins;}
+.example-limit strong {color:#9BE3EC;font-weight:600;} .amount {position:relative;margin-top:27px;font:600 40px/1.2 Poppins;letter-spacing:-.8px;}
+.amount small {display:block;font:400 20px/1.4 Poppins;color:#647176;letter-spacing:0;margin-bottom:5px;}
+.branch .stage {top:790px;height:358px;border:0;background:transparent;border-radius:0;}
 .branch .stage:before {display:none;} .branch #scene {height:500px;width:912px;} .branch .body {display:none;}
 .cover {background:#1A1A1A;color:white;} .cover .topline {color:white;} .cover h1 {font-size:92px;line-height:1.22;} .cover .hl {background:none;color:#04ADC3;} .cover .body {color:#D7DDDF;font-size:34px;}
 .cover .stage {background:#263235;border-color:#35464B;top:650px;height:500px;} .cover .stage:before {background:#334147;} .cover .handle,.cover .count {color:#BCC8CB;}
+.s3 h1,.s4 h1,.s6 h1,.s7 h1 {font-size:80px;line-height:1.25;} .s8 h1 {font-size:78px;line-height:1.25;}
+.s8 {background:#04ADC3;} .s8 .hl {background:linear-gradient(transparent 61%,white 61%,white 94%,transparent 94%);} .s8 .stage {background:white;border-color:white;}
+.s8 .body {color:#143B41;} .s8 .topline .rule {background:#80D9E4;} .s8 .handle,.s8 .count {color:#174A51;}
 </style></head>
-<body><div id="root" data-composition-id="slide-01" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide cover" data-start="0" data-duration="4">
+<body><div id="root" data-composition-id="slide-01" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s1 cover" data-start="0" data-duration="4">
 <div class="topline"><span class="marker"></span>ART<span class="rule"></span></div>
 <div class="col"><h1>Low stock.<br>Next order,<br><span class="hl">handled.</span></h1><p class="body">ART reorders within your limits.</p></div>
 <div class="stage"><canvas id="scene" width="912" height="520"></canvas></div>
@@ -815,108 +821,159 @@ function drawTrail(ctx, W, i, n, k, dark, aqua) {
   pxr(ctx, mx + 17, -12, 6, 12, dark ? C8.W : C8.K); pxr(ctx, mx + 14, -18, 12, 8, aqua ? C8.W : C8.A);
 }
 
-// Style 1: smooth vector props; the original pixel mascot at u=10 (240px).
-// No random numbers or wall clocks: every frame is a deterministic function of t.
-function line(c, pts, color=VC.K, width=3, dash=[]) {
-  c.save(); c.strokeStyle=color; c.lineWidth=width; c.lineCap='round'; c.lineJoin='round'; c.setLineDash(dash);
-  c.beginPath(); pts.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y)); c.stroke(); c.restore();
+// Style 1 v2. One deliberate action at a time; all copy remains stationary.
+// The original mascot is always u=10 / 240px. Props use continuous easing.
+function line(c,pts,color=VC.K,width=3,dash=[]) {
+  c.save();c.strokeStyle=color;c.lineWidth=width;c.lineCap='round';c.lineJoin='round';c.setLineDash(dash);c.beginPath();pts.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y));c.stroke();c.restore();
 }
-function clock(c,x,y,t) {
-  c.save(); c.translate(x,y); c.beginPath(); c.arc(0,0,39,0,Math.PI*2); fs(c,VC.W,VC.K,3);
-  line(c,[[0,-24],[0,0],[Math.cos(t*2)*22,Math.sin(t*2)*22]],VC.K,4);
-  c.restore();
-}
-function sheet(c,x,y,w,h,fill=VC.W) {
-  rr(c,x,y,w,h,14);fs(c,fill,VC.K,3);
-  rr(c,x+17,y+21,w-34,22,5);fs(c,VC.T);
-  for(let row=0;row<4;row++){
-    line(c,[[x+17,y+67+row*27],[x+w-17,y+67+row*27]],'#D5E2E4',2);
-    line(c,[[x+w*.55,y+54],[x+w*.55,y+h-14]],'#D5E2E4',2);
-  }
+function label(c,text,x,y,color='#58696E',size=22,align='center') {
+  c.save();c.fillStyle=color;c.font='500 '+size+'px Poppins';c.textAlign=align;c.fillText(text,x,y);c.restore();
 }
 function parcel(c,x,y,w=80,h=64,fill=VC.A) {
-  rr(c,x,y,w,h,8);fs(c,fill,VC.K,3);
-  line(c,[[x+2,y+16],[x+w-2,y+16]],VC.K,2);
-  rr(c,x+w*.43,y+2,w*.14,h-4,0);fs(c,fill===VC.Y?'#FFE6A0':VC.S);
+  rr(c,x,y,w,h,8);fs(c,fill,VC.K,3);line(c,[[x+2,y+16],[x+w-2,y+16]],VC.K,2);rr(c,x+w*.43,y+2,w*.14,h-4,0);fs(c,fill===VC.Y?'#FFE6A0':VC.S);
 }
-function shelf(c,t,restore=false) {
-  vShelf(c,42,264,138,[250,366]);
+function sheet(c,x,y,w,h,fill=VC.W) {
+  rr(c,x,y,w,h,14);fs(c,fill,VC.K,3);rr(c,x+18,y+22,w-36,16,4);fs(c,VC.S);
+  for(let j=0;j<3;j++)line(c,[[x+18,y+63+j*24],[x+w-18,y+63+j*24]],'#C5D9DD',3);
+}
+function avatar(c,x,y,r=23) {
+  c.save();c.beginPath();c.arc(x,y-r*.25,r*.43,0,Math.PI*2);fs(c,VC.K);
+  c.beginPath();c.arc(x,y+r*.8,r*.85,Math.PI,Math.PI*2);c.closePath();fs(c,VC.K);c.restore();
+}
+function robot(c,x,y,t,mode='work',dark=false,arm='reach') {
+  const done=mode==='done',alert=mode==='alert';
+  vShadow(c,x+120,y+236,148,0,dark);
+  drawBot(c,x,y,10,{dark,halo:dark,armR:arm,armL:'down',legs:'stand',eyes:done?'happy':alert?'wide':'focus',mouth:done?'grin':alert?'o':'smile',bulb:done?'aqua':alert?'red':'yellow'});
+}
+function shelf(c,x,y,full=false,t=0) {
+  vShelf(c,x,x+222,y,[y+112,y+228]);
   for(let j=0;j<6;j++){
-    let x=58+(j%3)*66,y=j<3?194:310;
-    let disappear=[.35,.7,1,1.3,1.6,9][j];
-    let a=1-eOut((t-disappear)/.3);
-    if(restore)a=Math.max(a,eOut((t-2.6-j*.06)/.25));
-    if(a>.001){c.save();c.globalAlpha=a;parcel(c,x,y,52,56);c.restore();}
-    else {c.save();c.strokeStyle='#BBD5D9';c.lineWidth=2;c.setLineDash([5,7]);c.strokeRect(x,y,52,56);c.restore();}
+    if(!full&&j!==5)continue;
+    parcel(c,x+16+(j%3)*66,y+56+(j<3?0:116),52,56);
   }
 }
-function chasing(c,t,S) {
-  shelf(c,t);
-  clock(c,152,66,t);
-  const x=snap(t<1.4?300+eInOut(t/1.4)*100:400-eInOut((t-1.4)/1.4)*100);
-  sheet(c,654,182,194,218);
-  c.save();c.translate(752,140);c.scale(1.5,1.5);vPhone(c,0,0,t,true,0);c.restore();
-  vRings(c,752,87,t);
-  vShadow(c,x+120,457,152);
-  drawBot(c,x,224,10,{legs:walkLegs(S),armL:S%4<2?'up':'down',armR:S%4<2?'reach':'up',eyes:'wide',mouth:'wobble',bulb:'red',bulbOff:S%3===0});
-  vSweat(c,x+188,286,t,1);
-  if(t>.9)vMark(c,276,104,'!',(t-.9)/.25,'bang',1.15);
-  c.save();c.globalAlpha=.45;line(c,[[300,470],[620,470]],VC.K,2,[6,8]);c.restore();
+function clock(c,x,y,t) {
+  c.beginPath();c.arc(x,y,37,0,Math.PI*2);fs(c,VC.W,VC.K,3);
+  line(c,[[x,y-21],[x,y],[x+Math.sin(Math.min(t,2.4)*1.8)*22,y-Math.cos(Math.min(t,2.4)*1.8)*22]],VC.K,3);
+}
+function notification(c,x,y,k) {
+  rr(c,x,y,91,122,13);fs(c,VC.K);rr(c,x+7,y+12,77,92,7);fs(c,VC.W);avatar(c,x+45,y+50,22);
+  if(k>0){c.beginPath();c.arc(x+80,y+13,11*eOut(k),0,Math.PI*2);fs(c,VC.Y,VC.W,3);}
+  line(c,[[x+37,y+113],[x+54,y+113]],VC.S,3);
 }
 function hero(c,t,S) {
-  c.save(); c.translate(580,2);
-  vShelf(c,0,276,100,[225,350]);
-  for(let j=0;j<6;j++) {
-    const k=j===5?1:eOut((t-2.1-j*.1)/.3);
-    if(k>0) {c.save();c.globalAlpha=k;parcel(c,18+(j%3)*83,(j<3?155:280)-20*(1-k),67,70);c.restore();}
-  }
-  c.restore();
-  const x=snap(150+eOut(Math.min(1,t/1.1))*70), y=225;
-  vShadow(c,x+120,461,154,0,true);
-  drawBot(c,x,y,10,{dark:true,halo:true,legs:t<1?'stepL':'stand',armR:t>1?'reach':'down',eyes:t>2.6?'happy':t>1?'focus':'lookR',mouth:t>2.6?'grin':'smile',bulb:t>2.6?'aqua':'yellow'});
-  if(t>.9) {
-    const k=eOut((t-.9)/.4);
-    c.save();c.globalAlpha=k;vSlip(c,440,280+30*(1-k),100,128);
-    if(t>2.35)vBadge(c,492,304,(t-2.35)/.35,25);c.restore();
-    vCurve(c,[544,330],[570,315],[580,263],(t-1.45)/.65,VC.A,{arrow:true,dash:[6,8],lw:3});
-  }
+  label(c,'Reorder',491,200,'#D9E6E8');label(c,'Stock',732,60,'#D9E6E8');
+  shelf(c,620,100,false);
+  // The existing stock stays low: the check means an order is ready, not instant delivery.
+  line(c,[[550,322],[586,322],[586,214],[615,214]],VC.A,3,[6,8]);
+  const ready=t>=2.25;
+  robot(c,220,225,t,ready?'done':'work',true,t<.7?'down':'reach');
+  const q=eOut((t-.65)/.75);sheet(c,440,294-22*q,100,134);
+  if(ready)vBadge(c,491,300,(t-2.25)/.35,26);
 }
-// Two fixed branches. Small orders leave immediately; the larger request remains
-// visibly held for a person. It never acquires a completion check in this slide.
+function chasing(c,t,S) {
+  label(c,'Shelf checks',153,65);label(c,'Manual records',751,65);
+  vShelf(c,42,264,138,[250,366]);
+  for(let j=0;j<6;j++){
+    const a=j===5?1:1-eOut((t-.3-j*.22)/.3);
+    if(a>0){c.save();c.globalAlpha=a;parcel(c,58+(j%3)*66,j<3?194:310,52,56);c.restore();}
+  }
+  sheet(c,657,176,188,222);clock(c,751,123,t);
+  const moving=t>.6&&t<2.3,x=snap(302+eInOut((t-.6)/1.7)*65);
+  vShadow(c,x+120,460,148);drawBot(c,x,224,10,{legs:moving?walkLegs(S):'stand',armR:t<1.4?'down':'reach',eyes:'wide',mouth:'wobble',bulb:'red'});
+  if(t>2.35)vMark(c,288,110,'!',(t-2.35)/.3,'bang',1);
+}
+function monitor(c,t,S) {
+  label(c,'Stock level',174,70);label(c,'Reorder point',736,128);
+  shelf(c,62,140,false);
+  const scan=eInOut((t-.4)/1.3);if(t>.4&&t<1.9)vBeam(c,70+scan*200,147,365);
+  rr(c,690,170,92,230,12);fs(c,VC.W,'#B6D8DF',3);
+  const h=168-110*eInOut((t-.55)/1.2);rr(c,702,388-h,68,h,6);fs(c,VC.A);
+  line(c,[[667,292],[803,292]],VC.R,3,[6,6]);
+  const active=t>1.9;robot(c,360,224,t,active?'done':'work',false,active?'up':'reach');
+  if(active)vMark(c,815,205,'!',(t-1.9)/.25,'bang',.9);
+}
+function compare(c,t,S) {
+  label(c,'On hand',170,72);label(c,'Incoming',747,72);label(c,'Reorder check',456,80);
+  shelf(c,60,150,false);
+  // Incoming parcel advances only in its own far-right lane.
+  vBelt(c,650,855,360,30,Math.min(Math.max(t-.7,0),1.1)*70);
+  parcel(c,657+eInOut((t-.7)/1.1)*70,281,100,79);
+  const a=eOut((t-1.1)/.9),b=eOut((t-1.9)/.65);
+  vCurve(c,[282,210],[346,97],[450,186],a,VC.A,{arrow:true,dash:[6,7],lw:3});
+  vCurve(c,[698,255],[636,93],[501,186],b,VC.A,{arrow:true,dash:[6,7],lw:3});
+  robot(c,350,224,t,t>2.8?'done':'work',false,'up');
+  if(t>2.8)vBadge(c,469,188,(t-2.8)/.3,26);
+}
 function paths(c,t,S) {
-  const leftX=7,rightX=477;
-  for(let i=0;i<2;i++) {
-    const offset=i?rightX:leftX;
-    c.save();c.translate(offset,0);
-    const floor=445, bx=4, by=floor-230;
-    // The belt stays beside the mascot, rather than passing through its body.
-    vBelt(c,232,420,383,36,i?Math.min(t,1.8)*65:t*80);
-    if(!i){
-      // A low-amount request becomes an order, then leaves on the conveyor.
-      const k=eInOut((t-.7)/1.5), x=230+k*125;
-      parcel(c,x,329,58,52);
-      if(t>2.15)vBadge(c,328,273,(t-2.15)/.3,28);
-      line(c,[[253,229],[291,229],[291,283]],VC.A,3,[6,7]);
-      if(t>1.4) {const q=eOut((t-1.4)/.25);line(c,[[285,274],[291,283],[297,274]],VC.A,3*q);}
-    } else {
-      const k=eInOut((t-.7)/1.1), x=230+k*26;
-      parcel(c,x,329,92,52,VC.Y);
-      // Closed gate + an unanswered notification = request awaits human action.
-      line(c,[[371,383],[371,290],[414,290]],VC.K,5);
-      line(c,[[376,294],[400,318]],VC.R,5);
-      if(t>1.8){
-        c.save();c.translate(337,217);c.scale(1.2,1.2);vPhone(c,0,0,t,true,0,'bell');c.restore();
-        vRings(c,337,178,t);
-        vCurve(c,[300,328],[242,253],[315,220],(t-1.8)/.55,VC.A,{arrow:true,dash:[5,7],lw:3});
+  for(let i=0;i<2;i++){
+    c.save();c.translate(i?477:7,0);
+    const start=i?1.8:.35,duration=i?.65:1.05,k=eInOut((t-start)/duration);
+    const x=232+k*(i?20:92),floor=333;
+    // Each example resolves in sequence, then holds still for comparison.
+    const beltOff=80*Math.min(Math.max(t-start,0),duration);
+    vBelt(c,231,415,285,30,beltOff);
+    parcel(c,x,231,i?88:62,54,i?VC.Y:VC.A);
+    if(i){
+      // Request stops before the closed review gate. No approval is implied.
+      line(c,[[371,284],[371,211],[411,211]],VC.K,4);
+      line(c,[[377,215],[399,237]],VC.R,4);
+      if(t>2.45){
+        vCurve(c,[298,227],[264,150],[309,133],(t-2.45)/.35,VC.A,{arrow:true,dash:[6,7],lw:3});
+        notification(c,300,22,(t-2.45)/.35);
       }
+      robot(c,4,floor-230,t,'work',false,t>2.45?'up':'reach');
+    }else{
+      if(t>1.45)vBadge(c,350,189,(t-1.45)/.3,25);
+      robot(c,4,floor-230,t,t>1.45?'done':'work',false,t>1.45?'up':'reach');
     }
-    vShadow(c,bx+120,floor+6,142);
-    drawBot(c,bx,by,10,{armR:t<1.2?'reach':i?'up':S%4<2?'wave1':'wave2',armL:'down',eyes:t>2?i?'lookR':'happy':'focus',mouth:t>2&&!i?'grin':'smile',bulb:t>1.8&&i?'yellow':'aqua'});
     c.restore();
   }
 }
+function review(c,t,S) {
+  label(c,'Exception request',191,68);label(c,'Your decision',718,68);
+  // Human review is an abstract illustration, not a real product interface.
+  rr(c,622,152,213,236,20);fs(c,VC.W,VC.K,3);avatar(c,730,210,44);
+  const q=eInOut((t-.55)/1.25);
+  sheet(c,80,145,145,185,VC.Y);
+  vCurve(c,[232,208],[431,87],[611,222],q,VC.A,{arrow:true,dash:[7,8],lw:3});
+  robot(c,330,225,t,'work',false,t>1.7?'up':'reach');
+  // All choices stay visible; only a restrained focus outline changes.
+  const choices=[['Review',638,280],['Adjust',733,280],['Approve',638,329],['Hold',733,329]];
+  choices.forEach(([text,x,y],j)=>{
+    rr(c,x,y,87,37,8);fs(c,j===0&&t>2?VC.T:'#F4F7F8',j===0&&t>2?VC.A:'#DBE5E8',2);
+    label(c,text,x+43,y+25,VC.K,16);
+  });
+  if(t>2.7){c.beginPath();c.arc(806,146,10,0,Math.PI*2);fs(c,VC.Y,VC.W,3);}
+}
+function together(c,t,S) {
+  label(c,'Routine orders',171,70);label(c,'Exceptions',750,70);
+  vBelt(c,52,285,346,31,70*Math.min(Math.max(t-.3,0),1.3));
+  const k=eInOut((t-.3)/1.3);parcel(c,70+110*k,285,72,61);
+  if(t>1.7)vBadge(c,233,249,(t-1.7)/.3,24);
+  line(c,[[570,235],[614,235],[614,150],[659,150]],VC.A,3,[6,8]);
+  sheet(c,680,274,128,137,VC.Y);
+  notification(c,700,100,Math.max(0,(t-2.1)/.3));
+  robot(c,334,224,t,t>2.7?'done':'work',false,t>2?'up':'reach');
+}
+function controls(c,t,S) {
+  label(c,'Your rules',157,68);label(c,'Stock flow',742,68);
+  rr(c,51,126,211,257,20);fs(c,VC.W,VC.K,3);
+  const q=eInOut((t-.45)/.8);
+  for(let j=0;j<3;j++){
+    const y=191+j*67;
+    line(c,[[80,y],[232,y]],'#B7D5DA',5);
+    const x=j===0?110+q*76:j===1?190:147;
+    c.beginPath();c.arc(x,y,11,0,Math.PI*2);fs(c,VC.A,VC.K,2);
+  }
+  const k=eInOut((t-1.6)/1.2);
+  vBelt(c,643,855,353,31,k*100);parcel(c,655+110*k,287,75,66);
+  vCurve(c,[270,144],[455,39],[657,169],eOut((t-1.1)/.8),VC.A,{arrow:true,dash:[7,8],lw:3});
+  robot(c,340,224,t,t>2.8?'done':'work',false,t<1.3?'reach':'up');
+  if(t>2.8)vBadge(c,790,241,(t-2.8)/.3,27);
+}
 
 const st={t:0},c=document.getElementById('scene').getContext('2d'),tr=document.getElementById('trail').getContext('2d');
-function render(){c.clearRect(0,0,912,520);hero(c,st.t,Math.min(31,Math.floor(st.t*8)));tr.clearRect(0,0,1080,80);tr.save();tr.translate(0,26);drawTrail(tr,1080,1,8,eOut(st.t/.8),false,false);tr.restore();}
+function render(){c.clearRect(0,0,912,520);hero(c,st.t,Math.min(31,Math.floor(st.t*8)));tr.clearRect(0,0,1080,80);tr.save();tr.translate(0,26);drawTrail(tr,1080,1,8,eOut(st.t/.8),true,false);tr.restore();}
 const tl=gsap.timeline({paused:true});tl.to(st,{t:4,duration:4,ease:'none',onUpdate:render},0);window.__timelines={'slide-01':tl};render();
 </script></body></html>

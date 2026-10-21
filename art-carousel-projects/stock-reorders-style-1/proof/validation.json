@@ -20,7 +20,57 @@
     "video": "1080x1350 / 30fps / 4s / 120 frames"
   },
   {
+    "slide": 3,
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "fonts": "loaded",
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
+    "slide": 4,
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "fonts": "loaded",
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
     "slide": 5,
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "fonts": "loaded",
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
+    "slide": 6,
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "fonts": "loaded",
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
+    "slide": 7,
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "fonts": "loaded",
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "1080x1350 / 30fps / 4s / 120 frames"
+  },
+  {
+    "slide": 8,
     "approved_copy": "exact",
     "text_pixels": "stationary",
     "fonts": "loaded",
