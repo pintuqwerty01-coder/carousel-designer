@@ -1,12 +1,12 @@
 {
   "title": "Your shelves called. ART’s already on it.",
   "style": "Style 1",
-  "status": "Revision 12: approved opener preserved; pixel stock flow, urgency, human handoff, routine dispatch and stronger closing",
+  "status": "Revision 13: typography and alignment pass, black edge fade, resolved stock checks, one-lakh limit, logical order routing and branded close",
   "threshold_example": {
     "currency": "INR",
-    "approval_limit": 10000,
-    "automatic_order": 6000,
-    "approval_required_order": 15000,
+    "approval_limit": 100000,
+    "automatic_order": 60000,
+    "approval_required_order": 150000,
     "note": "Illustrative values, not configured business rules."
   },
   "handle": "@arealtimetech",
@@ -40,7 +40,8 @@
       "body": [
         "Manual checks. Late orders.",
         "Avoidable shortages.",
-        "By the time someone notices, the shelf can already be empty."
+        "By the time someone notices,",
+        "the shelf can already be empty."
       ],
       "duration": 7
     },
@@ -86,7 +87,7 @@
       ],
       "body": [
         "Review. Adjust. Approve or hold.",
-        "See the request and decide what happens next."
+        "Above ₹1,00,000? It comes to you."
       ],
       "duration": 8
     },

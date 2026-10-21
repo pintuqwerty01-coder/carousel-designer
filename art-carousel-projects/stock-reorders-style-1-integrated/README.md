@@ -1,50 +1,42 @@
-# ART stock replenishment — Style 1, revision 12
+# ART stock replenishment — Style 1, revision 13
 
-Slide 1 is the user-approved reference. Its video, still image, scene function and pixel-prop helpers are preserved. The original mascot engine stays unchanged: 240px scale, identical body/head geometry, approved facial poses, palette and outline. Emotion comes from poses, facial expressions, antenna states, stepped movement and a single victory jump—not a redesigned mascot.
+Designer revision following the user's review: consistent typography and alignment, black fades at every edge, finished stock-check endings, a ₹1 lakh approval-limit example, order-routing recap and a branded closing.
 
-The remaining scenes now use foreground elements in the opening's pixel-art style over the existing photographic backgrounds. This follows the user's explicit request to match the liked opening, including incoming stock in the mascot's animation style.
+## Layout and type
 
-## Scene direction
+All copy uses the same 84px left margin and 168px headline start. Headings use Preahvihear Regular at 82px with 1.24 line spacing; the two longest titles use 72px and the closing uses 78px to keep intentional two-line breaks. Body copy uses Poppins Medium, 30px / 1.55, with a 30px gap below the title. Text stays stationary. The pain paragraph has balanced line breaks; slides 8 and 9 now follow the same left alignment as the rest.
 
-| Slide | Action and cause/result | Emotion |
-| --- | --- | --- |
-| 01 | Approved side entrance, two carton checks, tablet pickup and stock update. Unchanged. | Focus → satisfaction. |
-| 02 | A pixel purchase order forms, confirms, then is collected from the tabletop. | Concentration → relief. |
-| 03 | Checking paperwork builds up at the records table. ART recoils and sweats. | Urgency and overwhelm; no false completion. |
-| 04 | A cutaway carton visibly dwindles to a remaining stock symbol. ART recoils, the low-stock alert appears, then ART starts checking incoming stock. | Shock → urgency → focused action. |
-| 05 | A loaded pixel truck enters with its cab leading leftward. ART checks on-hand stock first, counts the incoming cartons, then compares them on the tablet. The loaded truck remains in transit; it does not unload into on-hand stock. | Attention → verification → relief. |
-| 06 | The existing ₹10,000 example limit remains clear: the ₹6,000 path completes; the ₹15,000 request remains pending. Pixel documents and reactions replace mixed-style icons. | Routine confidence → exception urgency. |
-| 07 | ART hurries the above-limit request to a person. A hand reaches from the frame edge, grips the request and takes it to the review tray. It remains awaiting a decision. | Urgency → attentive waiting; no automatic approval. |
-| 08 | ART releases completed routine orders along a pixel roller belt. They leave before ART jumps and celebrates. The separate human-review tray stays pending. | Focus → relief → celebration. |
-| 09 | “Stock handled. Time handed back.” A pixel clock settles, the routine-order box confirms and ART raises both arms. “Put ART to work.” provides the closing action. | Pride and celebration. |
+A black fade covers all four edges of every photo and scene. It replaces the visible full-frame photo boundaries while keeping the working area clear. The closing uses the supplied, unmodified ART logo on a solid ink field, with clear space on every side. ART (A Realtime Tech) remains in the first and final headers.
 
-ART (A Realtime Tech) remains on the first and final slides. The new closing emphasises the team's time, rather than repeating rule settings.
+## Scene changes
 
-All stock symbols are illustrative. No quantities, delivery guarantees or numeric time-saving claims are added. The ₹10,000/₹6,000/₹15,000 values remain illustrative spending examples. A completion mark on incoming cartons means they have been included in the check, not received into stock. Exception handoff means sent for review, not approved.
+| Slide | Final behavior |
+| --- | --- |
+| 1 | Original side entrance, carton checks, tablet pickup and update choreography retained. Typography and edge fade updated as requested across every slide. |
+| 2–3 | Existing purchase-order and paperwork animations retained, with the new type grid and edge treatment. |
+| 4 | Stock visibly dwindles; ART reacts, checks the shortage, the carton closes and the scene holds on “Low stock confirmed. Check started.” No false replenishment or approval is shown. |
+| 5 | ART checks on-hand stock, counts the loaded incoming shipment and updates its tablet. Wheels and tablet tapping stop. The final hold reads “Stock + incoming checked. Gap ready.” Incoming stock remains loaded, not received. |
+| 6 | Example limit ₹1,00,000; ₹60,000 is placed automatically; ₹1,50,000 goes for review. |
+| 7 | The ₹1,50,000 request is handed to a person; copy and stage identify the ₹1,00,000 limit. It remains awaiting a decision. |
+| 8 | A ₹60,000 purchase order completes, then ART moves to the exception phone and a ₹1.5L review request appears. The recap concerns purchase orders, not outgoing physical stock. No conveyor or unrelated celebration. |
+| 9 | Stock checks and the completed tablet record support “Stock handled. Time handed back.” The actual ART logo and “Put ART to work.” close the carousel. No clock or unrelated celebration. |
 
-## Visual system and timing
+The canonical mascot model, geometry, palette and scale remain unchanged. Pixel props follow the opening the user liked. Existing photographic backgrounds remain unchanged; no new paid image generation was used. The curly apostrophe alone uses Poppins because Preahvihear lacks that glyph.
 
-- Canonical Preahvihear Regular headlines and Poppins body text; no synthetic weights.
-- Main copy stays stationary and readable from frame one.
-- Same mascot model and 240px scale across scenes; pixel cartons, papers, truck, hand, roller belt and clock support the story.
-- 84px text margins, photographed backgrounds at native resolution and consistent white/ink/aqua branding.
-- Red antenna and wide eyes communicate urgency. Green appears only on completion marks. One restrained pixel-confetti burst follows the dispatch celebration.
-- Durations: 8, 6, 7, 7, 8, 8, 8, 7 and 7 seconds. Total: 66 seconds. Every frame and JPEG is 1080 × 1350; videos run at 30fps.
+## Delivery and verification
 
-Background files remain unchanged. No new paid generation was used. The existing generated images are illustrative and do not depict an identified real business. Preahvihear lacks the curly apostrophe, which alone uses the approved Poppins family.
+Nine MP4s at native 1080 × 1350, 30fps; durations 8, 6, 7, 7, 8, 8, 8, 7 and 7 seconds, totaling 66 seconds. Nine high-quality 1080 × 1350 JPEGs, a nine-page high-quality PDF, storyboard and validation reports accompany the videos. The focused review covers slides 4, 5, 7, 8 and 9 in 37 seconds.
 
-## Reproduce
+The audit pins the approved opening's choreography, original helper functions and canonical mascot model. Historical media hashes in `proof/approved-opening.json` refer to the original reference; this revision intentionally changes typography and edge treatment on all slides. Checks cover actual rendered fonts, copy, grid positions, line spacing, image loading, safe margins, stationary text, motion, JavaScript errors, logo treatment and native video metadata. Exported video frames are compared with the browser reference stills before packaging.
 
 ```bash
 source /workspace/art-carousel-venv/bin/activate
 python build.py
-python stills.py 2,3,4,5,6,7,8,9
-python motion-sheets.py 2,3,4,5,6,7,8,9
-python render-lossless.py 2,3,4,5,6,7,8,9
+python stills.py
+python motion-sheets.py 1,2,3,4,5,6,7,8,9
+python render-lossless.py
 python audit.py
 python package.py
 ```
 
-Keep the approved opening master and still in place. The audit checks their hashes and the approved scene/model source. It also checks copy, actual rendered fonts, margins, fixed text, scene motion, image loading, JavaScript errors and per-video metadata. Exported video frames are compared against the browser reference stills. The ZIP includes nine native MP4s, nine high-quality JPEGs, a nine-page PDF and validation reports.
-
-Delivered on `stock-reorders-style-1-v12`. Earlier versions stay on their separate branches.
+Delivery branch: `stock-reorders-style-1-v13`. Earlier revisions remain on their separate branches.
