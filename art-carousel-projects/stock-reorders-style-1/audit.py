@@ -1,0 +1,49 @@
+"""Validate approved copy, stationary text, fonts, layout, motion and MP4 metadata."""
+import functools, hashlib, http.server, json, pathlib, subprocess, threading
+from playwright.sync_api import sync_playwright
+
+P=pathlib.Path(__file__).resolve().parent
+content=json.loads((P/'content.json').read_text())
+class Quiet(http.server.SimpleHTTPRequestHandler):
+    def log_message(self,*args):pass
+server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Quiet,directory=str(P/'slides')))
+threading.Thread(target=server.serve_forever,daemon=True).start()
+norm=lambda s:''.join(s.split())
+report=[]
+try:
+    with sync_playwright() as pw:
+        browser=pw.chromium.launch(executable_path='/usr/bin/chromium')
+        page=browser.new_page(viewport={'width':1080,'height':1350})
+        for n in [1,2,5]:
+            errors=[]
+            page.on('pageerror',lambda e:errors.append(str(e)))
+            page.goto(f'http://127.0.0.1:{server.server_port}/slide-{n:02}.html')
+            page.evaluate('document.fonts.ready')
+            assert page.evaluate("document.fonts.check('40px Preahvihear') && document.fonts.check('600 40px Poppins')")
+            s=content['slides'][n-1]
+            assert norm(page.locator('h1').inner_text())==norm(' '.join(s['headline']))
+            if s.get('panels'):
+                for j,p in enumerate(s['panels']):
+                    assert norm(page.locator('.panel h2').nth(j).inner_text())==norm(p['headline'])
+                    assert norm(page.locator('.panel p').nth(j).inner_text())==norm(p['body'])
+            else:
+                assert norm(page.locator('.body').inner_text())==norm(' '.join(s['body']))
+            boxes=page.locator('h1:visible,.body:visible,.panel h2,.panel p').evaluate_all('els=>els.map(e=>{let r=e.getBoundingClientRect();return {left:r.left,right:r.right,bottom:r.bottom,scroll:e.scrollWidth,width:e.clientWidth}})')
+            assert all(b['left']>=83 and b['right']<=997 and b['bottom']<1220 and b['scroll']<=b['width']+1 for b in boxes),boxes
+            text_frames=[];scene_frames=[]
+            for t in [.1,1.5,3.9]:
+                page.evaluate('(t)=>{Object.values(window.__timelines).forEach(tl=>tl.seek(t,false));}',t)
+                text_frames.append([hashlib.sha256(e.screenshot()).hexdigest() for e in page.locator('h1:visible,.body:visible,.panel h2,.panel p').all()])
+                scene_frames.append(hashlib.sha256(page.locator('#scene').screenshot()).hexdigest())
+            assert text_frames[0]==text_frames[1]==text_frames[2],f'text moved on {n}'
+            assert len(set(scene_frames))==3,f'missing motion on {n}'
+            assert not errors,errors
+            probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-show_format','-of','json',str(P/'render'/'out'/f'slide-{n:02}.mp4')]))
+            v=probe['streams'][0]
+            assert (v['width'],v['height'],v['r_frame_rate'],int(v['nb_frames']))==(1080,1350,'30/1',120)
+            assert float(probe['format']['duration'])==4
+            report.append({'slide':n,'approved_copy':'exact','text_pixels':'stationary','fonts':'loaded','text_layout':'within margins','scene_motion':'verified at 3 times','javascript_errors':errors,'video':'1080x1350 / 30fps / 4s / 120 frames'})
+        browser.close()
+finally:server.shutdown()
+(P/'proof'/'validation.json').write_text(json.dumps(report,indent=2)+'\n')
+print(json.dumps(report,indent=2))
