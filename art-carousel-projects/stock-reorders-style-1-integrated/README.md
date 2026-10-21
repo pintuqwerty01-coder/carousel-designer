@@ -1,23 +1,30 @@
-# ART stock replenishment — Style 1, revision 7
+# ART stock replenishment — Style 1, revision 8
 
-Nine photographic scenes with the established script, Preahvihear Regular headlines and Poppins body copy. Revision 7 replaces the previous generic travel, waving, floating scanner columns and dotted diagrams with individual scene actions.
+This revision simplifies the carousel after feedback about repetition, accuracy and unnecessary design elements. The nine-slide script, threshold example and 57-second timing are retained.
 
-## Motion direction
+## What changed
 
-- **Opening and low-stock detection:** ART walks toward the bottom shelf carton. A handheld scanner remains attached to the mascot's hand. A short light cone begins at the device nozzle, and its moving scan line is clipped to a barcode on that carton. It does not scan the empty shelf bay. A prepared-order terminal rests on the pictured workbench.
-- **Next order handled:** ART reaches the printer control on the workbench; the printer feeds an order, which receives an order status stamp.
-- **Manual checking:** papers slide across the pictured records table toward ART. A restrained vibration follows the pictured telephone.
-- **Stock and incoming:** ART scans the label on the actual incoming carton on the trolley. A desk terminal shows the stock-and-incoming check.
-- **Two spending paths:** both terminals sit on the pictured full-width records table. ART walks to and taps the within-limit order, then the above-limit request. No connecting arrows or dotted routing lines are used.
-- **Human review:** the request moves along the review desk to ART's left hand. ART uses the adjacent terminal; its status waits for a person's decision. Approval is not assumed.
-- **Routine and exception:** the trolley carton receives a completion mark. The desk terminal identifies the exception for review.
-- **Rules:** ART approaches the terminal and touches its save control. The controls update and the saved state appears.
+The repeated scanner, printer and terminal scenes have been removed. ART's role is represented as responding to stock rules, checking on-hand and incoming stock, placing within-limit orders and sending above-limit requests to a person. The animation no longer implies that ART must physically scan warehouse cartons or operate a printer.
 
-The mascot retains its original 240px pixel design and stepped motion. Props use smooth vector shapes with restrained lighting, tabletop shadows and perspective. The former dotted footer is replaced with quiet solid progress segments. Backgrounds remain stationary so scene coordinates cannot drift away from their physical objects. Text stays visible and still from the first frame.
+Each slide now has a specific visual purpose:
 
-Timing: 7 seconds for the opener, 8 seconds for the price comparison and 6 seconds for every other slide. Total 57 seconds. Native size: 1080 × 1350, 30fps. The ₹10,000 limit, ₹6,000 automatic order and ₹15,000 approval request remain illustrative.
+| Slide | Visual purpose |
+| --- | --- |
+| 01 | Photograph and mascot establish ART in the stockroom; no added interface. |
+| 02 | One completed purchase order represents the routine outcome. |
+| 03 | A pile of papers represents manual checking, with an unresolved mascot reaction. |
+| 04 | A stock-data bar reaches its reorder point and triggers the rule. This is a data annotation, not a shelf scanner. |
+| 05 | The pictured incoming trolley and on-hand stock are identified before the reorder gap is considered. No quantities are invented. |
+| 06 | The existing two amount panels carry the explanation. A completion mark and human-review symbol identify the two paths; duplicate miniature terminals are gone. |
+| 07 | The only device in the sequence is a human-review phone. ART waits for the person's decision; approval is not assumed. |
+| 08 | A completion mark attaches to a dispatch carton while ART moves through the aisle. No extra screen or repeated flow diagram. |
+| 09 | A centred closing composition and mascot complete the existing call to action without added controls or props. |
 
-Existing generated backgrounds are reused from `festive-dispatch-realistic` and `festive-dispatch-photo`. No new paid image generation was used. The underlying background image files are unchanged; hardware and scene effects are rendered separately as animation layers. Preahvihear lacks the curly apostrophe; that character uses the approved Poppins family. Chrome DevTools verifies the fonts actually rendered.
+Consistency comes from Preahvihear Regular headlines, Poppins body copy, the 84px grid, a single 240px mascot scale, white/aqua/ink colours and the same photographic environment. Green is reserved for completion. The outcome and closing slides use centred text to distinguish them from the explanation slides. Main copy stays still and visible from the first frame. Dotted connectors and the dotted footer remain removed.
+
+Existing generated photographs are reused unchanged from `festive-dispatch-realistic` and `festive-dispatch-photo`; no paid image generation was used. These are illustrative backgrounds, not images of an identified real business. Preahvihear lacks the curly apostrophe, which uses the approved Poppins family. Actual rendered font names are checked through Chrome DevTools.
+
+Timing: 7 seconds for the opening, 8 seconds for the amount comparison, 6 seconds for every other slide. All videos and JPEGs are 1080 × 1350. Videos run at 30fps. The ₹10,000 limit, ₹6,000 order and ₹15,000 request are examples, not configured business rules.
 
 ## Reproduce
 
@@ -31,6 +38,6 @@ python audit.py
 python package.py
 ```
 
-The ZIP contains nine MP4 masters, nine native-size high-quality JPEGs, a nine-page PDF and validation reports. The combined MP4 is a compressed viewing copy. The storyboard is extracted from actual exported video frames.
+The ZIP contains nine MP4 masters, nine high-quality native-size JPEGs, a nine-page PDF and validation reports. The combined video is a compressed viewing copy; the storyboard comes from actual exported frames.
 
-Delivered on the separate `stock-reorders-style-1-v7` branch; earlier revisions remain available on their branches.
+Delivered on `stock-reorders-style-1-v8`. Previous revisions remain on their own branches.

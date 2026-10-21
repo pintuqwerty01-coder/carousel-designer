@@ -1,47 +1,47 @@
 [
   {
     "slide": "slide-01",
-    "actual_export_background_and_design": "matches revision-7 reference still",
-    "mean_rgb_pixel_error": 3.538
+    "actual_export_background_and_design": "matches revision-8 reference still",
+    "mean_rgb_pixel_error": 3.569
   },
   {
     "slide": "slide-02",
-    "actual_export_background_and_design": "matches revision-7 reference still",
-    "mean_rgb_pixel_error": 3.678
+    "actual_export_background_and_design": "matches revision-8 reference still",
+    "mean_rgb_pixel_error": 3.676
   },
   {
     "slide": "slide-03",
-    "actual_export_background_and_design": "matches revision-7 reference still",
-    "mean_rgb_pixel_error": 3.583
+    "actual_export_background_and_design": "matches revision-8 reference still",
+    "mean_rgb_pixel_error": 3.571
   },
   {
     "slide": "slide-04",
-    "actual_export_background_and_design": "matches revision-7 reference still",
-    "mean_rgb_pixel_error": 3.52
+    "actual_export_background_and_design": "matches revision-8 reference still",
+    "mean_rgb_pixel_error": 3.54
   },
   {
     "slide": "slide-05",
-    "actual_export_background_and_design": "matches revision-7 reference still",
-    "mean_rgb_pixel_error": 3.426
+    "actual_export_background_and_design": "matches revision-8 reference still",
+    "mean_rgb_pixel_error": 3.481
   },
   {
     "slide": "slide-06",
-    "actual_export_background_and_design": "matches revision-7 reference still",
-    "mean_rgb_pixel_error": 3.937
+    "actual_export_background_and_design": "matches revision-8 reference still",
+    "mean_rgb_pixel_error": 3.961
   },
   {
     "slide": "slide-07",
-    "actual_export_background_and_design": "matches revision-7 reference still",
-    "mean_rgb_pixel_error": 3.529
+    "actual_export_background_and_design": "matches revision-8 reference still",
+    "mean_rgb_pixel_error": 3.533
   },
   {
     "slide": "slide-08",
-    "actual_export_background_and_design": "matches revision-7 reference still",
-    "mean_rgb_pixel_error": 3.92
+    "actual_export_background_and_design": "matches revision-8 reference still",
+    "mean_rgb_pixel_error": 3.925
   },
   {
     "slide": "slide-09",
-    "actual_export_background_and_design": "matches revision-7 reference still",
-    "mean_rgb_pixel_error": 3.445
+    "actual_export_background_and_design": "matches revision-8 reference still",
+    "mean_rgb_pixel_error": 3.459
   }
 ]

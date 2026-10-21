@@ -14,7 +14,7 @@ photos={
  'controls.png':P.parent/'festive-dispatch-photo/slides/assets/clean-05.png',
 }
 for name,source in photos.items():shutil.copy2(source,A/name)
-photo_order=['shelves.png','aisle.png','records.png','shelves.png','incoming.png','records.png','review.png','incoming.png','controls.png']
+photo_order=['aisle.png','controls.png','records.png','shelves.png','incoming.png','records.png','review.png','incoming.png','controls.png']
 lib='\n'.join((K/'assets'/'kit'/'js'/name).read_text() for name in ['pixelbot.js','props-vector.js','scenes-library.js'])+'\n'+(P/'scenes.js').read_text()
 css=(K/'assets'/'shared.css').read_text()+'''
 html,body {background:#101519;} #root {position:relative;width:1080px;height:1350px;overflow:hidden;}
@@ -28,7 +28,7 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 .headline {font:400 86px/1.22 Preahvihear,Poppins,sans-serif;letter-spacing:-.01em;color:white;text-shadow:0 2px 18px rgba(0,0,0,.2);}
 .accent {color:#04ADC3;} .body {font:500 32px/1.45 Poppins;color:#F3F6F7;max-width:870px;}
 .s2 .headline,.s3 .headline {font-size:96px;}.s4 .headline {font-size:84px;}.s5 .headline {font-size:80px;}.s6 .headline {font-size:82px;}.s8 .headline {font-size:74px;}.s9 .headline {font-size:80px;}
-.s1 .headline {font-size:78px;} .body {font-size:30px;line-height:1.48;}
+.s1 .headline {font-size:86px;} .s8 .col,.s9 .col {top:180px;text-align:center;align-items:center;} .body {font-size:30px;line-height:1.48;}
 .stage {position:absolute;inset:0;z-index:2;pointer-events:none;background:transparent;} #scene {display:block;width:1080px;height:1350px;}
 .handle {position:absolute;left:84px;bottom:92px;z-index:4;font:500 23px/1 Poppins;letter-spacing:.02em;color:#F0F4F5;text-shadow:0 1px 4px black;}
 .count {position:absolute;right:84px;bottom:92px;z-index:4;font:500 23px/1 Poppins;letter-spacing:3px;color:#F0F4F5;}

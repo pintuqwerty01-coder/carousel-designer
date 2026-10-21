@@ -47,7 +47,7 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 .headline {font:400 86px/1.22 Preahvihear,Poppins,sans-serif;letter-spacing:-.01em;color:white;text-shadow:0 2px 18px rgba(0,0,0,.2);}
 .accent {color:#04ADC3;} .body {font:500 32px/1.45 Poppins;color:#F3F6F7;max-width:870px;}
 .s2 .headline,.s3 .headline {font-size:96px;}.s4 .headline {font-size:84px;}.s5 .headline {font-size:80px;}.s6 .headline {font-size:82px;}.s8 .headline {font-size:74px;}.s9 .headline {font-size:80px;}
-.s1 .headline {font-size:78px;} .body {font-size:30px;line-height:1.48;}
+.s1 .headline {font-size:86px;} .s8 .col,.s9 .col {top:180px;text-align:center;align-items:center;} .body {font-size:30px;line-height:1.48;}
 .stage {position:absolute;inset:0;z-index:2;pointer-events:none;background:transparent;} #scene {display:block;width:1080px;height:1350px;}
 .handle {position:absolute;left:84px;bottom:92px;z-index:4;font:500 23px/1 Poppins;letter-spacing:.02em;color:#F0F4F5;text-shadow:0 1px 4px black;}
 .count {position:absolute;right:84px;bottom:92px;z-index:4;font:500 23px/1 Poppins;letter-spacing:3px;color:#F0F4F5;}
@@ -61,7 +61,7 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 .panel p {font:400 27px/1.4 Poppins;margin-top:15px;}
 </style></head><body>
  <div id="root" data-composition-id="slide-02" data-start="0" data-duration="6" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s2 " data-start="0" data-duration="6">
- <div class="backdrop"><img src="assets/aisle.png" alt="Photorealistic stockroom scene"></div><div class="shade"></div>
+ <div class="backdrop"><img src="assets/controls.png" alt="Photorealistic stockroom scene"></div><div class="shade"></div>
  <div class="topline"><span class="brand-dot"></span>ART<span class="rule"></span></div>
  <div class="col"><h1 class="headline">Low stock.<br>Next order,<br><span class="accent">handled.</span></h1><p class="body">ART reorders within your limits.<br>Set the stock rules once. ART handles the next step.</p></div>
  <div class="stage"><canvas id="scene" width="1080" height="1350"></canvas></div>
@@ -832,114 +832,79 @@ function surfaceShadow(c,x,y,w){c.save();c.translate(x,y);c.scale(1,.16);let g=c
 function robot(c,x,feet,S,p={}){
  x=snap(x);feet=snap(feet);surfaceShadow(c,x+119,feet+3,155);
  const arm=p.arm||'down',flip=!!p.flip;
- drawBot(c,x,feet-230,10,{dark:true,halo:true,haloColor:'#F0EEE7',armR:arm,armL:p.left||(p.walk?'out':'down'),legs:p.walk?(S%2?'stepL':'stepR'):'stand',eyes:S%29===0?'blink':p.done?'happy':p.alert?'wide':flip?'lookL':'lookR',mouth:p.done?'smile':p.alert?'wobble':'flat',bulb:p.done?'aqua':p.alert?'red':'yellow',flip});
+ drawBot(c,x,feet-230,10,{dark:true,halo:true,haloColor:'#F0EEE7',armR:arm,armL:p.left||(p.walk?'out':'down'),legs:p.walk?(S%2?'stepL':'stepR'):'stand',eyes:S%29===0?'blink':p.done?'happy':p.alert?'wide':p.eyes||(flip?'lookL':'lookR'),mouth:p.done?'smile':p.alert?'wobble':'flat',bulb:p.done?'aqua':p.alert?'red':'yellow',flip});
  const hand=arm==='hold'?[185,165]:arm==='tap'?[205,185]:arm==='up'?[195,115]:[215,155];
  return {x:x+(flip?240-hand[0]:hand[0]),y:feet-230+hand[1]};
 }
 function paper(c,x,y,w=120,h=150,angle=0){c.save();c.translate(x,y);c.rotate(angle);c.shadowColor='rgba(0,0,0,.23)';c.shadowBlur=12;c.shadowOffsetY=6;rr(c,0,0,w,h,3);fs(c,'#F4F0E7');c.shadowColor='transparent';ink(c,[[14,24],[w-14,24]],'#04ADC3',5);for(let i=0;i<4;i++)ink(c,[[14,48+i*19],[w-19-(i%2)*18,48+i*19]],'#9BA8A7',2);c.restore();}
-function barcode(c,x,y,w=65,h=37){c.save();c.translate(x,y);c.transform(1,.015,-.045,1,0,0);rr(c,0,0,w,h,2);fs(c,'#EDE7DB');for(let j=0;j<20;j++){c.fillStyle='#353B3A';c.fillRect(6+j*(w-12)/20,7,1+(j%3===0),h-17);}c.restore();}
-function device(c,x,y,w,h,title,rows,progress=0,done=false){
- surfaceShadow(c,x+w/2,y+h+7,w*1.15);
- c.save();c.translate(x,y);c.transform(1,.018,-.045,1,0,0);
- rr(c,0,0,w,h,13);fs(c,'#222A2B','#7D8786',2);rr(c,8,8,w-16,h-19,8);fs(c,'#112124');
- text(c,title,23,42,Math.min(23,(w-46)/(title.length*.57)));ink(c,[[23,58],[w-25,58]],'#415455',1);
- rows.forEach((r,j)=>text(c,r,23,88+j*31,Math.min(20,(w-46)/(r.length*.56)),'#D4DEDC',400));
- rr(c,22,h-43,w-45,11,5);fs(c,'#3A4848');rr(c,22,h-43,Math.max(1,(w-45)*clamp01(progress)),11,5);fs(c,done?'#2B907F':'#04ADC3');
- if(done)vBadge(c,w-32,h-37,1,12);
- c.restore();
-}
-function touch(c,x,y,k){if(k<=0||k>=1)return;c.save();c.globalAlpha=1-k;c.strokeStyle='#9BE3EC';c.lineWidth=2;c.beginPath();c.arc(x,y,6+22*k,0,Math.PI*2);c.stroke();c.restore();}
-function scanner(c,hand,target,t,active){
- const angle=Math.atan2(target.y-hand.y,target.x-hand.x);
- const nozzle={x:hand.x+28*Math.cos(angle),y:hand.y+28*Math.sin(angle)};
- if(active){
-  // The light starts at the actual nozzle and lands ONLY on the carton label.
-  c.save();const g=c.createLinearGradient(nozzle.x,nozzle.y,target.x,target.y);g.addColorStop(0,'rgba(4,173,195,.02)');g.addColorStop(1,'rgba(4,173,195,.20)');c.fillStyle=g;c.beginPath();c.moveTo(nozzle.x,nozzle.y);c.lineTo(target.x-29,target.y-15);c.lineTo(target.x+29,target.y+15);c.closePath();c.fill();
-  c.beginPath();c.rect(target.x-31,target.y-18,62,36);c.clip();const y=target.y-13+26*((t*1.5)%1);c.shadowColor='#04ADC3';c.shadowBlur=10;ink(c,[[target.x-31,y],[target.x+31,y]],'#9BE3EC',2.5);c.restore();
- }
- c.save();c.translate(hand.x,hand.y);c.rotate(angle);
- rr(c,-13,-7,23,14,4);fs(c,'#202C30','#B7C4C1',1.5);rr(c,0,-12,29,24,5);fs(c,'#2C3C40','#B7C4C1',1.5);rr(c,23,-8,7,16,2);fs(c,active?'#04ADC3':'#526769');c.restore();
-}
-function stamp(c,x,y,k){if(k<=0)return;const q=eOut(k);c.save();c.globalAlpha=q;c.translate(x,y);c.rotate(-.08);rr(c,-57,-21,114,42,4);fs(c,'rgba(43,144,127,.17)','#41A486',2);text(c,'ORDERED',-45,7,19,'#A7E3CC',600);c.restore();}
-function scanShelf(c,t,S,hero=false){
- const arrival=eInOut(t/.85),x=456-arrival*196,feet=1116;
- // This label is on the front of the bottom carton, not in the empty shelf bay.
- barcode(c,108,900,64,37);
- const scan=t>.85&&t<2.3;
- const hand=robot(c,x,feet,S,{flip:true,arm:t>.8?'hold':'down',walk:t<.85,done:t>2.4});
- if(t>.8)scanner(c,hand,{x:140,y:919},t,scan);
- if(t>2.4){c.save();c.globalAlpha=eOut((t-2.4)/.35);device(c,718,755,256,153,hero?'Reorder prepared':'Stock rule triggered',['Low stock detected'],1,true);c.restore();}
- if(t>2.4)vBadge(c,181,914,eOut((t-2.4)/.25),15);
-}
+
+function pill(c,s,x,y,color='#04ADC3') {c.save();c.font='500 24px Poppins';const w=c.measureText(s).width+34;rr(c,x,y,w,43,7);fs(c,'rgba(14,26,28,.86)');ink(c,[[x+1,y+8],[x+1,y+35]],color,3);text(c,s,x+17,y+29,24);c.restore();}
+function reveal(c,k,fn){c.save();c.globalAlpha=eOut(k);fn();c.restore();}
+function person(c,x,y){c.save();c.fillStyle='#18272A';c.beginPath();c.arc(x,y,16,0,Math.PI*2);c.fill();c.beginPath();c.ellipse(x,y+35,30,23,0,Math.PI,Math.PI*2);c.fill();c.restore();}
 const SCENES={
- 1(c,t,S){scanShelf(c,t,S,true);},
+ 1(c,t,S){
+  // Hero = warehouse + ART. No duplicate workflow diagram or hardware.
+  const k=eInOut((t-.15)/1.3),x=430+k*198;
+  robot(c,x,1128,S,{walk:t>.15&&t<1.45,arm:t>2.1?'up':'down',done:t>2.7,eyes:t<2?'lookR':'open'});
+ },
  2(c,t,S){
-  // The order printer rests on the pictured workbench; the hand meets its button.
-  const x=154+eInOut(t/.65)*84;
-  surfaceShadow(c,527,859,188);
-  rr(c,446,758,163,100,12);fs(c,'#C4C8C2','#526161',2);rr(c,457,777,141,20,4);fs(c,'#1A292B');
-  const feed=eInOut((t-1.35)/1.15);if(t>1.35){c.save();c.beginPath();c.rect(453,798,148,160);c.clip();paper(c,468,803,122,feed*140+1);c.restore();}
-  rr(c,452,818,23,20,4);fs(c,t>1.2?'#04ADC3':'#586F70');
-  const hand=robot(c,x,900,S,{walk:t<.65,arm:t>.9&&t<1.4?'reach':t>2.6?'hold':'down',done:t>2.6});
-  touch(c,hand.x,hand.y,(t-1.1)/.35);if(t>2.7)stamp(c,530,912,(t-2.7)/.25);
+  // One purchase order, held at its edge. No literal printer action is implied.
+  const h=robot(c,380,1012,S,{arm:t>.7?'reach':'down',done:t>2.6});
+  if(t>.7)reveal(c,(t-.7)/.3,()=>{paper(c,595,840,158,173);});
+  if(t>2.5)vBadge(c,716,978,eOut((t-2.5)/.35),21);
  },
  3(c,t,S){
-  // Papers slide across the actual table into the mascot's reach.
-  const x=356+eInOut(t/.65)*28,hand=robot(c,x,980,S,{walk:t<.65,arm:t>.7?'reach':'down',alert:true});
-  for(let j=2;j>=0;j--){let q=eInOut((t-.65-j*.34)/.7);paper(c,700+j*14-q*(110+j*5),865+j*8,108,106,-.045+j*.025);}
-  if(t>2.3){text(c,'Still checking…',584,1043,24,'#FFD166');}
-  // A restrained vibration stays on the pictured handset, not in a floating bubble.
-  if(t>.7&&t<2.7){c.save();c.globalAlpha=.45+.3*Math.sin(t*12);c.strokeStyle='#FFD166';c.lineWidth=2;c.beginPath();c.ellipse(909,871,61,17,-.3,3.8,5.4);c.stroke();c.restore();}
+  // Manual checking is the only scene with a pile of paperwork.
+  robot(c,360-eInOut((t-2.4)/.5)*24,980,S,{arm:t>2.8?'up':t>.8?'reach':'down',alert:true});
+  for(let j=2;j>=0;j--){const k=eInOut((t-.5-j*.3)/.75);paper(c,737+j*12-k*(142+j*5),867+j*10,104,103,-.07+j*.04);}
  },
- 4(c,t,S){scanShelf(c,t,S,false);},
+ 4(c,t,S){
+  // A stock-data threshold, not a physical barcode scan.
+  const x=96,y=810,w=252,k=eInOut((t-.6)/1.4),fill=236-k*151;
+  ink(c,[[x,y],[x+w,y]],'rgba(255,255,255,.38)',5);
+  ink(c,[[x,y],[x+fill,y]],'#04ADC3',5);
+  ink(c,[[x+85,y-14],[x+85,y+14]],'#FFD166',3);
+  text(c,'Reorder point',96,858,25);
+  if(t>2.1)reveal(c,(t-2.1)/.35,()=>pill(c,'Rule triggered',96,910,'#FFD166'));
+  robot(c,440,1120,S,{flip:true,arm:t>2?'up':'down',done:t>2.8});
+ },
  5(c,t,S){
-  // Check the label on the real incoming carton on the left trolley.
-  barcode(c,260,780,42,44);
-  const x=490-eInOut(t/.8)*100;
-  const hand=robot(c,x,1080,S,{flip:true,walk:t<.8,arm:t>.8?'hold':'down',done:t>2.7});
-  if(t>.8)scanner(c,hand,{x:281,y:802},t,t>.8&&t<2.1);
-  if(t>2.15){c.save();c.globalAlpha=eOut((t-2.15)/.3);device(c,698,761,276,187,'Replenishment check',['On hand + incoming','Reorder only the gap'],eOut((t-2.15)/.65),t>2.85);c.restore();}
+  // Labels identify the pictured stock and incoming trolley; no invented quantities.
+  pill(c,'On hand',500,654);pill(c,'Incoming',111,715);
+  if(t>.55)reveal(c,(t-.55)/.4,()=>{ink(c,[[494,695],[494,857]],'#04ADC3',2);ink(c,[[111,864],[111,886],[314,886]],'#04ADC3',2);});
+  const flip=t<1.8;
+  robot(c,406,1092,S,{flip,arm:t>.7&&t<2.7?'up':'down',done:t>2.8});
+  if(t>2.65)reveal(c,(t-2.65)/.4,()=>pill(c,'Reorder only the gap',681,884));
  },
  6(c,t,S){
-  // Both examples are acted out beneath their own panels; no diagram connectors.
-  const goLeft=eInOut((t-.2)/.85),goRight=eInOut((t-1.8)/1.1);
-  const x=430-goLeft*128+goRight*294;
-  // Both terminals rest directly on the pictured full-width records table.
-  const sent=t>1.15;device(c,190,860,176,154,'₹6,000',[sent?'Order placed':'Within limit'],eOut((t-1.05)/.45),sent);
-  device(c,779,860,170,154,'₹15,000',[t>3?'Review sent':'Above limit'],eOut((t-2.8)/.5),false);
-  const walking=t>.2&&t<1.05||t>1.8&&t<2.9;
-  const hand=robot(c,x,1016,S,{flip:t<1.8,walk:walking,arm:t>1.05&&t<1.65||t>2.9?'tap':'down',done:t>3.35});
-  touch(c,hand.x,hand.y,(t-1.1)/.35);touch(c,hand.x,hand.y,(t-2.95)/.35);
-  if(t>3.05){c.beginPath();c.arc(923,881,6,0,Math.PI*2);fs(c,'#FFD166');}
+  // The approved amount panels are the visual. No second set of mini screens.
+  const left=eInOut((t-.15)/.8),right=eInOut((t-1.9)/1.1),x=430-left*140+right*280;
+  robot(c,x,1170,S,{flip:t<1.9,walk:t>.15&&t<.95||t>1.9&&t<3,arm:t>1&&t<1.8||t>3?'up':'down',done:t>3.55});
+  if(t>1.1)vBadge(c,270,939,eOut((t-1.1)/.3),34);
+  if(t>3.05)reveal(c,(t-3.05)/.3,()=>{rr(c,787,898,85,89,15);fs(c,'#F4F0E7');person(c,830,923);c.beginPath();c.arc(866,902,8,0,Math.PI*2);fs(c,'#FFD166');});
  },
  7(c,t,S){
-  // Slide the review request along the photographed desk to a review terminal.
-  const q=eInOut((t-.75)/1.2);
-  paper(c,110+q*162,879-q*5,113,129,-.04+q*.04);
-  const hand=robot(c,360,1015,S,{left:'out',arm:t>.7&&t<2.15?'reach':'tap'});
-  device(c,565,800,393,220,'Your decision',['Review  ·  Adjust','Approve  ·  Hold'],0,false);
-  rr(c,586,968,348,30,6);fs(c,t>2.1?'#6B5A30':'#39494B');text(c,t>2.1?'Waiting for your decision':'Request ready',600,990,20,t>2.1?'#FFD166':'#C4D5D4');
-  rr(c,560,958,27,30,5);fs(c,'#04ADC3');touch(c,hand.x,hand.y,(t-2.2)/.35);
+  // Only the human-review slide uses a device. ART waits; it never approves itself.
+  surfaceShadow(c,797,1046,188);
+  c.save();c.translate(720,802);c.transform(1,.025,-.04,1,0,0);
+  rr(c,0,0,156,237,17);fs(c,'#253337','#A0ABA6',2);rr(c,8,12,140,207,10);fs(c,'#F2EFE8');
+  person(c,78,54);text(c,'₹15,000',29,127,23,'#18272A',600);
+  text(c,'For your review',16,156,16,'#344E50');
+  text(c,'Approve  /  Hold',15,193,15,'#344E50');
+  if(t>1.5){c.beginPath();c.arc(143,17,8,0,Math.PI*2);fs(c,'#FFD166');}
+  c.restore();
+  robot(c,352,1016,S,{arm:t>.7&&t<1.8?'reach':'down',eyes:t>2?'open':'lookR'});
  },
  8(c,t,S){
-  // One scan on the actual trolley carton; the exception is shown on a desk device.
-  barcode(c,260,780,42,44);
-  const x=405-eInOut(t/.7)*32,hand=robot(c,x,1080,S,{flip:true,walk:t<.7,arm:t>.7?'hold':'down',done:t>2.4});
-  if(t>.7)scanner(c,hand,{x:281,y:802},t,t>.7&&t<1.65);
-  if(t>1.8)vBadge(c,285,800,eOut((t-1.8)/.3),18);
-  device(c,716,774,258,176,'Exceptions only',[t>2.2?'Review requested':'Routine order handled'],eOut((t-1.5)/.6),false);
-  if(t>2.2){c.beginPath();c.arc(943,807,6,0,Math.PI*2);fs(c,'#FFD166');}
+  // Completion is attached to the actual dispatch carton, not another screen.
+  const k=eInOut((t-.2)/1.5);
+  robot(c,350+k*170,1120,S,{walk:t>.2&&t<1.7,arm:t>2.1?'flex':'down',done:t>2.1});
+  if(t>1.8)vBadge(c,285,800,eOut((t-1.8)/.35),24);
  },
  9(c,t,S){
-  // ART reaches the actual control instead of waving beside it.
-  device(c,94,795,421,243,'Your replenishment rules',[],0,false);
-  const k=eInOut((t-1.15)/.7);
-  const rows=[['Reorder point',876,232+k*100],['Amount limit',944,421]];
-  rows.forEach(([label,y,x])=>{text(c,label,119,y-13,20,'#D4DEDC');ink(c,[[119,y+9],[493,y+9]],'#566D70',5);c.beginPath();c.arc(x,y+9,9,0,Math.PI*2);fs(c,'#04ADC3','#DAEFEC',2);});
-  const x=674-eInOut(t/.8)*206;
-  const hand=robot(c,x,1034,S,{flip:true,walk:t<.8,arm:t>.8&&t<2?'tap':t>2.6?'up':'down',done:t>2.6});
-  rr(c,479,974,29,30,5);fs(c,'#04ADC3');text(c,'Save',427,995,17);touch(c,hand.x,hand.y,(t-1.05)/.4);
-  if(t>2.5){rr(c,118,1005,350,24,5);fs(c,'#173331');text(c,'Rules saved. Routine handled.',132,1023,17,'#B8E2D5');}
+  // Quiet close: the mascot, the working environment and the existing call to action.
+  const k=eInOut((t-.15)/1.05);
+  robot(c,650-k*230,1128,S,{flip:true,walk:t>.15&&t<1.2,arm:t>1.8?'flex':'down',left:t>2.7?'up':'down',done:t>2.7,eyes:'open'});
  }
 };
 
