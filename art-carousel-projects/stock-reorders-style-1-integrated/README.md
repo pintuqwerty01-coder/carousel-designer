@@ -1,6 +1,8 @@
-# ART stock replenishment — Style 1, revision 8
+# ART stock replenishment — Style 1, revision 9
 
-This revision simplifies the carousel after feedback about repetition, accuracy and unnecessary design elements. The nine-slide script, threshold example and 57-second timing are retained.
+This revision corrects only the opening scene and slide 2 placement. The nine-slide script, threshold example, other seven scenes and 57-second timing are retained.
+
+Slide 1 now shows ART holding a prepared order, with one confirmation mark. Its walking entrance and raised-arm gesture are removed. Slide 2 places the feet at y=920 within the photographed tabletop (approximately y=875–982 at this horizontal position), instead of y=1012 over the vertical apron. Its paper base shares the tabletop plane; the hand meets the paper edge. The mascot stays at the established 240px scale. Individual masters 1 and 2 are rerendered; masters 3–9 are reused unchanged.
 
 ## What changed
 
@@ -10,7 +12,7 @@ Each slide now has a specific visual purpose:
 
 | Slide | Visual purpose |
 | --- | --- |
-| 01 | Photograph and mascot establish ART in the stockroom; no added interface. |
+| 01 | ART holds the prepared order in a fixed opening pose; one confirmation mark draws. |
 | 02 | One completed purchase order represents the routine outcome. |
 | 03 | A pile of papers represents manual checking, with an unresolved mascot reaction. |
 | 04 | A stock-data bar reaches its reorder point and triggers the rule. This is a data annotation, not a shelf scanner. |
@@ -40,4 +42,4 @@ python package.py
 
 The ZIP contains nine MP4 masters, nine high-quality native-size JPEGs, a nine-page PDF and validation reports. The combined video is a compressed viewing copy; the storyboard comes from actual exported frames.
 
-Delivered on `stock-reorders-style-1-v8`. Previous revisions remain on their own branches.
+Delivered on `stock-reorders-style-1-v9`. Previous revisions remain on their own branches.

@@ -60,12 +60,12 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 .amount {font:600 52px/1.2 Poppins;font-variant-numeric:tabular-nums;letter-spacing:-1px;margin-top:15px;}
 .panel p {font:400 27px/1.4 Poppins;margin-top:15px;}
 </style></head><body>
- <div id="root" data-composition-id="slide-09" data-start="0" data-duration="6" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s9 " data-start="0" data-duration="6">
+ <div id="root" data-composition-id="slide-02" data-start="0" data-duration="6" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s2 " data-start="0" data-duration="6">
  <div class="backdrop"><img src="assets/controls.png" alt="Photorealistic stockroom scene"></div><div class="shade"></div>
  <div class="topline"><span class="brand-dot"></span>ART<span class="rule"></span></div>
- <div class="col"><h1 class="headline">Set the rules.<br>Let ART handle<br><span class="accent">the routine.</span></h1><p class="body">Make stock replenishment flow.<br>Choose your reorder points and spending limits.</p></div>
+ <div class="col"><h1 class="headline">Low stock.<br>Next order,<br><span class="accent">handled.</span></h1><p class="body">ART reorders within your limits.<br>Set the stock rules once. ART handles the next step.</p></div>
  <div class="stage"><canvas id="scene" width="1080" height="1350"></canvas></div>
- <div class="handle">@arealtimetech</div><div class="count">09 / 09</div><canvas id="trail" width="1080" height="80"></canvas></div></div>
+ <div class="handle">@arealtimetech</div><div class="count">02 / 09</div><canvas id="trail" width="1080" height="80"></canvas></div></div>
  <script>// ART pixel robot, canvas engine (frame-by-frame poses). Aiotrix kit only.
 // Grid 24x24 art pixels. drawBot(ctx, x, y, u, pose): (x,y) = top-left of grid, u = px per art pixel.
 // Poses step at 8/s (S = floor(t*8)); travel snaps to 4px. Deterministic: no random, no clocks.
@@ -843,15 +843,19 @@ function reveal(c,k,fn){c.save();c.globalAlpha=eOut(k);fn();c.restore();}
 function person(c,x,y){c.save();c.fillStyle='#18272A';c.beginPath();c.arc(x,y,16,0,Math.PI*2);c.fill();c.beginPath();c.ellipse(x,y+35,30,23,0,Math.PI,Math.PI*2);c.fill();c.restore();}
 const SCENES={
  1(c,t,S){
-  // Hero = warehouse + ART. No duplicate workflow diagram or hardware.
-  const k=eInOut((t-.15)/1.3),x=430+k*198;
-  robot(c,x,1128,S,{walk:t>.15&&t<1.45,arm:t>2.1?'up':'down',done:t>2.7,eyes:t<2?'lookR':'open'});
+  // Composed hero: ART holds the order, then its prepared state resolves once.
+  // Fixed floor position and hand contact; no entrance, travelling or pointing.
+  const hand=robot(c,624,1128,S,{arm:'reach',done:t>2.55,eyes:'lookR'});
+  paper(c,hand.x,936,132,160);
+  if(t>1.45)vBadge(c,hand.x+98,1061,eOut((t-1.45)/.7),21);
  },
  2(c,t,S){
-  // One purchase order, held at its edge. No literal printer action is implied.
-  const h=robot(c,380,1012,S,{arm:t>.7?'reach':'down',done:t>2.6});
-  if(t>.7)reveal(c,(t-.7)/.3,()=>{paper(c,595,840,158,173);});
-  if(t>2.5)vBadge(c,716,978,eOut((t-2.5)/.35),21);
+  // At x=380 the photographed tabletop is y=875..982. Feet sit at y=920,
+  // well inside its surface, rather than at y=1012 on the vertical apron.
+  // The document edge shares the hand x; its base rests on that same surface.
+  const hand=robot(c,380,920,S,{arm:'reach',done:t>2.55,eyes:'lookR'});
+  paper(c,hand.x,752,158,168);
+  if(t>1.65)vBadge(c,hand.x+120,887,eOut((t-1.65)/.65),21);
  },
  3(c,t,S){
   // Manual checking is the only scene with a pile of paperwork.
@@ -909,6 +913,6 @@ const SCENES={
 };
 
  const st={t:0},c=document.getElementById('scene').getContext('2d'),tr=document.getElementById('trail').getContext('2d');
- function render(){c.clearRect(0,0,1080,1350);SCENES[9](c,st.t*4/6,Math.floor(st.t*8));tr.clearRect(0,0,1080,80);for(let j=0;j<9;j++){tr.fillStyle=j<9?'#04ADC3':'rgba(255,255,255,.18)';tr.fillRect(84+j*103,39,88,3);}}
- const tl=gsap.timeline({paused:true});tl.to(st,{t:6,duration:6,ease:'none',onUpdate:render},0);window.__timelines={'slide-09':tl};render();
+ function render(){c.clearRect(0,0,1080,1350);SCENES[2](c,st.t*4/6,Math.floor(st.t*8));tr.clearRect(0,0,1080,80);for(let j=0;j<9;j++){tr.fillStyle=j<2?'#04ADC3':'rgba(255,255,255,.18)';tr.fillRect(84+j*103,39,88,3);}}
+ const tl=gsap.timeline({paused:true});tl.to(st,{t:6,duration:6,ease:'none',onUpdate:render},0);window.__timelines={'slide-02':tl};render();
  </script></body></html>

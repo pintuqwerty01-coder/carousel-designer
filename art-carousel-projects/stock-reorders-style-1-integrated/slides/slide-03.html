@@ -843,15 +843,19 @@ function reveal(c,k,fn){c.save();c.globalAlpha=eOut(k);fn();c.restore();}
 function person(c,x,y){c.save();c.fillStyle='#18272A';c.beginPath();c.arc(x,y,16,0,Math.PI*2);c.fill();c.beginPath();c.ellipse(x,y+35,30,23,0,Math.PI,Math.PI*2);c.fill();c.restore();}
 const SCENES={
  1(c,t,S){
-  // Hero = warehouse + ART. No duplicate workflow diagram or hardware.
-  const k=eInOut((t-.15)/1.3),x=430+k*198;
-  robot(c,x,1128,S,{walk:t>.15&&t<1.45,arm:t>2.1?'up':'down',done:t>2.7,eyes:t<2?'lookR':'open'});
+  // Composed hero: ART holds the order, then its prepared state resolves once.
+  // Fixed floor position and hand contact; no entrance, travelling or pointing.
+  const hand=robot(c,624,1128,S,{arm:'reach',done:t>2.55,eyes:'lookR'});
+  paper(c,hand.x,936,132,160);
+  if(t>1.45)vBadge(c,hand.x+98,1061,eOut((t-1.45)/.7),21);
  },
  2(c,t,S){
-  // One purchase order, held at its edge. No literal printer action is implied.
-  const h=robot(c,380,1012,S,{arm:t>.7?'reach':'down',done:t>2.6});
-  if(t>.7)reveal(c,(t-.7)/.3,()=>{paper(c,595,840,158,173);});
-  if(t>2.5)vBadge(c,716,978,eOut((t-2.5)/.35),21);
+  // At x=380 the photographed tabletop is y=875..982. Feet sit at y=920,
+  // well inside its surface, rather than at y=1012 on the vertical apron.
+  // The document edge shares the hand x; its base rests on that same surface.
+  const hand=robot(c,380,920,S,{arm:'reach',done:t>2.55,eyes:'lookR'});
+  paper(c,hand.x,752,158,168);
+  if(t>1.65)vBadge(c,hand.x+120,887,eOut((t-1.65)/.65),21);
  },
  3(c,t,S){
   // Manual checking is the only scene with a pile of paperwork.

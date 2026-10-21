@@ -1,5 +1,5 @@
 """Render variable-duration compositions and verify every native master."""
-import json,pathlib,shutil,subprocess,os
+import json,pathlib,shutil,subprocess,os,sys
 P=pathlib.Path(__file__).resolve().parent
 K=P.parents[1]/'art-carousel-kit'
 r=P/'render';(r/'out').mkdir(parents=True,exist_ok=True)
@@ -8,6 +8,7 @@ shutil.copytree(P/'slides/assets',r/'assets',dirs_exist_ok=True)
 (r/'meta.json').write_text(json.dumps({'id':P.name,'name':P.name}))
 env=dict(os.environ,npm_config_cache='/workspace/art-carousel-npm-cache',HYPERFRAMES_BROWSER_PATH='/usr/bin/chromium')
 for n,s in enumerate(json.loads((P/'content.json').read_text())['slides'],1):
+ if len(sys.argv)>1 and n not in {int(x) for x in sys.argv[1].split(',')}:continue
  shutil.copyfile(P/'slides'/f'slide-{n:02}.html',r/'index.html')
  for args in [['lint'],['render','--quality','delivery','--fps','30','--crf','0','--output',f'out/slide-{n:02}.mp4']]:
   result=subprocess.run(['npx','--yes','hyperframes@0.8.55']+args,cwd=r,env=env,capture_output=True,text=True)
