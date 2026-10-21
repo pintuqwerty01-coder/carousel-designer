@@ -15,13 +15,79 @@ function paper(c,x,y,w=120,h=150,angle=0){c.save();c.translate(x,y);c.rotate(ang
 function pill(c,s,x,y,color='#04ADC3') {c.save();c.font='500 24px Poppins';const w=c.measureText(s).width+34;rr(c,x,y,w,43,7);fs(c,'rgba(14,26,28,.86)');ink(c,[[x+1,y+8],[x+1,y+35]],color,3);text(c,s,x+17,y+29,24);c.restore();}
 function reveal(c,k,fn){c.save();c.globalAlpha=eOut(k);fn();c.restore();}
 function person(c,x,y){c.save();c.fillStyle='#18272A';c.beginPath();c.arc(x,y,16,0,Math.PI*2);c.fill();c.beginPath();c.ellipse(x,y+35,30,23,0,Math.PI,Math.PI*2);c.fill();c.restore();}
+// Opening-specific pixel props: user requested boxes in the mascot's art style.
+function pixelCells(c,cells,colour,u=10){c.fillStyle=colour;for(const [x,y,w=1,h=1] of cells)c.fillRect(x,y,w*u,h*u);}
+function pixelTick(c,x,y,size=10){pixelCells(c,[[x,y+size],[x+size,y+2*size],[x+2*size,y+size],[x+3*size,y],[x+4*size,y-size]],'#41A486',size);}
+function heroBox(c,x,y,w,h,opening,checked,occupied=false){
+ const lift=occupied?0:Math.round(Math.sin(Math.PI*clamp01(opening))*3)*10;
+ surfaceShadow(c,x+w/2,1134,w+55);
+ // Cut corners, block shading and 10px tape use the same geometry as ART.
+ pixelCells(c,[[x+10,y,w/10-2,h/10],[x,y+10,w/10,h/10-2]],'#F0EEE7');
+ pixelCells(c,[[x+10,y+10,w/10-2,h/10-2]],'#96643E');
+ pixelCells(c,[[x+10,y+10,w/10-4,h/10-3]],'#CB965F');
+ pixelCells(c,[[x+20,y+20,w/10-6,1]],'#E0B885');
+ pixelCells(c,[[x+w/2-10,y+10,2,h/10-2]],'#E4C79E');
+ // The lid opens and closes once as ART inspects this carton.
+ pixelCells(c,[[x+10,y-lift,w/10-2,1]],'#F0EEE7');
+ pixelCells(c,[[x+20,y-lift+10,w/10-4,1]],'#E0B885');
+ if(lift){pixelCells(c,[[x+20,y+10,w/10-4,1]],'#473C32');pixelCells(c,[[x,y-lift+10,2,1],[x+w-20,y-lift+10,2,1]],'#CB965F');}
+ const labelX=x+30,labelY=y+h-70;
+ pixelCells(c,[[labelX,labelY,8,5]],'#F0EEE7');
+ if(checked)pixelTick(c,labelX+10,labelY+10,10);
+ else pixelCells(c,[[labelX+10,labelY+10,1,3],[labelX+30,labelY+10,1,3],[labelX+50,labelY+10,1,3]],opening>0&&opening<1?'#04ADC3':'#8A9290');
+}
+function heroTablet(c,x,y,update){
+ x=snap(x);y=snap(y);
+ // Landscape tablet. It starts visibly resting on the first carton.
+ pixelCells(c,[[x+10,y,12,8],[x,y+10,14,6]],'#F0EEE7');
+ pixelCells(c,[[x+10,y+10,12,6]],'#203136');
+ pixelCells(c,[[x+20,y+20,10,4]],'#DDECE9');
+ for(let j=0;j<3;j++)pixelCells(c,[[x+30,y+20+j*10,4+j,1]],update>(j+1)/4?'#04ADC3':'#A1B3B1');
+ if(update>=1)pixelTick(c,x+90,y+30,5);
+}
+function heroArm(c,points){
+ // Square stepping for the pickup forearm, rather than a smooth vector limb.
+ const cells=[];
+ for(let j=1;j<points.length;j++){
+  const a=points[j-1],b=points[j],n=Math.max(1,Math.ceil(Math.hypot(b[0]-a[0],b[1]-a[1])/8));
+  for(let k=0;k<=n;k++)cells.push([Math.round((a[0]+(b[0]-a[0])*k/n)/10)*10,Math.round((a[1]+(b[1]-a[1])*k/n)/10)*10]);
+ }
+ c.fillStyle='#F0EEE7';for(const [x,y] of cells)c.fillRect(x-4,y-4,18,18);
+ c.fillStyle='#04ADC3';for(const [x,y] of cells)c.fillRect(x,y,10,10);
+}
+
 const SCENES={
  1(c,t,S){
-  // Composed hero: ART holds the order, then its prepared state resolves once.
-  // Fixed floor position and hand contact; no entrance, travelling or pointing.
-  const hand=robot(c,624,1128,S,{arm:'reach',done:t>2.55,eyes:'lookR'});
-  paper(c,hand.x,936,132,160);
-  if(t>1.45)vBadge(c,hand.x+98,1061,eOut((t-1.45)/.7),21);
+  const sec=t*2; // The opening runs eight seconds, with five deliberate beats.
+  const walking=sec<1.5;
+  const x=snap(-250+670*eInOut(sec/1.5)),top=900;
+  const first=clamp01((sec-1.65)/1.05),second=clamp01((sec-3)/1.05);
+  const taking=clamp01((sec-4.2)/1.1),k=eInOut(taking);
+  const updating=sec>5.5,done=sec>=7.1;
+  // Lower the tablet beside the face before bringing it across to both hands.
+  const lower=eInOut(k/.55),across=eInOut((k-.55)/.45);
+  const tabX=650+(x+50-650)*across,tabY=910+(top+140-910)*lower;
+  const update=clamp01((sec-5.65)/1.4);
+  heroBox(c,650,990,140,140,first,sec>=2.7,true);
+  heroBox(c,820,960,140,170,second,sec>=4.05);
+  // Tablet continuity: on the carton from frame one, then carried to ART's hands.
+  if(sec<4.2)heroTablet(c,650,910,0);
+  surfaceShadow(c,x+119,1133,155);
+  drawBot(c,x,top,10,{dark:true,halo:true,haloColor:'#F0EEE7',legs:walking?(S%2?'stepL':'stepR'):'stand',armL:walking?'out':'down',armR:walking?'down':sec<3?'reach':sec<4.2?'up':'hold',eyes:S%29===0?'blink':done?'happy':walking?'lookR':updating?'focus':'lookR',mouth:done?'grin':'flat',bulb:done?'aqua':'yellow'});
+  if(sec>=4.2){
+   heroTablet(c,tabX,tabY,update);
+   if(taking<1){
+    // Reach to the same tablet that was resting on the carton; follow its grip.
+    const grip=[tabX+5+125*k,tabY+70-30*k];
+    heroArm(c,[[x+170,top+150],[x+210,top+150],grip]);
+   }else{
+    // Left hand supports the tablet. Right forearm taps its visible screen.
+    pixelCells(c,[[x+40,top+170,2,2]],'#04ADC3');
+    const tapping=(sec>5.55&&sec<5.85)||(sec>6.15&&sec<6.45);
+    heroArm(c,[[x+170,top+150],[x+180,top+140],[x+160,top+140],[x+160,top+(tapping?160:130)]]);
+   }
+  }
+  if(done)text(c,'Stock updated',x+23,1180,25,'#DDECE9');
  },
  2(c,t,S){
   // At x=380 the photographed tabletop is y=875..982. Feet sit at y=920,

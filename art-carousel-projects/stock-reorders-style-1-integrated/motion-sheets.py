@@ -1,5 +1,5 @@
 """Nine evenly spaced moments per slide, including the final pose."""
-import functools,http.server,threading,pathlib,json,io
+import functools,http.server,threading,pathlib,json,io,sys
 from playwright.sync_api import sync_playwright
 from PIL import Image,ImageDraw
 P=pathlib.Path(__file__).resolve().parent
@@ -10,6 +10,7 @@ threading.Thread(target=server.serve_forever,daemon=True).start()
 with sync_playwright() as pw:
  b=pw.chromium.launch(executable_path='/usr/bin/chromium');pg=b.new_page(viewport={'width':1080,'height':1350})
  for n,s in enumerate(json.loads((P/'content.json').read_text())['slides'],1):
+  if len(sys.argv)>1 and n not in {int(x) for x in sys.argv[1].split(',')}:continue
   pg.goto(f'http://127.0.0.1:{server.server_port}/slide-{n:02}.html');pg.evaluate('document.fonts.ready')
   sheet=Image.new('RGB',(972,1275),'white');d=ImageDraw.Draw(sheet)
   for j in range(9):

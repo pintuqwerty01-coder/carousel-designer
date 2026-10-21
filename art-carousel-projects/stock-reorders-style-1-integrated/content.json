@@ -1,7 +1,7 @@
 {
   "title": "Before the shelf runs empty, ART gets moving.",
   "style": "Style 1",
-  "status": "Revision 9: opening order presentation; slide 2 mascot and order anchored to the tabletop",
+  "status": "Revision 10: side entrance, pixel cartons inspected in sequence, visible tablet pickup and stock update",
   "threshold_example": {
     "currency": "INR",
     "approval_limit": 10000,
@@ -20,7 +20,7 @@
         "Low stock becomes the next order.",
         "Your rules decide when you step in."
       ],
-      "duration": 7
+      "duration": 8
     },
     {
       "headline": [
