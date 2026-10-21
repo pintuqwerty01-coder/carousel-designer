@@ -1,7 +1,7 @@
 {
   "title": "Your shelves called. ART’s already on it.",
   "style": "Style 1",
-  "status": "Revision 13: typography and alignment pass, black edge fade, resolved stock checks, one-lakh limit, logical order routing and branded close",
+  "status": "Revision 14: subtle light vignette and closing content retained without the black logo rectangle",
   "threshold_example": {
     "currency": "INR",
     "approval_limit": 100000,

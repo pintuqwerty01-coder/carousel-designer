@@ -17,6 +17,18 @@
       ]
     },
     "text_layout": "within margins",
+    "typography_grid": {
+      "left": 84,
+      "top": 168,
+      "gap": "30px",
+      "size": 82,
+      "height": 203.34375,
+      "line": 101.68,
+      "bodySize": 30,
+      "bodyLine": 46.5
+    },
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
     "video": "not checked"
@@ -38,6 +50,18 @@
       ]
     },
     "text_layout": "within margins",
+    "typography_grid": {
+      "left": 84,
+      "top": 168,
+      "gap": "30px",
+      "size": 82,
+      "height": 203.34375,
+      "line": 101.68,
+      "bodySize": 30,
+      "bodyLine": 46.5
+    },
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
     "video": "not checked"
@@ -59,6 +83,18 @@
       ]
     },
     "text_layout": "within margins",
+    "typography_grid": {
+      "left": 84,
+      "top": 168,
+      "gap": "30px",
+      "size": 82,
+      "height": 203.34375,
+      "line": 101.68,
+      "bodySize": 30,
+      "bodyLine": 46.5
+    },
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
     "video": "not checked"
@@ -81,6 +117,18 @@
       ]
     },
     "text_layout": "within margins",
+    "typography_grid": {
+      "left": 84,
+      "top": 168,
+      "gap": "30px",
+      "size": 82,
+      "height": 203.34375,
+      "line": 101.68,
+      "bodySize": 30,
+      "bodyLine": 46.5
+    },
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
     "video": "not checked"
@@ -103,6 +151,18 @@
       ]
     },
     "text_layout": "within margins",
+    "typography_grid": {
+      "left": 84,
+      "top": 168,
+      "gap": "30px",
+      "size": 72,
+      "height": 178.53125,
+      "line": 89.28,
+      "bodySize": 30,
+      "bodyLine": 46.5
+    },
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
     "video": "not checked"
@@ -124,6 +184,18 @@
       ]
     },
     "text_layout": "within margins",
+    "typography_grid": {
+      "left": 84,
+      "top": 168,
+      "gap": "30px",
+      "size": 82,
+      "height": 203.34375,
+      "line": 101.68,
+      "bodySize": 30,
+      "bodyLine": 46.5
+    },
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
     "video": "not checked"
@@ -145,6 +217,18 @@
       ]
     },
     "text_layout": "within margins",
+    "typography_grid": {
+      "left": 84,
+      "top": 168,
+      "gap": "30px",
+      "size": 82,
+      "height": 203.34375,
+      "line": 101.68,
+      "bodySize": 30,
+      "bodyLine": 46.5
+    },
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
     "video": "not checked"
@@ -166,6 +250,18 @@
       ]
     },
     "text_layout": "within margins",
+    "typography_grid": {
+      "left": 84,
+      "top": 168,
+      "gap": "30px",
+      "size": 72,
+      "height": 178.53125,
+      "line": 89.28,
+      "bodySize": 30,
+      "bodyLine": 46.5
+    },
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
     "video": "not checked"
@@ -187,6 +283,18 @@
       ]
     },
     "text_layout": "within margins",
+    "typography_grid": {
+      "left": 84,
+      "top": 168,
+      "gap": "30px",
+      "size": 78,
+      "height": 193.4375,
+      "line": 96.72,
+      "bodySize": 30,
+      "bodyLine": 46.5
+    },
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "closing_logo": "supplied logo with no rectangle; closing content retained",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
     "video": "not checked"

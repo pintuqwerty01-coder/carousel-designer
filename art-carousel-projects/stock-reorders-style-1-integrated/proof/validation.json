@@ -27,7 +27,7 @@
       "bodySize": 30,
       "bodyLine": 46.5
     },
-    "edge_fade": "black fade on all four edges",
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -60,7 +60,7 @@
       "bodySize": 30,
       "bodyLine": 46.5
     },
-    "edge_fade": "black fade on all four edges",
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -93,7 +93,7 @@
       "bodySize": 30,
       "bodyLine": 46.5
     },
-    "edge_fade": "black fade on all four edges",
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -127,7 +127,7 @@
       "bodySize": 30,
       "bodyLine": 46.5
     },
-    "edge_fade": "black fade on all four edges",
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -161,7 +161,7 @@
       "bodySize": 30,
       "bodyLine": 46.5
     },
-    "edge_fade": "black fade on all four edges",
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -194,7 +194,7 @@
       "bodySize": 30,
       "bodyLine": 46.5
     },
-    "edge_fade": "black fade on all four edges",
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -227,7 +227,7 @@
       "bodySize": 30,
       "bodyLine": 46.5
     },
-    "edge_fade": "black fade on all four edges",
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -260,7 +260,7 @@
       "bodySize": 30,
       "bodyLine": 46.5
     },
-    "edge_fade": "black fade on all four edges",
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -293,8 +293,8 @@
       "bodySize": 30,
       "bodyLine": 46.5
     },
-    "edge_fade": "black fade on all four edges",
-    "closing_logo": "supplied unmodified logo on ink",
+    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "closing_logo": "supplied logo with no rectangle; closing content retained",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
     "video": "1080x1350 / 30fps / 7s"

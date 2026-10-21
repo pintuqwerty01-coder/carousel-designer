@@ -40,7 +40,7 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 .slide {background:#101519;color:white;} * {font-synthesis:none;}
 .backdrop,.shade {position:absolute;inset:0;width:1080px;height:1350px;}
 .backdrop {z-index:0;} .backdrop img {width:100%;height:100%;object-fit:cover;display:block;}
-.shade {z-index:1;background:linear-gradient(180deg,rgba(4,12,15,.87) 0%,rgba(4,12,15,.76) 28%,rgba(4,12,15,.34) 50%,rgba(4,12,15,.18) 74%,rgba(4,12,15,.85) 100%);}
+.shade {z-index:1;background:linear-gradient(180deg,rgba(4,12,15,.72) 0%,rgba(4,12,15,.64) 28%,rgba(4,12,15,.34) 50%,rgba(4,12,15,.18) 74%,rgba(4,12,15,.42) 100%);}
 .topline {position:absolute;left:84px;right:84px;top:78px;z-index:4;display:flex;align-items:center;gap:17px;font:600 23px/1 Poppins;letter-spacing:3px;}
 .brand-dot {width:11px;height:11px;background:#04ADC3;border-radius:50%;}.topline .rule {height:1px;background:rgba(255,255,255,.3);flex:1;margin-left:20px;}
 .col {position:absolute;top:156px;left:84px;right:84px;z-index:4;display:flex;flex-direction:column;gap:26px;}
@@ -53,8 +53,8 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 .s1 .headline {font-size:82px;}.s5 .headline {font-size:72px;}.s8 .headline {font-size:72px;}.s9 .headline {font-size:78px;}
 .s8 .col,.s9 .col {text-align:left;align-items:flex-start;}
 .edge-fade {position:absolute;inset:0;z-index:3;pointer-events:none;
- background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.74) 2%,rgba(0,0,0,.16) 9%,transparent 17%,transparent 83%,rgba(0,0,0,.16) 91%,rgba(0,0,0,.74) 98%,#000 100%),linear-gradient(180deg,#000 0%,rgba(0,0,0,.65) 3%,transparent 15%,transparent 81%,rgba(0,0,0,.6) 96%,#000 100%);}
-.closing-brand {position:absolute;left:0;top:510px;width:1080px;height:375px;z-index:2;background:#1A1A1A;display:flex;align-items:center;justify-content:center;}
+ background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.06) 82%,rgba(0,0,0,.12) 100%);}
+.closing-brand {position:absolute;left:0;top:510px;width:1080px;height:375px;z-index:2;background:transparent;mix-blend-mode:lighten;display:flex;align-items:center;justify-content:center;}
 .closing-brand img {width:340px;height:auto;display:block;}
 .stage {position:absolute;inset:0;z-index:2;pointer-events:none;background:transparent;} #scene {display:block;width:1080px;height:1350px;}
 .handle {position:absolute;left:84px;bottom:92px;z-index:4;font:500 23px/1 Poppins;letter-spacing:.02em;color:#F0F4F5;text-shadow:0 1px 4px black;}

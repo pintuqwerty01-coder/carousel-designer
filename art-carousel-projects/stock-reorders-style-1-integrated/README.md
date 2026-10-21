@@ -1,33 +1,16 @@
-# ART stock replenishment — Style 1, revision 13
+# ART stock replenishment — Style 1, revision 14
 
-Designer revision following the user's review: consistent typography and alignment, black fades at every edge, finished stock-check endings, a ₹1 lakh approval-limit example, order-routing recap and a branded closing.
+The edge treatment is now a subtle, light vignette. The former black perimeter gradients are removed; one continuous radial gradient reaches only 12% opacity at the outer corners. The photo's separate text-readability shade is also lighter, including the footer. There is no opaque border or stacked black edge layer.
 
-## Layout and type
+Slide 9 retains the closing headline, body, mascot, stock props and CTA. Only the black rectangle behind the logo is removed, as clarified by the user. The original logo asset stays unchanged; its existing dark backing blends into the scene without a visible rectangular panel. The closing is not a logo-only slide.
 
-All copy uses the same 84px left margin and 168px headline start. Headings use Preahvihear Regular at 82px with 1.24 line spacing; the two longest titles use 72px and the closing uses 78px to keep intentional two-line breaks. Body copy uses Poppins Medium, 30px / 1.55, with a 30px gap below the title. Text stays stationary. The pain paragraph has balanced line breaks; slides 8 and 9 now follow the same left alignment as the rest.
+Slides 1–8 retain the revision-13 type grid, copy, animation, ₹1,00,000 example limit and stock-check endings. The original opening choreography and canonical mascot engine remain unchanged. Only their overall shade and edge treatment change in this revision.
 
-A black fade covers all four edges of every photo and scene. It replaces the visible full-frame photo boundaries while keeping the working area clear. The closing uses the supplied, unmodified ART logo on a solid ink field, with clear space on every side. ART (A Realtime Tech) remains in the first and final headers.
+## Delivery
 
-## Scene changes
+Nine native 1080 × 1350 MP4s at 30fps, nine high-quality 1080 × 1350 JPEGs, a nine-page high-quality PDF, storyboard and validation reports. Durations remain 8, 6, 7, 7, 8, 8, 8, 7 and 7 seconds: 66 seconds total. A focused review covers slides 4, 5, 7, 8 and the closing in 37 seconds.
 
-| Slide | Final behavior |
-| --- | --- |
-| 1 | Original side entrance, carton checks, tablet pickup and update choreography retained. Typography and edge fade updated as requested across every slide. |
-| 2–3 | Existing purchase-order and paperwork animations retained, with the new type grid and edge treatment. |
-| 4 | Stock visibly dwindles; ART reacts, checks the shortage, the carton closes and the scene holds on “Low stock confirmed. Check started.” No false replenishment or approval is shown. |
-| 5 | ART checks on-hand stock, counts the loaded incoming shipment and updates its tablet. Wheels and tablet tapping stop. The final hold reads “Stock + incoming checked. Gap ready.” Incoming stock remains loaded, not received. |
-| 6 | Example limit ₹1,00,000; ₹60,000 is placed automatically; ₹1,50,000 goes for review. |
-| 7 | The ₹1,50,000 request is handed to a person; copy and stage identify the ₹1,00,000 limit. It remains awaiting a decision. |
-| 8 | A ₹60,000 purchase order completes, then ART moves to the exception phone and a ₹1.5L review request appears. The recap concerns purchase orders, not outgoing physical stock. No conveyor or unrelated celebration. |
-| 9 | Stock checks and the completed tablet record support “Stock handled. Time handed back.” The actual ART logo and “Put ART to work.” close the carousel. No clock or unrelated celebration. |
-
-The canonical mascot model, geometry, palette and scale remain unchanged. Pixel props follow the opening the user liked. Existing photographic backgrounds remain unchanged; no new paid image generation was used. The curly apostrophe alone uses Poppins because Preahvihear lacks that glyph.
-
-## Delivery and verification
-
-Nine MP4s at native 1080 × 1350, 30fps; durations 8, 6, 7, 7, 8, 8, 8, 7 and 7 seconds, totaling 66 seconds. Nine high-quality 1080 × 1350 JPEGs, a nine-page high-quality PDF, storyboard and validation reports accompany the videos. The focused review covers slides 4, 5, 7, 8 and 9 in 37 seconds.
-
-The audit pins the approved opening's choreography, original helper functions and canonical mascot model. Historical media hashes in `proof/approved-opening.json` refer to the original reference; this revision intentionally changes typography and edge treatment on all slides. Checks cover actual rendered fonts, copy, grid positions, line spacing, image loading, safe margins, stationary text, motion, JavaScript errors, logo treatment and native video metadata. Exported video frames are compared with the browser reference stills before packaging.
+The audit checks the original opening choreography and mascot, actual font rendering, fixed copy, margins, type grid, scene motion, JavaScript errors and native video metadata. The closing is checked for the retained content and a transparent logo container with no rectangular backing. Exported frames are compared to the browser reference stills. The original media hashes in `proof/approved-opening.json` are historical references; the typography, shade and edge changes were requested by the user.
 
 ```bash
 source /workspace/art-carousel-venv/bin/activate
@@ -39,4 +22,4 @@ python audit.py
 python package.py
 ```
 
-Delivery branch: `stock-reorders-style-1-v13`. Earlier revisions remain on their separate branches.
+Delivery branch: `stock-reorders-style-1-v14`. Earlier revisions remain on their separate branches.

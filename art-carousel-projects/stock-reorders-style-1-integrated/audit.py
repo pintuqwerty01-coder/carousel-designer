@@ -82,7 +82,8 @@ try:
             assert page.locator('.edge-fade').count()==1
             if n==9:
                 logo=page.locator('.closing-brand img').evaluate('e=>({loaded:e.complete,w:e.naturalWidth,h:e.naturalHeight,box:e.getBoundingClientRect().toJSON(),parent:e.parentElement.getBoundingClientRect().toJSON(),color:getComputedStyle(e.parentElement).backgroundColor})')
-                assert logo['loaded'] and logo['w']>0 and logo['box']['width']==340 and logo['color']=='rgb(26, 26, 26)',logo
+                assert logo['loaded'] and logo['w']>0 and logo['box']['width']==340 and logo['color']=='rgba(0, 0, 0, 0)',logo
+                assert page.locator('.closing-brand').evaluate('e=>getComputedStyle(e).mixBlendMode')=='lighten'
                 assert logo['parent']['bottom']<=885 and logo['box']['top']-logo['parent']['top']>=116,logo
             text_frames=[];scene_frames=[]
             for t in [.1,s['duration']*.5,s['duration']-.1]:
@@ -97,7 +98,7 @@ try:
                 v=probe['streams'][0]
                 assert (v['width'],v['height'],v['r_frame_rate'],int(v['nb_frames']))==(1080,1350,'30/1',s['duration']*30)
                 assert float(probe['format']['duration'])==s['duration']
-            report.append({'slide':n,'photorealistic_full_frame_background':'verified loaded at native resolution','script_copy':'exact','text_pixels':'stationary','actual_rendered_fonts':fonts,'text_layout':'within margins','typography_grid':grid,'edge_fade':'black fade on all four edges','closing_logo':'supplied unmodified logo on ink' if n==9 else 'not applicable','scene_motion':'verified at 3 times','javascript_errors':errors,'video':'not checked' if '--html-only' in sys.argv else f"1080x1350 / 30fps / {s['duration']}s"})
+            report.append({'slide':n,'photorealistic_full_frame_background':'verified loaded at native resolution','script_copy':'exact','text_pixels':'stationary','actual_rendered_fonts':fonts,'text_layout':'within margins','typography_grid':grid,'edge_fade':'subtle radial vignette, maximum 12% opacity','closing_logo':'supplied logo with no rectangle; closing content retained' if n==9 else 'not applicable','scene_motion':'verified at 3 times','javascript_errors':errors,'video':'not checked' if '--html-only' in sys.argv else f"1080x1350 / 30fps / {s['duration']}s"})
         browser.close()
 finally:server.shutdown()
 (P/'proof'/('html-validation.json' if '--html-only' in sys.argv else 'validation.json')).write_text(json.dumps(report,indent=2)+'\n')
