@@ -19,6 +19,12 @@ assert hashlib.sha256(opening_source.encode()).hexdigest()==opening_ref['scene_f
 assert hashlib.sha256(opening_helpers.encode()).hexdigest()==opening_ref['pixel_helpers_sha256']
 assert hashlib.sha256((P.parents[1]/'art-carousel-kit/assets/kit/js/pixelbot.js').read_bytes()).hexdigest()==opening_ref['mascot_engine_sha256']
 
+# The requested logo uses the original Style 2 vector, not a redrawn mark.
+import re
+logo_html=(P.parent/'delivery-delays-style-2/final/slide-07.html').read_text()
+original_logo=next(svg for svg in re.findall(r'<svg\b[\s\S]*?</svg>',logo_html) if 'A Realtime Tech logo' in svg)
+assert (P/'brand/art-original-style2.svg').read_text()==original_logo
+
 class Quiet(http.server.SimpleHTTPRequestHandler):
     def log_message(self,*args):pass
 server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Quiet,directory=str(P/'slides')))
@@ -36,10 +42,11 @@ try:
             page.on('pageerror',lambda e:errors.append(str(e)))
             page.goto(f'http://127.0.0.1:{server.server_port}/slide-{n:02}.html')
             page.evaluate('document.fonts.ready')
-            assert page.evaluate("document.fonts.check('40px Preahvihear') && document.fonts.check('600 40px Poppins')")
+            assert page.evaluate("document.fonts.check('40px Preahvihear') && document.fonts.check('"+("700" if n==9 else "600")+" 40px Poppins')"),(n,"required fonts")
             root=cdp.send('DOM.getDocument')['root']['nodeId']
             fonts={}
             for selector,required in [('h1','Preahvihear'),('.panel h2' if n==6 else '.body','Poppins'),('.topline','Poppins')]:
+                if n==9 and selector=='.topline':continue
                 node=cdp.send('DOM.querySelector',{'nodeId':root,'selector':selector})['nodeId']
                 used=cdp.send('CSS.getPlatformFontsForNode',{'nodeId':node})['fonts']
                 assert used and all(f['isCustomFont'] and f['glyphCount']>0 for f in used),(n,selector,used)
@@ -57,7 +64,7 @@ try:
             photo=page.locator('.backdrop img').evaluate('e=>({loaded:e.complete,w:e.naturalWidth,h:e.naturalHeight,fit:getComputedStyle(e).objectFit,box:[e.getBoundingClientRect().width,e.getBoundingClientRect().height]})')
             assert photo['loaded'] and photo['w']>=1080 and photo['h']>=1350 and photo['fit']=='cover' and photo['box']==[1080,1350],photo
             assert page.locator('.stage').evaluate('e=>getComputedStyle(e).backgroundColor')=='rgba(0, 0, 0, 0)'
-            assert page.locator('h1').evaluate('e=>getComputedStyle(e).color')=='rgb(255, 255, 255)'
+            assert page.locator('h1').evaluate('e=>getComputedStyle(e).color')==('rgb(26, 26, 26)' if n==9 else 'rgb(255, 255, 255)')
             assert norm(page.locator('.topline').inner_text())==norm(content['brand_full_name'] if n in (1,9) else 'ART')
             s=content['slides'][n-1]
             assert norm(page.locator('h1').inner_text())==norm(' '.join(s['headline']))
@@ -72,19 +79,30 @@ try:
                 assert ex['automatic_order']<=ex['approval_limit']<ex['approval_required_order']
             else:
                 assert norm(page.locator('.body').inner_text())==norm(' '.join(s['body']))
-            selector='.topline,h1:visible,.body:visible,.panel h2,.panel p,.amount,.example-limit'
+            selector='.topline:visible,h1:visible,.body:visible,.panel h2,.panel p,.amount,.example-limit,.closing-cta'
             boxes=page.locator(selector).evaluate_all('els=>els.map(e=>{let r=e.getBoundingClientRect();return {left:r.left,right:r.right,bottom:r.bottom,scroll:e.scrollWidth,width:e.clientWidth}})')
             assert all(b['left']>=83 and b['right']<=997 and b['bottom']<1220 and b['scroll']<=b['width']+1 for b in boxes),boxes
             grid=page.locator('.col').evaluate('e=>{const r=e.getBoundingClientRect(),h=e.querySelector("h1"),b=e.querySelector(".body"),hs=getComputedStyle(h),bs=getComputedStyle(b);return {left:r.left,top:r.top,gap:getComputedStyle(e).gap,size:parseFloat(hs.fontSize),height:h.getBoundingClientRect().height,line:parseFloat(hs.lineHeight),bodySize:parseFloat(bs.fontSize),bodyLine:parseFloat(bs.lineHeight)}}')
-            assert grid['left']==84 and grid['top']==168 and grid['gap']=='30px',grid
+            assert grid['left']==84 and grid['top']==(244 if n==9 else 168) and grid['gap']==('24px' if n==9 else '28px'),grid
             assert abs(grid['height']-2*grid['line'])<1,(n,'headline must have two deliberate lines',grid)
-            assert grid['bodySize']==30 and abs(grid['bodyLine']-46.5)<.1,grid
+            assert grid['bodySize']==34 and abs(grid['bodyLine']-51)<.1,grid
             assert page.locator('.edge-fade').count()==1
             if n==9:
-                logo=page.locator('.closing-brand img').evaluate('e=>({loaded:e.complete,w:e.naturalWidth,h:e.naturalHeight,box:e.getBoundingClientRect().toJSON(),parent:e.parentElement.getBoundingClientRect().toJSON(),color:getComputedStyle(e.parentElement).backgroundColor})')
-                assert logo['loaded'] and logo['w']>0 and logo['box']['width']==340 and logo['color']=='rgba(0, 0, 0, 0)',logo
-                assert page.locator('.closing-brand').evaluate('e=>getComputedStyle(e).mixBlendMode')=='lighten'
-                assert logo['parent']['bottom']<=885 and logo['box']['top']-logo['parent']['top']>=116,logo
+                logo=page.locator('.closing-brand svg').bounding_box()
+                assert logo and logo['x']==84 and logo['y']==84 and logo['width']==200,logo
+                assert page.locator('.closing-brand').evaluate('e=>getComputedStyle(e).backgroundColor')=='rgba(0, 0, 0, 0)'
+                palette=page.locator('.closing-brand svg path[fill="#04adc3"]').count()
+                assert palette==6,palette
+                wordmark=page.locator('.closing-brand svg path[transform^="matrix(1,0,0,-1,250.92774"]')
+                assert wordmark.count()==13 and wordmark.first.evaluate('e=>getComputedStyle(e).fill')=='rgb(26, 26, 26)'
+                cta=page.locator('.closing-cta').evaluate('e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {center:r.x+r.width/2,size:parseFloat(s.fontSize),weight:s.fontWeight}}')
+                assert cta=={'center':540,'size':58,'weight':'700'},cta
+            if n==7:
+                for moment,expected in [(3.1,False),(3.2,True),(7.9,True)]:
+                    page.evaluate('(t)=>Object.values(window.__timelines).forEach(tl=>tl.seek(t,false))',moment)
+                    assert page.locator('.approval-state').is_visible()==expected
+                assert page.locator('.approval-state').inner_text()=='Awaiting approval'
+                assert page.locator('.approval-state').evaluate('e=>getComputedStyle(e).fontSize')=='44px'
             text_frames=[];scene_frames=[]
             for t in [.1,s['duration']*.5,s['duration']-.1]:
                 page.evaluate('(t)=>{Object.values(window.__timelines).forEach(tl=>tl.seek(t,false));}',t)
@@ -98,7 +116,7 @@ try:
                 v=probe['streams'][0]
                 assert (v['width'],v['height'],v['r_frame_rate'],int(v['nb_frames']))==(1080,1350,'30/1',s['duration']*30)
                 assert float(probe['format']['duration'])==s['duration']
-            report.append({'slide':n,'photorealistic_full_frame_background':'verified loaded at native resolution','script_copy':'exact','text_pixels':'stationary','actual_rendered_fonts':fonts,'text_layout':'within margins','typography_grid':grid,'edge_fade':'subtle radial vignette, maximum 12% opacity','closing_logo':'supplied logo with no rectangle; closing content retained' if n==9 else 'not applicable','scene_motion':'verified at 3 times','javascript_errors':errors,'video':'not checked' if '--html-only' in sys.argv else f"1080x1350 / 30fps / {s['duration']}s"})
+            report.append({'slide':n,'photorealistic_full_frame_background':'verified loaded at native resolution','script_copy':'exact','text_pixels':'stationary','actual_rendered_fonts':fonts,'text_layout':'within margins','typography_grid':grid,'edge_fade':'subtle radial vignette, maximum 12% opacity','closing_logo':'original Style 2 aqua vector, requested ink wordmark, top-left with no rectangle' if n==9 else 'not applicable','scene_motion':'verified at 3 times','javascript_errors':errors,'video':'not checked' if '--html-only' in sys.argv else f"1080x1350 / 30fps / {s['duration']}s"})
         browser.close()
 finally:server.shutdown()
 (P/'proof'/('html-validation.json' if '--html-only' in sys.argv else 'validation.json')).write_text(json.dumps(report,indent=2)+'\n')

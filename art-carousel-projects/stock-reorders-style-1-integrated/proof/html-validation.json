@@ -20,12 +20,12 @@
     "typography_grid": {
       "left": 84,
       "top": 168,
-      "gap": "30px",
-      "size": 82,
-      "height": 203.34375,
-      "line": 101.68,
-      "bodySize": 30,
-      "bodyLine": 46.5
+      "gap": "28px",
+      "size": 80,
+      "height": 192,
+      "line": 96,
+      "bodySize": 34,
+      "bodyLine": 51
     },
     "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
@@ -53,12 +53,12 @@
     "typography_grid": {
       "left": 84,
       "top": 168,
-      "gap": "30px",
-      "size": 82,
-      "height": 203.34375,
-      "line": 101.68,
-      "bodySize": 30,
-      "bodyLine": 46.5
+      "gap": "28px",
+      "size": 80,
+      "height": 192,
+      "line": 96,
+      "bodySize": 34,
+      "bodyLine": 51
     },
     "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
@@ -86,12 +86,12 @@
     "typography_grid": {
       "left": 84,
       "top": 168,
-      "gap": "30px",
-      "size": 82,
-      "height": 203.34375,
-      "line": 101.68,
-      "bodySize": 30,
-      "bodyLine": 46.5
+      "gap": "28px",
+      "size": 80,
+      "height": 192,
+      "line": 96,
+      "bodySize": 34,
+      "bodyLine": 51
     },
     "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
@@ -120,12 +120,12 @@
     "typography_grid": {
       "left": 84,
       "top": 168,
-      "gap": "30px",
-      "size": 82,
-      "height": 203.34375,
-      "line": 101.68,
-      "bodySize": 30,
-      "bodyLine": 46.5
+      "gap": "28px",
+      "size": 80,
+      "height": 192,
+      "line": 96,
+      "bodySize": 34,
+      "bodyLine": 51
     },
     "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
@@ -154,12 +154,12 @@
     "typography_grid": {
       "left": 84,
       "top": 168,
-      "gap": "30px",
-      "size": 72,
-      "height": 178.53125,
-      "line": 89.28,
-      "bodySize": 30,
-      "bodyLine": 46.5
+      "gap": "28px",
+      "size": 80,
+      "height": 192,
+      "line": 96,
+      "bodySize": 34,
+      "bodyLine": 51
     },
     "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
@@ -187,12 +187,12 @@
     "typography_grid": {
       "left": 84,
       "top": 168,
-      "gap": "30px",
-      "size": 82,
-      "height": 203.34375,
-      "line": 101.68,
-      "bodySize": 30,
-      "bodyLine": 46.5
+      "gap": "28px",
+      "size": 80,
+      "height": 192,
+      "line": 96,
+      "bodySize": 34,
+      "bodyLine": 51
     },
     "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
@@ -220,12 +220,12 @@
     "typography_grid": {
       "left": 84,
       "top": 168,
-      "gap": "30px",
-      "size": 82,
-      "height": 203.34375,
-      "line": 101.68,
-      "bodySize": 30,
-      "bodyLine": 46.5
+      "gap": "28px",
+      "size": 80,
+      "height": 192,
+      "line": 96,
+      "bodySize": 34,
+      "bodyLine": 51
     },
     "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
@@ -253,12 +253,12 @@
     "typography_grid": {
       "left": 84,
       "top": 168,
-      "gap": "30px",
-      "size": 72,
-      "height": 178.53125,
-      "line": 89.28,
-      "bodySize": 30,
-      "bodyLine": 46.5
+      "gap": "28px",
+      "size": 80,
+      "height": 192,
+      "line": 96,
+      "bodySize": 34,
+      "bodyLine": 51
     },
     "edge_fade": "subtle radial vignette, maximum 12% opacity",
     "closing_logo": "not applicable",
@@ -277,24 +277,21 @@
       ],
       ".body": [
         "Poppins Medium"
-      ],
-      ".topline": [
-        "Poppins SemiBold"
       ]
     },
     "text_layout": "within margins",
     "typography_grid": {
       "left": 84,
-      "top": 168,
-      "gap": "30px",
-      "size": 78,
-      "height": 193.4375,
-      "line": 96.72,
-      "bodySize": 30,
-      "bodyLine": 46.5
+      "top": 244,
+      "gap": "24px",
+      "size": 80,
+      "height": 192,
+      "line": 96,
+      "bodySize": 34,
+      "bodyLine": 51
     },
     "edge_fade": "subtle radial vignette, maximum 12% opacity",
-    "closing_logo": "supplied logo with no rectangle; closing content retained",
+    "closing_logo": "original Style 2 aqua vector, requested ink wordmark, top-left with no rectangle",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
     "video": "not checked"

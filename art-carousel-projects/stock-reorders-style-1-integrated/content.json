@@ -1,7 +1,7 @@
 {
   "title": "Your shelves called. ART’s already on it.",
   "style": "Style 1",
-  "status": "Revision 14: subtle light vignette and closing content retained without the black logo rectangle",
+  "status": "Revision 15: readable type and props, explicit approval handoff, corner aqua/black vector logo and tabletop closing with bold centered CTA",
   "threshold_example": {
     "currency": "INR",
     "approval_limit": 100000,
@@ -51,7 +51,8 @@
       ],
       "body": [
         "Your stock rules trigger the next step.",
-        "When stock hits your reorder point, ART starts the check."
+        "When stock hits your reorder point,",
+        "ART starts the check."
       ],
       "duration": 7
     },
@@ -61,7 +62,8 @@
       ],
       "body": [
         "ART checks stock and incoming orders.",
-        "What’s already on the way helps shape the next order."
+        "What’s already on the way",
+        "helps shape the next order."
       ],
       "duration": 8
     },
@@ -98,7 +100,8 @@
       ],
       "body": [
         "Less chasing. Control where it counts.",
-        "Everyday replenishment keeps moving within your rules."
+        "Everyday replenishment keeps moving",
+        "within your rules."
       ],
       "duration": 7
     },

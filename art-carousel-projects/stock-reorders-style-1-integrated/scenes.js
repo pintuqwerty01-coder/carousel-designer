@@ -12,7 +12,7 @@ function robot(c,x,feet,S,p={}){
 }
 function paper(c,x,y,w=120,h=150,angle=0){c.save();c.translate(x,y);c.rotate(angle);c.shadowColor='rgba(0,0,0,.23)';c.shadowBlur=12;c.shadowOffsetY=6;rr(c,0,0,w,h,3);fs(c,'#F4F0E7');c.shadowColor='transparent';ink(c,[[14,24],[w-14,24]],'#04ADC3',5);for(let i=0;i<4;i++)ink(c,[[14,48+i*19],[w-19-(i%2)*18,48+i*19]],'#9BA8A7',2);c.restore();}
 
-function pill(c,s,x,y,color='#04ADC3') {c.save();c.font='500 24px Poppins';const w=c.measureText(s).width+34;rr(c,x,y,w,43,7);fs(c,'rgba(14,26,28,.86)');ink(c,[[x+1,y+8],[x+1,y+35]],color,3);text(c,s,x+17,y+29,24);c.restore();}
+function pill(c,s,x,y,color='#04ADC3') {c.save();c.font='500 30px Poppins';const w=c.measureText(s).width+40;x=(1080-w)/2;rr(c,x,y,w,52,7);fs(c,'rgba(14,26,28,.86)');ink(c,[[x+1,y+8],[x+1,y+44]],color,3);text(c,s,x+20,y+35,30);c.restore();}
 function reveal(c,k,fn){c.save();c.globalAlpha=eOut(k);fn();c.restore();}
 function person(c,x,y){c.save();c.fillStyle='#18272A';c.beginPath();c.arc(x,y,16,0,Math.PI*2);c.fill();c.beginPath();c.ellipse(x,y+35,30,23,0,Math.PI,Math.PI*2);c.fill();c.restore();}
 // Opening-specific pixel props: user requested boxes in the mascot's art style.
@@ -73,7 +73,8 @@ function stockBox(c,x,y,checked=false,w=140,h=140){
  if(checked)pixelTick(c,x+40,y+h-60,10);
  else pixelCells(c,[[x+40,y+h-60,1,3],[x+60,y+h-60,1,3],[x+80,y+h-60,1,3]],'#8A9290');
 }
-function pixelPaper(c,x,y,k=1,checked=false,amount=''){
+function pixelPaper(c,x,y,k=1,checked=false,amount=''){c.save();c.translate(snap(x),snap(y));c.scale(1.1,1.1);pixelPaperBase(c,0,0,k,checked,amount);c.restore();}
+function pixelPaperBase(c,x,y,k=1,checked=false,amount=''){
  x=snap(x);y=snap(y);surfaceShadow(c,x+70,y+184,145);
  pixelCells(c,[[x+10,y,12,18],[x,y+10,14,16]],'#F0EEE7');
  pixelCells(c,[[x+20,y+20,10,1]],'#04ADC3');
@@ -202,7 +203,7 @@ const SCENES={
  },
  5(c,t,S){
   const sec=t*2,arrive=eInOut((sec-.6)/2.1),truckX=1110-510*arrive;
-  text(c,'On hand',105,945,27);text(c,'Incoming stock',635,892,27);
+  c.save();c.textAlign='center';text(c,'On hand',180,945,30);text(c,'Incoming stock',790,892,30);c.restore();
   stockBox(c,110,990,sec>1);
   pixelTruck(c,truckX,sec,sec>4.3);
   const working=sec>4.4;
@@ -222,32 +223,31 @@ const SCENES={
   const sec=t*2,approach=eInOut((sec-.55)/1.25),handoff=eInOut((sec-3.2)/1.2);
   const x=snap(260+170*approach),paperX=x+215+handoff*165;
   pixelTray(c,795,1120,180);
-  text(c,'Your decision',770,865,28);
-  text(c,'Above ₹1,00,000',740,902,24,'#FFD166');
+  c.save();c.textAlign='center';text(c,'Your decision',885,865,30);
+  text(c,'Above ₹1,00,000',885,902,26,'#FFD166');c.restore();
   actor(c,x,900,S,{walk:sec>.55&&sec<1.8,arm:sec<4.5?'reach':'down',left:sec<2.5?'up':'down',mood:sec<3.2?'urgent':'work',sweat:sec<3.2,eyes:'lookR'});
-  pixelPaper(c,paperX,940,1,false,'₹1,50,000');
+  pixelPaper(c,paperX,920,1,false,'₹1,50,000');
   if(sec<2.8)warning(c,985,892,S);
   if(sec>2.2){
-   const reach=eInOut((sec-2.2)/.8),edge=1120+(x+355-1120)*reach+handoff*165;
+   const reach=eInOut((sec-2.2)/.8),edge=1120+(x+369-1120)*reach+handoff*165;
    reviewHand(c,edge,1010);
   }
-  if(sec>4.5)text(c,'Awaiting your decision',690,1180,25,'#FFD166');
  },
  8(c,t,S){
-  const sec=t*1.75,move=eInOut((sec-3.2)/1.25),x=snap(285+315*move);
+  const sec=t*1.75,move=eInOut((sec-3.2)/1.25),x=snap(300+300*move);
   // A purchase order is sent automatically; an exception arrives on your phone.
   // Neither prop depicts outgoing physical stock or an unapproved purchase.
-  text(c,'Routine order',155,860,28);
-  text(c,'Your review',790,860,28,'#FFD166');
+  c.save();c.textAlign='center';text(c,'Routine order',255,860,30);
+  text(c,'Your review',900,860,30,'#FFD166');c.restore();
   pixelTray(c,160,1120,170);
   pixelPaper(c,178,940,clamp01((sec-.4)/1.2),sec>2.1,'₹60,000');
   const px=830,py=930;
-  pixelCells(c,[[px+10,py,10,20],[px,py+10,12,18]],'#F0EEE7');
-  pixelCells(c,[[px+10,py+20,10,15]],'#203136');
-  pixelCells(c,[[px+40,py+5,4,1],[px+50,py+180,2,1]],'#6D817F');
+  pixelCells(c,[[px+10,py,12,20],[px,py+10,14,18]],'#F0EEE7');
+  pixelCells(c,[[px+10,py+20,12,15]],'#203136');
+  pixelCells(c,[[px+50,py+5,4,1],[px+60,py+180,2,1]],'#6D817F');
   if(sec>4.65){
-   pixelCells(c,[[px+20,py+35,8,11]],'#FFF3D5');
-   text(c,'REVIEW',px+26,py+62,16,'#203136',600);
+   pixelCells(c,[[px+20,py+35,10,11]],'#FFF3D5');
+   text(c,'REVIEW',px+26,py+62,20,'#203136',600);
    text(c,'₹1.5L',px+26,py+95,23,'#203136',600);
    pixelCells(c,[[px+30,py+105,6,1],[px+30,py+125,4,1]],'#D5B15C');
    if(sec<5.5)warning(c,px+125,py+20,S,'#FFD166');
@@ -256,14 +256,11 @@ const SCENES={
   if(sec>5.6)pill(c,'Routine sent. Exception with you.',320,1155);
  },
  9(c,t,S){
-  const sec=t*1.75,x=snap(130+300*eInOut((sec-.2)/1.3)),working=sec>3;
-  // Close on the same job as the opening: checked stock, recorded on the tablet.
-  // The unrelated clock and free-standing celebration are removed.
-  pixelCells(c,[[710,1125,25,2],[720,1145,2,2],[940,1145,2,2]],'#6D817F');
-  stockBox(c,715,975,sec>1.8,110,150);
-  stockBox(c,850,975,sec>2.7,110,150);
-  actor(c,x,900,S,{walk:sec>.2&&sec<1.5,arm:'hold',left:'down',mood:sec>5.1?'relief':'work',eyes:'lookR'});
-  tabletInHands(c,x,900,sec<1.5?6.6:sec+1.5,clamp01((sec-3.2)/1.7));
-  text(c,'Put ART to work.',84,1180,28,'#F0EEE7',600);
+  const sec=t*1.75,x=snap(130+300*eInOut((sec-.2)/1.3));
+  // The photo's tabletop is at y=920 here. All three objects share that surface.
+  stockBox(c,715,770,sec>1.8,110,150);
+  stockBox(c,850,770,sec>2.7,110,150);
+  actor(c,x,690,S,{walk:sec>.2&&sec<1.5,arm:'hold',left:'down',mood:sec>5.1?'relief':'work',eyes:'lookR'});
+  tabletInHands(c,x,690,sec<1.5?6.6:sec+1.5,clamp01((sec-3.2)/1.7));
  }
 };
