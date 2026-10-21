@@ -40,23 +40,23 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 .slide {background:#101519;color:white;} * {font-synthesis:none;}
 .backdrop,.shade {position:absolute;inset:0;width:1080px;height:1350px;}
 .backdrop {z-index:0;} .backdrop img {width:100%;height:100%;object-fit:cover;display:block;}
-.shade {z-index:1;background:linear-gradient(180deg,rgba(4,12,15,.72) 0%,rgba(4,12,15,.64) 28%,rgba(4,12,15,.34) 50%,rgba(4,12,15,.18) 74%,rgba(4,12,15,.42) 100%);}
-.topline {position:absolute;left:84px;right:84px;top:78px;z-index:4;display:flex;align-items:center;gap:17px;font:600 23px/1 Poppins;letter-spacing:3px;}
-.brand-dot {width:11px;height:11px;background:#04ADC3;border-radius:50%;}.topline .rule {height:1px;background:rgba(255,255,255,.3);flex:1;margin-left:20px;}
+.shade {z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.88) 32%,rgba(0,0,0,.58) 45%,rgba(0,0,0,.04) 67%,rgba(4,12,15,.12) 78%,rgba(4,12,15,.50) 100%);}
 .col {position:absolute;top:156px;left:84px;right:84px;z-index:4;display:flex;flex-direction:column;gap:26px;}
 .headline {font:400 86px/1.22 Preahvihear,Poppins,sans-serif;letter-spacing:-.01em;color:white;text-shadow:0 2px 18px rgba(0,0,0,.2);}
 .accent {color:#04ADC3;} .body {font:500 32px/1.45 Poppins;color:#F3F6F7;max-width:870px;}
 /* Optical hierarchy: one left edge, one copy rhythm, deliberate line breaks. */
-.col {top:168px;gap:28px;}
+.col {top:112px;gap:28px;}
 .headline {font-size:80px;line-height:1.2;letter-spacing:-.015em;}
 .body {font-size:34px;line-height:1.5;max-width:880px;text-wrap:pretty;}
 .s1 .headline,.s5 .headline,.s8 .headline,.s9 .headline {font-size:80px;}
 .s8 .col,.s9 .col {text-align:left;align-items:flex-start;}
+.s3 .body {display:flex;flex-direction:column;gap:22px;width:820px;max-width:100%;text-align:left;}
+.s3 .body span {display:block;}
 .edge-fade {position:absolute;inset:0;z-index:3;pointer-events:none;
  background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.06) 82%,rgba(0,0,0,.12) 100%);}
 .closing-brand {position:absolute;left:84px;top:84px;width:200px;height:80px;z-index:4;background:transparent;}
 .closing-brand svg {display:block;width:200px;height:auto;}
-.s9 .topline {display:none;}.s9 .col {top:244px;gap:24px;}
+.s9 .col {top:244px;gap:24px;}
 .s9 .headline {color:#1A1A1A;font-size:80px;line-height:1.2;text-shadow:none;}
 .s9 .body {color:#1A1A1A;}
 .s9 .shade {background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.90) 35%,rgba(255,255,255,.60) 45%,rgba(255,255,255,.04) 67%,rgba(4,12,15,.12) 78%,rgba(4,12,15,.50) 100%);}
@@ -76,11 +76,12 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 </style></head><body>
  <div id="root" data-composition-id="slide-06" data-start="0" data-duration="8" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s6 has-panels" data-start="0" data-duration="8">
  <div class="backdrop"><img src="assets/records.png" alt="Photorealistic stockroom scene"></div><div class="shade"></div><div class="edge-fade"></div>
- <div class="topline"><span class="brand-dot"></span>ART<span class="rule"></span></div>
  <div class="col"><h1 class="headline">Your limit.<br><span class="accent">Two clear paths.</span></h1><p class="body"></p></div><div class="example-limit">Example approval limit: <strong>₹1,00,000</strong></div><div class="panels"><section class="panel"><h2>Within your amount limit</h2><div class="amount">₹60,000</div><p>ART places the order.</p></section><section class="panel"><h2>Above your amount limit</h2><div class="amount">₹1,50,000</div><p>ART sends it for approval.</p></section></div>
  <div class="stage"><canvas id="scene" width="1080" height="1350"></canvas></div>
  <div class="handle">@arealtimetech</div><div class="count">06 / 09</div><canvas id="trail" width="1080" height="80"></canvas></div></div>
- <script>// ART pixel robot, canvas engine (frame-by-frame poses). Aiotrix kit only.
+ <script>const canvasFontReady=document.fonts.load('600 30px Poppins');
+ const OUTCOMES={"4": {"text": "Stock is below your reorder point.", "at": 3.5}, "5": {"text": "ART calculates how much stock to reorder.", "at": 5.1}, "8": {"text": "Routine orders placed. Exceptions await approval.", "at": 5.0}};
+ // ART pixel robot, canvas engine (frame-by-frame poses). Aiotrix kit only.
 // Grid 24x24 art pixels. drawBot(ctx, x, y, u, pose): (x,y) = top-left of grid, u = px per art pixel.
 // Poses step at 8/s (S = floor(t*8)); travel snaps to 4px. Deterministic: no random, no clocks.
 const C8 = { A: "#04ADC3", W: "#FFFFFF", K: "#1A1A1A", S: "#9BE3EC", R: "#F27A7A", Y: "#FFD166", G: "#D9D9D9", D: "#5A5A5A" };
@@ -1039,7 +1040,7 @@ const SCENES={
   const alarm=sec>2.1,recoil=sec>2.15&&sec<3.3,x=430-(recoil?eOut((sec-2.15)/.3)*36:0);
   actor(c,x,900,S,{arm:recoil?'up':sec>5.3?'down':sec>3.3?'reach':'down',left:recoil?'up':'down',mood:recoil?'panic':alarm&&sec<4?'urgent':'work',sweat:recoil});
   if(alarm){if(sec<4.4)warning(c,930,900,S);text(c,'LOW STOCK',697,1100,25,'#FFF5E8',600);}
-  if(sec>5.3)pill(c,'Low stock confirmed. Check started.',365,1155);
+  if(sec>OUTCOMES[4].at)pill(c,OUTCOMES[4].text,365,1155);
  },
  5(c,t,S){
   const sec=t*2,arrive=eInOut((sec-.6)/2.1),truckX=1110-510*arrive;
@@ -1049,7 +1050,7 @@ const SCENES={
   const working=sec>4.4;
   actor(c,350,900,S,{flip:sec<2.4,arm:working?'hold':sec>1.3?'up':'down',mood:sec>6.7?'relief':'work',eyes:'lookR'});
   if(working)tabletInHands(c,350,900,Math.min(sec,6.5),clamp01((sec-4.55)/1.6));
-  if(sec>6.2)pill(c,'Stock + incoming checked. Gap ready.',275,1155,'#41A486');
+  if(sec>OUTCOMES[5].at)pill(c,OUTCOMES[5].text,275,1155);
  },
  6(c,t,S){
   const sec=t*2,leftDone=sec>2.2,right=sec>3.8;
@@ -1093,7 +1094,7 @@ const SCENES={
    if(sec<5.5)warning(c,px+125,py+20,S,'#FFD166');
   }
   actor(c,x,900,S,{flip:sec<3.2,walk:sec>3.2&&sec<4.45,arm:sec<2.1?'reach':sec>4.45&&sec<5.2?'tap':'down',mood:sec>5.2?'relief':'work',eyes:'lookR'});
-  if(sec>5.6)pill(c,'Routine sent. Exception with you.',320,1155);
+  if(sec>OUTCOMES[8].at)pill(c,OUTCOMES[8].text,320,1155);
  },
  9(c,t,S){
   const sec=t*1.75,x=snap(130+300*eInOut((sec-.2)/1.3));
@@ -1107,5 +1108,5 @@ const SCENES={
 
  const st={t:0},c=document.getElementById('scene').getContext('2d'),tr=document.getElementById('trail').getContext('2d');
  function render(){c.clearRect(0,0,1080,1350);SCENES[6](c,st.t*4/8,Math.floor(st.t*8));tr.clearRect(0,0,1080,80);const approval=document.querySelector('.approval-state');if(approval)approval.style.visibility=st.t>=3.2?'visible':'hidden';for(let j=0;j<9;j++){tr.fillStyle=j<6?'#04ADC3':'rgba(255,255,255,.18)';tr.fillRect(84+j*103,39,88,3);}}
- const tl=gsap.timeline({paused:true});tl.to(st,{t:8,duration:8,ease:'none',onUpdate:render},0);window.__timelines={'slide-06':tl};render();
+ const tl=gsap.timeline({paused:true});tl.to(st,{t:8,duration:8,ease:'none',onUpdate:render},0);window.__timelines={'slide-06':tl};render();canvasFontReady.then(render);
  </script></body></html>

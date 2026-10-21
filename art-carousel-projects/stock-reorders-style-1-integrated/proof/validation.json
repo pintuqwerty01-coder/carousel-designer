@@ -11,15 +11,12 @@
       ],
       ".body": [
         "Poppins Medium"
-      ],
-      ".topline": [
-        "Poppins SemiBold"
       ]
     },
     "text_layout": "within margins",
     "typography_grid": {
       "left": 84,
-      "top": 168,
+      "top": 112,
       "gap": "28px",
       "size": 80,
       "height": 192,
@@ -27,7 +24,9 @@
       "bodySize": 34,
       "bodyLine": 51
     },
-    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "text_backdrop": "soft black upper-area gradient; white on closing",
+    "watermark_header": "removed",
+    "outcome": null,
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -44,15 +43,12 @@
       ],
       ".body": [
         "Poppins Medium"
-      ],
-      ".topline": [
-        "Poppins SemiBold"
       ]
     },
     "text_layout": "within margins",
     "typography_grid": {
       "left": 84,
-      "top": 168,
+      "top": 112,
       "gap": "28px",
       "size": 80,
       "height": 192,
@@ -60,7 +56,9 @@
       "bodySize": 34,
       "bodyLine": 51
     },
-    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "text_backdrop": "soft black upper-area gradient; white on closing",
+    "watermark_header": "removed",
+    "outcome": null,
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -77,15 +75,12 @@
       ],
       ".body": [
         "Poppins Medium"
-      ],
-      ".topline": [
-        "Poppins SemiBold"
       ]
     },
     "text_layout": "within margins",
     "typography_grid": {
       "left": 84,
-      "top": 168,
+      "top": 112,
       "gap": "28px",
       "size": 80,
       "height": 192,
@@ -93,7 +88,9 @@
       "bodySize": 34,
       "bodyLine": 51
     },
-    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "text_backdrop": "soft black upper-area gradient; white on closing",
+    "watermark_header": "removed",
+    "outcome": null,
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -111,15 +108,12 @@
       ],
       ".body": [
         "Poppins Medium"
-      ],
-      ".topline": [
-        "Poppins SemiBold"
       ]
     },
     "text_layout": "within margins",
     "typography_grid": {
       "left": 84,
-      "top": 168,
+      "top": 112,
       "gap": "28px",
       "size": 80,
       "height": 192,
@@ -127,7 +121,12 @@
       "bodySize": 34,
       "bodyLine": 51
     },
-    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "text_backdrop": "soft black upper-area gradient; white on closing",
+    "watermark_header": "removed",
+    "outcome": {
+      "text": "Stock is below your reorder point.",
+      "at": 3.5
+    },
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -145,15 +144,12 @@
       ],
       ".body": [
         "Poppins Medium"
-      ],
-      ".topline": [
-        "Poppins SemiBold"
       ]
     },
     "text_layout": "within margins",
     "typography_grid": {
       "left": 84,
-      "top": 168,
+      "top": 112,
       "gap": "28px",
       "size": 80,
       "height": 192,
@@ -161,7 +157,12 @@
       "bodySize": 34,
       "bodyLine": 51
     },
-    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "text_backdrop": "soft black upper-area gradient; white on closing",
+    "watermark_header": "removed",
+    "outcome": {
+      "text": "ART calculates how much stock to reorder.",
+      "at": 5.1
+    },
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -178,15 +179,12 @@
       ],
       ".panel h2": [
         "Poppins Medium"
-      ],
-      ".topline": [
-        "Poppins SemiBold"
       ]
     },
     "text_layout": "within margins",
     "typography_grid": {
       "left": 84,
-      "top": 168,
+      "top": 112,
       "gap": "28px",
       "size": 80,
       "height": 192,
@@ -194,7 +192,9 @@
       "bodySize": 34,
       "bodyLine": 51
     },
-    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "text_backdrop": "soft black upper-area gradient; white on closing",
+    "watermark_header": "removed",
+    "outcome": null,
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -211,15 +211,12 @@
       ],
       ".body": [
         "Poppins Medium"
-      ],
-      ".topline": [
-        "Poppins SemiBold"
       ]
     },
     "text_layout": "within margins",
     "typography_grid": {
       "left": 84,
-      "top": 168,
+      "top": 112,
       "gap": "28px",
       "size": 80,
       "height": 192,
@@ -227,7 +224,9 @@
       "bodySize": 34,
       "bodyLine": 51
     },
-    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "text_backdrop": "soft black upper-area gradient; white on closing",
+    "watermark_header": "removed",
+    "outcome": null,
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -244,15 +243,12 @@
       ],
       ".body": [
         "Poppins Medium"
-      ],
-      ".topline": [
-        "Poppins SemiBold"
       ]
     },
     "text_layout": "within margins",
     "typography_grid": {
       "left": 84,
-      "top": 168,
+      "top": 112,
       "gap": "28px",
       "size": 80,
       "height": 192,
@@ -260,7 +256,12 @@
       "bodySize": 34,
       "bodyLine": 51
     },
-    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "text_backdrop": "soft black upper-area gradient; white on closing",
+    "watermark_header": "removed",
+    "outcome": {
+      "text": "Routine orders placed. Exceptions await approval.",
+      "at": 5.0
+    },
     "closing_logo": "not applicable",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],
@@ -290,7 +291,9 @@
       "bodySize": 34,
       "bodyLine": 51
     },
-    "edge_fade": "subtle radial vignette, maximum 12% opacity",
+    "text_backdrop": "soft black upper-area gradient; white on closing",
+    "watermark_header": "removed",
+    "outcome": null,
     "closing_logo": "original Style 2 aqua vector, requested ink wordmark, top-left with no rectangle",
     "scene_motion": "verified at 3 times",
     "javascript_errors": [],

@@ -199,7 +199,7 @@ const SCENES={
   const alarm=sec>2.1,recoil=sec>2.15&&sec<3.3,x=430-(recoil?eOut((sec-2.15)/.3)*36:0);
   actor(c,x,900,S,{arm:recoil?'up':sec>5.3?'down':sec>3.3?'reach':'down',left:recoil?'up':'down',mood:recoil?'panic':alarm&&sec<4?'urgent':'work',sweat:recoil});
   if(alarm){if(sec<4.4)warning(c,930,900,S);text(c,'LOW STOCK',697,1100,25,'#FFF5E8',600);}
-  if(sec>5.3)pill(c,'Low stock confirmed. Check started.',365,1155);
+  if(sec>OUTCOMES[4].at)pill(c,OUTCOMES[4].text,365,1155);
  },
  5(c,t,S){
   const sec=t*2,arrive=eInOut((sec-.6)/2.1),truckX=1110-510*arrive;
@@ -209,7 +209,7 @@ const SCENES={
   const working=sec>4.4;
   actor(c,350,900,S,{flip:sec<2.4,arm:working?'hold':sec>1.3?'up':'down',mood:sec>6.7?'relief':'work',eyes:'lookR'});
   if(working)tabletInHands(c,350,900,Math.min(sec,6.5),clamp01((sec-4.55)/1.6));
-  if(sec>6.2)pill(c,'Stock + incoming checked. Gap ready.',275,1155,'#41A486');
+  if(sec>OUTCOMES[5].at)pill(c,OUTCOMES[5].text,275,1155);
  },
  6(c,t,S){
   const sec=t*2,leftDone=sec>2.2,right=sec>3.8;
@@ -253,7 +253,7 @@ const SCENES={
    if(sec<5.5)warning(c,px+125,py+20,S,'#FFD166');
   }
   actor(c,x,900,S,{flip:sec<3.2,walk:sec>3.2&&sec<4.45,arm:sec<2.1?'reach':sec>4.45&&sec<5.2?'tap':'down',mood:sec>5.2?'relief':'work',eyes:'lookR'});
-  if(sec>5.6)pill(c,'Routine sent. Exception with you.',320,1155);
+  if(sec>OUTCOMES[8].at)pill(c,OUTCOMES[8].text,320,1155);
  },
  9(c,t,S){
   const sec=t*1.75,x=snap(130+300*eInOut((sec-.2)/1.3));

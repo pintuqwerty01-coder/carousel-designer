@@ -1,25 +1,38 @@
-# ART stock replenishment — Style 1, revision 15
+# ART stock replenishment — Style 1, revision 16
 
-This revision addresses the size hierarchy, approval handoff and closing composition.
+This revision follows the user's reference for the copy-area treatment, removes the decorative ART header from every slide and clarifies the animation outcomes.
 
-- Headings: a consistent 80px Preahvihear Regular, with deliberate two-line breaks and 1.2 line spacing.
-- Body copy: 34px Poppins Medium / 1.5, enlarged from 30px. Line breaks preserve the approved words.
-- Scene labels: 30px, aligned with the objects they describe. Final status captions: 30px instead of 24px.
-- Documents: 10% larger, consistently applied across scenes; handoff and phone spacing adjusted to preserve clear gaps around the mascot.
-- Canonical mascot: unchanged 240px model, palette and geometry on every slide. Poses remain stepped at 8Hz.
-- Slide 6: the ₹1,00,000 example remains; amounts are 56px, with larger card descriptions.
-- Slide 7: as the hand grips the document at 3.2 seconds, a clearly visible 44px semibold “Awaiting approval” line appears and holds. Taking the request does not automatically approve it.
-- Slide 9: the logo is at the top-left, with clear space. The original aqua vector comes from Style 2's final slide 7. Its paths and white clock hands remain intact; CSS presents its wordmark in ink, as requested by the user. There is no logo patch or central logo.
-- Slide 9: mascot feet and both cartons share the photographed tabletop at y=920. The former floor-level platform is removed. The tablet stays in ART's hands during the entrance and stock check.
-- Slide 9 CTA: “Put ART to work.” is centered, 58px Poppins Bold, readable from the first frame. The lighter top treatment gives the aqua-and-ink logo and ink headline contrast without a rectangular backing.
+## Visual corrections
 
-The user's subtle 12% radial edge vignette is retained. All main copy, the logo and CTA stay stationary. The only conditional copy is the approval status explicitly requested after handoff. No internal logo shapes are animated. The original opening choreography and mascot engine remain pinned in the audit. Prior user directions authorize the pixel props, photographic backgrounds and 5–8-second timing used in this project.
+Slides 1–8 now have the black equivalent of the closing slide's soft white upper fade: dark behind the copy, smoothly fading into the photograph. This is a copy-area treatment, not a black perimeter or rectangular logo panel. The light closing treatment, original aqua vector with the requested ink wordmark, tabletop mascot and cartons, and bold centered CTA are retained.
 
-## Delivery and checks
+The ART dot, wordmark and horizontal rule at the top are removed from every slide's markup. The actual blue-and-black ART logo remains on the closing only. Main headlines on slides 1–8 start at y=112, with the same 84px left margin. The closing retains its corner-logo layout and clear space.
 
-Nine MP4s, 1080 × 1350, 30fps. Durations: 8, 6, 7, 7, 8, 8, 8, 7 and 7 seconds; 66 seconds total. Nine high-quality native JPEGs, a nine-page high-quality PDF and storyboard accompany the videos. The focused review covers slides 4, 5, 7, 8 and 9 in 37 seconds.
+Slide 3's subheading has two left-aligned 820px blocks, both starting at x=84. A 22px gap separates the pain points from their consequence. The approved wording is preserved.
 
-Checks cover original model/choreography, actual rendered brand fonts, fixed text, safe margins, deliberate line breaks, timing of the approval status, the original vector source and requested presentation, logo position, CTA centering/weight/size, native video metadata, browser errors, exported frame comparisons and ZIP integrity. Motion sheets are inspected for hand contact, prop clearance and placement on the photographed table.
+## Meaning and animation timing
+
+| Slide | What the animation establishes | Copy following the action |
+| --- | --- | --- |
+| 1 | ART checks stock and records the update on its tablet. The boxes do not refill. | The original “Stock updated” label refers to the stock record. Original opening choreography retained. |
+| 2 | A routine purchase order forms and completes. | Main copy remains readable throughout; no additional completion claim is introduced. |
+| 3 | Manual paperwork builds up and causes urgency. | No false resolution or success caption. |
+| 4 | Stock dwindles and ART detects the low-stock state. | “Stock is below your reorder point.” appears after 3.5 seconds. It states the finding, without suggesting an order has already been placed. |
+| 5 | ART checks stock on hand and accounts for the loaded incoming shipment on its tablet. | “ART calculates how much stock to reorder.” appears after 5.1 seconds. Incoming stock remains in transit, not received. This present-tense caption accompanies the calculation. Ordering follows the amount rules on slide 6. |
+| 6 | ₹60,000 completes automatically under the ₹1,00,000 example limit; ₹1,50,000 remains pending. | The panels explain the two paths. There is no automatic approval on the exception. |
+| 7 | A person receives the above-limit request. | “Awaiting approval” appears at the handoff, at 3.2 seconds, and remains visible. Receipt is not approval. |
+| 8 | The routine order completes, then an exception reaches the review phone. | “Routine orders placed. Exceptions await approval.” appears after 5.0 seconds, after both destinations are established. |
+| 9 | ART completes the stock-recording task while standing on the table. | The centered “Put ART to work.” CTA is static and readable from the first frame. |
+
+The three revised outcomes and their times live in `content.json` and are injected into the animation from that single source. The vague “check started,” “gap ready” and “exception with you” phrases are removed.
+
+## Delivery and verification
+
+Nine native 1080 × 1350 MP4s, 30fps; durations 8, 6, 7, 7, 8, 8, 8, 7 and 7 seconds, totaling 66 seconds. Nine high-quality JPEGs, a nine-page PDF, storyboard and validation reports. The focused review covers slides 4, 5, 7, 8 and 9 in 37 seconds.
+
+Preahvihear Regular headings remain 80px; Poppins Medium body is 34px. The original 240px mascot, its palette and stepped poses, and the original opening choreography remain unchanged. Text stays stationary. Poppins Semibold is explicitly loaded before late canvas labels appear, preventing a temporary fallback font on the low-stock label. Pixel props, photographic backgrounds, requested logo presentation and 5–8-second durations follow the user's explicit direction. No shared brand kit or guide is modified.
+
+Checks cover header removal on all nine slides, fonts, copy, safe margins, line breaks, slide 3's paragraph alignment, outcome copy and width, approval timing, source-logo geometry and colors, logo clear space, CTA position/weight/size, motion, browser errors, native video metadata, exported frame comparisons and package integrity.
 
 ```bash
 source /workspace/art-carousel-venv/bin/activate
@@ -31,4 +44,4 @@ python audit.py
 python package.py
 ```
 
-Delivery branch: `stock-reorders-style-1-v15`. Earlier versions remain on their separate branches.
+Delivery branch: `stock-reorders-style-1-v16`. Prior revisions remain on separate branches.

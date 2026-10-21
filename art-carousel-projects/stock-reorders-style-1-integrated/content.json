@@ -1,7 +1,7 @@
 {
   "title": "Your shelves called. ART’s already on it.",
   "style": "Style 1",
-  "status": "Revision 15: readable type and props, explicit approval handoff, corner aqua/black vector logo and tabletop closing with bold centered CTA",
+  "status": "Revision 16: soft black copy-area fade, no top ART watermark headers, aligned slide 3 paragraphs and contextual animation outcomes",
   "threshold_example": {
     "currency": "INR",
     "approval_limit": 100000,
@@ -54,7 +54,11 @@
         "When stock hits your reorder point,",
         "ART starts the check."
       ],
-      "duration": 7
+      "duration": 7,
+      "outcome": {
+        "text": "Stock is below your reorder point.",
+        "at": 3.5
+      }
     },
     {
       "headline": [
@@ -65,7 +69,11 @@
         "What’s already on the way",
         "helps shape the next order."
       ],
-      "duration": 8
+      "duration": 8,
+      "outcome": {
+        "text": "ART calculates how much stock to reorder.",
+        "at": 5.1
+      }
     },
     {
       "headline": [
@@ -103,7 +111,11 @@
         "Everyday replenishment keeps moving",
         "within your rules."
       ],
-      "duration": 7
+      "duration": 7,
+      "outcome": {
+        "text": "Routine orders placed. Exceptions await approval.",
+        "at": 5.0
+      }
     },
     {
       "headline": [
