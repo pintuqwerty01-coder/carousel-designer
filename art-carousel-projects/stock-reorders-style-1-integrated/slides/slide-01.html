@@ -46,7 +46,8 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 .col {position:absolute;top:156px;left:84px;right:84px;z-index:4;display:flex;flex-direction:column;gap:26px;}
 .headline {font:400 86px/1.22 Preahvihear,Poppins,sans-serif;letter-spacing:-.01em;color:white;text-shadow:0 2px 18px rgba(0,0,0,.2);}
 .accent {color:#04ADC3;} .body {font:500 32px/1.45 Poppins;color:#F3F6F7;max-width:870px;}
-.s1 .headline,.s2 .headline {font-size:96px;}.s3 .headline {font-size:84px;}.s4 .headline {font-size:80px;}.s5 .headline {font-size:82px;}.s7 .headline {font-size:74px;}.s8 .headline {font-size:80px;}
+.s2 .headline,.s3 .headline {font-size:96px;}.s4 .headline {font-size:84px;}.s5 .headline {font-size:80px;}.s6 .headline {font-size:82px;}.s8 .headline {font-size:74px;}.s9 .headline {font-size:80px;}
+.s1 .headline {font-size:78px;} .body {font-size:30px;line-height:1.48;}
 .stage {position:absolute;inset:0;z-index:2;pointer-events:none;background:transparent;} #scene {display:block;width:1080px;height:1350px;}
 .handle {position:absolute;left:84px;bottom:92px;z-index:4;font:500 23px/1 Poppins;letter-spacing:.02em;color:#F0F4F5;text-shadow:0 1px 4px black;}
 .count {position:absolute;right:84px;bottom:92px;z-index:4;font:500 23px/1 Poppins;letter-spacing:3px;color:#F0F4F5;}
@@ -59,12 +60,12 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 .amount {font:600 52px/1.2 Poppins;font-variant-numeric:tabular-nums;letter-spacing:-1px;margin-top:15px;}
 .panel p {font:400 27px/1.4 Poppins;margin-top:15px;}
 </style></head><body>
- <div id="root" data-composition-id="slide-01" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s1 " data-start="0" data-duration="4">
- <div class="backdrop"><img src="assets/aisle.png" alt="Photorealistic stockroom scene"></div><div class="shade"></div>
+ <div id="root" data-composition-id="slide-01" data-start="0" data-duration="7" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s1 " data-start="0" data-duration="7">
+ <div class="backdrop"><img src="assets/shelves.png" alt="Photorealistic stockroom scene"></div><div class="shade"></div>
  <div class="topline"><span class="brand-dot"></span>ART<span class="rule"></span></div>
- <div class="col"><h1 class="headline">Low stock.<br>Next order,<br><span class="accent">handled.</span></h1><p class="body">ART reorders within your limits.</p></div>
+ <div class="col"><h1 class="headline">Before the shelf<br>runs empty,<br><span class="accent">ART gets moving.</span></h1><p class="body">Low stock becomes the next order.<br>Your rules decide when you step in.</p></div>
  <div class="stage"><canvas id="scene" width="1080" height="1350"></canvas></div>
- <div class="handle">@arealtimetech</div><div class="count">01 / 08</div><canvas id="trail" width="1080" height="80"></canvas></div></div>
+ <div class="handle">@arealtimetech</div><div class="count">01 / 09</div><canvas id="trail" width="1080" height="80"></canvas></div></div>
  <script>// ART pixel robot, canvas engine (frame-by-frame poses). Aiotrix kit only.
 // Grid 24x24 art pixels. drawBot(ctx, x, y, u, pose): (x,y) = top-left of grid, u = px per art pixel.
 // Poses step at 8/s (S = floor(t*8)); travel snaps to 4px. Deterministic: no random, no clocks.
@@ -828,8 +829,16 @@ function drawTrail(ctx, W, i, n, k, dark, aqua) {
 function stroke(c,pts,color=VC.A,width=3,dash=[]) {c.save();c.strokeStyle=color;c.lineWidth=width;c.lineCap='round';c.lineJoin='round';c.setLineDash(dash);c.beginPath();pts.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y));c.stroke();c.restore();}
 function note(c,text,x,y,align='left') {c.save();c.font='500 25px Poppins';c.textAlign=align;c.fillStyle='#FFFFFF';c.shadowColor='rgba(0,0,0,.9)';c.shadowBlur=7;c.fillText(text,x,y);c.restore();}
 function bot(c,x,feet,t,mode='focus',arm='reach',flip=false) {
- const done=mode==='done',alert=mode==='alert';vShadow(c,x+120,feet+4,150,0,true);
- drawBot(c,x,feet-230,10,{dark:true,halo:true,armR:arm,armL:'down',eyes:done?'happy':alert?'wide':'focus',mouth:done?'grin':alert?'o':'smile',bulb:done?'aqua':alert?'red':'yellow',flip});
+ const done=mode==='done',alert=mode==='alert';
+ const arrival=eInOut(t/.7),second=eInOut((t-2.1)/.65);
+ const dx=snap((1-arrival)*(flip?104:-104)+second*(flip?-16:16));
+ const walking=t<.7||(t>2.1&&t<2.75);
+ const step=Math.floor(t*12)%2;
+ const lift=walking?(step?4:0):(done&&t>3?Math.max(0,Math.sin((t-3)*Math.PI*2))*12:0);
+ const blink=Math.floor(t*8)%23===0;
+ const wave=done&&t>3.2?(Math.floor(t*8)%4<2?'wave1':'wave2'):arm;
+ vShadow(c,x+dx+120,feet+4,150,lift,true);
+ drawBot(c,x+dx,snap(feet-230-lift),10,{dark:true,halo:true,armR:wave,armL:walking?'out':'down',legs:walking?(step?'stepL':'stepR'):'stand',eyes:blink?'blink':done?'happy':alert?'wide':'focus',mouth:done?'grin':alert?'o':'smile',bulb:done?'aqua':alert?'red':'yellow',flip});
 }
 function card(c,x,y,w,h,fill=VC.W) {rr(c,x,y,w,h,10);fs(c,fill,VC.K,2.5);rr(c,x+16,y+19,w-32,12,3);fs(c,VC.A);for(let j=0;j<3;j++)stroke(c,[[x+16,y+53+24*j],[x+w-16,y+53+24*j]],'#B8D4D9',3);}
 function corners(c,x,y,w,h,k,color=VC.A) {c.save();c.globalAlpha=clamp01(k);for(const [a,b,dx,dy] of [[x,y,1,1],[x+w,y,-1,1],[x,y+h,1,-1],[x+w,y+h,-1,-1]])stroke(c,[[a,b+dy*25],[a,b],[a+dx*25,b]],color,4);c.restore();}
@@ -838,13 +847,22 @@ function phone(c,x,y,k) {rr(c,x,y,92,130,13);fs(c,VC.K);rr(c,x+7,y+12,78,100,7);
 function tag(c,x,y,text,w=192) {rr(c,x,y,w,45,10);fs(c,'rgba(9,24,29,.88)');stroke(c,[[x+1,y+10],[x+1,y+35]],VC.A,3);note(c,text,x+16,y+31);}
 const SCENES={
  1(c,t,S) {
+   // Hero: ART walks into the real low-stock aisle and turns the signal into a reorder.
+   corners(c,91,584,277,365,eOut((t-.4)/.5));
+   if(t>.7&&t<2.1)vBeam(c,108+eInOut((t-.7)/1.4)*242,600,934);
+   bot(c,492,1138,t,t>2.7?'done':'focus',t>2.2?'hold':'reach',true);
+   if(t>1.7)vCurve(c,[365,757],[575,668],[804,859],eOut((t-1.7)/.8),VC.A,{arrow:true,dash:[6,8],lw:3});
+   if(t>2.1){card(c,792,887+snap(24*(1-eOut((t-2.1)/.5))),146,176);note(c,'Next order',783,1110);}
+   if(t>2.7)vBadge(c,865,955,(t-2.7)/.35,30);
+ },
+ 2(c,t,S) {
    // A reorder card is prepared beside the mascot; real shelves remain visible.
    bot(c,636,1130,t,t>2.5?'done':'focus',t>.7?'reach':'down');
    const q=eOut((t-.6)/.7);card(c,846,910+22*(1-q),112,148);
    if(t>1.45)vCurve(c,[885,872],[759,675],[575,728],(t-1.45)/.7,VC.A,{arrow:true,dash:[5,8],lw:3});
    if(t>2.5)vBadge(c,902,951,(t-2.5)/.3,27);
  },
- 2(c,t,S) {
+ 3(c,t,S) {
    // The mascot works at the actual records table. The callout targets its papers.
    const x=snap(340+eInOut((t-.5)/1.1)*28);
    bot(c,x,978,t,'alert',t>1.5?'reach':'down');
@@ -852,7 +870,7 @@ const SCENES={
    if(t>1.3)vCurve(c,[600,858],[591,764],[743,798],(t-1.3)/.6,VC.A,{arrow:true,dash:[6,8],lw:3});
    if(t>2.45)vMark(c,843,796,'!',(t-2.45)/.3,'bang',1.1);
  },
- 3(c,t,S) {
+ 4(c,t,S) {
    // Scan the photographed left shelf instead of adding a second drawn shelf.
    corners(c,91,584,277,365,Math.max(.2,eOut((t-.3)/.4)));
    if(t>.45&&t<1.85){let x=108+eInOut((t-.45)/1.4)*242;vBeam(c,x,600,934);}
@@ -861,7 +879,7 @@ const SCENES={
    if(t>2.25)vMark(c,378,667,'!',(t-2.25)/.3,'bang',1.05);
    tag(c,99,978,'Reorder point',210);
  },
- 4(c,t,S) {
+ 5(c,t,S) {
    // Connect the actual stock rack to the actual incoming-cart area.
    tag(c,100,670,'On hand',150);tag(c,780,670,'Incoming',180);
    corners(c,109,730,228,255,eOut((t-.4)/.5));
@@ -871,7 +889,7 @@ const SCENES={
    if(t>1.6)vLens(c,687,1001,34,604,1065);
    if(t>2.8)vBadge(c,551,724,(t-2.8)/.3,27);
  },
- 5(c,t,S) {
+ 6(c,t,S) {
    // One mascot and a visible fork. Cards occupy 270px, leaving the photo visible.
    stroke(c,[[534,918],[534,862],[301,862],[301,818]],VC.A,3,[6,8]);
    stroke(c,[[546,918],[546,862],[778,862],[778,818]],VC.A,3,[6,8]);
@@ -881,7 +899,7 @@ const SCENES={
    if(t>2.15){phone(c,797,908,(t-2.15)/.3);vCurve(c,[685,1000],[754,948],[791,950],(t-2.15)/.4,VC.A,{arrow:true,dash:[6,8],lw:3});}
    bot(c,420,1180,t,t>2.7?'done':'focus',t>1.7?'up':'reach');
  },
- 6(c,t,S) {
+ 7(c,t,S) {
    // A request on the photographed review table reaches a person, not a fake warehouse.
    card(c,92,866,152,190,VC.Y);
    bot(c,328,1015,t,'focus',t>1.7?'up':'reach');
@@ -891,7 +909,7 @@ const SCENES={
    vCurve(c,[253,881],[514,654],[674,852],eOut((t-.55)/1.2),VC.A,{arrow:true,dash:[6,8],lw:3});
    if(t>2.6){c.beginPath();c.arc(947,824,11,0,Math.PI*2);fs(c,VC.Y,VC.W,3);}
  },
- 7(c,t,S) {
+ 8(c,t,S) {
    // Routine completion attaches to real cartons; exceptions reach a human.
    tag(c,96,696,'Routine orders',230);tag(c,730,696,'Exceptions',200);
    corners(c,98,781,254,280,eOut((t-.3)/.5));
@@ -899,7 +917,7 @@ const SCENES={
    if(t>2){phone(c,814,862,(t-2)/.3);vCurve(c,[657,984],[733,900],[806,915],(t-2)/.5,VC.A,{arrow:true,dash:[6,8],lw:3});}
    bot(c,424,1151,t,t>2.6?'done':'focus',t>2?'up':'reach');
  },
- 8(c,t,S) {
+ 9(c,t,S) {
    // Rule controls sit on the actual desk; the mascot gestures into the stockroom.
    rr(c,86,797,438,252,18);fs(c,'rgba(8,21,25,.93)','rgba(255,255,255,.24)',2);
    note(c,'Your rules',112,840);
@@ -912,6 +930,6 @@ const SCENES={
 };
 
  const st={t:0},c=document.getElementById('scene').getContext('2d'),tr=document.getElementById('trail').getContext('2d');
- function render(){c.clearRect(0,0,1080,1350);SCENES[1](c,st.t,Math.min(31,Math.floor(st.t*8)));tr.clearRect(0,0,1080,80);tr.save();tr.translate(0,26);drawTrail(tr,1080,1,8,eOut(st.t/.8),true,false);tr.restore();}
- const tl=gsap.timeline({paused:true});tl.to(st,{t:4,duration:4,ease:'none',onUpdate:render},0);window.__timelines={'slide-01':tl};render();
+ function render(){c.clearRect(0,0,1080,1350);SCENES[1](c,st.t*4/7,Math.floor(st.t*8));tr.clearRect(0,0,1080,80);tr.save();tr.translate(0,26);drawTrail(tr,1080,1,9,eOut(st.t/.8),true,false);tr.restore();}
+ const tl=gsap.timeline({paused:true});tl.to(st,{t:7,duration:7,ease:'none',onUpdate:render},0);window.__timelines={'slide-01':tl};render();
  </script></body></html>

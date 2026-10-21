@@ -42,7 +42,6 @@
     "text_pixels": "stationary",
     "actual_rendered_fonts": {
       "h1": [
-        "Poppins",
         "Preahvihear"
       ],
       ".body": [
@@ -80,9 +79,10 @@
     "text_pixels": "stationary",
     "actual_rendered_fonts": {
       "h1": [
+        "Poppins",
         "Preahvihear"
       ],
-      ".panel h2": [
+      ".body": [
         "Poppins Medium"
       ]
     },
@@ -100,7 +100,7 @@
       "h1": [
         "Preahvihear"
       ],
-      ".body": [
+      ".panel h2": [
         "Poppins Medium"
       ]
     },
@@ -129,6 +129,24 @@
   },
   {
     "slide": 8,
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
+    "approved_copy": "exact",
+    "text_pixels": "stationary",
+    "actual_rendered_fonts": {
+      "h1": [
+        "Preahvihear"
+      ],
+      ".body": [
+        "Poppins Medium"
+      ]
+    },
+    "text_layout": "within margins",
+    "scene_motion": "verified at 3 times",
+    "javascript_errors": [],
+    "video": "not checked"
+  },
+  {
+    "slide": 9,
     "photorealistic_full_frame_background": "verified loaded at native resolution",
     "approved_copy": "exact",
     "text_pixels": "stationary",

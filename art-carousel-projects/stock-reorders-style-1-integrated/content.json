@@ -1,17 +1,116 @@
 {
-  "title": "Low stock. Next order, handled.",
+  "title": "Before the shelf runs empty, ART gets moving.",
   "style": "Style 1",
-  "status": "Integrated photographic scenes with typography and foreground anchors designed together; approved copy unchanged",
-  "threshold_example": {"currency": "INR", "approval_limit": 10000, "automatic_order": 6000, "approval_required_order": 15000, "note": "Illustrative values, not configured business rules."},
+  "status": "Revision 6: additional opener, expanded copy, 6–8 second action sequences",
+  "threshold_example": {
+    "currency": "INR",
+    "approval_limit": 10000,
+    "automatic_order": 6000,
+    "approval_required_order": 15000,
+    "note": "Illustrative values, not configured business rules."
+  },
   "handle": "@arealtimetech",
   "slides": [
-    {"headline": ["Low stock.", "Next order, handled."], "body": ["ART reorders within your limits."]},
-    {"headline": ["Stop chasing stock."], "body": ["Manual checks. Late orders.", "Avoidable shortages."]},
-    {"headline": ["ART spots what’s running low."], "body": ["Your stock rules trigger the next step."]},
-    {"headline": ["Check first. Reorder what’s needed."], "body": ["ART checks stock and incoming orders."]},
-    {"headline": ["Your limit. Two clear paths."], "panels": [{"headline": "Within your amount limit", "body": "ART places the order."}, {"headline": "Above your amount limit", "body": "ART sends it for approval."}]},
-    {"headline": ["An exception needs your call."], "body": ["Review. Adjust. Approve or hold."]},
-    {"headline": ["Routine orders move.", "Exceptions reach you."], "body": ["Less chasing. Control where it counts."]},
-    {"headline": ["Set the rules.", "Let ART handle the routine."], "body": ["Make stock replenishment flow."]}
+    {
+      "headline": [
+        "Before the shelf runs empty,",
+        "ART gets moving."
+      ],
+      "body": [
+        "Low stock becomes the next order.",
+        "Your rules decide when you step in."
+      ],
+      "duration": 7
+    },
+    {
+      "headline": [
+        "Low stock.",
+        "Next order, handled."
+      ],
+      "body": [
+        "ART reorders within your limits.",
+        "Set the stock rules once. ART handles the next step."
+      ],
+      "duration": 6
+    },
+    {
+      "headline": [
+        "Stop chasing stock."
+      ],
+      "body": [
+        "Manual checks. Late orders.",
+        "Avoidable shortages.",
+        "By the time someone notices, the shelf can already be empty."
+      ],
+      "duration": 6
+    },
+    {
+      "headline": [
+        "ART spots what’s running low."
+      ],
+      "body": [
+        "Your stock rules trigger the next step.",
+        "When stock hits your reorder point, ART starts the check."
+      ],
+      "duration": 6
+    },
+    {
+      "headline": [
+        "Check first. Reorder what’s needed."
+      ],
+      "body": [
+        "ART checks stock and incoming orders.",
+        "What’s already on the way helps shape the next order."
+      ],
+      "duration": 6
+    },
+    {
+      "headline": [
+        "Your limit. Two clear paths."
+      ],
+      "panels": [
+        {
+          "headline": "Within your amount limit",
+          "body": "ART places the order."
+        },
+        {
+          "headline": "Above your amount limit",
+          "body": "ART sends it for approval."
+        }
+      ],
+      "duration": 8
+    },
+    {
+      "headline": [
+        "An exception needs your call."
+      ],
+      "body": [
+        "Review. Adjust. Approve or hold.",
+        "See the request and decide what happens next."
+      ],
+      "duration": 6
+    },
+    {
+      "headline": [
+        "Routine orders move.",
+        "Exceptions reach you."
+      ],
+      "body": [
+        "Less chasing. Control where it counts.",
+        "Everyday replenishment keeps moving within your rules."
+      ],
+      "duration": 6
+    },
+    {
+      "headline": [
+        "Set the rules.",
+        "Let ART handle the routine."
+      ],
+      "body": [
+        "Make stock replenishment flow.",
+        "Choose your reorder points and spending limits."
+      ],
+      "duration": 6
+    }
   ]
 }
