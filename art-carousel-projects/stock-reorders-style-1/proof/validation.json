@@ -1,7 +1,7 @@
 [
   {
     "slide": 1,
-    "style_1_background": "verified",
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
     "approved_copy": "exact",
     "text_pixels": "stationary",
     "fonts": "loaded",
@@ -12,7 +12,7 @@
   },
   {
     "slide": 2,
-    "style_1_background": "verified",
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
     "approved_copy": "exact",
     "text_pixels": "stationary",
     "fonts": "loaded",
@@ -23,7 +23,7 @@
   },
   {
     "slide": 3,
-    "style_1_background": "verified",
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
     "approved_copy": "exact",
     "text_pixels": "stationary",
     "fonts": "loaded",
@@ -34,7 +34,7 @@
   },
   {
     "slide": 4,
-    "style_1_background": "verified",
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
     "approved_copy": "exact",
     "text_pixels": "stationary",
     "fonts": "loaded",
@@ -45,7 +45,7 @@
   },
   {
     "slide": 5,
-    "style_1_background": "verified",
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
     "approved_copy": "exact",
     "text_pixels": "stationary",
     "fonts": "loaded",
@@ -56,7 +56,7 @@
   },
   {
     "slide": 6,
-    "style_1_background": "verified",
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
     "approved_copy": "exact",
     "text_pixels": "stationary",
     "fonts": "loaded",
@@ -67,7 +67,7 @@
   },
   {
     "slide": 7,
-    "style_1_background": "verified",
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
     "approved_copy": "exact",
     "text_pixels": "stationary",
     "fonts": "loaded",
@@ -78,7 +78,7 @@
   },
   {
     "slide": 8,
-    "style_1_background": "verified",
+    "photorealistic_full_frame_background": "verified loaded at native resolution",
     "approved_copy": "exact",
     "text_pixels": "stationary",
     "fonts": "loaded",

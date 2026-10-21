@@ -1,7 +1,7 @@
 {
   "title": "Low stock. Next order, handled.",
   "style": "Style 1",
-  "status": "Style 1 background revision: white tasks, pale-aqua flat stages, aqua copy strips, ink summary, aqua CTA",
+  "status": "User-directed full-frame photorealistic stockroom backgrounds with original Style 1 animated mascot and props",
   "threshold_example": {"currency": "INR", "approval_limit": 10000, "automatic_order": 6000, "approval_required_order": 15000, "note": "Illustrative values, not configured business rules."},
   "handle": "@arealtimetech",
   "slides": [

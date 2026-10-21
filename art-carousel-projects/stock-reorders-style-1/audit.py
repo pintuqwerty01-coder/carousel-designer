@@ -20,12 +20,10 @@ try:
             page.goto(f'http://127.0.0.1:{server.server_port}/slide-{n:02}.html')
             page.evaluate('document.fonts.ready')
             assert page.evaluate("document.fonts.check('40px Preahvihear') && document.fonts.check('600 40px Poppins')")
-            expected_bg='rgb(26, 26, 26)' if n in [1,7] else 'rgb(4, 173, 195)' if n==8 else 'rgb(255, 255, 255)'
-            bg=page.locator('.slide').evaluate('e=>getComputedStyle(e).backgroundColor')
-            assert bg==expected_bg,(n,bg)
-            if n in [2,3,4,6]:
-                assert page.locator('.stage').evaluate('e=>getComputedStyle(e).backgroundColor')=='rgb(238, 249, 251)'
-                assert page.locator('.body').evaluate('e=>getComputedStyle(e).backgroundColor')=='rgb(221, 243, 247)'
+            photo=page.locator('.backdrop img').evaluate('e=>({loaded:e.complete,w:e.naturalWidth,h:e.naturalHeight,fit:getComputedStyle(e).objectFit,box:[e.getBoundingClientRect().width,e.getBoundingClientRect().height]})')
+            assert photo['loaded'] and photo['w']>=1080 and photo['h']>=1350 and photo['fit']=='cover' and photo['box']==[1080,1350],photo
+            assert page.locator('.stage').evaluate('e=>getComputedStyle(e).backgroundColor')=='rgba(0, 0, 0, 0)'
+            assert page.locator('h1').evaluate('e=>getComputedStyle(e).color')=='rgb(255, 255, 255)'
             s=content['slides'][n-1]
             assert norm(page.locator('h1').inner_text())==norm(' '.join(s['headline']))
             if s.get('panels'):
@@ -55,7 +53,7 @@ try:
                 v=probe['streams'][0]
                 assert (v['width'],v['height'],v['r_frame_rate'],int(v['nb_frames']))==(1080,1350,'30/1',120)
                 assert float(probe['format']['duration'])==4
-            report.append({'slide':n,'style_1_background':'verified','approved_copy':'exact','text_pixels':'stationary','fonts':'loaded','text_layout':'within margins','scene_motion':'verified at 3 times','javascript_errors':errors,'video':'not checked' if '--html-only' in sys.argv else '1080x1350 / 30fps / 4s / 120 frames'})
+            report.append({'slide':n,'photorealistic_full_frame_background':'verified loaded at native resolution','approved_copy':'exact','text_pixels':'stationary','fonts':'loaded','text_layout':'within margins','scene_motion':'verified at 3 times','javascript_errors':errors,'video':'not checked' if '--html-only' in sys.argv else '1080x1350 / 30fps / 4s / 120 frames'})
         browser.close()
 finally:server.shutdown()
 (P/'proof'/('html-validation.json' if '--html-only' in sys.argv else 'validation.json')).write_text(json.dumps(report,indent=2)+'\n')

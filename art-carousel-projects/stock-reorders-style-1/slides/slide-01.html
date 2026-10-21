@@ -79,8 +79,30 @@ h1,.s3 h1,.s4 h1,.s6 h1,.s7 h1 {font-size:74px;line-height:1.22;letter-spacing:-
 .s8 h1 {font-size:74px;} .s8 .stage {background:white;}
 .s8 .body {background:white;color:#1A1A1A;border-color:#1A1A1A;}
 .s8 .topline .marker {background:#1A1A1A;color:white;}
+/* User-directed photographic background revision. Foreground stays Style 1. */
+.slide,.s7,.s8 {background:#101519;color:white;}
+.backdrop,.photo-shade {position:absolute;inset:0;width:1080px;height:1350px;}
+.backdrop {z-index:0;} .backdrop img {width:100%;height:100%;display:block;object-fit:cover;}
+.photo-shade {z-index:1;background:linear-gradient(180deg,rgba(5,11,14,.88) 0%,rgba(5,11,14,.82) 34%,rgba(5,11,14,.40) 57%,rgba(5,11,14,.34) 76%,rgba(5,11,14,.83) 100%);}
+.topline,.col,.stage,.panels,.example-limit {z-index:3;}
+.topline,.cover .topline,.s7 .topline {color:white;} .topline .rule,.s7 .topline .rule,.s8 .topline .rule {background:rgba(255,255,255,.26);}
+h1,.s7 h1 {color:white;text-shadow:0 2px 12px rgba(0,0,0,.25);}
+.hl,.cover .hl,.s7 .hl,.s8 .hl {background:none;color:#04ADC3;}
+.stage,.cover .stage,.s7 .stage,.s8 .stage {background:transparent;border:0;border-radius:0;}
+.stage:before,.cover .stage:before,.s7 .stage:before {display:none;}
+.body,.s7 .body,.s8 .body {color:white;background:rgba(8,17,20,.76);border-left:8px solid #04ADC3;padding:14px 22px 14px 28px;font-weight:500;}
+.cover .body {position:static;border:0;padding:0;background:transparent;color:#F0F4F5;}
+.s7 .topline {display:flex;} .s7 .col {top:152px;} .s7 h1 {font-size:74px;}
+.brandlogo {display:none;}
+.panel,.panel:last-child {background:rgba(255,255,255,.96);color:#1A1A1A;}
+.example-limit {background:rgba(255,255,255,.96);color:#1A1A1A;}
+.example-limit strong {color:#1A1A1A;}
+.handle,.count,.cover .handle,.cover .count,.s7 .handle,.s7 .count,.s8 .handle,.s8 .count {color:#F0F4F5;text-shadow:0 1px 5px black;}
+.s8 .topline .marker {background:#04ADC3;}
+.count {z-index:30;} #trail {z-index:40;}
 </style></head>
 <body><div id="root" data-composition-id="slide-01" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s1 cover" data-start="0" data-duration="4">
+<div class="backdrop"><img src="assets/warehouse-aisle.png" alt="Photorealistic warehouse background"></div><div class="photo-shade"></div>
 <div class="topline"><span class="marker">01/08</span>ART<span class="rule"></span></div>
 
 <div class="col"><h1>Low stock.<br>Next order,<br><span class="hl">handled.</span></h1><p class="body">ART reorders within your limits.</p></div>
@@ -849,7 +871,7 @@ function drawTrail(ctx, W, i, n, k, dark, aqua) {
 function line(c,pts,color=VC.K,width=3,dash=[]) {
   c.save();c.strokeStyle=color;c.lineWidth=width;c.lineCap='round';c.lineJoin='round';c.setLineDash(dash);c.beginPath();pts.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y));c.stroke();c.restore();
 }
-function label(c,text,x,y,color='#58696E',size=22,align='center') {
+function label(c,text,x,y,color='#F0F4F5',size=22,align='center') {
   c.save();c.fillStyle=color;c.font='500 '+size+'px Poppins';c.textAlign=align;c.fillText(text,x,y);c.restore();
 }
 function parcel(c,x,y,w=80,h=64,fill=VC.A) {
@@ -864,6 +886,7 @@ function avatar(c,x,y,r=23) {
   c.beginPath();c.arc(x,y+r*.8,r*.85,Math.PI,Math.PI*2);c.closePath();fs(c,VC.K);c.restore();
 }
 function robot(c,x,y,t,mode='work',dark=false,arm='reach') {
+  dark=!c.canvas.closest('.branch'); // Photo scenes need white legs/halo; slide 5 keeps black legs on its light cards.
   const done=mode==='done',alert=mode==='alert';
   vShadow(c,x+120,y+236,148,0,dark);
   drawBot(c,x,y,10,{dark,halo:dark,armR:arm,armL:'down',legs:'stand',eyes:done?'happy':alert?'wide':'focus',mouth:done?'grin':alert?'o':'smile',bulb:done?'aqua':alert?'red':'yellow'});
@@ -903,7 +926,7 @@ function chasing(c,t,S) {
   }
   sheet(c,657,176,188,222);clock(c,751,123,t);
   const moving=t>.6&&t<2.3,x=snap(302+eInOut((t-.6)/1.7)*65);
-  vShadow(c,x+120,460,148);drawBot(c,x,224,10,{legs:moving?walkLegs(S):'stand',armR:t<1.4?'down':'reach',eyes:'wide',mouth:'wobble',bulb:'red'});
+  vShadow(c,x+120,460,148,0,true);drawBot(c,x,224,10,{dark:true,halo:true,legs:moving?walkLegs(S):'stand',armR:t<1.4?'down':'reach',eyes:'wide',mouth:'wobble',bulb:'red'});
   if(t>2.35)vMark(c,288,110,'!',(t-2.35)/.3,'bang',1);
 }
 function monitor(c,t,S) {

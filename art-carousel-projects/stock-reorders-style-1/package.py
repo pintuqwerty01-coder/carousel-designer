@@ -14,9 +14,9 @@ for video in videos:
     assert float(info['format']['duration'])==4
 cmd=['ffmpeg','-v','error','-y']
 for video in videos:cmd+=['-i',str(video)]
-cmd+=['-filter_complex',''.join(f'[{i}:v]' for i in range(8))+'concat=n=8:v=1:a=0[v]','-map','[v]','-c:v','libx264','-crf','16','-preset','medium','-pix_fmt','yuv420p','-movflags','+faststart','-threads','2',str(proof/'ART-stock-reorders-v3-preview.mp4')]
+cmd+=['-filter_complex',''.join(f'[{i}:v]' for i in range(8))+'concat=n=8:v=1:a=0[v]','-map','[v]','-c:v','libx264','-crf','16','-preset','medium','-pix_fmt','yuv420p','-movflags','+faststart','-threads','2',str(proof/'ART-stock-reorders-v4-preview.mp4')]
 subprocess.run(cmd,check=True)
-subprocess.run(['ffmpeg','-v','error','-y','-i',str(videos[4]),'-filter_complex','fps=12,scale=540:675:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=sierra2_4a','-loop','0',str(proof/'slide-05-threshold-v3.gif')],check=True)
+subprocess.run(['ffmpeg','-v','error','-y','-i',str(videos[4]),'-filter_complex','fps=12,scale=540:675:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=sierra2_4a','-loop','0',str(proof/'slide-05-threshold-v4.gif')],check=True)
 images=[]
 storyboard=Image.new('RGB',(1440,900),'#DDE8EC')
 for n in range(1,9):
@@ -25,16 +25,16 @@ for n in range(1,9):
     im.save(delivery/f'slide-{n:02}.jpg',quality=98,subsampling=0,dpi=(300,300))
     images.append(im)
     storyboard.paste(im.resize((352,440),Image.Resampling.LANCZOS),(((n-1)%4)*360+4,((n-1)//4)*450+5))
-images[0].save(delivery/'ART-stock-reorders-v3.pdf',save_all=True,append_images=images[1:],resolution=72,quality=100,subsampling=0,title='ART stock reorders — Style 1 revision 3')
-storyboard.save(proof/'ART-stock-reorders-v3-storyboard.jpg',quality=95)
+images[0].save(delivery/'ART-stock-reorders-v4.pdf',save_all=True,append_images=images[1:],resolution=72,quality=100,subsampling=0,title='ART stock reorders — Style 1 revision 4')
+storyboard.save(proof/'ART-stock-reorders-v4-storyboard.jpg',quality=95)
 for n,name in [(1,'cover-video-frame.png'),(5,'threshold-video-frame.png')]:
     subprocess.run(['ffmpeg','-v','error','-y','-ss','3.4','-i',str(videos[n-1]),'-frames:v','1',str(proof/name)],check=True)
-with zipfile.ZipFile(delivery/'ART-stock-reorders-v3-all-slides.zip','w',zipfile.ZIP_DEFLATED) as z:
+with zipfile.ZipFile(delivery/'ART-stock-reorders-v4-all-slides.zip','w',zipfile.ZIP_DEFLATED) as z:
     for n,video in enumerate(videos,1):
         z.write(video,f'videos/slide-{n:02}.mp4')
         z.write(delivery/f'slide-{n:02}.jpg',f'JPEGs/slide-{n:02}.jpg')
     for f in ['README.md','content.json']:z.write(P/f,f)
-    z.write(delivery/'ART-stock-reorders-v3.pdf','ART-stock-reorders-v3.pdf')
+    z.write(delivery/'ART-stock-reorders-v4.pdf','ART-stock-reorders-v4.pdf')
     z.write(proof/'validation.json','validation.json')
-    z.write(proof/'ART-stock-reorders-v3-storyboard.jpg','storyboard.jpg')
+    z.write(proof/'ART-stock-reorders-v4-storyboard.jpg','storyboard.jpg')
 print('Packaged 8 MP4s, 8 JPEGs, PDF, storyboard and validation report.')

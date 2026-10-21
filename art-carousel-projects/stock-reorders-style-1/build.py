@@ -7,6 +7,15 @@ C=json.loads((P/'content.json').read_text())
 A=P/'slides'/'assets'
 A.mkdir(parents=True,exist_ok=True)
 shutil.copytree(K/'assets'/'kit',A,dirs_exist_ok=True)
+photos={
+    'warehouse-aisle.png':P.parent/'festive-dispatch-realistic/slides/assets/cover-art.png',
+    'stockroom-desk.png':P.parent/'festive-dispatch-photo/slides/assets/clean-02.png',
+    'stockroom-shelves.png':P.parent/'festive-dispatch-photo/slides/assets/clean-04.png',
+    'stockroom-review.png':P.parent/'festive-dispatch-photo/slides/assets/clean-05.png',
+    'stockroom-dispatch.png':P.parent/'festive-dispatch-photo/slides/assets/clean-06.png',
+}
+for name,source in photos.items():shutil.copy2(source,A/name)
+photo_by_slide=['warehouse-aisle.png','stockroom-desk.png','stockroom-shelves.png','stockroom-dispatch.png','warehouse-aisle.png','stockroom-review.png','stockroom-dispatch.png','warehouse-aisle.png']
 lib='\n'.join((K/'assets'/'kit'/'js'/f).read_text() for f in ['pixelbot.js','props-vector.js','scenes-library.js'])
 lib+='\n'+(P/'scenes.js').read_text()
 css=(K/'assets'/'shared.css').read_text()+'''
@@ -53,6 +62,27 @@ h1,.s3 h1,.s4 h1,.s6 h1,.s7 h1 {font-size:74px;line-height:1.22;letter-spacing:-
 .s8 h1 {font-size:74px;} .s8 .stage {background:white;}
 .s8 .body {background:white;color:#1A1A1A;border-color:#1A1A1A;}
 .s8 .topline .marker {background:#1A1A1A;color:white;}
+/* User-directed photographic background revision. Foreground stays Style 1. */
+.slide,.s7,.s8 {background:#101519;color:white;}
+.backdrop,.photo-shade {position:absolute;inset:0;width:1080px;height:1350px;}
+.backdrop {z-index:0;} .backdrop img {width:100%;height:100%;display:block;object-fit:cover;}
+.photo-shade {z-index:1;background:linear-gradient(180deg,rgba(5,11,14,.88) 0%,rgba(5,11,14,.82) 34%,rgba(5,11,14,.40) 57%,rgba(5,11,14,.34) 76%,rgba(5,11,14,.83) 100%);}
+.topline,.col,.stage,.panels,.example-limit {z-index:3;}
+.topline,.cover .topline,.s7 .topline {color:white;} .topline .rule,.s7 .topline .rule,.s8 .topline .rule {background:rgba(255,255,255,.26);}
+h1,.s7 h1 {color:white;text-shadow:0 2px 12px rgba(0,0,0,.25);}
+.hl,.cover .hl,.s7 .hl,.s8 .hl {background:none;color:#04ADC3;}
+.stage,.cover .stage,.s7 .stage,.s8 .stage {background:transparent;border:0;border-radius:0;}
+.stage:before,.cover .stage:before,.s7 .stage:before {display:none;}
+.body,.s7 .body,.s8 .body {color:white;background:rgba(8,17,20,.76);border-left:8px solid #04ADC3;padding:14px 22px 14px 28px;font-weight:500;}
+.cover .body {position:static;border:0;padding:0;background:transparent;color:#F0F4F5;}
+.s7 .topline {display:flex;} .s7 .col {top:152px;} .s7 h1 {font-size:74px;}
+.brandlogo {display:none;}
+.panel,.panel:last-child {background:rgba(255,255,255,.96);color:#1A1A1A;}
+.example-limit {background:rgba(255,255,255,.96);color:#1A1A1A;}
+.example-limit strong {color:#1A1A1A;}
+.handle,.count,.cover .handle,.cover .count,.s7 .handle,.s7 .count,.s8 .handle,.s8 .count {color:#F0F4F5;text-shadow:0 1px 5px black;}
+.s8 .topline .marker {background:#04ADC3;}
+.count {z-index:30;} #trail {z-index:40;}
 '''
 for i,key,title in [
     (1,'hero','Low stock.<br>Next order,<br><span class="hl">handled.</span>'),
@@ -72,6 +102,7 @@ for i,key,title in [
         panels+='<div class="panels">'+''.join('<section class="panel"><h2>'+html.escape(p['headline'])+'</h2><p>'+html.escape(p['body'])+'</p><div class="amount"><small>Order value</small>₹'+format(ex['automatic_order'] if j==0 else ex['approval_required_order'],',')+'</div></section>' for j,p in enumerate(s['panels']))+'</div>'
     doc=f'''<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080,height=1350"><script src="assets/gsap.min.js"></script><style>{css}</style></head>
 <body><div id="root" data-composition-id="{sid}" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s{i} {'branch' if i==5 else 'cover' if i==1 else ''}" data-start="0" data-duration="4">
+<div class="backdrop"><img src="assets/{photo_by_slide[i-1]}" alt="Photorealistic warehouse background"></div><div class="photo-shade"></div>
 <div class="topline"><span class="marker">{i:02d}/08</span>ART<span class="rule"></span></div>
 {'<img class="brandlogo" src="assets/brand/logo-on-dark.png" alt="A Realtime Tech">' if i==7 else ''}
 <div class="col"><h1>{title}</h1><p class="body">{body}</p></div>{panels}
@@ -79,7 +110,7 @@ for i,key,title in [
 <div class="handle">@arealtimetech</div><div class="count">{i:02d} / 08</div><canvas id="trail" width="1080" height="80"></canvas></div></div>
 <script>{lib}
 const st={{t:0}},c=document.getElementById('scene').getContext('2d'),tr=document.getElementById('trail').getContext('2d');
-function render(){{c.clearRect(0,0,912,520);c.save();c.translate(0,{0 if i==5 else 10 if i==1 else 34});{key}(c,st.t,Math.min(31,Math.floor(st.t*8)));c.restore();tr.clearRect(0,0,1080,80);tr.save();tr.translate(0,26);drawTrail(tr,1080,{i},8,eOut(st.t/.8),{'true' if i in [1,7] else 'false'},{'true' if i==8 else 'false'});tr.restore();}}
+function render(){{c.clearRect(0,0,912,520);c.save();c.translate(0,{0 if i==5 else 10 if i==1 else 34});{key}(c,st.t,Math.min(31,Math.floor(st.t*8)));c.restore();tr.clearRect(0,0,1080,80);tr.save();tr.translate(0,26);drawTrail(tr,1080,{i},8,eOut(st.t/.8),true,false);tr.restore();}}
 const tl=gsap.timeline({{paused:true}});tl.to(st,{{t:4,duration:4,ease:'none',onUpdate:render}},0);window.__timelines={{'{sid}':tl}};render();
 </script></body></html>'''
     (P/'slides'/f'{sid}.html').write_text(doc)

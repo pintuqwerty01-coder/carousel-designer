@@ -3,7 +3,7 @@
 function line(c,pts,color=VC.K,width=3,dash=[]) {
   c.save();c.strokeStyle=color;c.lineWidth=width;c.lineCap='round';c.lineJoin='round';c.setLineDash(dash);c.beginPath();pts.forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y));c.stroke();c.restore();
 }
-function label(c,text,x,y,color='#58696E',size=22,align='center') {
+function label(c,text,x,y,color='#F0F4F5',size=22,align='center') {
   c.save();c.fillStyle=color;c.font='500 '+size+'px Poppins';c.textAlign=align;c.fillText(text,x,y);c.restore();
 }
 function parcel(c,x,y,w=80,h=64,fill=VC.A) {
@@ -18,6 +18,7 @@ function avatar(c,x,y,r=23) {
   c.beginPath();c.arc(x,y+r*.8,r*.85,Math.PI,Math.PI*2);c.closePath();fs(c,VC.K);c.restore();
 }
 function robot(c,x,y,t,mode='work',dark=false,arm='reach') {
+  dark=!c.canvas.closest('.branch'); // Photo scenes need white legs/halo; slide 5 keeps black legs on its light cards.
   const done=mode==='done',alert=mode==='alert';
   vShadow(c,x+120,y+236,148,0,dark);
   drawBot(c,x,y,10,{dark,halo:dark,armR:arm,armL:'down',legs:'stand',eyes:done?'happy':alert?'wide':'focus',mouth:done?'grin':alert?'o':'smile',bulb:done?'aqua':alert?'red':'yellow'});
@@ -57,7 +58,7 @@ function chasing(c,t,S) {
   }
   sheet(c,657,176,188,222);clock(c,751,123,t);
   const moving=t>.6&&t<2.3,x=snap(302+eInOut((t-.6)/1.7)*65);
-  vShadow(c,x+120,460,148);drawBot(c,x,224,10,{legs:moving?walkLegs(S):'stand',armR:t<1.4?'down':'reach',eyes:'wide',mouth:'wobble',bulb:'red'});
+  vShadow(c,x+120,460,148,0,true);drawBot(c,x,224,10,{dark:true,halo:true,legs:moving?walkLegs(S):'stand',armR:t<1.4?'down':'reach',eyes:'wide',mouth:'wobble',bulb:'red'});
   if(t>2.35)vMark(c,288,110,'!',(t-2.35)/.3,'bang',1);
 }
 function monitor(c,t,S) {
