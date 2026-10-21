@@ -24,7 +24,7 @@ try:
             assert page.evaluate("document.fonts.check('40px Preahvihear') && document.fonts.check('600 40px Poppins')")
             root=cdp.send('DOM.getDocument')['root']['nodeId']
             fonts={}
-            for selector,required in [('h1','Preahvihear'),('.panel h2' if n==6 else '.body','Poppins')]:
+            for selector,required in [('h1','Preahvihear'),('.panel h2' if n==6 else '.body','Poppins'),('.topline','Poppins')]:
                 node=cdp.send('DOM.querySelector',{'nodeId':root,'selector':selector})['nodeId']
                 used=cdp.send('CSS.getPlatformFontsForNode',{'nodeId':node})['fonts']
                 assert used and all(f['isCustomFont'] and f['glyphCount']>0 for f in used),(n,selector,used)
@@ -43,6 +43,7 @@ try:
             assert photo['loaded'] and photo['w']>=1080 and photo['h']>=1350 and photo['fit']=='cover' and photo['box']==[1080,1350],photo
             assert page.locator('.stage').evaluate('e=>getComputedStyle(e).backgroundColor')=='rgba(0, 0, 0, 0)'
             assert page.locator('h1').evaluate('e=>getComputedStyle(e).color')=='rgb(255, 255, 255)'
+            assert norm(page.locator('.topline').inner_text())==norm(content['brand_full_name'] if n in (1,9) else 'ART')
             s=content['slides'][n-1]
             assert norm(page.locator('h1').inner_text())==norm(' '.join(s['headline']))
             if s.get('panels'):
@@ -56,7 +57,7 @@ try:
                 assert ex['automatic_order']<=ex['approval_limit']<ex['approval_required_order']
             else:
                 assert norm(page.locator('.body').inner_text())==norm(' '.join(s['body']))
-            selector='h1:visible,.body:visible,.panel h2,.panel p,.amount,.example-limit'
+            selector='.topline,h1:visible,.body:visible,.panel h2,.panel p,.amount,.example-limit'
             boxes=page.locator(selector).evaluate_all('els=>els.map(e=>{let r=e.getBoundingClientRect();return {left:r.left,right:r.right,bottom:r.bottom,scroll:e.scrollWidth,width:e.clientWidth}})')
             assert all(b['left']>=83 and b['right']<=997 and b['bottom']<1220 and b['scroll']<=b['width']+1 for b in boxes),boxes
             text_frames=[];scene_frames=[]

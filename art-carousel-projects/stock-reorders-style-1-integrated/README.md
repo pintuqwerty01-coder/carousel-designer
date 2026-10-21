@@ -1,4 +1,6 @@
-# ART stock replenishment — Style 1, revision 10
+# ART stock replenishment — Style 1, revision 11
+
+Revision 11 applies the approved marketing headline “Your shelves called. ART’s already on it.” and its supporting copy. The opening does not mention spending limits. “ART (A Realtime Tech)” appears in the brand line on slides 1 and 9, in the approved Poppins family. The existing animated opening is preserved. Masters 1, 2 and 9 are rerendered for this revision. Slide 2 is the next scene: its order form fills automatically, confirms completion and is lifted slightly as ART reaches to collect it. The mascot stays anchored to the tabletop at y=920.
 
 The user explicitly requested a new opening: ART walks in from the side, checks animated boxes in the mascot's pixel-art style, takes a tablet and updates the stock. This overrides the default guide's vector-prop rule for these opening props.
 
@@ -15,7 +17,7 @@ The user explicitly requested a new opening: ART walks in from the side, checks 
 
 The opening uses pixel cartons, a pixel tablet and pixel arm extensions, with the same stepped geometry and light outline treatment as the mascot. The realistic background, stationary headline and established fonts stay in place. Boxes stand on the same floor line as ART. No stock quantities or business settings are invented.
 
-Only the opening master is rerendered. The corrected slide 2 tabletop placement and slides 3–9 are preserved. The opening is now eight seconds, bringing the complete carousel to 58 seconds. The separate opening preview shows only this eight-second sequence.
+The opening choreography was introduced in revision 10. The corrected slide 2 tabletop placement and slides 3–9 are preserved. The opening is now eight seconds, bringing the complete carousel to 58 seconds. The separate opening preview shows only this eight-second sequence.
 
 ## What changed
 
@@ -26,7 +28,7 @@ Each slide now has a specific visual purpose:
 | Slide | Visual purpose |
 | --- | --- |
 | 01 | Side entrance → inspect two pixel cartons → pick up tablet → update stock. |
-| 02 | One completed purchase order represents the routine outcome. |
+| 02 | An order form builds automatically, confirms completion, then ART collects it while standing on the tabletop. |
 | 03 | A pile of papers represents manual checking, with an unresolved mascot reaction. |
 | 04 | A stock-data bar reaches its reorder point and triggers the rule. This is a data annotation, not a shelf scanner. |
 | 05 | The pictured incoming trolley and on-hand stock are identified before the reorder gap is considered. No quantities are invented. |
@@ -55,4 +57,4 @@ python package.py
 
 The ZIP contains nine MP4 masters, nine high-quality native-size JPEGs, a nine-page PDF and validation reports. The combined video is a compressed viewing copy; the storyboard comes from actual exported frames.
 
-Delivered on `stock-reorders-style-1-v10`. Previous revisions remain on their own branches.
+Delivered on `stock-reorders-style-1-v11`. Previous revisions remain on their own branches.

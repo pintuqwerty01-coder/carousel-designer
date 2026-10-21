@@ -90,12 +90,19 @@ const SCENES={
   if(done)text(c,'Stock updated',x+23,1180,25,'#DDECE9');
  },
  2(c,t,S){
-  // At x=380 the photographed tabletop is y=875..982. Feet sit at y=920,
-  // well inside its surface, rather than at y=1012 on the vertical apron.
-  // The document edge shares the hand x; its base rests on that same surface.
-  const hand=robot(c,380,920,S,{arm:'reach',done:t>2.55,eyes:'lookR'});
-  paper(c,hand.x,752,158,168);
-  if(t>1.65)vBadge(c,hand.x+120,887,eOut((t-1.65)/.65),21);
+  // The stock check leads to an automatically prepared order, then collection.
+  // ART remains on the photographed tabletop at y=920 throughout.
+  const sec=t*1.5,collect=eInOut((sec-3.35)/.45),x=595,y=752-collect*20;
+  robot(c,380,920,S,{arm:sec>3.2?'reach':'down',done:sec>3.65,eyes:'lookR'});
+  c.save();c.shadowColor='rgba(0,0,0,.23)';c.shadowBlur=12;c.shadowOffsetY=6;
+  rr(c,x,y,158,168,3);fs(c,'#F4F0E7');c.shadowColor='transparent';
+  ink(c,[[x+14,y+24],[x+144,y+24]],'#04ADC3',5);
+  for(let j=0;j<4;j++){
+   const k=eInOut((sec-.65-j*.45)/.4),w=125-(j%2)*18;
+   if(k>0)ink(c,[[x+14,y+48+j*19],[x+14+w*k,y+48+j*19]],'#9BA8A7',2);
+  }
+  if(sec>2.6)vBadge(c,x+120,y+135,eOut((sec-2.6)/.5),21);
+  c.restore();
  },
  3(c,t,S){
   // Manual checking is the only scene with a pile of paperwork.

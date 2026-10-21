@@ -1,7 +1,7 @@
 {
-  "title": "Before the shelf runs empty, ART gets moving.",
+  "title": "Your shelves called. ART’s already on it.",
   "style": "Style 1",
-  "status": "Revision 10: side entrance, pixel cartons inspected in sequence, visible tablet pickup and stock update",
+  "status": "Revision 11: approved marketing opening; ART full name on first and final slides; next slide shows automatic order preparation",
   "threshold_example": {
     "currency": "INR",
     "approval_limit": 10000,
@@ -13,12 +13,12 @@
   "slides": [
     {
       "headline": [
-        "Before the shelf runs empty,",
-        "ART gets moving."
+        "Your shelves called.",
+        "ART’s already on it."
       ],
       "body": [
-        "Low stock becomes the next order.",
-        "Your rules decide when you step in."
+        "Low stock spotted. Reorder handled.",
+        "One less thing for your team to chase."
       ],
       "duration": 8
     },
@@ -112,5 +112,6 @@
       ],
       "duration": 6
     }
-  ]
+  ],
+  "brand_full_name": "ART (A Realtime Tech)"
 }

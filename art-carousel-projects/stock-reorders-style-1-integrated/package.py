@@ -21,16 +21,18 @@ for idx,video in enumerate(videos):
     error=sum(ImageStat.Stat(ImageChops.difference(actual,expected)).mean)/3
     assert error<6,(video.name,error)
     export_frames.append(actual)
-    export_checks.append({'slide':video.stem,'actual_export_background_and_design':'matches revision-10 reference still','mean_rgb_pixel_error':round(error,3)})
+    export_checks.append({'slide':video.stem,'actual_export_background_and_design':'matches revision-11 reference still','mean_rgb_pixel_error':round(error,3)})
 (proof/'export-validation.json').write_text(json.dumps(export_checks,indent=2)+'\n')
 cmd=['ffmpeg','-v','error','-y']
 for video in videos:cmd+=['-i',str(video)]
-cmd+=['-filter_complex',''.join(f'[{i}:v]' for i in range(9))+'concat=n=9:v=1:a=0[v]','-map','[v]','-c:v','libx264','-crf','16','-preset','medium','-pix_fmt','yuv420p','-movflags','+faststart','-threads','2',str(proof/'ART-stock-reorders-v10-preview.mp4')]
+cmd+=['-filter_complex',''.join(f'[{i}:v]' for i in range(9))+'concat=n=9:v=1:a=0[v]','-map','[v]','-c:v','libx264','-crf','16','-preset','medium','-pix_fmt','yuv420p','-movflags','+faststart','-threads','2',str(proof/'ART-stock-reorders-v11-preview.mp4')]
 subprocess.run(cmd,check=True)
 # Focused opening review at native resolution.
-subprocess.run(['ffmpeg','-v','error','-y','-i',str(videos[0]),'-c:v','libx264','-crf','16','-pix_fmt','yuv420p','-movflags','+faststart','-threads','2',str(proof/'opening-sequence-v10.mp4')],check=True)
-export_frames[0].save(proof/'opening-sequence-v10.jpg',quality=98,subsampling=0)
-subprocess.run(['ffmpeg','-v','error','-y','-i',str(videos[5]),'-filter_complex','fps=12,scale=540:675:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=sierra2_4a','-loop','0',str(proof/'slide-06-threshold-v10.gif')],check=True)
+subprocess.run(['ffmpeg','-v','error','-y','-i',str(videos[0]),'-c:v','libx264','-crf','16','-pix_fmt','yuv420p','-movflags','+faststart','-threads','2',str(proof/'opening-sequence-v11.mp4')],check=True)
+export_frames[0].save(proof/'opening-sequence-v11.jpg',quality=98,subsampling=0)
+subprocess.run(['ffmpeg','-v','error','-y','-i',str(videos[1]),'-c:v','libx264','-crf','16','-pix_fmt','yuv420p','-movflags','+faststart','-threads','2',str(proof/'slide-02-order-v11.mp4')],check=True)
+export_frames[1].save(proof/'slide-02-order-v11.jpg',quality=98,subsampling=0)
+subprocess.run(['ffmpeg','-v','error','-y','-i',str(videos[5]),'-filter_complex','fps=12,scale=540:675:flags=lanczos,split[a][b];[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=sierra2_4a','-loop','0',str(proof/'slide-06-threshold-v11.gif')],check=True)
 images=[]
 storyboard=Image.new('RGB',(1296,1620),'#DDE8EC')
 for n in range(1,10):
@@ -39,17 +41,17 @@ for n in range(1,10):
     im.save(delivery/f'slide-{n:02}.jpg',quality=98,subsampling=0,dpi=(300,300))
     images.append(im)
     storyboard.paste(export_frames[n-1].resize((424,530),Image.Resampling.LANCZOS),(((n-1)%3)*432+4,((n-1)//3)*540+5))
-images[0].save(delivery/'ART-stock-reorders-v10.pdf',save_all=True,append_images=images[1:],resolution=72,quality=100,subsampling=0,title='ART stock reorders — Style 1 revision 10')
-storyboard.save(proof/'ART-stock-reorders-v10-storyboard.jpg',quality=95)
+images[0].save(delivery/'ART-stock-reorders-v11.pdf',save_all=True,append_images=images[1:],resolution=72,quality=100,subsampling=0,title='ART stock reorders — Style 1 revision 11')
+storyboard.save(proof/'ART-stock-reorders-v11-storyboard.jpg',quality=95)
 for n,name in [(1,'cover-video-frame.png'),(6,'threshold-video-frame.png')]:
     subprocess.run(['ffmpeg','-v','error','-y','-ss',str(durations[n-1]-.0334),'-i',str(videos[n-1]),'-frames:v','1',str(proof/name)],check=True)
-with zipfile.ZipFile(delivery/'ART-stock-reorders-v10-all-slides.zip','w',zipfile.ZIP_DEFLATED) as z:
+with zipfile.ZipFile(delivery/'ART-stock-reorders-v11-all-slides.zip','w',zipfile.ZIP_DEFLATED) as z:
     for n,video in enumerate(videos,1):
         z.write(video,f'videos/slide-{n:02}.mp4')
         z.write(delivery/f'slide-{n:02}.jpg',f'JPEGs/slide-{n:02}.jpg')
     for f in ['README.md','content.json']:z.write(P/f,f)
-    z.write(delivery/'ART-stock-reorders-v10.pdf','ART-stock-reorders-v10.pdf')
+    z.write(delivery/'ART-stock-reorders-v11.pdf','ART-stock-reorders-v11.pdf')
     z.write(proof/'validation.json','validation.json')
     z.write(proof/'export-validation.json','export-validation.json')
-    z.write(proof/'ART-stock-reorders-v10-storyboard.jpg','storyboard.jpg')
+    z.write(proof/'ART-stock-reorders-v11-storyboard.jpg','storyboard.jpg')
 print('Packaged 9 MP4s, 9 JPEGs, PDF, storyboard and validation report.')

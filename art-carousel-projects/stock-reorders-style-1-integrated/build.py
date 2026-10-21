@@ -42,7 +42,7 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 .panel p {font:400 27px/1.4 Poppins;margin-top:15px;}
 '''
 headlines=[
- 'Before the shelf<br>runs empty,<br><span class="accent">ART gets moving.</span>',
+ 'Your shelves called.<br><span class="accent">ART’s already on it.</span>',
  'Low stock.<br>Next order,<br><span class="accent">handled.</span>',
  'Stop chasing<br><span class="accent">stock.</span>',
  'ART spots what’s<br><span class="accent">running low.</span>',
@@ -61,7 +61,7 @@ for i,s in enumerate(C['slides'],1):
  doc=f'''<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080,height=1350"><script src="assets/gsap.min.js"></script><style>{css}</style></head><body>
  <div id="root" data-composition-id="{sid}" data-start="0" data-duration="{s['duration']}" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s{i} {'has-panels' if i==6 else ''}" data-start="0" data-duration="{s['duration']}">
  <div class="backdrop"><img src="assets/{photo_order[i-1]}" alt="Photorealistic stockroom scene"></div><div class="shade"></div>
- <div class="topline"><span class="brand-dot"></span>ART<span class="rule"></span></div>
+ <div class="topline"><span class="brand-dot"></span>{html.escape(C['brand_full_name']) if i in (1,9) else 'ART'}<span class="rule"></span></div>
  <div class="col"><h1 class="headline">{headlines[i-1]}</h1><p class="body">{body}</p></div>{panels}
  <div class="stage"><canvas id="scene" width="1080" height="1350"></canvas></div>
  <div class="handle">@arealtimetech</div><div class="count">{i:02d} / 09</div><canvas id="trail" width="1080" height="80"></canvas></div></div>
