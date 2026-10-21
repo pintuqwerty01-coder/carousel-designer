@@ -14,7 +14,7 @@ photos={
  'controls.png':P.parent/'festive-dispatch-photo/slides/assets/clean-05.png',
 }
 for name,source in photos.items():shutil.copy2(source,A/name)
-photo_order=['shelves.png','aisle.png','records.png','shelves.png','incoming.png','aisle.png','review.png','incoming.png','controls.png']
+photo_order=['shelves.png','aisle.png','records.png','shelves.png','incoming.png','records.png','review.png','incoming.png','controls.png']
 lib='\n'.join((K/'assets'/'kit'/'js'/name).read_text() for name in ['pixelbot.js','props-vector.js','scenes-library.js'])+'\n'+(P/'scenes.js').read_text()
 css=(K/'assets'/'shared.css').read_text()+'''
 html,body {background:#101519;} #root {position:relative;width:1080px;height:1350px;overflow:hidden;}
@@ -35,7 +35,7 @@ html,body {background:#101519;} #root {position:relative;width:1080px;height:135
 #trail {position:absolute;left:0;bottom:0;width:1080px;height:80px;z-index:5;}
 .has-panels .body {display:none;}.example-limit {position:absolute;top:422px;left:84px;width:912px;z-index:4;font:500 27px/1.4 Poppins;color:white;display:flex;align-items:center;gap:12px;}
 .example-limit:before {content:'';width:7px;height:42px;background:#04ADC3;border-radius:4px;margin-right:10px;}.example-limit strong {font-weight:600;}
-.panels {position:absolute;top:538px;left:84px;width:912px;display:grid;grid-template-columns:1fr 1fr;gap:26px;z-index:4;}
+.panels {position:absolute;top:512px;left:84px;width:912px;display:grid;grid-template-columns:1fr 1fr;gap:26px;z-index:4;}
 .panel {border-radius:20px;background:rgba(255,255,255,.97);padding:26px 28px;height:270px;color:#1A1A1A;box-shadow:0 8px 24px rgba(0,0,0,.10);border-top:5px solid #04ADC3;}
 .panel:last-child {border-top-color:#FFD166;}.panel h2 {font:500 27px/1.35 Poppins;letter-spacing:-.2px;}
 .amount {font:600 52px/1.2 Poppins;font-variant-numeric:tabular-nums;letter-spacing:-1px;margin-top:15px;}
@@ -67,7 +67,7 @@ for i,s in enumerate(C['slides'],1):
  <div class="handle">@arealtimetech</div><div class="count">{i:02d} / 09</div><canvas id="trail" width="1080" height="80"></canvas></div></div>
  <script>{lib}
  const st={{t:0}},c=document.getElementById('scene').getContext('2d'),tr=document.getElementById('trail').getContext('2d');
- function render(){{c.clearRect(0,0,1080,1350);SCENES[{i}](c,st.t*4/{s['duration']},Math.floor(st.t*8));tr.clearRect(0,0,1080,80);tr.save();tr.translate(0,26);drawTrail(tr,1080,{i},9,eOut(st.t/.8),true,false);tr.restore();}}
+ function render(){{c.clearRect(0,0,1080,1350);SCENES[{i}](c,st.t*4/{s['duration']},Math.floor(st.t*8));tr.clearRect(0,0,1080,80);for(let j=0;j<9;j++){{tr.fillStyle=j<{i}?'#04ADC3':'rgba(255,255,255,.18)';tr.fillRect(84+j*103,39,88,3);}}}}
  const tl=gsap.timeline({{paused:true}});tl.to(st,{{t:{s['duration']},duration:{s['duration']},ease:'none',onUpdate:render}},0);window.__timelines={{'{sid}':tl}};render();
  </script></body></html>'''
  (P/'slides'/f'{sid}.html').write_text(doc);print('built',sid)

@@ -2,7 +2,7 @@
   {
     "slide": 1,
     "photorealistic_full_frame_background": "verified loaded at native resolution",
-    "approved_copy": "exact",
+    "script_copy": "exact",
     "text_pixels": "stationary",
     "actual_rendered_fonts": {
       "h1": [
@@ -20,7 +20,7 @@
   {
     "slide": 2,
     "photorealistic_full_frame_background": "verified loaded at native resolution",
-    "approved_copy": "exact",
+    "script_copy": "exact",
     "text_pixels": "stationary",
     "actual_rendered_fonts": {
       "h1": [
@@ -38,7 +38,7 @@
   {
     "slide": 3,
     "photorealistic_full_frame_background": "verified loaded at native resolution",
-    "approved_copy": "exact",
+    "script_copy": "exact",
     "text_pixels": "stationary",
     "actual_rendered_fonts": {
       "h1": [
@@ -56,7 +56,7 @@
   {
     "slide": 4,
     "photorealistic_full_frame_background": "verified loaded at native resolution",
-    "approved_copy": "exact",
+    "script_copy": "exact",
     "text_pixels": "stationary",
     "actual_rendered_fonts": {
       "h1": [
@@ -75,7 +75,7 @@
   {
     "slide": 5,
     "photorealistic_full_frame_background": "verified loaded at native resolution",
-    "approved_copy": "exact",
+    "script_copy": "exact",
     "text_pixels": "stationary",
     "actual_rendered_fonts": {
       "h1": [
@@ -94,7 +94,7 @@
   {
     "slide": 6,
     "photorealistic_full_frame_background": "verified loaded at native resolution",
-    "approved_copy": "exact",
+    "script_copy": "exact",
     "text_pixels": "stationary",
     "actual_rendered_fonts": {
       "h1": [
@@ -112,7 +112,7 @@
   {
     "slide": 7,
     "photorealistic_full_frame_background": "verified loaded at native resolution",
-    "approved_copy": "exact",
+    "script_copy": "exact",
     "text_pixels": "stationary",
     "actual_rendered_fonts": {
       "h1": [
@@ -130,7 +130,7 @@
   {
     "slide": 8,
     "photorealistic_full_frame_background": "verified loaded at native resolution",
-    "approved_copy": "exact",
+    "script_copy": "exact",
     "text_pixels": "stationary",
     "actual_rendered_fonts": {
       "h1": [
@@ -148,7 +148,7 @@
   {
     "slide": 9,
     "photorealistic_full_frame_background": "verified loaded at native resolution",
-    "approved_copy": "exact",
+    "script_copy": "exact",
     "text_pixels": "stationary",
     "actual_rendered_fonts": {
       "h1": [
