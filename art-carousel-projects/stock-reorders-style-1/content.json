@@ -1,7 +1,7 @@
 {
   "title": "Low stock. Next order, handled.",
   "style": "Style 1",
-  "status": "Illustrated direction approved; cleaner full-carousel revision with illustrative price examples",
+  "status": "Style 1 background revision: white tasks, pale-aqua flat stages, aqua copy strips, ink summary, aqua CTA",
   "threshold_example": {"currency": "INR", "approval_limit": 10000, "automatic_order": 6000, "approval_required_order": 15000, "note": "Illustrative values, not configured business rules."},
   "handle": "@arealtimetech",
   "slides": [

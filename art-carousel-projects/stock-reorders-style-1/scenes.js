@@ -124,14 +124,14 @@ function review(c,t,S) {
   if(t>2.7){c.beginPath();c.arc(806,146,10,0,Math.PI*2);fs(c,VC.Y,VC.W,3);}
 }
 function together(c,t,S) {
-  label(c,'Routine orders',171,70);label(c,'Exceptions',750,70);
+  label(c,'Routine orders',171,70,'#D9E6E8');label(c,'Exceptions',750,70,'#D9E6E8');
   vBelt(c,52,285,346,31,70*Math.min(Math.max(t-.3,0),1.3));
   const k=eInOut((t-.3)/1.3);parcel(c,70+110*k,285,72,61);
   if(t>1.7)vBadge(c,233,249,(t-1.7)/.3,24);
   line(c,[[570,235],[614,235],[614,150],[659,150]],VC.A,3,[6,8]);
   sheet(c,680,274,128,137,VC.Y);
   notification(c,700,100,Math.max(0,(t-2.1)/.3));
-  robot(c,334,224,t,t>2.7?'done':'work',false,t>2?'up':'reach');
+  robot(c,334,224,t,t>2.7?'done':'work',true,t>2?'up':'reach');
 }
 function controls(c,t,S) {
   label(c,'Your rules',157,68);label(c,'Stock flow',742,68);

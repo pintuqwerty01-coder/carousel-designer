@@ -1,6 +1,12 @@
-# Stock reorders — Style 1, revision 2
+# Stock reorders — Style 1, revision 3
 
 Approved script: `content.json`. The user approved the illustrated direction and requested clearer, cleaner execution and a price-threshold example on slide 5. ART appears from the beginning. No photos or paid image generation are used.
+
+## Style 1 background revision
+
+Requested change: use the original Style 1 background approach. Tasks now have the original white page, flat #EEF9FB scene stage and #DDF3F7 aqua copy strip with an aqua leading edge. Headline highlights and top counter pills use the primary #04ADC3. The cover and summary use open ink backgrounds instead of tinted scene cards, with the supplied logo on the summary. The closing slide stays aqua with a white scene card. Both threshold panels use the same pale-aqua treatment. The earlier no-photo direction remains in effect.
+
+The approved script, illustrative price examples, scene timing and 240px mascot scale are unchanged. Revision 2 remains available on its own branch.
 
 ## Motion and clarity
 
@@ -41,4 +47,4 @@ Each per-slide master is 1080 × 1350, 30fps, 120 frames and four seconds. Lossl
 
 Validation compares approved copy, checks the requested price examples and their relation to the limit, verifies fonts and margins, compares text screenshots across three moments, confirms scene motion, checks JavaScript errors and probes the final videos. Frame sheets support visual review of transitions and mascot/prop separation.
 
-Earlier three-slide studies remain in Git history and on the `stock-reorders-style-1-preview` branch. The current revision is delivered separately on `stock-reorders-style-1-v2`.
+Earlier three-slide studies remain in Git history and on the `stock-reorders-style-1-preview` branch. The current revision is delivered separately on `stock-reorders-style-1-v3`.

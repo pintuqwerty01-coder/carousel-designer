@@ -31,6 +31,28 @@ body {background:white;} #root {position:relative;width:1080px;height:1350px;ove
 .s3 h1,.s4 h1,.s6 h1,.s7 h1 {font-size:80px;line-height:1.25;} .s8 h1 {font-size:78px;line-height:1.25;}
 .s8 {background:#04ADC3;} .s8 .hl {background:linear-gradient(transparent 61%,white 61%,white 94%,transparent 94%);} .s8 .stage {background:white;border-color:white;}
 .s8 .body {color:#143B41;} .s8 .topline .rule {background:#80D9E4;} .s8 .handle,.s8 .count {color:#174A51;}
+/* Style 1 background revision: original flat stage, strong band and copy strip. */
+.topline .marker {width:auto;height:auto;border-radius:999px;background:#04ADC3;color:white;font:600 23px/1 Poppins;padding:13px 20px;letter-spacing:1px;}
+.hl {background:linear-gradient(transparent 50%,#04ADC3 50%,#04ADC3 94%,transparent 94%);}
+h1,.s3 h1,.s4 h1,.s6 h1,.s7 h1 {font-size:74px;line-height:1.22;letter-spacing:-1px;}
+.body {position:fixed;left:84px;right:84px;top:1100px;margin:0;padding:14px 22px 14px 28px;border-left:8px solid #04ADC3;border-radius:14px;background:#DDF3F7;color:#1A1A1A;font:500 30px/1.4 Poppins;}
+.stage {top:560px;background:#EEF9FB;border:0;border-radius:26px;}
+.stage:before {height:28px;background:rgba(4,173,195,.1);}
+.cover .col {top:156px;} .cover .body {position:static;background:none;border:0;border-radius:0;padding:0;color:#D7DDDF;font-size:34px;}
+.cover .stage {left:0;top:650px;width:1080px;height:500px;background:transparent;border:0;border-radius:0;}
+.cover #scene {left:84px;} .cover .stage:before {background:#242424;height:28px;}
+.branch h1 {font-size:78px;} .branch .stage {top:790px;background:transparent;}
+.panel {background:#EEF9FB;border:0;border-radius:26px;} .panel:last-child {background:#EEF9FB;border:0;}
+.panel h2 {color:#1A1A1A;} .example-limit {background:#DDF3F7;color:#1A1A1A;border-left:8px solid #04ADC3;border-radius:14px;}
+.example-limit strong {color:#1A1A1A;}
+.s7 {background:#1A1A1A;color:white;} .s7 .topline {color:white;} .s7 .topline .rule {background:#414141;}
+.s7 .col {top:322px;} .s7 h1 {font-size:70px;} .s7 .hl {color:#04ADC3;background:none;}
+.s7 .stage {background:transparent;border:0;border-radius:0;} .s7 .stage:before {background:#242424;}
+.s7 .body {background:transparent;border:0;color:#04ADC3;padding:14px 0;font-weight:600;} .s7 .handle,.s7 .count {color:#B4BEC2;}
+.s7 .topline {display:none;} .brandlogo {position:absolute;left:84px;top:96px;width:300px;height:auto;}
+.s8 h1 {font-size:74px;} .s8 .stage {background:white;}
+.s8 .body {background:white;color:#1A1A1A;border-color:#1A1A1A;}
+.s8 .topline .marker {background:#1A1A1A;color:white;}
 '''
 for i,key,title in [
     (1,'hero','Low stock.<br>Next order,<br><span class="hl">handled.</span>'),
@@ -50,13 +72,14 @@ for i,key,title in [
         panels+='<div class="panels">'+''.join('<section class="panel"><h2>'+html.escape(p['headline'])+'</h2><p>'+html.escape(p['body'])+'</p><div class="amount"><small>Order value</small>₹'+format(ex['automatic_order'] if j==0 else ex['approval_required_order'],',')+'</div></section>' for j,p in enumerate(s['panels']))+'</div>'
     doc=f'''<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080,height=1350"><script src="assets/gsap.min.js"></script><style>{css}</style></head>
 <body><div id="root" data-composition-id="{sid}" data-start="0" data-duration="4" data-width="1080" data-height="1350" data-fps="30"><div class="clip slide s{i} {'branch' if i==5 else 'cover' if i==1 else ''}" data-start="0" data-duration="4">
-<div class="topline"><span class="marker"></span>ART<span class="rule"></span></div>
+<div class="topline"><span class="marker">{i:02d}/08</span>ART<span class="rule"></span></div>
+{'<img class="brandlogo" src="assets/brand/logo-on-dark.png" alt="A Realtime Tech">' if i==7 else ''}
 <div class="col"><h1>{title}</h1><p class="body">{body}</p></div>{panels}
 <div class="stage"><canvas id="scene" width="912" height="520"></canvas></div>
 <div class="handle">@arealtimetech</div><div class="count">{i:02d} / 08</div><canvas id="trail" width="1080" height="80"></canvas></div></div>
 <script>{lib}
 const st={{t:0}},c=document.getElementById('scene').getContext('2d'),tr=document.getElementById('trail').getContext('2d');
-function render(){{c.clearRect(0,0,912,520);{key}(c,st.t,Math.min(31,Math.floor(st.t*8)));tr.clearRect(0,0,1080,80);tr.save();tr.translate(0,26);drawTrail(tr,1080,{i},8,eOut(st.t/.8),{'true' if i==1 else 'false'},{'true' if i==8 else 'false'});tr.restore();}}
+function render(){{c.clearRect(0,0,912,520);c.save();c.translate(0,{0 if i==5 else 10 if i==1 else 34});{key}(c,st.t,Math.min(31,Math.floor(st.t*8)));c.restore();tr.clearRect(0,0,1080,80);tr.save();tr.translate(0,26);drawTrail(tr,1080,{i},8,eOut(st.t/.8),{'true' if i in [1,7] else 'false'},{'true' if i==8 else 'false'});tr.restore();}}
 const tl=gsap.timeline({{paused:true}});tl.to(st,{{t:4,duration:4,ease:'none',onUpdate:render}},0);window.__timelines={{'{sid}':tl}};render();
 </script></body></html>'''
     (P/'slides'/f'{sid}.html').write_text(doc)
