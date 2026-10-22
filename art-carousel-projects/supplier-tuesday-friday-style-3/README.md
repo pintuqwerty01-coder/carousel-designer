@@ -1,6 +1,6 @@
 # Supplier said Tuesday. It's Friday. — Style 3
 
-Current review: **static v7, eight slides with copy and visual consistency refinements**, in `static-v7/`. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
+Current review: **static v8, eight slides with mascot model consistency corrections**, in `static-v8/`. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
 
 ## Current downloads
 
@@ -39,3 +39,7 @@ Only slides 1, 2, 3 and 5 are revised: clean coherent eye shapes, well-spaced fe
 ## Static v7 — copy and scene consistency
 
 The user returned to the non-animated format and requested clear, natural sentences with headings, supporting copy and scene elements aligned on every slide. `static-v7/` retains the original approved images, faces, font, logo and layout, with revised copy and separate supplier-reply/no-reply branches. See `static-v7/README.md` for the per-slide rationale. This is a review revision; v6 and all motion exports remain unchanged.
+
+## Static v8 — mascot model consistency
+
+The user requested consistency in body size, shape, colour and details. All scenes are referenced to the same original ART mascot; short legs on slide 3 and the extended hanging arm on slide 2 receive specific anatomical corrections. The latest v7 copy and layout are retained. `static-v8/character-spec.md` records the shared model rules. This remains a static review revision.
