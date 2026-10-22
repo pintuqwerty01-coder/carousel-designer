@@ -1,0 +1,87 @@
+{
+  "topic": "Supplier said Tuesday. It's Friday.",
+  "style": "Style 3",
+  "status": "Approach approved; draft copy and representative static design proof for review",
+  "slides": [
+    {
+      "headline": [
+        "Supplier said Tuesday.",
+        "It's Friday. ART's on it."
+      ],
+      "body": [
+        "ART (A Realtime Tech) follows up",
+        "on overdue deliveries."
+      ]
+    },
+    {
+      "headline": [
+        "The delivery slipped.",
+        "Your work shouldn't."
+      ],
+      "body": [
+        "One late shipment can hold up",
+        "everything after it."
+      ]
+    },
+    {
+      "headline": [
+        "ART catches the missed date."
+      ],
+      "body": [
+        "It checks the expected delivery",
+        "against what's actually arrived."
+      ]
+    },
+    {
+      "headline": [
+        "\"Any update?\" Already sent."
+      ],
+      "body": [
+        "ART follows up with the supplier",
+        "for a revised delivery date."
+      ]
+    },
+    {
+      "headline": [
+        "A new date needs a clear answer."
+      ],
+      "body": [
+        "ART tracks the supplier's response",
+        "and updates the delivery status."
+      ]
+    },
+    {
+      "headline": [
+        "Still no answer? You hear about it."
+      ],
+      "body": [
+        "ART flags the delay and shows",
+        "what's waiting on the shipment."
+      ]
+    },
+    {
+      "headline": [
+        "The chasing is handled.",
+        "The next call stays yours."
+      ],
+      "body": [
+        "Wait, escalate or explore another supplier",
+        "with the context in hand."
+      ]
+    },
+    {
+      "headline": [
+        "Keep work moving.",
+        "Let ART do the chasing."
+      ],
+      "body": [
+        "ART (A Realtime Tech) keeps delivery follow-ups",
+        "off your team's to-do list."
+      ]
+    }
+  ],
+  "proof_slides": [
+    1,
+    4
+  ]
+}

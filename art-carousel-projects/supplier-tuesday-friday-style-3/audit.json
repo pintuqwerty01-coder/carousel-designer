@@ -1,0 +1,90 @@
+[
+  {
+    "slide": 1,
+    "fonts": {
+      ".headline": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 46
+        }
+      ],
+      ".body": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 54
+        }
+      ],
+      ".prompt": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 34
+        }
+      ],
+      ".footer": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ]
+    },
+    "images_loaded": true,
+    "copy_bottom": {
+      "x": 84,
+      "y": 94,
+      "width": 912,
+      "height": 492.40625
+    }
+  },
+  {
+    "slide": 4,
+    "fonts": {
+      ".headline": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 26
+        }
+      ],
+      ".body": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 60
+        }
+      ],
+      ".prompt": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 32
+        }
+      ],
+      ".footer": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ]
+    },
+    "images_loaded": true,
+    "copy_bottom": {
+      "x": 84,
+      "y": 105,
+      "width": 912,
+      "height": 378.15625
+    }
+  }
+]
