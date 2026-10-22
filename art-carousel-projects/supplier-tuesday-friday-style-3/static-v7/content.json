@@ -1,0 +1,148 @@
+{
+  "topic": "Supplier said Tuesday. It's Friday.",
+  "status": "Static v7 copy and scene consistency review; awaiting user review",
+  "slides": [
+    {
+      "slide": 1,
+      "headline": [
+        "Supplier said Tuesday.",
+        "It's Friday.",
+        "ART's on it."
+      ],
+      "body": [
+        "ART (A Realtime Tech) follows up",
+        "on overdue deliveries."
+      ],
+      "prompt": "Your team shouldn't have to chase.",
+      "scene_label": "ART follows up while your team gets on with work.",
+      "results": [
+        "ART spots the overdue delivery.",
+        "ART handles the follow-up."
+      ],
+      "visual_logic": "Mascot points to Tuesday/Friday overdue record."
+    },
+    {
+      "slide": 2,
+      "headline": [
+        "One late delivery.",
+        "A whole team waiting."
+      ],
+      "body": [
+        "A missing shipment can leave",
+        "the next job waiting to start."
+      ],
+      "prompt": "The impact goes beyond the delivery.",
+      "scene_label": "The receiving tray is empty. The next job waits.",
+      "results": [
+        "The shipment is late.",
+        "The next job is waiting."
+      ],
+      "visual_logic": "Empty receiving tray and concerned mascot show the next job waiting."
+    },
+    {
+      "slide": 3,
+      "headline": [
+        "ART spots",
+        "what's overdue."
+      ],
+      "body": [
+        "ART checks the promised delivery date",
+        "against what has actually arrived."
+      ],
+      "prompt": "Check what was due against what arrived.",
+      "scene_label": "The receiving record shows what is still missing.",
+      "results": [
+        "The delivery date has passed.",
+        "The shipment has not arrived."
+      ],
+      "visual_logic": "Magnifier and receiving records support the overdue check."
+    },
+    {
+      "slide": 4,
+      "headline": [
+        "\"Any update?\"",
+        "Already sent."
+      ],
+      "body": [
+        "ART asks the supplier",
+        "for a revised delivery date."
+      ],
+      "prompt": "Ask for a date. Keep track of the reply.",
+      "scene_label": "The follow-up is sent. ART now tracks the reply.",
+      "results": [
+        "A new date has been requested.",
+        "The supplier has not replied yet."
+      ],
+      "visual_logic": "Mascot sends follow-up on phone; reply remains pending."
+    },
+    {
+      "slide": 5,
+      "headline": [
+        "When a reply comes in,",
+        "ART updates the record."
+      ],
+      "body": [
+        "ART records the supplier's response",
+        "and updates the delivery status."
+      ],
+      "prompt": "Keep the reply with the delivery record.",
+      "scene_label": "The supplier's reply stays with the delivery record.",
+      "results": [
+        "The supplier's reply is recorded.",
+        "The delivery status is updated."
+      ],
+      "visual_logic": "Stylus/tablet illustrate the conditional reply-recording branch."
+    },
+    {
+      "slide": 6,
+      "headline": [
+        "No reply yet?",
+        "ART flags the delay."
+      ],
+      "body": [
+        "ART alerts your team and shows",
+        "which work is waiting on the shipment."
+      ],
+      "prompt": "Bring unresolved delays to your team.",
+      "scene_label": "No reply yet. Your team can see what is held up.",
+      "results": [
+        "Your team is alerted.",
+        "The affected work is highlighted."
+      ],
+      "visual_logic": "Raised flag and waiting folder illustrate the no-reply escalation branch."
+    },
+    {
+      "slide": 7,
+      "headline": [
+        "ART brings the details.",
+        "You decide what's next."
+      ],
+      "body": [
+        "Wait, escalate or explore another supplier.",
+        "Your team has the details to decide."
+      ],
+      "prompt": "You choose the next step.",
+      "scene_label": "The handover includes the details your team needs.",
+      "results": [
+        "The delivery details are together.",
+        "Your team decides the next step."
+      ],
+      "visual_logic": "Folder handover illustrates context passed to a human decision-maker."
+    },
+    {
+      "slide": 8,
+      "headline": [
+        "Keep work moving.",
+        "Let ART do the chasing."
+      ],
+      "body": [
+        "ART (A Realtime Tech) handles delivery follow-ups",
+        "so your team can focus on the work ahead."
+      ],
+      "prompt": "Put ART to work.",
+      "scene_label": "Less chasing. More time for your team.",
+      "results": [],
+      "visual_logic": "Relaxed mascot beside correspondence folders supports relief from follow-ups."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Supplier said Tuesday. It's Friday. — Style 3
 
-Current version: **v6, full eight-slide static review with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
+Current review: **static v7, eight slides with copy and visual consistency refinements**, in `static-v7/`. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
 
 ## Current downloads
 
@@ -14,7 +14,7 @@ The sequence moves from an overdue delivery to paused work, delivery-record comp
 
 All marketing copy is editable HTML, in local Preahvihear Regular. New illustrative photographs integrate variations of the supplied original dimensional mascot, using `mascot-point.png` as a strict reference. They are generated scenes, not customer photographs. The original ART vector geometry and clock hands are unchanged; the previously approved blue-and-black wordmark presentation is applied via CSS. No top watermark is added.
 
-`content.json` remains the canonical eight-slide draft copy. `slides/` holds editable layouts and assets; `stills/` holds current native PNGs. `build-full.py` creates the layouts. `capture-full.py` audits browser fonts/copy/bounds; `print-full.py` renders reliable native PNGs through the PDF print pipeline; `export-v6.py` packages the current version. The final PDF retains vector text and embedded Preahvihear rather than rasterizing typography. Historical `build.py` and `capture.py` reproduce earlier proofs and must not be used to rebuild v3.
+`static-v7/content.json` is the canonical copy for the current static review; root `content.json` records the earlier draft. `slides/` holds editable layouts and assets; `stills/` holds current native PNGs. `build-full.py` creates the layouts. `capture-full.py` audits browser fonts/copy/bounds; `print-full.py` renders reliable native PNGs through the PDF print pipeline; `export-v6.py` packages the current version. The final PDF retains vector text and embedded Preahvihear rather than rasterizing typography. Historical `build.py` and `capture.py` reproduce earlier proofs and must not be used to rebuild v3.
 
 ## Validation
 
@@ -35,3 +35,7 @@ Only slides 1, 2, 3 and 5 are revised: clean coherent eye shapes, well-spaced fe
 ## First motion test
 
 `motion-preview/delivery/` contains a seven-second slide 4 supplier-follow-up test at 1080×1350 and 30 fps. It synchronizes a send press with confirmation and a pending supplier reply. The full static set remains the current complete delivery.
+
+## Static v7 — copy and scene consistency
+
+The user returned to the non-animated format and requested clear, natural sentences with headings, supporting copy and scene elements aligned on every slide. `static-v7/` retains the original approved images, faces, font, logo and layout, with revised copy and separate supplier-reply/no-reply branches. See `static-v7/README.md` for the per-slide rationale. This is a review revision; v6 and all motion exports remain unchanged.
