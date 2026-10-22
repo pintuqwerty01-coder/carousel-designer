@@ -1,6 +1,6 @@
 # Supplier said Tuesday. It's Friday. — Style 3
 
-Current review: **static v8, eight slides with mascot model consistency corrections**, in `static-v8/`. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
+Current review: **static v9, white limb colours restored without a new design**, in `static-v9/`. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
 
 ## Current downloads
 
@@ -43,3 +43,7 @@ The user returned to the non-animated format and requested clear, natural senten
 ## Static v8 — mascot model consistency
 
 The user requested consistency in body size, shape, colour and details. All scenes are referenced to the same original ART mascot; short legs on slide 3 and the extended hanging arm on slide 2 receive specific anatomical corrections. The latest v7 copy and layout are retained. `static-v8/character-spec.md` records the shared model rules. This remains a static review revision.
+
+## Static v9 — white limb colour correction
+
+The user clarified that the mascot has no blue in its hands or legs and asked not to alter the design. The blue limb segments in v8 were incorrect. `static-v9/` removes those colours through localized scene edits, retaining the v8 copy/layout and existing character poses. White limbs, aqua head/torso and black shoes are the current explicit colour rule.
