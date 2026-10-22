@@ -1,6 +1,6 @@
 # Supplier said Tuesday. It's Friday. — Style 3
 
-Current review: **static v9, white limb colours restored without a new design**, in `static-v9/`. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
+Current review: **static v10, shorter copy with distinct heading/body/box roles**, in `static-v10/`. The white-limb v9 scenes are retained unchanged. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
 
 ## Current downloads
 
@@ -47,3 +47,7 @@ The user requested consistency in body size, shape, colour and details. All scen
 ## Static v9 — white limb colour correction
 
 The user clarified that the mascot has no blue in its hands or legs and asked not to alter the design. The blue limb segments in v8 were incorrect. `static-v9/` removes those colours through localized scene edits, retaining the v8 copy/layout and existing character poses. White limbs, aqua head/torso and black shoes are the current explicit colour rule.
+
+## Static v10 — concise copy without repeated boxes
+
+Removed repeated captions, task prompts and redundant cards. Each heading hooks, the body adds context or mechanism, and the remaining boxes give evidence, detail or choices. The v9 mascot/scene images are referenced byte-for-byte without alteration. See `static-v10/README.md` for the slide-by-slide content roles.

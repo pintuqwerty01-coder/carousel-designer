@@ -222,7 +222,7 @@ Respect the business's competence. ART offers an easier way to coordinate the sy
 
 When copy editing is authorised, avoid repeating the campaign phrase on every slide. In the current reference, “festive season” establishes the campaign on the cover; later copy uses more precise context such as “peak demand,” “when demand rises” or “the next big rush.” Do not mechanically replace every repetition with another repeated phrase.
 
-Keep one main message per slide, concise pain copy, a clear possibility and concrete outcomes. Avoid unsupported guarantees, invented dates/numbers, real customer logos, and unconfirmed capabilities. Visuals must not introduce claims absent from the script.
+Keep one main message per slide, concise pain copy, a clear possibility and concrete outcomes. Give headings, body copy and boxes distinct jobs. Do not repeat boxed information in another sentence on the same slide. Remove redundant captions or callouts instead of paraphrasing the same point; use short natural hooks and leave visual breathing room. Avoid unsupported guarantees, invented dates/numbers, real customer logos, and unconfirmed capabilities. Visuals must not introduce claims absent from the script.
 
 ## 9. Motion rules — after design approval
 

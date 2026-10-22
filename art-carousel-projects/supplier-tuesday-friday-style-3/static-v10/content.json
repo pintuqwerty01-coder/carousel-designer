@@ -1,0 +1,142 @@
+{
+  "topic": "Supplier said Tuesday. It's Friday.",
+  "status": "Static v10 review: concise hooks and distinct copy roles; exact white-limb v9 scene images retained",
+  "slides": [
+    {
+      "slide": 1,
+      "headline": [
+        "Supplier said Tuesday.",
+        "It's Friday.",
+        "ART's on it."
+      ],
+      "body": [
+        "ART (A Realtime Tech) follows up",
+        "on overdue deliveries."
+      ],
+      "prompt": "See what happens next.",
+      "scene_label": null,
+      "results": [],
+      "visual_logic": "Mascot points to Tuesday/Friday overdue record."
+    },
+    {
+      "slide": 2,
+      "headline": [
+        "One late delivery.",
+        "A whole team waiting."
+      ],
+      "body": [
+        "Hours meant for packing turn into",
+        "calls, reminders and \"any updates?\""
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [
+        "Materials are still missing.",
+        "The packing line is on hold."
+      ],
+      "visual_logic": "Empty receiving tray and concerned mascot show the next job waiting."
+    },
+    {
+      "slide": 3,
+      "headline": [
+        "ART checks first.",
+        "Then follows up."
+      ],
+      "body": [
+        "It compares the promised delivery date",
+        "with your receiving record."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [
+        "The due date has passed.",
+        "The shipment is still missing."
+      ],
+      "visual_logic": "Magnifier and receiving records support the overdue check."
+    },
+    {
+      "slide": 4,
+      "headline": [
+        "\"Any update?\"",
+        "Already sent."
+      ],
+      "body": [
+        "Your team shouldn't need",
+        "to write the same reminder again."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [],
+      "visual_logic": "Mascot sends follow-up on phone; reply remains pending."
+    },
+    {
+      "slide": 5,
+      "headline": [
+        "A supplier reply.",
+        "A clearer picture."
+      ],
+      "body": [
+        "When the supplier responds,",
+        "ART keeps the update with the order."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [
+        "Revised date, if provided.",
+        "Latest delivery status."
+      ],
+      "visual_logic": "Stylus/tablet illustrate the conditional reply-recording branch."
+    },
+    {
+      "slide": 6,
+      "headline": [
+        "Silence shouldn't",
+        "hide the hold-up."
+      ],
+      "body": [
+        "If the supplier stays silent,",
+        "ART alerts your team."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [
+        "See the overdue delivery.",
+        "See the work it is holding up."
+      ],
+      "visual_logic": "Raised flag and waiting folder illustrate the no-reply escalation branch."
+    },
+    {
+      "slide": 7,
+      "headline": [
+        "ART brings the facts.",
+        "You make the call."
+      ],
+      "body": [
+        "Get the delivery details,",
+        "including any supplier response."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [
+        "Give the supplier more time.",
+        "Escalate or explore alternatives."
+      ],
+      "visual_logic": "Folder handover illustrates context passed to a human decision-maker."
+    },
+    {
+      "slide": 8,
+      "headline": [
+        "Your team has work to do.",
+        "Let ART do the chasing."
+      ],
+      "body": [
+        "ART (A Realtime Tech) keeps supplier follow-ups",
+        "off your team's to-do list."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [],
+      "visual_logic": "Relaxed mascot beside correspondence folders supports relief from follow-ups."
+    }
+  ]
+}
