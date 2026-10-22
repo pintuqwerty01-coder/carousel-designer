@@ -1,6 +1,6 @@
 # Supplier said Tuesday. It's Friday. — Style 3
 
-Current version: **v6, full eight-slide static review with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. No animation is included.
+Current version: **v6, full eight-slide static review with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
 
 ## Current downloads
 
@@ -31,3 +31,7 @@ The user approved a different emotional/action cue per slide. Gentle concern and
 ## Facial geometry correction — v6
 
 Only slides 1, 2, 3 and 5 are revised: clean coherent eye shapes, well-spaced features and simple mouths replace fragmented marks. Concern, puzzlement and focus remain appropriate to the content. Other slide imagery, all copy and editable layout are retained.
+
+## First motion test
+
+`motion-preview/delivery/` contains a seven-second slide 4 supplier-follow-up test at 1080×1350 and 30 fps. It synchronizes a send press with confirmation and a pending supplier reply. The full static set remains the current complete delivery.
