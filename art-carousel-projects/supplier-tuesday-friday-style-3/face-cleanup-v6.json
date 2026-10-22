@@ -1,0 +1,22 @@
+{
+  "slides": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "direction": "Exactly two coherent eyes and one simple mouth; balanced pixel-grid spacing; remove fragments, white cutouts, highlights and stray marks.",
+  "expressions": {
+    "1": "Gentle concern",
+    "2": "Mild puzzlement",
+    "3": "Focused inspection",
+    "5": "Focused updating"
+  },
+  "retained_slides": [
+    4,
+    6,
+    7,
+    8
+  ],
+  "scope": "Localized facial geometry cleanup only; script, layout, actions and props retained."
+}
