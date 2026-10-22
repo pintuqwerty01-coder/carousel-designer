@@ -2,7 +2,7 @@ from pathlib import Path
 import json,shutil,html
 P=Path(__file__).resolve().parent;R=P.parents[1];A=P/'slides/assets';A.mkdir(parents=True,exist_ok=True)
 ref=R/'art-carousel-projects/festive-dispatch-preahvihear/slides/assets'
-for src,name in [(ref/'cta-mascot.png','mascot-point.png'),(ref/'reveal-mascot.png','mascot-wave.png'),(ref/'fonts/Preahvihear-Regular.ttf','Preahvihear-Regular.ttf'),(R/'art-carousel-projects/festive-dispatch-photo/slides/assets/clean-02.png','warehouse.png')]:shutil.copyfile(src,A/name)
+for src,name in [(ref/'cta-mascot.png','mascot-point.png'),(ref/'reveal-mascot.png','mascot-wave.png'),(ref/'fonts/Preahvihear-Regular.ttf','Preahvihear-Regular.ttf')]:shutil.copyfile(src,A/name)
 slides=[
 {'headline':['Supplier said Tuesday.',"It's Friday. ART's on it."],'body':['ART (A Realtime Tech) follows up','on overdue deliveries.']},
 {'headline':['The delivery slipped.',"Your work shouldn't."],'body':['One late shipment can hold up','everything after it.']},
@@ -28,6 +28,6 @@ for n in [1,4]:
   prompt='Ask for a date. Track the reply.'
   scene='''<div class="ground"></div><div class="phone"><div class="speaker"></div><div class="screen"><div class="screen-title">Supplier follow-up</div><div class="message">Please confirm<br>the revised<br>delivery date.</div><div class="sent">'''+tick+'''Follow-up sent</div></div></div><img class="mascot" src="assets/mascot-wave.png" alt="Original dimensional ART mascot making contact beside an outgoing supplier follow-up">'''
   result='<div class="results"><p class="result">'+tick+'Revised date requested.</p><p class="result">'+clock+'Supplier reply pending.</p></div>'
- doc='<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080,height=1350"><style>'+css+'</style></head><body><main class="slide '+('task' if n==4 else 'cover')+'"><img class="photo" src="assets/warehouse.png" alt="Illustrative warehouse receiving desk"><div class="shade"></div><div class="bottom-shade"></div><section class="copy"><h1 class="headline">'+title+'</h1><p class="body">'+'<br>'.join(html.escape(x) for x in s['body'])+'</p><p class="prompt">'+html.escape(prompt)+'</p></section>'+scene+result+'<footer class="footer"><span>@arealtimetech</span><span>'+f'{n:02d} / 08'+'</span></footer><div class="trail">'+''.join('<i class="'+('on' if i<n else '')+'"></i>' for i in range(8))+'</div></main></body></html>'
+ doc='<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080,height=1350"><style>'+css+'</style></head><body><main class="slide '+('task' if n==4 else 'cover')+'"><img class="photo" src="assets/warehouse.png" alt="Illustrative modern goods receiving counter"><div class="shade"></div><div class="bottom-shade"></div><section class="copy"><h1 class="headline">'+title+'</h1><p class="body">'+'<br>'.join(html.escape(x) for x in s['body'])+'</p><p class="prompt">'+html.escape(prompt)+'</p></section>'+scene+result+'<footer class="footer"><span>@arealtimetech</span><span>'+f'{n:02d} / 08'+'</span></footer><div class="trail">'+''.join('<i class="'+('on' if i<n else '')+'"></i>' for i in range(8))+'</div></main></body></html>'
  (P/'slides'/f'slide-{n:02d}.html').write_text(doc)
 print(P)
