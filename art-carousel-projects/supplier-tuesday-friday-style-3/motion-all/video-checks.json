@@ -1,0 +1,74 @@
+[
+  {
+    "slide": 1,
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "frames": 210,
+    "duration": 7,
+    "distinct_decoded_frames": 159
+  },
+  {
+    "slide": 2,
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "frames": 210,
+    "duration": 7,
+    "distinct_decoded_frames": 164
+  },
+  {
+    "slide": 3,
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "frames": 210,
+    "duration": 7,
+    "distinct_decoded_frames": 167
+  },
+  {
+    "slide": 4,
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "frames": 210,
+    "duration": 7,
+    "distinct_decoded_frames": 154
+  },
+  {
+    "slide": 5,
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "frames": 210,
+    "duration": 7,
+    "distinct_decoded_frames": 169
+  },
+  {
+    "slide": 6,
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "frames": 210,
+    "duration": 7,
+    "distinct_decoded_frames": 155
+  },
+  {
+    "slide": 7,
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "frames": 210,
+    "duration": 7,
+    "distinct_decoded_frames": 166
+  },
+  {
+    "slide": 8,
+    "width": 1080,
+    "height": 1350,
+    "fps": 30,
+    "frames": 210,
+    "duration": 7,
+    "distinct_decoded_frames": 157
+  }
+]
