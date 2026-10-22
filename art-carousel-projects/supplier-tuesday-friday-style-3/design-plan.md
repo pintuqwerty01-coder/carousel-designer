@@ -16,3 +16,16 @@ Upper copy uses the same Preahvihear hierarchy and fitted card language. Photo-o
 ## v4 expression refinement
 
 Keep the original cute, friendly facial identity throughout. Use the paused station, record comparison, warning flag and human handoff to communicate context rather than harsh facial changes.
+
+## Current v5 expression/action mapping
+
+1. **Gently concerned:** Points at missed delivery date.
+2. **Puzzled:** Looks into empty parts tray.
+3. **Curious and focused:** Compares records using magnifier.
+4. **Attentive:** Presses send on supplier follow-up.
+5. **Concentrating:** Updates delivery record on tablet.
+6. **Concerned and alert:** Flags unresolved delay and folder.
+7. **Reassuring:** Hands context dossier to person.
+8. **Relaxed and confident:** Presents organized follow-up folders.
+
+This mapping supersedes the v4 uniform-smile refinement. Each expression must support the stated action and message while preserving the cute pixel identity.

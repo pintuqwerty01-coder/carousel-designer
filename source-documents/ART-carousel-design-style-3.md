@@ -153,7 +153,7 @@ Give the character a concept-specific action:
 | Reveal/outcome | A confident wave or presenting the coordinated workflow |
 | CTA | Pointing toward the preparation or action cue |
 
-These are examples, not scenes to repeat on unrelated topics. Avoid repeating the cover pose on the setup slide. Keep the face, antenna and silhouette recognisable. Retain the original cute, friendly pixel-face identity when varying expressions; avoid extra eyebrows, harsh frowns and exaggerated alarm faces. Convey urgency mainly through posture, gesture and explanatory props. Separate the mascot clearly from the background; an aqua background behind an aqua mascot is unsuitable here.
+These are examples, not scenes to repeat on unrelated topics. Avoid repeating the cover pose on the setup slide. Keep the face, antenna and silhouette recognisable. Retain the original cute, friendly pixel-face identity while matching expression, gaze and action to each slide's content. Cute does not mean smiling on every slide: use gentle concern for delays, puzzlement for missing items, focus for checks, reassuring warmth for a human handoff and confidence for the close. Avoid harsh frowns, heavy eyebrows and exaggerated alarm faces. Posture, gesture and explanatory props must reinforce the same message. Separate the mascot clearly from the background; an aqua background behind an aqua mascot is unsuitable here.
 
 Avoid malformed hands, floating objects, contradictory shadows, unreadable pseudo-text and excessive glowing arrows. Keep one dominant explanatory visual per slide. Generic channel/document graphics may be used, but must not impersonate a real product interface or imply an unconfirmed integration.
 
@@ -306,3 +306,5 @@ Then decode every PDF page and inspect the exported proof. Adapt the utilities w
 When the user changes a Style 3 rule, update this document and add a concise revision note. Preserve Style 1 as its separate original guide. Keep final rules clear rather than appending contradictory historical directions.
 
 **Baseline recorded:** 8 October 2026. Style 3 reference: festive-dispatch project at commit `8c1057d`, including the matched slide 5 blue-box treatment.
+
+**Expression/content refinement — 22 October 2026:** Preserve the cute mascot identity, with expression, gaze and action matched to each slide; a friendly character does not require a repeated happy face.

@@ -1,10 +1,10 @@
 # Supplier said Tuesday. It's Friday. — Style 3
 
-Current version: **v4, full eight-slide static review with softer mascot expressions**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. No animation is included.
+Current version: **v5, full eight-slide static review with content-matched expressions and actions**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. No animation is included.
 
 ## Current downloads
 
-`delivery-v4/` contains the ordered eight-page PDF, eight native 1080×1350 JPEGs, a contact sheet and a ZIP including the native PNGs. `delivery/` and `delivery-v2/` are superseded two-slide proofs; `delivery-v3/` is the superseded full set.
+`delivery-v5/` contains the ordered eight-page PDF, eight native 1080×1350 JPEGs, a contact sheet and a ZIP including the native PNGs. `delivery/` and `delivery-v2/` are superseded two-slide proofs; `delivery-v3/` and `delivery-v4/` are superseded full sets.
 
 ## Scene logic
 
@@ -14,7 +14,7 @@ The sequence moves from an overdue delivery to paused work, delivery-record comp
 
 All marketing copy is editable HTML, in local Preahvihear Regular. New illustrative photographs integrate variations of the supplied original dimensional mascot, using `mascot-point.png` as a strict reference. They are generated scenes, not customer photographs. The original ART vector geometry and clock hands are unchanged; the previously approved blue-and-black wordmark presentation is applied via CSS. No top watermark is added.
 
-`content.json` remains the canonical eight-slide draft copy. `slides/` holds editable layouts and assets; `stills/` holds current native PNGs. `build-full.py` creates the layouts. `capture-full.py` audits browser fonts/copy/bounds; `print-full.py` renders reliable native PNGs through the PDF print pipeline; `export-v4.py` packages the current version. The final PDF retains vector text and embedded Preahvihear rather than rasterizing typography. Historical `build.py` and `capture.py` reproduce earlier proofs and must not be used to rebuild v3.
+`content.json` remains the canonical eight-slide draft copy. `slides/` holds editable layouts and assets; `stills/` holds current native PNGs. `build-full.py` creates the layouts. `capture-full.py` audits browser fonts/copy/bounds; `print-full.py` renders reliable native PNGs through the PDF print pipeline; `export-v5.py` packages the current version. The final PDF retains vector text and embedded Preahvihear rather than rasterizing typography. Historical `build.py` and `capture.py` reproduce earlier proofs and must not be used to rebuild v3.
 
 ## Validation
 
@@ -23,3 +23,7 @@ Chromium checked actual Preahvihear font use, body copy, image loads and content
 ## Expression correction — v4
 
 Slides 1, 2, 3, 5, 6 and 7 have localized face edits referenced to the original mascot. Cute friendly pixel eyes and a small stepped smile replace stern, worried or irregular facial marks. Slides 4 and 8 already use the friendly face and are retained. Posture, gesture and props carry the scene context. Marketing copy and layout are unchanged.
+
+## Content-matched expression/action revision — v5
+
+The user approved a different emotional/action cue per slide. Gentle concern and puzzlement replace happy faces on the delay and missing-stock scenes; checking, sending and updating use attentive focus; escalation is concerned and alert. The human handoff stays reassuring and the closing stays relaxed and confident. See `expression-action-v5.json`. This supersedes the uniform-friendly-face direction of v4.

@@ -1,0 +1,58 @@
+{
+  "direction": "User-approved eight-slide expression/action mapping; preserve cute original pixel identity",
+  "revised_scenes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "retained_matching_scenes": [
+    7,
+    8
+  ],
+  "slides": [
+    {
+      "slide": 1,
+      "expression": "Gently concerned",
+      "action": "Points at missed delivery date"
+    },
+    {
+      "slide": 2,
+      "expression": "Puzzled",
+      "action": "Looks into empty parts tray"
+    },
+    {
+      "slide": 3,
+      "expression": "Curious and focused",
+      "action": "Compares records using magnifier"
+    },
+    {
+      "slide": 4,
+      "expression": "Attentive",
+      "action": "Presses send on supplier follow-up"
+    },
+    {
+      "slide": 5,
+      "expression": "Concentrating",
+      "action": "Updates delivery record on tablet"
+    },
+    {
+      "slide": 6,
+      "expression": "Concerned and alert",
+      "action": "Flags unresolved delay and folder"
+    },
+    {
+      "slide": 7,
+      "expression": "Reassuring",
+      "action": "Hands context dossier to person"
+    },
+    {
+      "slide": 8,
+      "expression": "Relaxed and confident",
+      "action": "Presents organized follow-up folders"
+    }
+  ],
+  "scope": "Expression and gaze refinements aligned with existing purposeful poses. Copy and editable layout retained."
+}

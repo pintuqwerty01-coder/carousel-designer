@@ -1,0 +1,14 @@
+{
+  "slides": 8,
+  "PNG_dimensions": [
+    1080,
+    1350
+  ],
+  "JPEG_dimensions": [
+    1080,
+    1350
+  ],
+  "PDF": "Vector typography; Preahvihear embedded on all 8 pages",
+  "script_and_editable_layout_unchanged": true,
+  "review": "Decoded all PDF pages and checked scene/expression/action correspondence against expression-action-v5.json"
+}
