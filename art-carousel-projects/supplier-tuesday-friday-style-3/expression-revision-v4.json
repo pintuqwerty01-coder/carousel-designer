@@ -1,0 +1,21 @@
+{
+  "reference": "slides/assets/mascot-point.png",
+  "changed_scenes": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7
+  ],
+  "retained_friendly_scenes": [
+    4,
+    8
+  ],
+  "scope": "Localized edits to pixel facial markings, maintaining scene actions and editable overlays.",
+  "direction": "Original cute eyes and small stepped smile; no extra eyebrows, stern mouths or exaggerated alarm.",
+  "copy_and_layout_unchanged": true,
+  "native_dimensions_checked_all_slides": true,
+  "PDF_pages": 8,
+  "Preahvihear_embedded_all_pages": true
+}

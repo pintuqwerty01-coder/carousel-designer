@@ -12,3 +12,7 @@
 | 8 | Let ART do the chasing | Ink-toned desk, organized correspondence folders | Confident and relaxed, grounded beside folders |
 
 Upper copy uses the same Preahvihear hierarchy and fitted card language. Photo-overlay shading fades into each scene. The last three scenes share the dark closing palette. Slide 5 is the response-received branch; slide 6 is the no-answer branch. Neither promises an arrival or automatically chooses another supplier.
+
+## v4 expression refinement
+
+Keep the original cute, friendly facial identity throughout. Use the paused station, record comparison, warning flag and human handoff to communicate context rather than harsh facial changes.

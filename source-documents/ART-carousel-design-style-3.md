@@ -153,7 +153,7 @@ Give the character a concept-specific action:
 | Reveal/outcome | A confident wave or presenting the coordinated workflow |
 | CTA | Pointing toward the preparation or action cue |
 
-These are examples, not scenes to repeat on unrelated topics. Avoid repeating the cover pose on the setup slide. Keep the face, antenna and silhouette recognisable. Separate the mascot clearly from the background; an aqua background behind an aqua mascot is unsuitable here.
+These are examples, not scenes to repeat on unrelated topics. Avoid repeating the cover pose on the setup slide. Keep the face, antenna and silhouette recognisable. Retain the original cute, friendly pixel-face identity when varying expressions; avoid extra eyebrows, harsh frowns and exaggerated alarm faces. Convey urgency mainly through posture, gesture and explanatory props. Separate the mascot clearly from the background; an aqua background behind an aqua mascot is unsuitable here.
 
 Avoid malformed hands, floating objects, contradictory shadows, unreadable pseudo-text and excessive glowing arrows. Keep one dominant explanatory visual per slide. Generic channel/document graphics may be used, but must not impersonate a real product interface or imply an unconfirmed integration.
 
