@@ -1,0 +1,811 @@
+[
+  {
+    "slide": 1,
+    "fonts": {
+      ".headline0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 46
+        }
+      ],
+      ".body0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 54
+        }
+      ],
+      ".prompt0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 34
+        }
+      ],
+      ".footer0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ],
+      ".scene-label0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 38
+        }
+      ],
+      ".result0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 28
+        }
+      ],
+      ".result1": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 25
+        }
+      ],
+      ".prop-text small0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 17
+        }
+      ],
+      ".prop-text strong0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 7
+        }
+      ],
+      ".prop-text em0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 26
+        }
+      ]
+    },
+    "body_matches_canonical": true,
+    "images_loaded": true,
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 84,
+        "right": 996,
+        "bottom": 574.40625,
+        "overflow": false
+      },
+      {
+        "class": "scene-label",
+        "x": 84,
+        "y": 1050,
+        "right": 996,
+        "bottom": 1085,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 84,
+        "y": 1110,
+        "right": 529,
+        "bottom": 1173.046875,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 551,
+        "y": 1110,
+        "right": 996,
+        "bottom": 1173.046875,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "fonts": {
+      ".headline0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 41
+        }
+      ],
+      ".body0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 49
+        }
+      ],
+      ".prompt0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 36
+        }
+      ],
+      ".footer0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ],
+      ".scene-label0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 38
+        }
+      ],
+      ".result0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ],
+      ".result1": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 25
+        }
+      ]
+    },
+    "body_matches_canonical": true,
+    "images_loaded": true,
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 463.890625,
+        "overflow": false
+      },
+      {
+        "class": "scene-label",
+        "x": 84,
+        "y": 1050,
+        "right": 996,
+        "bottom": 1085,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 84,
+        "y": 1110,
+        "right": 529,
+        "bottom": 1178.390625,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 551,
+        "y": 1110,
+        "right": 996,
+        "bottom": 1178.390625,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "fonts": {
+      ".headline0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 27
+        }
+      ],
+      ".body0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 63
+        }
+      ],
+      ".prompt0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 34
+        }
+      ],
+      ".footer0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ],
+      ".scene-label0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 46
+        }
+      ],
+      ".result0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 22
+        }
+      ],
+      ".result1": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 26
+        }
+      ]
+    },
+    "body_matches_canonical": true,
+    "images_loaded": true,
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 463.890625,
+        "overflow": false
+      },
+      {
+        "class": "scene-label",
+        "x": 84,
+        "y": 1050,
+        "right": 996,
+        "bottom": 1085,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 84,
+        "y": 1110,
+        "right": 529,
+        "bottom": 1178.390625,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 551,
+        "y": 1110,
+        "right": 996,
+        "bottom": 1178.390625,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "fonts": {
+      ".headline0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 26
+        }
+      ],
+      ".body0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 60
+        }
+      ],
+      ".prompt0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 32
+        }
+      ],
+      ".footer0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ],
+      ".scene-label0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 38
+        }
+      ],
+      ".result0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 23
+        }
+      ],
+      ".result1": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 23
+        }
+      ],
+      ".prop-text small0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 18
+        }
+      ],
+      ".prop-text p0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 37
+        }
+      ],
+      ".sent0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 14
+        }
+      ]
+    },
+    "body_matches_canonical": true,
+    "images_loaded": true,
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 463.890625,
+        "overflow": false
+      },
+      {
+        "class": "scene-label",
+        "x": 84,
+        "y": 1050,
+        "right": 996,
+        "bottom": 1085,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 84,
+        "y": 1110,
+        "right": 529,
+        "bottom": 1178.390625,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 551,
+        "y": 1110,
+        "right": 996,
+        "bottom": 1178.390625,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "fonts": {
+      ".headline0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 31
+        }
+      ],
+      ".body0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 66
+        }
+      ],
+      ".prompt0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 33
+        }
+      ],
+      ".footer0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ],
+      ".scene-label0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 47
+        }
+      ],
+      ".result0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 26
+        }
+      ],
+      ".result1": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 24
+        }
+      ],
+      ".prop-text small0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 13
+        }
+      ],
+      ".prop-text p0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 15
+        }
+      ]
+    },
+    "body_matches_canonical": true,
+    "images_loaded": true,
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 463.890625,
+        "overflow": false
+      },
+      {
+        "class": "scene-label",
+        "x": 84,
+        "y": 1050,
+        "right": 996,
+        "bottom": 1085,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 84,
+        "y": 1110,
+        "right": 529,
+        "bottom": 1178.390625,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 551,
+        "y": 1110,
+        "right": 996,
+        "bottom": 1178.390625,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "fonts": {
+      ".headline0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 34
+        }
+      ],
+      ".body0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 60
+        }
+      ],
+      ".prompt0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 31
+        }
+      ],
+      ".footer0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ],
+      ".scene-label0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 42
+        }
+      ],
+      ".result0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 14
+        }
+      ],
+      ".result1": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 26
+        }
+      ]
+    },
+    "body_matches_canonical": true,
+    "images_loaded": true,
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 451.390625,
+        "overflow": false
+      },
+      {
+        "class": "scene-label",
+        "x": 84,
+        "y": 1050,
+        "right": 996,
+        "bottom": 1085,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 84,
+        "y": 1110,
+        "right": 529,
+        "bottom": 1178.390625,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 551,
+        "y": 1110,
+        "right": 996,
+        "bottom": 1178.390625,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "fonts": {
+      ".headline0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 49
+        }
+      ],
+      ".body0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 67
+        }
+      ],
+      ".prompt0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 36
+        }
+      ],
+      ".footer0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ],
+      ".scene-label0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 42
+        }
+      ],
+      ".result0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 25
+        }
+      ],
+      ".result1": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 26
+        }
+      ]
+    },
+    "body_matches_canonical": true,
+    "images_loaded": true,
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 451.390625,
+        "overflow": false
+      },
+      {
+        "class": "scene-label",
+        "x": 84,
+        "y": 1050,
+        "right": 996,
+        "bottom": 1085,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 84,
+        "y": 1110,
+        "right": 529,
+        "bottom": 1178.390625,
+        "overflow": false
+      },
+      {
+        "class": "result",
+        "x": 551,
+        "y": 1110,
+        "right": 996,
+        "bottom": 1178.390625,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "fonts": {
+      ".headline0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 40
+        }
+      ],
+      ".body0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 74
+        }
+      ],
+      ".footer0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ],
+      ".scene-label0": [],
+      ".brand-cta span0": [
+        {
+          "familyName": "Preahvihear",
+          "postScriptName": "Preahvihear-Regular",
+          "isCustomFont": true,
+          "glyphCount": 16
+        }
+      ]
+    },
+    "body_matches_canonical": true,
+    "images_loaded": true,
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 349.59375,
+        "overflow": false
+      },
+      {
+        "class": "scene-label",
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "bottom": 0,
+        "overflow": false
+      },
+      {
+        "class": "brand-cta",
+        "x": 84,
+        "y": 1082,
+        "right": 996,
+        "bottom": 1193,
+        "overflow": false
+      }
+    ]
+  }
+]

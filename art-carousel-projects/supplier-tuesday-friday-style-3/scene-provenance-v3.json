@@ -1,0 +1,17 @@
+{
+  "route": "Generated illustrative scenes, not customer photographs",
+  "identity_reference": "slides/assets/mascot-point.png",
+  "preserved": "aqua stepped head, cube antenna, white pixel face, two-dot badge, white block limbs, black shoes",
+  "marketing_text": "Added as editable HTML, not generated into imagery",
+  "scenes": {
+    "1": "slides/assets/scene-01.png",
+    "2": "slides/assets/scene-02.png",
+    "3": "slides/assets/scene-03.png",
+    "4": "slides/assets/scene-04.png",
+    "5": "slides/assets/scene-05.png",
+    "6": "slides/assets/scene-06.png",
+    "7": "slides/assets/scene-07.png",
+    "8": "slides/assets/scene-08.png"
+  },
+  "note": "Scenes 5 and 6 demonstrate response-received and no-answer branches respectively."
+}

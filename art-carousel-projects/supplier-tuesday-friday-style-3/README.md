@@ -1,23 +1,21 @@
 # Supplier said Tuesday. It's Friday. — Style 3
 
-Representative static design proof: cover (01) and supplier follow-up (04), from an eight-slide narrative. The approach is approved; these layouts and draft copy are for design review before completing the set. No motion is included.
+Current version: **v3, full eight-slide static review**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. No animation is included.
 
-## Design
+## Current downloads
 
-Preahvihear Regular throughout; clean modern receiving counter; original dimensional aqua ART mascot; fitted aqua callouts; separate white outcome cards. ART is present from the opening. The follow-up ends with a reply pending, without inventing a supplier response or delivery guarantee. No top ART watermark.
+`delivery-v3/` contains the ordered eight-page PDF, eight native 1080×1350 JPEGs, a contact sheet and a ZIP including the native PNGs. `delivery/` and `delivery-v2/` are superseded two-slide proofs.
 
-## Files
+## Scene logic
 
-- `slides/`: editable HTML, local font and original assets.
-- `stills/`: native 1080×1350 PNGs.
-- `delivery/`: high-quality individual JPEGs, two-page raster PDF, overview and download ZIP.
-- `content.json`: eight-slide draft narrative; only slides 01 and 04 are designed in this proof.
-- `audit.json`: browser font and image-load checks.
+The sequence moves from an overdue delivery to paused work, delivery-record comparison, outgoing follow-up, response tracking, unresolved-delay escalation, a human decision handoff and a calm close. The response-tracking slide illustrates what ART does when a reply is received; the next slide covers the unanswered branch. No revised date, real supplier reply or guaranteed delivery is invented.
 
-Revision v2 replaces the festive warehouse with a newly generated non-festive receiving-counter background. It is illustrative imagery, not a customer photograph. Original mascot/font assets come from `festive-dispatch-preahvihear`. `build.py` regenerates the editable layouts using those repository assets. Capture with Chromium over local HTTP after document.fonts.ready, at viewport 1080×1350 and device scale 1.
+## Source and brand
 
-Validation: visually inspected both native renders; browser reports embedded Preahvihear in all main text elements; images loaded. PDF pages exported at native dimensions.
+All marketing copy is editable HTML, in local Preahvihear Regular. New illustrative photographs integrate variations of the supplied original dimensional mascot, using `mascot-point.png` as a strict reference. They are generated scenes, not customer photographs. The original ART vector geometry and clock hands are unchanged; the previously approved blue-and-black wordmark presentation is applied via CSS. No top watermark is added.
 
-## Background revision v2
+`content.json` remains the canonical eight-slide draft copy. `slides/` holds editable layouts and assets; `stills/` holds current native PNGs. `build-full.py` creates the layouts. `capture-full.py` audits browser fonts/copy/bounds; `print-full.py` renders reliable native PNGs through the PDF print pipeline; `export-full.py` packages them. The final PDF retains vector text and embedded Preahvihear rather than rasterizing typography. Historical `build.py` and `capture.py` reproduce earlier proofs and must not be used to rebuild v3.
 
-Latest exports are in `delivery-v2/`; `delivery/` is the superseded first proof. Background revised on both slides; script, mascot identity and typography preserved. Reproduce: `python build.py`, `python capture.py`, `python export-v2.py`. The generated source background is retained as `slides/assets/warehouse.png`.
+## Validation
+
+Chromium checked actual Preahvihear font use, body copy, image loads and content bounds for all eight slides. Full renders and decoded PDF pages were visually inspected. See `audit-full-v3.json`. The document remains a static design review, not a publication approval.

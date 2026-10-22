@@ -1,0 +1,110 @@
+{
+  "pipeline": "Chromium PDF print -> native PNG raster; PDF pages merged preserving vector typography",
+  "Preahvihear_embedded_all_pages": true,
+  "checks": [
+    {
+      "slide": 1,
+      "PNG_dimensions": [
+        1080,
+        1350
+      ],
+      "JPEG_dimensions": [
+        1080,
+        1350
+      ],
+      "PDF_text_extracted": true,
+      "decoded_PDF_page_visually_inspected": true
+    },
+    {
+      "slide": 2,
+      "PNG_dimensions": [
+        1080,
+        1350
+      ],
+      "JPEG_dimensions": [
+        1080,
+        1350
+      ],
+      "PDF_text_extracted": true,
+      "decoded_PDF_page_visually_inspected": true
+    },
+    {
+      "slide": 3,
+      "PNG_dimensions": [
+        1080,
+        1350
+      ],
+      "JPEG_dimensions": [
+        1080,
+        1350
+      ],
+      "PDF_text_extracted": true,
+      "decoded_PDF_page_visually_inspected": true
+    },
+    {
+      "slide": 4,
+      "PNG_dimensions": [
+        1080,
+        1350
+      ],
+      "JPEG_dimensions": [
+        1080,
+        1350
+      ],
+      "PDF_text_extracted": true,
+      "decoded_PDF_page_visually_inspected": true
+    },
+    {
+      "slide": 5,
+      "PNG_dimensions": [
+        1080,
+        1350
+      ],
+      "JPEG_dimensions": [
+        1080,
+        1350
+      ],
+      "PDF_text_extracted": true,
+      "decoded_PDF_page_visually_inspected": true
+    },
+    {
+      "slide": 6,
+      "PNG_dimensions": [
+        1080,
+        1350
+      ],
+      "JPEG_dimensions": [
+        1080,
+        1350
+      ],
+      "PDF_text_extracted": true,
+      "decoded_PDF_page_visually_inspected": true
+    },
+    {
+      "slide": 7,
+      "PNG_dimensions": [
+        1080,
+        1350
+      ],
+      "JPEG_dimensions": [
+        1080,
+        1350
+      ],
+      "PDF_text_extracted": true,
+      "decoded_PDF_page_visually_inspected": true
+    },
+    {
+      "slide": 8,
+      "PNG_dimensions": [
+        1080,
+        1350
+      ],
+      "JPEG_dimensions": [
+        1080,
+        1350
+      ],
+      "PDF_text_extracted": true,
+      "decoded_PDF_page_visually_inspected": true
+    }
+  ]
+}
