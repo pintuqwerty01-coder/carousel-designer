@@ -1,6 +1,6 @@
 # Supplier said Tuesday. It's Friday. — Style 3
 
-Current review: **static v14, closing slide rebuilt with an upper-left logo on a white brand header**, in `static-v14/`. The six-slide supplier follow-through story and slide 5 governance are retained. The original white-limb mascot treatment is retained. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
+Current review: **static v15, redesigned pad and mobile text/elements on slides 1 and 2**, in `static-v15/`. The v14 closing-slide layout is retained. The six-slide supplier follow-through story and slide 5 governance are retained. The original white-limb mascot treatment is retained. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
 
 ## Current downloads
 
@@ -63,3 +63,7 @@ Slide 6 has a larger original logo with white clear space, aligned logo/CTA colu
 ## Static v14 — distinct upper-left brand placement
 
 After further user feedback, the final slide is rebuilt: blue/black logo on a full-width white header, a left-aligned text column that clears the mascot, and a text-only bottom CTA. Slides 1–5, the mascot/photo and all words are retained.
+
+## Static v15 — pad and mobile
+
+Slide 1 has a delivery-status pad with aligned dates and status treatments. Slide 2 has a supplier follow-up conversation UI fitted to the phone. Main copy, photographs, mascot and slides 3–6 are retained.
