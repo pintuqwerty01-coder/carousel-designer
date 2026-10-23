@@ -1,3 +1,7 @@
+## Current review: static v20
+
+Connected opening pair: slide 1 maps material delay to production and dispatch risks; slide 2 uses Meet plus the exact ART logo and Governed automation for everyday business operations, followed by three corresponding response actions. Shared box/factory/truck icons, consistent cards and the original white-limb mascot scenes. Slides 3–7 retained. Current PDF, JPEGs, PNGs and ZIP: `static-v20/delivery/`.
+
 ## Current review: static v19
 
 Slide 2: entire Meet ART (A Realtime Tech) line enlarged to 54 px, above the 43 px supporting headline. ART remains bold. Updated PDF, JPEGs and ZIP: `static-v19/delivery/`. Other slides unchanged.
