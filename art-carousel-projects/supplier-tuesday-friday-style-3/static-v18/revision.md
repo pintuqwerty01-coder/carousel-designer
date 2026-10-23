@@ -1,0 +1,1 @@
+Slide 2 only: ART receives a larger bold treatment as explicitly requested, overriding the regular-only style rule for this word. All remaining text stays regular Preahvihear. Tablet interface is an editable generic delivery status illustration, fitted to the photographed display with a four-point perspective projection. Canonical marketing copy unchanged.

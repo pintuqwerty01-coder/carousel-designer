@@ -1,3 +1,7 @@
+## Current review: static v18
+
+Slide 2: ART bold emphasis (explicit user request), aligned regular supporting typography and an editable perspective-fitted tablet delivery interface. Approved marketing copy retained. Other slides unchanged. Latest downloads: `static-v18/delivery/`.
+
 ## Current review: static v17
 
 Slide 2 uses the approved ART product introduction and supplier follow-through closing. Other slides are unchanged from v16. Downloads: `static-v17/delivery/` (7-page PDF, seven 1080 x 1350 JPEGs, overview and ZIP with PNGs). Canonical copy and editable HTML: `static-v17/content.json` and `static-v17/slides/`. Run `static-v17/render.py` to reproduce exports.
