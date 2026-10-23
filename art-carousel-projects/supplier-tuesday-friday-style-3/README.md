@@ -1,3 +1,7 @@
+## Current review: static v19
+
+Slide 2: entire Meet ART (A Realtime Tech) line enlarged to 54 px, above the 43 px supporting headline. ART remains bold. Updated PDF, JPEGs and ZIP: `static-v19/delivery/`. Other slides unchanged.
+
 ## Current review: static v18
 
 Slide 2: ART bold emphasis (explicit user request), aligned regular supporting typography and an editable perspective-fitted tablet delivery interface. Approved marketing copy retained. Other slides unchanged. Latest downloads: `static-v18/delivery/`.
