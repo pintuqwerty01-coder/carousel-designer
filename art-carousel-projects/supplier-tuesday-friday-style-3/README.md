@@ -1,6 +1,6 @@
 # Supplier said Tuesday. It's Friday. — Style 3
 
-Current review: **static v13, corrected closing-slide logo and typography**, in `static-v13/`. The six-slide supplier follow-through story and slide 5 governance are retained. The original white-limb mascot treatment is retained. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
+Current review: **static v14, closing slide rebuilt with an upper-left logo on a white brand header**, in `static-v14/`. The six-slide supplier follow-through story and slide 5 governance are retained. The original white-limb mascot treatment is retained. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
 
 ## Current downloads
 
@@ -59,3 +59,7 @@ The user approved the six-slide script and the governance addition on slide 5, t
 ## Static v13 — closing-slide hierarchy and logo
 
 Slide 6 has a larger original logo with white clear space, aligned logo/CTA columns, a stronger primary headline and balanced paragraph lines. Slides 1–5 and all marketing wording are retained unchanged.
+
+## Static v14 — distinct upper-left brand placement
+
+After further user feedback, the final slide is rebuilt: blue/black logo on a full-width white header, a left-aligned text column that clears the mascot, and a text-only bottom CTA. Slides 1–5, the mascot/photo and all words are retained.
