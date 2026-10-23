@@ -1,0 +1,1 @@
+Slide 2 reading order corrected: Meet plus approved ART logo; Governed automation for everyday business operations; supplier-delay connection; three response actions. All copy, photos and other slides retained.

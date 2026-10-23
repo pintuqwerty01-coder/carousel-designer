@@ -1,3 +1,7 @@
+## Current review: static v21
+
+Slide 2 reading order: Meet plus ART logo, Governed automation for everyday business operations, supplier-delay connection, then response actions. All other content and slides unchanged. Current exports: `static-v21/delivery/`.
+
 ## Current review: static v20
 
 Connected opening pair: slide 1 maps material delay to production and dispatch risks; slide 2 uses Meet plus the exact ART logo and Governed automation for everyday business operations, followed by three corresponding response actions. Shared box/factory/truck icons, consistent cards and the original white-limb mascot scenes. Slides 3–7 retained. Current PDF, JPEGs, PNGs and ZIP: `static-v20/delivery/`.
