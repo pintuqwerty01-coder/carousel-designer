@@ -1,0 +1,120 @@
+{
+  "topic": "Supplier said Tuesday. ART doesn't wait for Friday.",
+  "status": "Six-slide static v13 review: closing-slide hierarchy, logo legibility and CTA alignment corrected",
+  "slides": [
+    {
+      "slide": 1,
+      "headline": [
+        "Supplier said Tuesday.",
+        "ART doesn't wait",
+        "for Friday."
+      ],
+      "body": [
+        "ART (A Realtime Tech) tracks the commitment",
+        "and prepares the next move",
+        "when delivery is at risk."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [],
+      "rules": [],
+      "cta": null,
+      "photo": "../static-v9/assets/scene-01.png"
+    },
+    {
+      "slide": 2,
+      "headline": [
+        "The date is set.",
+        "ART stays on it."
+      ],
+      "body": [
+        "From order confirmation to dispatch,",
+        "ART keeps asking for updates",
+        "and sends timely reminders."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [],
+      "rules": [],
+      "cta": null,
+      "photo": "../static-v9/assets/scene-04.png"
+    },
+    {
+      "slide": 3,
+      "headline": [
+        "Will stock last",
+        "until the new delivery?"
+      ],
+      "body": [
+        "ART checks demand and incoming stock",
+        "to calculate the shortfall",
+        "and identify orders at risk."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [],
+      "rules": [],
+      "cta": null,
+      "photo": "../static-v9/assets/scene-03.png"
+    },
+    {
+      "slide": 4,
+      "headline": [
+        "Your supplier can't",
+        "meet the need?",
+        "ART looks for who can."
+      ],
+      "body": [
+        "It checks approved alternatives",
+        "for the required quantity,",
+        "arrival time and cost."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [],
+      "rules": [],
+      "cta": null,
+      "photo": "../static-v12/assets/scene-04.png"
+    },
+    {
+      "slide": 5,
+      "headline": [
+        "Cover what's missing.",
+        "Keep control",
+        "of what changes."
+      ],
+      "body": [
+        "ART accounts for the original delivery",
+        "before arranging replacement stock."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [],
+      "rules": [
+        "Within your purchasing rules, ART proceeds.",
+        "Changes outside them come to you for approval."
+      ],
+      "cta": null,
+      "photo": "../static-v9/assets/scene-07.png"
+    },
+    {
+      "slide": 6,
+      "headline": [
+        "Put ART on",
+        "the follow-through."
+      ],
+      "body": [
+        "Let ART (A Realtime Tech)",
+        "track suppliers, flag delivery risks",
+        "and coordinate the next move."
+      ],
+      "prompt": null,
+      "scene_label": null,
+      "results": [],
+      "rules": [],
+      "cta": "Talk to us about your supplier workflow.",
+      "photo": "../static-v9/assets/scene-08.png",
+      "kicker": "Stop chasing delivery updates."
+    }
+  ]
+}

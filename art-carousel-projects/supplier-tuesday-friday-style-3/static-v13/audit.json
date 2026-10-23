@@ -1,0 +1,260 @@
+[
+  {
+    "slide": 1,
+    "copy_matches": true,
+    "font": "Preahvihear custom font",
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 84,
+        "right": 996,
+        "bottom": 501.015625,
+        "overflow": false
+      },
+      {
+        "class": "headline",
+        "x": 84,
+        "y": 84,
+        "right": 996,
+        "bottom": 330.234375,
+        "overflow": false
+      },
+      {
+        "class": "body",
+        "x": 84,
+        "y": 358.234375,
+        "right": 996,
+        "bottom": 501.015625,
+        "overflow": false
+      },
+      {
+        "class": "prop-text record",
+        "x": 119.0492935180664,
+        "y": 704.2891845703125,
+        "right": 400.95072174072266,
+        "bottom": 944.8983154296875,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "copy_matches": true,
+    "font": "Preahvihear custom font",
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 406.890625,
+        "overflow": false
+      },
+      {
+        "class": "headline",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 245.5,
+        "overflow": false
+      },
+      {
+        "class": "body",
+        "x": 84,
+        "y": 272.5,
+        "right": 996,
+        "bottom": 406.890625,
+        "overflow": false
+      },
+      {
+        "class": "prop-text phone-note",
+        "x": 245,
+        "y": 605,
+        "right": 453.3475036621094,
+        "bottom": 907.5750122070312,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "copy_matches": true,
+    "font": "Preahvihear custom font",
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 406.890625,
+        "overflow": false
+      },
+      {
+        "class": "headline",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 245.5,
+        "overflow": false
+      },
+      {
+        "class": "body",
+        "x": 84,
+        "y": 272.5,
+        "right": 996,
+        "bottom": 406.890625,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "copy_matches": true,
+    "font": "Preahvihear custom font",
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 471.28125,
+        "overflow": false
+      },
+      {
+        "class": "headline",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 309.890625,
+        "overflow": false
+      },
+      {
+        "class": "body",
+        "x": 84,
+        "y": 336.890625,
+        "right": 996,
+        "bottom": 471.28125,
+        "overflow": false
+      },
+      {
+        "class": "quote q1",
+        "x": 102,
+        "y": 853,
+        "right": 226,
+        "bottom": 1017.78125,
+        "overflow": false
+      },
+      {
+        "class": "quote q2",
+        "x": 265,
+        "y": 853,
+        "right": 389,
+        "bottom": 1017.78125,
+        "overflow": false
+      },
+      {
+        "class": "quote q3",
+        "x": 432,
+        "y": 853,
+        "right": 556,
+        "bottom": 1017.78125,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "copy_matches": true,
+    "font": "Preahvihear custom font",
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 420.890625,
+        "overflow": false
+      },
+      {
+        "class": "headline",
+        "x": 84,
+        "y": 96,
+        "right": 996,
+        "bottom": 309.890625,
+        "overflow": false
+      },
+      {
+        "class": "body",
+        "x": 84,
+        "y": 336.890625,
+        "right": 996,
+        "bottom": 420.890625,
+        "overflow": false
+      },
+      {
+        "class": "rule",
+        "x": 84,
+        "y": 1064,
+        "right": 529,
+        "bottom": 1212.78125,
+        "overflow": false
+      },
+      {
+        "class": "rule",
+        "x": 551,
+        "y": 1064,
+        "right": 996,
+        "bottom": 1212.78125,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "copy_matches": true,
+    "font": "Preahvihear custom font",
+    "boxes": [
+      {
+        "class": "copy",
+        "x": 84,
+        "y": 88,
+        "right": 996,
+        "bottom": 477,
+        "overflow": false
+      },
+      {
+        "class": "closing-kicker",
+        "x": 84,
+        "y": 88,
+        "right": 996,
+        "bottom": 135.25,
+        "overflow": false
+      },
+      {
+        "class": "headline",
+        "x": 84,
+        "y": 157.25,
+        "right": 996,
+        "bottom": 318.5,
+        "overflow": false
+      },
+      {
+        "class": "body",
+        "x": 84,
+        "y": 346.5,
+        "right": 734,
+        "bottom": 477,
+        "overflow": false
+      },
+      {
+        "class": "brand-cta",
+        "x": 84,
+        "y": 1052,
+        "right": 996,
+        "bottom": 1206,
+        "overflow": false
+      }
+    ]
+  }
+]
