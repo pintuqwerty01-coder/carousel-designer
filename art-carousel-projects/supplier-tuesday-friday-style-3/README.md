@@ -1,3 +1,7 @@
+## Current review: static v17
+
+Slide 2 uses the approved ART product introduction and supplier follow-through closing. Other slides are unchanged from v16. Downloads: `static-v17/delivery/` (7-page PDF, seven 1080 x 1350 JPEGs, overview and ZIP with PNGs). Canonical copy and editable HTML: `static-v17/content.json` and `static-v17/slides/`. Run `static-v17/render.py` to reproduce exports.
+
 ## Current review: static v16 (7 slides)
 
 Pain-first cover, new ART introduction on slide 2, existing four workflow slides retained, and blue-and-white closing logo without a white background. Closing CTA: DM "DELIVERY" to discuss your supplier workflow.

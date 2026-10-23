@@ -1,0 +1,1 @@
+Approved slide 2 content applied from the user conversation. Only slide 2 was revised. Preahvihear and the existing white-limb mascot scene retained. Headline uses an ASCII apostrophe supported by the font. Other slide HTML, PNG and individual PDF proofs are identical to v16.
