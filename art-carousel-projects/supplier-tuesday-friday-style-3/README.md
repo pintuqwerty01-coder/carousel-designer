@@ -1,3 +1,7 @@
+## Current review: static v23
+
+Restored the original cover selected by the user; added the requested pipeline-impact sentence and three compact elements below the pad/mascot. Slide 2 retains consistent supporting type, the delay-connection line and the previous three response boxes. Current exports: `static-v23/delivery/`. Slides 3–7 unchanged.
+
 ## Current review: static v22
 
 Cover rebuilt as a four-step visual manager workload roadmap: supplier chat, supplier-list search, repeated order entry and ongoing reminders. Smaller mascot leaves space for the workflow. Slide 2 uses consistent 32px supporting copy and four matching ART response actions. Latest PDF, native 1080 x 1350 JPEGs, PNGs and ZIP: `static-v22/delivery/`. Slides 3–7 unchanged.

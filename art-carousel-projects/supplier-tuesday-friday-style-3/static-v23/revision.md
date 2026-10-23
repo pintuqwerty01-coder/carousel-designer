@@ -1,0 +1,1 @@
+Restored exact source design of the cover supplied by the user (v16): original full-size mascot, pad, dates and top copy. Appended requested impact sentence and three compact material/production/dispatch cues below the scene. Slide 2 retains corrected uniform supporting typography and the pain-connection line; restores the previous three action cards. Slides 3–7 unchanged.
