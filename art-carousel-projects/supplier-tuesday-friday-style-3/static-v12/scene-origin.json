@@ -1,0 +1,6 @@
+{
+  "slide": 4,
+  "source": "../static-v9/assets/scene-05.png",
+  "reference": "../static-v9/assets/scene-01.png",
+  "output_hint": "Generated images are saved to /workspace/generated_images as /workspace/generated_images/exec-8d8d98d7-60b5-4e8b-a1d4-fed340b56fe3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

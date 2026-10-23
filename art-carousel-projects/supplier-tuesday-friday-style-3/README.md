@@ -1,6 +1,6 @@
 # Supplier said Tuesday. It's Friday. — Style 3
 
-Current review: **static v10, shorter copy with distinct heading/body/box roles**, in `static-v10/`. The white-limb v9 scenes are retained unchanged. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
+Current review: **static v12, six-slide supplier follow-through story with governance on slide 5**, in `static-v12/`. The original white-limb mascot treatment is retained. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
 
 ## Current downloads
 
@@ -51,3 +51,7 @@ The user clarified that the mascot has no blue in its hands or legs and asked no
 ## Static v10 — concise copy without repeated boxes
 
 Removed repeated captions, task prompts and redundant cards. Each heading hooks, the body adds context or mechanism, and the remaining boxes give evidence, detail or choices. The v9 mascot/scene images are referenced byte-for-byte without alteration. See `static-v10/README.md` for the slide-by-slide content roles.
+
+## Six-slide static v12 — follow-through and alternate sourcing
+
+The user approved the six-slide script and the governance addition on slide 5, then requested design. This sequence covers ongoing supplier updates/reminders, stock impact, approved alternatives, original-delivery accounting with policy-based execution and human exceptions, and a supplier-workflow CTA. `static-v12/` contains the full static design. Previous eight-slide deliveries are superseded review versions.
