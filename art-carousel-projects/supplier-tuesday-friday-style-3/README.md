@@ -1,3 +1,9 @@
+## Current review: static v16 (7 slides)
+
+Pain-first cover, new ART introduction on slide 2, existing four workflow slides retained, and blue-and-white closing logo without a white background. Closing CTA: DM "DELIVERY" to discuss your supplier workflow.
+
+Deliverables: `static-v16/delivery/` (PDF, seven 1080 x 1350 JPEGs, overview and ZIP with PNGs). Editable HTML and canonical copy are in `static-v16/`; reproduce with its `build.py` and `render.py`.
+
 # Supplier said Tuesday. It's Friday. — Style 3
 
 Current review: **static v15, redesigned pad and mobile text/elements on slides 1 and 2**, in `static-v15/`. The v14 closing-slide layout is retained. The six-slide supplier follow-through story and slide 5 governance are retained. The original white-limb mascot treatment is retained. Static v7 records the copy and scene-logic revision. The previously approved static baseline is **v6, with clean facial geometry on slides 1, 2, 3 and 5**. Each slide now has its own generated photographic setting, pose, expression and explanatory props. ART appears from the cover. The full carousel is static. A single-slide motion test is available in `motion-preview/`.
