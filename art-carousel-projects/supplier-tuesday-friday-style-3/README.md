@@ -1,3 +1,7 @@
+## Current review: static v22
+
+Cover rebuilt as a four-step visual manager workload roadmap: supplier chat, supplier-list search, repeated order entry and ongoing reminders. Smaller mascot leaves space for the workflow. Slide 2 uses consistent 32px supporting copy and four matching ART response actions. Latest PDF, native 1080 x 1350 JPEGs, PNGs and ZIP: `static-v22/delivery/`. Slides 3–7 unchanged.
+
 ## Current review: static v21
 
 Slide 2 reading order: Meet plus ART logo, Governed automation for everyday business operations, supplier-delay connection, then response actions. All other content and slides unchanged. Current exports: `static-v21/delivery/`.
