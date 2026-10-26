@@ -1,0 +1,188 @@
+{
+  "topic": "7 calls behind one container",
+  "status": "Static v5: integrated content-specific states, larger semantic visuals and polished typographic composition. Approved marketing script unchanged.",
+  "slides": [
+    {
+      "n": 1,
+      "palette": "dark",
+      "headline": [
+        "7 CALLS",
+        "BEHIND ONE",
+        "CONTAINER."
+      ],
+      "body": [
+        "And you're still piecing",
+        "together the answer."
+      ],
+      "closing": [
+        "The shipment has a plan.",
+        "Keeping everyone on that plan",
+        "becomes your job."
+      ],
+      "asset": "cover.png",
+      "annotations": [
+        "CALL NOTES",
+        "Update",
+        "Revision",
+        "Details",
+        "Pickup",
+        "Timing",
+        "Receipt",
+        "Follow-up"
+      ]
+    },
+    {
+      "n": 2,
+      "palette": "light",
+      "headline": [
+        "Seven conversations.",
+        "One connected shipment."
+      ],
+      "body": [
+        "Governed automation",
+        "for everyday business operations."
+      ],
+      "closing": [
+        "ART brings updates, documents and next steps together\u2014",
+        "so every change doesn't become another round of calls."
+      ],
+      "asset": "intro.png",
+      "annotations": [
+        "Latest update",
+        "Load revised",
+        "Missing reply",
+        "Transporter",
+        "Next action",
+        "Confirm pickup"
+      ]
+    },
+    {
+      "n": 3,
+      "palette": "aqua",
+      "headline": [
+        "\"The load has changed.\""
+      ],
+      "body": [
+        "One supplier update. Now the packing list",
+        "and pickup details need to catch up."
+      ],
+      "closing": [
+        "ART checks the revision against the shipment",
+        "and requests what's missing."
+      ],
+      "asset": "documents.png",
+      "annotations": [
+        "Earlier version",
+        "Revision received",
+        "Changed fields"
+      ]
+    },
+    {
+      "n": 4,
+      "palette": "light",
+      "headline": [
+        "\"Has the transporter got",
+        "the new details?\""
+      ],
+      "body": [
+        "Sending the revised document",
+        "is only half the handoff."
+      ],
+      "closing": [
+        "The relevant change reaches the affected parties.",
+        "Their confirmations stay open until there's an answer."
+      ],
+      "asset": "handoff.png",
+      "annotations": [
+        "Revision sent",
+        "Acknowledgment pending"
+      ]
+    },
+    {
+      "n": 5,
+      "palette": "aqua",
+      "headline": [
+        "\"Can we still make",
+        "the cutoff?\""
+      ],
+      "body": [
+        "Pickup shifts. The next milestone",
+        "is now in question."
+      ],
+      "closing": [
+        "ART checks the knock-on effects",
+        "and gathers feasible options\u2014connecting",
+        "the changed timing to what happens next."
+      ],
+      "asset": "pickup.png",
+      "annotations": [
+        "Revised pickup",
+        "Existing cutoff"
+      ]
+    },
+    {
+      "n": 6,
+      "palette": "dark",
+      "headline": [
+        "Then comes",
+        "the silence."
+      ],
+      "body": [
+        "One confirmation is still missing.",
+        "Everyone else is waiting on it."
+      ],
+      "closing": [
+        "ART follows up on that unresolved step",
+        "and flags when it puts the shipment's",
+        "next milestone at risk."
+      ],
+      "asset": "confirmation.png",
+      "annotations": [
+        "TRANSPORTER",
+        "Acknowledgment",
+        "Pending"
+      ]
+    },
+    {
+      "n": 7,
+      "palette": "teal",
+      "headline": [
+        "The next call should",
+        "be a decision."
+      ],
+      "body": [
+        "If the revised plan adds cost or changes a commitment,",
+        "you get the options and their impact together\u2014",
+        "before it goes ahead."
+      ],
+      "closing": [
+        "Routine coordination follows your rules.",
+        "Exceptions get your judgment."
+      ],
+      "asset": "decision.png",
+      "annotations": [
+        "Change",
+        "Impact",
+        "Options",
+        "Your call"
+      ]
+    },
+    {
+      "n": 8,
+      "palette": "dark",
+      "headline": [
+        "Your job is to move",
+        "the shipment.",
+        "Not carry every conversation."
+      ],
+      "body": [
+        "ART (A Realtime Tech)",
+        "connects the follow-through."
+      ],
+      "closing": [
+        "DM \"CONTAINER\" to explore your shipment workflow."
+      ],
+      "annotations": []
+    }
+  ]
+}

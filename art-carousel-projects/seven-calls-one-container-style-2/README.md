@@ -1,3 +1,7 @@
+## Current review: static v5 — execution and semantic visual states
+
+Approved narrative unchanged. Revised compositions and editable prop labels make the story states visible: seven call notes, latest update/missing reply/next action in one shipment dossier, earlier/revised packing lists, sent/pending handoff, pickup/cutoff dependency, one outstanding transporter acknowledgment, and the change/impact/options briefing. New dossier and pending-acknowledgment illustrations replace decorative route and generic notification art. Current exports: `static-v5/delivery/` (full PDF, 1080 x 1350 JPEG/PNG slides and ZIP).
+
 ## Current review: static v4 — approved shipment narrative
 
 New eight-slide script approved in chat: calls behind the shipment → ART introduction → changed load → document handoff → cutoff question → missing confirmation → human decision → close. Reference PDF supplies the visual language; the previous four-feature presentation is removed. Native JPEG/PNG slides, full PDF and ZIP: `static-v4/delivery/`. Canonical content: `static-v4/content.json`.
