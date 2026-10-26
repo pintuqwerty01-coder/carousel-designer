@@ -1,3 +1,7 @@
+## Current review: static v6 — refined V4 creative direction
+
+Returns to the earlier distinct 3D visual approach preferred by the user. No V5 panels, labels or callout overlays. Reference-standard typography and varied compositions are refined; a new right-edge container/phone cover and a new physical load-change illustration connect to the approved story. Handoff, cutoff, confirmation and decision scenes are rebalanced and scaled. Current complete 8-slide PDF, native JPEG/PNG slides and ZIP: `static-v6/delivery/`. Approved script unchanged.
+
 ## Current review: static v5 — execution and semantic visual states
 
 Approved narrative unchanged. Revised compositions and editable prop labels make the story states visible: seven call notes, latest update/missing reply/next action in one shipment dossier, earlier/revised packing lists, sent/pending handoff, pickup/cutoff dependency, one outstanding transporter acknowledgment, and the change/impact/options briefing. New dossier and pending-acknowledgment illustrations replace decorative route and generic notification art. Current exports: `static-v5/delivery/` (full PDF, 1080 x 1350 JPEG/PNG slides and ZIP).
