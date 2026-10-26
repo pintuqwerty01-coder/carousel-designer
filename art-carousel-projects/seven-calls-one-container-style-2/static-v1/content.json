@@ -1,0 +1,126 @@
+{
+  "topic": "7 calls behind one container",
+  "status": "Three-slide static direction proof; full eight-slide script retained",
+  "slides": [
+    {
+      "n": 1,
+      "palette": "dark",
+      "headline": [
+        "7 CALLS",
+        "BEHIND ONE",
+        "CONTAINER."
+      ],
+      "body": [
+        "Goods ready? Documents correct?",
+        "Truck confirmed?"
+      ],
+      "closing": [
+        "One shipment. A whole day",
+        "connecting the dots."
+      ],
+      "asset": "cover.png"
+    },
+    {
+      "n": 2,
+      "palette": "light",
+      "headline": [
+        "Your team shouldn't have to hold",
+        "the shipment together through calls."
+      ],
+      "body": [
+        "Governed automation",
+        "for everyday business operations."
+      ],
+      "closing": [
+        "ART connects updates, checks what's missing",
+        "and coordinates the next step."
+      ],
+      "asset": "coordination.png"
+    },
+    {
+      "n": 3,
+      "palette": "aqua",
+      "headline": [
+        "'Ready' needs more",
+        "than a supplier's word."
+      ],
+      "body": [
+        "Goods packed. Documents complete.",
+        "Pickup arranged."
+      ],
+      "closing": [
+        "ART checks what's confirmed\u2014and follows up",
+        "on what still stands between 'ready' and moving."
+      ],
+      "asset": "ready.png"
+    },
+    {
+      "n": 4,
+      "headline": [
+        "The details changed.",
+        "Has the plan caught up?"
+      ],
+      "body": [
+        "A revised packing list can affect the load and pickup arrangements."
+      ],
+      "closing": [
+        "ART checks the change against shipment details and flags what needs correcting."
+      ],
+      "palette": "light"
+    },
+    {
+      "n": 5,
+      "headline": [
+        "Pickup moved. The impact doesn't stop there."
+      ],
+      "body": [
+        "Warehouse timing. Transport plans. Shipment cutoffs."
+      ],
+      "closing": [
+        "ART connects the affected steps and coordinates revised arrangements."
+      ],
+      "palette": "aqua"
+    },
+    {
+      "n": 6,
+      "headline": [
+        "A message sent isn't a job done."
+      ],
+      "body": [
+        "'Please confirm' can't be the last step."
+      ],
+      "closing": [
+        "ART keeps track of outstanding confirmations, follows up and flags milestones at risk."
+      ],
+      "palette": "dark"
+    },
+    {
+      "n": 7,
+      "headline": [
+        "When the plan needs a decision,",
+        "you get the whole picture."
+      ],
+      "body": [
+        "What changed. What it affects. What options are available."
+      ],
+      "closing": [
+        "Routine coordination follows your rules. Extra costs and exceptions come to the right person."
+      ],
+      "palette": "teal"
+    },
+    {
+      "n": 8,
+      "headline": [
+        "Move the container.",
+        "Lose the constant chasing."
+      ],
+      "body": [
+        "Let ART (A Realtime Tech) connect the follow-through."
+      ],
+      "closing": [
+        "DM \"CONTAINER\" to explore your shipment workflow."
+      ],
+      "palette": "dark"
+    }
+  ]
+}
