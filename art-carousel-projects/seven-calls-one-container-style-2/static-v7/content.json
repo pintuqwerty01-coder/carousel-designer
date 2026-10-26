@@ -1,0 +1,129 @@
+{
+  "topic": "7 calls behind one container",
+  "status": "Approved seven-slide narrative; reference-led static execution v7",
+  "slides": [
+    {
+      "n": 1,
+      "palette": "dark",
+      "headline": [
+        "7 CALLS TO MOVE",
+        "ONE CONTAINER.",
+        "One missed detail",
+        "to hold it up."
+      ],
+      "body": [
+        "Everyone gave you an update."
+      ],
+      "closing": [
+        "Do those updates agree?"
+      ],
+      "asset": "gate.png"
+    },
+    {
+      "n": 2,
+      "palette": "light",
+      "headline": [
+        "The supplier says ready.",
+        "The paperwork",
+        "says otherwise."
+      ],
+      "body": [
+        "The latest packing list doesn't match",
+        "the booking."
+      ],
+      "closing": [
+        "ART checks shipment details across the available",
+        "records and conversations\u2014and follows up",
+        "on the mismatch."
+      ],
+      "asset": "mismatch.png"
+    },
+    {
+      "n": 3,
+      "palette": "aqua",
+      "headline": [
+        "Fix the document.",
+        "Check what else changed."
+      ],
+      "body": [
+        "The revised load may affect vehicle capacity,",
+        "pickup arrangements and shipping instructions."
+      ],
+      "closing": [
+        "ART checks the affected dependencies",
+        "and coordinates the required updates."
+      ],
+      "asset": "documents.png"
+    },
+    {
+      "n": 4,
+      "palette": "light",
+      "headline": [
+        "Truck confirmed for 4 PM.",
+        "Loading closes at 3 PM."
+      ],
+      "body": [
+        "Two confirmations.",
+        "One plan that cannot work."
+      ],
+      "closing": [
+        "ART checks the timings together and seeks",
+        "a workable arrangement before dispatch."
+      ],
+      "asset": "timing.png"
+    },
+    {
+      "n": 5,
+      "palette": "aqua",
+      "headline": [
+        "New plan sent.",
+        "Old plan still in use."
+      ],
+      "body": [
+        "A revised pickup means little if the",
+        "transporter hasn't confirmed it."
+      ],
+      "closing": [
+        "ART follows the handoff through to",
+        "acknowledgment and action, keeping",
+        "the unresolved step open."
+      ],
+      "asset": "handoff.png"
+    },
+    {
+      "n": 6,
+      "palette": "teal",
+      "headline": [
+        "Now there's a decision.",
+        "Not another status call."
+      ],
+      "body": [
+        "Keep the cutoff with a costlier pickup\u2014",
+        "or take the later departure?"
+      ],
+      "closing": [
+        "ART gathers the available options, cost and timing",
+        "impact. Decisions outside your rules reach",
+        "the right person with context."
+      ],
+      "asset": "decision.png"
+    },
+    {
+      "n": 7,
+      "palette": "dark",
+      "headline": [
+        "Move the container.",
+        "Get your day back."
+      ],
+      "body": [
+        "ART checks the details, coordinates the changes",
+        "and follows through on the handoffs."
+      ],
+      "closing": [
+        "DM \"CONTAINER\"",
+        "to explore your shipment workflow."
+      ],
+      "asset": "released.png"
+    }
+  ]
+}
