@@ -1,3 +1,7 @@
+## Current review: static v4 — approved shipment narrative
+
+New eight-slide script approved in chat: calls behind the shipment → ART introduction → changed load → document handoff → cutoff question → missing confirmation → human decision → close. Reference PDF supplies the visual language; the previous four-feature presentation is removed. Native JPEG/PNG slides, full PDF and ZIP: `static-v4/delivery/`. Canonical content: `static-v4/content.json`.
+
 ## Current review: static v3 — full eight-slide carousel
 
 New distinct elements and compositions follow the supplied PDF standard: coordination desk, connected shipment route, retained readiness dock, revised packing lists, pickup-to-cutoff road, pending confirmation phone, decision briefing folio, and a typography-led close. The early ART introduction and full script remain intact. Current exports: `static-v3/delivery/`. Native 1080 x 1350 JPEGs/PNGs, complete PDF and ZIP.

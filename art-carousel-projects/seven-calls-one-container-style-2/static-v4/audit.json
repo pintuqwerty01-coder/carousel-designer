@@ -1,0 +1,660 @@
+[
+  {
+    "slide": 1,
+    "copy_matches": true,
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Bold",
+        "isCustomFont": true,
+        "glyphCount": 27
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 44
+      },
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 70
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 7
+      }
+    ],
+    "boxes": [
+      {
+        "name": "copy",
+        "x": 64,
+        "right": 1016,
+        "y": 128,
+        "bottom": 707.671875,
+        "overflow": false
+      },
+      {
+        "name": "headline",
+        "x": 64,
+        "right": 1016,
+        "y": 128,
+        "bottom": 443.109375,
+        "overflow": false
+      },
+      {
+        "name": "body",
+        "x": 64,
+        "right": 1016,
+        "y": 473.109375,
+        "bottom": 557.109375,
+        "overflow": false
+      },
+      {
+        "name": "closing",
+        "x": 64,
+        "right": 1016,
+        "y": 578.109375,
+        "bottom": 707.671875,
+        "overflow": false
+      },
+      {
+        "name": "footer",
+        "x": 64,
+        "right": 1016,
+        "y": 1249,
+        "bottom": 1297,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 2,
+    "copy_matches": true,
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 43
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 52
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 108
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 7
+      },
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 4
+      }
+    ],
+    "boxes": [
+      {
+        "name": "copy",
+        "x": 64,
+        "right": 1016,
+        "y": 106,
+        "bottom": 609.875,
+        "overflow": false
+      },
+      {
+        "name": "intro-brand",
+        "x": 64,
+        "right": 1016,
+        "y": 106,
+        "bottom": 210,
+        "overflow": false
+      },
+      {
+        "name": "body",
+        "x": 64,
+        "right": 1016,
+        "y": 240,
+        "bottom": 326.78125,
+        "overflow": false
+      },
+      {
+        "name": "headline",
+        "x": 64,
+        "right": 1016,
+        "y": 355.78125,
+        "bottom": 500.78125,
+        "overflow": false
+      },
+      {
+        "name": "closing",
+        "x": 64,
+        "right": 1016,
+        "y": 525.78125,
+        "bottom": 609.875,
+        "overflow": false
+      },
+      {
+        "name": "footer",
+        "x": 64,
+        "right": 1016,
+        "y": 1249,
+        "bottom": 1297,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 3,
+    "copy_matches": true,
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 23
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 77
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 72
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 7
+      }
+    ],
+    "boxes": [
+      {
+        "name": "copy",
+        "x": 64,
+        "right": 1016,
+        "y": 155,
+        "bottom": 457.71875,
+        "overflow": false
+      },
+      {
+        "name": "headline",
+        "x": 64,
+        "right": 1016,
+        "y": 155,
+        "bottom": 226.96875,
+        "overflow": false
+      },
+      {
+        "name": "body",
+        "x": 64,
+        "right": 1016,
+        "y": 254.96875,
+        "bottom": 344.84375,
+        "overflow": false
+      },
+      {
+        "name": "closing",
+        "x": 64,
+        "right": 1016,
+        "y": 367.84375,
+        "bottom": 457.71875,
+        "overflow": false
+      },
+      {
+        "name": "footer",
+        "x": 64,
+        "right": 1016,
+        "y": 1249,
+        "bottom": 1297,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 4,
+    "copy_matches": true,
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 41
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 53
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 103
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 7
+      }
+    ],
+    "boxes": [
+      {
+        "name": "copy",
+        "x": 64,
+        "right": 1016,
+        "y": 146,
+        "bottom": 507,
+        "overflow": false
+      },
+      {
+        "name": "headline",
+        "x": 64,
+        "right": 1016,
+        "y": 146,
+        "bottom": 285.21875,
+        "overflow": false
+      },
+      {
+        "name": "body",
+        "x": 64,
+        "right": 1016,
+        "y": 313.21875,
+        "bottom": 400,
+        "overflow": false
+      },
+      {
+        "name": "closing",
+        "x": 64,
+        "right": 1016,
+        "y": 423,
+        "bottom": 507,
+        "overflow": false
+      },
+      {
+        "name": "footer",
+        "x": 64,
+        "right": 1016,
+        "y": 1249,
+        "bottom": 1297,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 5,
+    "copy_matches": true,
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 30
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 52
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 110
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 7
+      }
+    ],
+    "boxes": [
+      {
+        "name": "copy",
+        "x": 320,
+        "right": 1016,
+        "y": 158,
+        "bottom": 558.734375,
+        "overflow": false
+      },
+      {
+        "name": "headline",
+        "x": 320,
+        "right": 1016,
+        "y": 158,
+        "bottom": 299.59375,
+        "overflow": false
+      },
+      {
+        "name": "body",
+        "x": 320,
+        "right": 1016,
+        "y": 324.59375,
+        "bottom": 408.59375,
+        "overflow": false
+      },
+      {
+        "name": "closing",
+        "x": 320,
+        "right": 1010,
+        "y": 432.59375,
+        "bottom": 558.734375,
+        "overflow": false
+      },
+      {
+        "name": "footer",
+        "x": 64,
+        "right": 1016,
+        "y": 1249,
+        "bottom": 1297,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 6,
+    "copy_matches": true,
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 22
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 65
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 98
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 7
+      }
+    ],
+    "boxes": [
+      {
+        "name": "copy",
+        "x": 64,
+        "right": 1016,
+        "y": 165,
+        "bottom": 586.65625,
+        "overflow": false
+      },
+      {
+        "name": "headline",
+        "x": 64,
+        "right": 964,
+        "y": 165,
+        "bottom": 318.375,
+        "overflow": false
+      },
+      {
+        "name": "body",
+        "x": 64,
+        "right": 939,
+        "y": 346.375,
+        "bottom": 433.15625,
+        "overflow": false
+      },
+      {
+        "name": "closing",
+        "x": 64,
+        "right": 984,
+        "y": 456.15625,
+        "bottom": 586.65625,
+        "overflow": false
+      },
+      {
+        "name": "footer",
+        "x": 64,
+        "right": 1016,
+        "y": 1249,
+        "bottom": 1297,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 7,
+    "copy_matches": true,
+    "fonts": [
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 34
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 121
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 69
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 7
+      }
+    ],
+    "boxes": [
+      {
+        "name": "copy",
+        "x": 64,
+        "right": 1016,
+        "y": 138,
+        "bottom": 575.0625,
+        "overflow": false
+      },
+      {
+        "name": "headline",
+        "x": 64,
+        "right": 1016,
+        "y": 138,
+        "bottom": 289.1875,
+        "overflow": false
+      },
+      {
+        "name": "body",
+        "x": 64,
+        "right": 1014,
+        "y": 322.1875,
+        "bottom": 457.1875,
+        "overflow": false
+      },
+      {
+        "name": "closing",
+        "x": 64,
+        "right": 1014,
+        "y": 485.1875,
+        "bottom": 575.0625,
+        "overflow": false
+      },
+      {
+        "name": "footer",
+        "x": 64,
+        "right": 1016,
+        "y": 1249,
+        "bottom": 1297,
+        "overflow": false
+      }
+    ]
+  },
+  {
+    "slide": 8,
+    "copy_matches": true,
+    "fonts": [
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Bold",
+        "isCustomFont": true,
+        "glyphCount": 61
+      },
+      {
+        "familyName": "Preahvihear",
+        "postScriptName": "Preahvihear-Regular",
+        "isCustomFont": true,
+        "glyphCount": 49
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Bold",
+        "isCustomFont": true,
+        "glyphCount": 14
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 34
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Regular",
+        "isCustomFont": true,
+        "glyphCount": 14
+      },
+      {
+        "familyName": "Poppins SemiBold",
+        "postScriptName": "Poppins-SemiBold",
+        "isCustomFont": true,
+        "glyphCount": 7
+      },
+      {
+        "familyName": "Poppins",
+        "postScriptName": "Poppins-Bold",
+        "isCustomFont": true,
+        "glyphCount": 14
+      }
+    ],
+    "boxes": [
+      {
+        "name": "cta",
+        "x": 95,
+        "right": 985,
+        "y": 845,
+        "bottom": 1002.9375,
+        "overflow": false
+      },
+      {
+        "name": "closing",
+        "x": 127,
+        "right": 953,
+        "y": 870,
+        "bottom": 977.9375,
+        "overflow": false
+      },
+      {
+        "name": "copy",
+        "x": 64,
+        "right": 1016,
+        "y": 260,
+        "bottom": 616.5625,
+        "overflow": false
+      },
+      {
+        "name": "headline",
+        "x": 64,
+        "right": 1016,
+        "y": 260,
+        "bottom": 480.78125,
+        "overflow": false
+      },
+      {
+        "name": "body",
+        "x": 64,
+        "right": 1016,
+        "y": 515.78125,
+        "bottom": 616.5625,
+        "overflow": false
+      },
+      {
+        "name": "footer",
+        "x": 64,
+        "right": 1016,
+        "y": 1263.40625,
+        "bottom": 1297,
+        "overflow": false
+      }
+    ]
+  }
+]
