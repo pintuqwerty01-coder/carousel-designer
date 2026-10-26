@@ -1,3 +1,7 @@
+## Current review: static v3 — full eight-slide carousel
+
+New distinct elements and compositions follow the supplied PDF standard: coordination desk, connected shipment route, retained readiness dock, revised packing lists, pickup-to-cutoff road, pending confirmation phone, decision briefing folio, and a typography-led close. The early ART introduction and full script remain intact. Current exports: `static-v3/delivery/`. Native 1080 x 1350 JPEGs/PNGs, complete PDF and ZIP.
+
 ## Current review: static v2
 
 Opening scenes now share the approved readiness slide’s physical loading-dock world. Cover shows calls/paperwork beside a waiting shipment; slide 2 connects goods, documents and pickup through one manifest. Slide 3 (1/4 Readiness) retained. Current 3-slide proof: `static-v2/delivery/`. Full script remains 8 slides.
