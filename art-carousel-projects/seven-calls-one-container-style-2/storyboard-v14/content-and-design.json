@@ -1,0 +1,112 @@
+{
+  "status": "Content and visual storyboard for review; not finished carousel artwork",
+  "topic": "7 calls behind one container",
+  "slides": [
+    {
+      "n": 1,
+      "role": "COVER",
+      "headline": [
+        "7 CALLS.",
+        "ONE CONTAINER.",
+        "EVERY LOOSE END",
+        "LANDS ON YOU."
+      ],
+      "body": "Checking details. Relaying changes. Chasing confirmations. The coordination becomes your second job.",
+      "art": "One container dominates the right edge. At its base, the phone, call slips and release docket belong to the same dispatch situation. Several updates have arrived, but one unresolved docket field still holds the release. The focal conflict is completed calls versus unfinished work.",
+      "layout": "Narrow left type column; tall container cropped along the right edge. One headline and one subtitle, with no additional closing sentence. The unresolved field is the only amber focal point.",
+      "reference": 1,
+      "palette": "dark",
+      "transition": "The cover establishes the hidden coordination burden. Slide 2 shows the first reason an update is not enough."
+    },
+    {
+      "n": 2,
+      "role": "CHECK THE ANSWER",
+      "headline": [
+        "Cargo ready.",
+        "Booking out of date."
+      ],
+      "body": "The supplier confirms the goods. The latest packing list shows a different load.",
+      "action": "ART checks the revision against the booking and follows up on the missing corrections.",
+      "art": "Ready cargo carries a green inspection tag, yet release remains closed. A close foreground view of the document-check window shows a conflicting quantity on the packing list and booking. Cargo readiness and record readiness must visibly disagree. Use naturally scaled documents in the window, with a deliberate close camera angle that makes the conflicting fields visible.",
+      "layout": "Light slide, copy upper-left. A continuous dispatch lane leads from ready goods to the held release; the check window is the foreground focal point. No giant stand-alone papers or unrelated comparison icon.",
+      "reference": 2,
+      "palette": "light",
+      "transition": "Correcting the record resolves one mismatch. Slide 3 asks what the revised load changes elsewhere."
+    },
+    {
+      "n": 3,
+      "role": "CHECK THE CONSEQUENCES",
+      "headline": [
+        "The load changed.",
+        "The rest of the plan didn't."
+      ],
+      "body": "More cargo can change vehicle capacity, pickup arrangements and shipping instructions.",
+      "action": "ART identifies what the revision affects and coordinates the required updates.",
+      "art": "The booked loading footprint is already full. Additional cargo extends beyond it into the dispatch lane. The same scene includes the pickup schedule and booking sleeve awaiting recheck. The extra load must visibly disrupt the original arrangement, rather than appear as decorative boxes beside documents.",
+      "layout": "Aqua with one dark organic text field, matching the reference's offset composition. Planning scene crosses the lower-left edge. The revised load is the focal point; schedule and paperwork are secondary consequences.",
+      "reference": 4,
+      "palette": "aqua",
+      "transition": "The wider plan needs checking. Slide 4 makes a timing conflict immediately concrete."
+    },
+    {
+      "n": 4,
+      "role": "CHECK THE HANDOFF WINDOW",
+      "headline": [
+        "Truck at 4 PM.",
+        "Loading closes at 3 PM."
+      ],
+      "body": "Both teams confirmed. The handoff still fails.",
+      "action": "ART checks the timings together and seeks a pickup that meets the loading window.",
+      "art": "The truck waits outside a closed loading bay. The dock clock reads 3 PM and the loading status is closed. The copy states the truck's 4 PM commitment. The relationship among truck, clock and closed bay must explain the failed handoff at a glance.",
+      "layout": "Light background, shared left text edge, restrained ghost numeral. Arrival and loading times receive the same typographic weight. Crop the scene to the lower-right, while keeping the clock, truck and closed bay visible.",
+      "reference": 5,
+      "palette": "light",
+      "transition": "A conflict has been identified. Slide 5 gives the person a meaningful choice before a revised instruction is issued."
+    },
+    {
+      "n": 5,
+      "role": "BRING THE DECISION",
+      "headline": [
+        "Your next call",
+        "should be a decision."
+      ],
+      "body": "Keep the cutoff with a costlier pickup\u2014or take the later departure?",
+      "action": "ART brings the options, cost and timing impact together. Decisions outside your rules reach you with context.",
+      "art": "Two feasible routes lead to the same departure terminal. One short route passes a paid express pickup point; the other reaches a later departure through a waiting bay. Show a genuine trade-off: neither path is a red dead end. Small, typeset route labels identify the choices without repeating the paragraph.",
+      "layout": "Deep blue-green, white headline with one aqua phrase. Copy at upper-left; one connected route scene below, angled toward the shared destination. Keep cost and time cues subordinate to the two paths.",
+      "reference": 2,
+      "palette": "dark",
+      "transition": "Once the decision is made, the revised plan must reach the people who will act on it."
+    },
+    {
+      "n": 6,
+      "role": "FINISH THE HANDOFF",
+      "headline": [
+        "A new plan only works",
+        "when someone acts on it."
+      ],
+      "body": "The revised pickup is sent. The transporter still has the old instruction.",
+      "action": "ART checks acknowledgment and follows the required action through.",
+      "art": "At the dispatch pass-through, the revised 2 PM instruction remains in the outgoing tray. At the key-collection point, the old 4 PM instruction is already attached to the transporter's keys. The empty handoff position between them carries one amber pending marker. These illustrative times connect directly to the 3 PM loading cutoff.",
+      "layout": "Aqua, ink text, compact copy block with deliberate line breaks. A close cutaway shows only the outgoing tray, transfer position and issued instruction/key rack. No truck, full office fit-out or decorative stationary.",
+      "reference": 4,
+      "palette": "aqua",
+      "transition": "The handoff is followed through. The closing states the benefit without introducing ART again."
+    },
+    {
+      "n": 7,
+      "role": "CLOSE WITH THE BENEFIT",
+      "headline": [
+        "Move the container.",
+        "Get your day back."
+      ],
+      "body": "ART checks what changed, coordinates what follows and brings the decisions that need you.",
+      "action": "DM \u201cCONTAINER\u201d to explore your shipment workflow.",
+      "art": "The closing is led by the message and CTA, as in the reference. A new illustration is not necessary. The visual resolution comes from clear, settled typography, generous space and one obvious action.",
+      "layout": "Deep blue-green. Small aqua-and-white logo at top-left. Large centered Poppins Bold headline, short supporting sentence, restrained downward cue and one aqua CTA pill. No object row competing with the closing.",
+      "reference": 9,
+      "palette": "dark",
+      "transition": "The product value is connected follow-through, with human judgment used where it matters."
+    }
+  ]
+}
