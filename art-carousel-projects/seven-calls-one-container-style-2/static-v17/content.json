@@ -1,0 +1,109 @@
+{
+  "topic": "7 calls behind one container",
+  "status": "Revised visual composition and contrast from approved copy",
+  "slides": [
+    {
+      "n": 1,
+      "palette": "dark",
+      "headline": [
+        "7 CALLS.",
+        "STILL CHASING",
+        "ONE CONTAINER."
+      ],
+      "body": [
+        "Every update creates another check, another change, another follow-up\u2014for you."
+      ],
+      "closing": [],
+      "asset": "cover.png"
+    },
+    {
+      "n": 2,
+      "palette": "light",
+      "headline": [
+        "Cargo ready.",
+        "Booking out of date."
+      ],
+      "body": [
+        "The supplier confirms the goods. The latest packing list shows a different load."
+      ],
+      "closing": [
+        "ART checks the revision against the booking and follows up on the missing corrections."
+      ],
+      "asset": "mismatch.png"
+    },
+    {
+      "n": 3,
+      "palette": "aqua",
+      "headline": [
+        "The load changed.",
+        "The rest of the plan didn't."
+      ],
+      "body": [
+        "More cargo can change vehicle capacity, pickup arrangements and shipping instructions."
+      ],
+      "closing": [
+        "ART identifies what the revision affects and coordinates the required updates."
+      ],
+      "asset": "documents.png"
+    },
+    {
+      "n": 4,
+      "palette": "light",
+      "headline": [
+        "Truck at 4 PM.",
+        "Loading closes at 3 PM."
+      ],
+      "body": [
+        "Both teams confirmed. The handoff still fails."
+      ],
+      "closing": [
+        "ART checks the timings together and seeks a pickup that meets the loading window."
+      ],
+      "asset": "timing.png"
+    },
+    {
+      "n": 5,
+      "palette": "dark",
+      "headline": [
+        "Your next call",
+        "should be a decision."
+      ],
+      "body": [
+        "Keep the cutoff with a costlier pickup\u2014or take the later departure?"
+      ],
+      "closing": [
+        "ART brings the options, cost and timing impact together. Decisions outside your rules reach you with context."
+      ],
+      "asset": "decision.png"
+    },
+    {
+      "n": 6,
+      "palette": "light",
+      "headline": [
+        "A new plan only works",
+        "when someone acts on it."
+      ],
+      "body": [
+        "The revised pickup is sent. The transporter still has the old instruction."
+      ],
+      "closing": [
+        "ART checks acknowledgment and follows the required action through."
+      ],
+      "asset": "handoff.png"
+    },
+    {
+      "n": 7,
+      "palette": "dark",
+      "headline": [
+        "Move the container.",
+        "Get your day back."
+      ],
+      "body": [
+        "ART checks what changed, coordinates what follows and brings the decisions that need you."
+      ],
+      "closing": [
+        "DM \u201cCONTAINER\u201d to explore your shipment workflow."
+      ]
+    }
+  ]
+}
