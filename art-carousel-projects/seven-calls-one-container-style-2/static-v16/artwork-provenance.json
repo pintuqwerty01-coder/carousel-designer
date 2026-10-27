@@ -1,0 +1,38 @@
+[
+  {
+    "asset": "cover.png",
+    "source": "/workspace/generated_images/exec-e8451f0c-5b8c-4357-85d9-b0e087757993.png",
+    "sha256": "55fdb92c90a316a3f8bd152fcaa92679c341d87fede28dccebd1293fd9db6d26",
+    "new_illustration": true
+  },
+  {
+    "asset": "mismatch.png",
+    "source": "/workspace/generated_images/exec-440f7ea8-f3c1-4a65-af5d-62a7ceeab829.png",
+    "sha256": "8595fccdcbef0921c5fe0a45fc742495db491eb47ab48051143c0e9153570a2f",
+    "new_illustration": true
+  },
+  {
+    "asset": "documents.png",
+    "source": "/workspace/generated_images/exec-b7d2225a-e9e0-41af-89b2-8ec61893a02a.png",
+    "sha256": "12b10e4f1726bafc2c2512ced945d07ff894072692e13c5a55f744d9b3e1ce3c",
+    "new_illustration": true
+  },
+  {
+    "asset": "timing.png",
+    "source": "/workspace/generated_images/exec-39793c52-1b79-436f-9e62-3acdd94e040e.png",
+    "sha256": "b356c66a614e8f58c2fe7604a4d064c8edf5cb69c14773d939f989a5dd3ceec5",
+    "new_illustration": true
+  },
+  {
+    "asset": "decision.png",
+    "source": "/workspace/generated_images/exec-ac730107-d2fb-4133-b4d7-195e7dc2b212.png",
+    "sha256": "7249feb7a70a1816a5f687fe19e0aa0ccf527c8990f07b16e3b276afa266304b",
+    "new_illustration": true
+  },
+  {
+    "asset": "handoff.png",
+    "source": "/workspace/generated_images/exec-4a9dee7d-cd28-431d-afe2-831eeb06a799.png",
+    "sha256": "7f487fc3646898a800dadd5070978fb25151e71d1e9dfc57f82c26d6a4ebec1b",
+    "new_illustration": true
+  }
+]
