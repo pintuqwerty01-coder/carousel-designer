@@ -1,0 +1,1 @@
+10-second vertical cover motion with six-beat storyboard. The blue container is grounded on a trailer at the loading dock, making the repeated call updates point to a believable shipment. The original ART mascot and exact cover copy are retained. Render with `python render.py`; regenerate storyboard with `python make_storyboard.py`.
