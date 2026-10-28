@@ -1,0 +1,3 @@
+# Seven calls, one container — slide 1 motion
+
+The six-beat storyboard and 10-second 1080 × 1350 MP4 are in `delivery/`. The headline is visible throughout. The original 3D ART mascot, suspended container, and cover copy remain in the scene. ART walks in, checks the tablet, receives seven call cards that repeat the same container thumbnail, reacts at the seventh call, then holds with the final copy. Each card arrival briefly marks the one container. The alternate 3D walking poses and discrete reaction cut avoid a sliding facial expression. Render with `python render.py`; rebuild the storyboard with `python make_storyboard.py`.
