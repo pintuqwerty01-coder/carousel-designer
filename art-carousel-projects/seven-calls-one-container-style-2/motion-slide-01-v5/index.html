@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><style>
+@font-face{font-family:Poppins;src:url('assets/Poppins-Regular.ttf');font-weight:400}
+@font-face{font-family:Poppins;src:url('assets/Poppins-Bold.ttf');font-weight:700}
+*{box-sizing:border-box}html,body{margin:0;width:1080px;height:1350px;overflow:hidden}body{font-family:Poppins;background:#031823;color:#fff}
+#stage{position:relative;width:1080px;height:1350px;overflow:hidden;background:#041c29}
+#port{position:absolute;inset:0;width:1080px;height:1350px;object-fit:cover;transform-origin:50% 55%}
+#shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(1,16,27,.70) 0%,rgba(1,16,27,.35) 48%,rgba(1,16,27,.04) 78%),linear-gradient(0deg,rgba(0,14,22,.42),transparent 22%)}
+#mascotBox{position:absolute;left:335px;top:890px;width:350px;height:475px;transform-origin:50% 100%;z-index:9;filter:drop-shadow(0 18px 14px rgba(0,0,0,.55))}
+#mascotBox img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+#walk,#walk2,#calm,#stress{opacity:0}
+#lines{position:absolute;inset:0;width:1080px;height:1350px;overflow:visible;z-index:3;pointer-events:none}
+#lines path{fill:none;stroke:#84eaf5;stroke-width:2.2;stroke-dasharray:6 9;opacity:.64;filter:drop-shadow(0 0 6px #04d8ed)}
+#orbitLines{position:absolute;inset:0;width:1080px;height:1350px;z-index:4;pointer-events:none;opacity:0}
+#orbitLines path{fill:none;stroke:#84eaf5;stroke-width:2;stroke-dasharray:5 8;opacity:.6;filter:drop-shadow(0 0 5px #04d8ed)}
+.card{position:absolute;width:242px;height:112px;padding:12px 14px;border:2px solid #7feeff;border-radius:17px;background:linear-gradient(135deg,#f8fcff,#d5f8ff);box-shadow:0 0 24px rgba(11,218,241,.72),0 12px 25px rgba(0,0,0,.3);color:#061f2c;z-index:7;transform-origin:center;opacity:0}
+.card .label{font-size:24px;line-height:1.15;font-weight:700;white-space:nowrap}.thumb{position:absolute;left:16px;bottom:14px;width:77px;height:39px;background:repeating-linear-gradient(90deg,#087b9d 0 7px,#0a91ae 7px 9px);border:2px solid #17445c;box-shadow:4px 4px 0 #b4dde6;transform:skewY(-4deg)}.phone{position:absolute;right:15px;bottom:14px;width:46px;height:46px;background:#00bbd4;border:3px solid #e9ffff;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 10px #00d8ec}.phone svg{width:25px;height:25px;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+#booking{left:75px;top:475px}#packing{left:75px;top:605px}#pickup{left:65px;top:735px}#delay{left:755px;top:475px}#truck{left:65px;top:865px}#loading{left:755px;top:605px}#customs{left:755px;top:735px}
+.orbit{position:absolute;width:68px;height:68px;border:2.5px solid #7cf6ff;border-radius:50%;background:rgba(0,180,211,.42);box-shadow:0 0 15px #04d6ea,0 0 34px #04d6ea88;display:grid;place-items:center;z-index:6;opacity:0}.orbit svg{width:33px;height:33px;fill:none;stroke:#fff;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}
+#o1{left:820px;top:270px}#o2{left:890px;top:390px}#o3{left:950px;top:600px}#o4{left:875px;top:824px}#o5{left:645px;top:940px}#o6{left:555px;top:740px}#o7{left:760px;top:620px}
+#copy{position:absolute;inset:0;z-index:10;pointer-events:none}#counter{position:absolute;left:64px;top:70px;font-size:25px;opacity:1}#headline{position:absolute;left:62px;top:150px;width:930px;font-size:83px;line-height:1.03;letter-spacing:-2.5px;font-weight:700}#headline>div{opacity:1;transform:none}.aqua{color:#30e6ee}#support{position:absolute;left:64px;top:492px;width:550px;font-size:31px;line-height:1.34;font-weight:400;opacity:0;text-shadow:0 2px 14px #001b28aa}#support span{display:block;white-space:nowrap}
+#grain{position:absolute;inset:0;z-index:11;opacity:.1;pointer-events:none;background:radial-gradient(circle at 15% 4%,#64f1ff 0,transparent 2%),radial-gradient(circle at 92% 81%,#fff 0,transparent 1%)}
+</style></head><body><main id="stage"><img id="port" src="assets/port-clean.png"><div id="shade"></div>
+<svg id="lines" viewBox="0 0 1080 1350"><path id="p0" d="M220 532 Q480 455 790 665"/><path id="p1" d="M220 662 Q490 545 790 665"/><path id="p2" d="M210 792 Q480 655 790 665"/><path id="p3" d="M875 532 Q835 590 790 665"/><path id="p4" d="M210 922 Q500 810 790 665"/><path id="p5" d="M875 662 Q835 660 790 665"/><path id="p6" d="M875 792 Q835 720 790 665"/></svg>
+<svg id="orbitLines" viewBox="0 0 1080 1350"><path d="M855 305 Q820 455 810 665"/><path d="M925 425 Q865 535 810 665"/><path d="M985 635 Q900 640 810 665"/><path d="M910 860 Q840 755 810 665"/><path d="M680 975 Q690 780 810 665"/><path d="M590 775 Q690 670 810 665"/><path d="M795 655 Q810 655 810 665"/></svg>
+<div id="cards"></div><div id="orbits"></div>
+<div id="mascotBox"><img id="walk" src="assets/mascot-walk.png"><img id="walk2" src="assets/mascot-walk2.png"><img id="calm" src="assets/mascot-calm.png"><img id="stress" src="assets/mascot-stressed.png"></div>
+<div id="copy"><div id="counter">1/7</div><div id="headline"><div id="h1">7 CALLS.</div><div class="aqua" id="h2">STILL CHASING</div><div class="aqua" id="h3">ONE CONTAINER.</div></div><div id="support"><span>Every update creates</span><span>another check, another</span><span>change, another follow-up—</span><span>for you.</span></div></div><div id="grain"></div></main>
+<script>
+const names=['Booking','Packing List','Pickup','Delay Update','Truck Timing','Loading Window','Customs Check'];const ids=['booking','packing','pickup','delay','truck','loading','customs'];const starts=[.95,1.47,2.13,2.67,3.22,3.78,4.34];
+const phone='<svg viewBox="0 0 32 32"><path d="M8 5c1-1 3-1 4 1l2 4c.5 1 0 2-1 3l-2 2c2 4 5 7 9 9l2-2c1-1 2-1 3-1l4 2c2 1 2 3 1 4-2 3-5 4-8 3C13 27 5 19 2 10 1 7 4 4 8 5Z"/></svg>';
+const cards=document.getElementById('cards'),orbits=document.getElementById('orbits');ids.forEach((id,i)=>{cards.insertAdjacentHTML('beforeend',`<div class="card" id="${id}"><span class="label">${names[i]}</span><div class="thumb"></div><div class="phone">${phone}</div></div>`);orbits.insertAdjacentHTML('beforeend',`<div class="orbit" id="o${i+1}">${phone}</div>`)});
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),ease=x=>{x=clamp(x);return x*x*x*(x*(x*6-15)+10)},S=(id,prop,v)=>document.getElementById(id).style[prop]=v;
+window.setTime=function(t){
+ const walking=t<1.45,walkStep=Math.floor(t/.24),stride=ease(clamp(t/1.45));
+ const stepX=walking?Math.round((-300+300*stride)/4)*4:0;
+ const footLift=walking?-7*Math.sin(Math.PI*((t/.24)%1)):0;
+ S('port','transform',`scale(${1.012-.012*ease(t/1.6)}) translateY(${4-4*ease(t/1.6)}px)`);
+ // An intentional step cycle carries the 3D mascot into the shot. At the seventh
+ // call, anticipation and a small recoil hide the pose cut; faces never dissolve.
+ const check=t>=1.45&&t<4.38;
+ const anticipate=t>=4.25&&t<4.46?Math.sin(Math.PI*(t-4.25)/.21):0;
+ const recoil=t>=4.46&&t<4.9?Math.sin(Math.PI*(t-4.46)/.44):0;
+ const settle=t>=4.9&&t<5.45?Math.sin(Math.PI*(t-4.9)/.55)*Math.exp(-2*(t-4.9)):0;
+ const dip=check&&t<1.9?6*Math.sin(Math.PI*(t-1.45)/.45):0;
+ const rise=walking?footLift:dip+8*anticipate-22*recoil-5*settle;
+ const rotate=walking?2*Math.sin(Math.PI*t/.24):check?-2*anticipate:5*recoil-2*settle;
+ const scaleX=1-.04*anticipate+.04*recoil,scaleY=1-.055*anticipate+.035*recoil;
+ S('mascotBox','transform',`translateX(${stepX}px) translateY(${rise}px) rotate(${rotate}deg) scale(${scaleX},${scaleY})`);
+ S('walk','opacity',walking&&walkStep%2===0?1:0);
+ S('walk2','opacity',walking&&walkStep%2===1?1:0);
+ S('calm','opacity',!walking&&t<4.46?1:0);
+ S('stress','opacity',t>=4.46?1:0);
+ ids.forEach((id,i)=>{const enter=ease((t-starts[i])/.53),leave=1-ease((t-5.05)/.72),a=enter*leave;S(id,'opacity',a);S(id,'transform',`translateY(${(1-enter)*16}px) scale(${.96+.04*enter})`);S('p'+i,'opacity',a*.62)});
+ const orbit=ease((t-5.2)/.75);S('orbitLines','opacity',orbit);for(let i=1;i<=7;i++){S('o'+i,'opacity',orbit);S('o'+i,'transform',`scale(${.93+.07*orbit})`)}
+ S('counter','opacity',1);['h1','h2','h3'].forEach(id=>{S(id,'opacity',1);S(id,'transform','none')});S('support','opacity',ease((t-6.19)/.67));
+};window.setTime(0);
+</script></body></html>
